@@ -1,0 +1,10 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "mcp__notion__notion-create-pages",
+        "hooks": [{ "type": "command", "command": "echo 'Notion page successfully created.' >> logs/notion-publish-audit.log" }]
+      }
+    ]
+  }
+}

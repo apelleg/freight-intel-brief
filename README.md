@@ -48,6 +48,16 @@ Keeping up with AI news across models, tools, policy, funding, and open source i
 
 ---
 
+## Research Ops Plugin Ecosystem
+
+Beyond the automated daily briefing, this project has evolved into a **Unified Research Ops Ecosystem** containing 10 deeply integrated intelligence plugins available natively for **Claude Code**, **OpenAI Codex**, and **Gemini CLI**.
+
+The ecosystem includes 10 production-ready agents covering News & Media (ai-news, last30days, podcast-summarizer), Tech & Dev (trend-spotter, paper-reader, repo-auditor), and Business (earnings, competitor-intel, startup-scout, crypto-tracker). These plugins and skills enable AI agents to perform a wide range of research tasks -- from tracking social media trends to analyzing financial filings to summarizing technical papers.
+
+See [PLUGINS.md](PLUGINS.md) for the complete developer manual.
+
+---
+
 ## Architecture
 
 We leverage the scheduling capabilities of the OS (launchd on macOS, Task Scheduler on Windows) to trigger a shell script at a specific time each day. The script reads a prompt template, selects an AI CLI engine (via the `AI_BRIEFING_CLI` env var or automatic fallback: claude → codex → gemini → copilot), and invokes it in headless mode. The agentic prompt performs web searches, compiles results, and calls the Notion MCP tool to create a new page in the database.

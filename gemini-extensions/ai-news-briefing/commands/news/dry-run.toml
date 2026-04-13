@@ -1,0 +1,8 @@
+prompt = """
+Execute a dry run of the AI News Briefing pipeline using the script `scripts/dry-run.sh` (or `.ps1`). 
+Do not pass any arguments unless specified.
+Summarize the output for me, highlighting the total cost estimated.
+
+Run the command:
+!{bash scripts/dry-run.sh {{args}}}
+"""

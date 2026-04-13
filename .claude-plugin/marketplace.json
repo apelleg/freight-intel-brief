@@ -1,0 +1,119 @@
+{
+  "name": "AI News Briefing Ecosystem",
+  "description": "Official plugin marketplace for comprehensive research, analytics, and intelligence tools.",
+  "homepage": "https://github.com/hoangsonww/AI-News-Briefing",
+  "repository": "https://github.com/hoangsonww/AI-News-Briefing",
+  "plugins": [
+    {
+      "name": "ai-news-briefing",
+      "path": "claude-plugins/ai-news-briefing",
+      "description": "Comprehensive AI news tracking, deep research agents, and automated Notion/Teams/Slack publishing.",
+      "tags": [
+        "news",
+        "briefing",
+        "research",
+        "mcp",
+        "automation"
+      ]
+    },
+    {
+      "name": "last30days",
+      "path": "claude-plugins/last30days",
+      "description": "An AI agent-led search engine scored by upvotes, likes, and real money. Searches Reddit, X, YouTube, HN, Polymarket, and the web from the last 30 days.",
+      "tags": [
+        "research",
+        "social",
+        "reddit",
+        "twitter",
+        "intelligence"
+      ]
+    },
+    {
+      "name": "trend-spotter",
+      "path": "claude-plugins/trend-spotter",
+      "description": "Analyzes GitHub trending repos, PyPI/NPM download spikes, and tech Twitter to identify emerging developer trends before they hit mainstream news.",
+      "tags": [
+        "trends",
+        "github",
+        "developer",
+        "analytics"
+      ]
+    },
+    {
+      "name": "earnings-analyzer",
+      "path": "claude-plugins/earnings-analyzer",
+      "description": "Fetches SEC filings, earnings call transcripts, and financial news to synthesize a business/financial briefing on a specific public company.",
+      "tags": [
+        "finance",
+        "earnings",
+        "stocks",
+        "business"
+      ]
+    },
+    {
+      "name": "paper-reader",
+      "path": "claude-plugins/paper-reader",
+      "description": "Connects to ArXiv and Semantic Scholar to find the latest AI/ML research papers, summarize their abstracts, and explain the methodology (ELI5).",
+      "tags": [
+        "research",
+        "arxiv",
+        "ai",
+        "machine-learning"
+      ]
+    },
+    {
+      "name": "competitor-intel",
+      "path": "claude-plugins/competitor-intel",
+      "description": "Given a company/product, finds its top competitors, compares feature releases, pricing changes, and customer sentiment.",
+      "tags": [
+        "competitors",
+        "intelligence",
+        "market-research"
+      ]
+    },
+    {
+      "name": "repo-auditor",
+      "path": "claude-plugins/repo-auditor",
+      "description": "Analyzes a given GitHub repository for security vulnerabilities, stale dependencies, code quality, and bus factor.",
+      "tags": [
+        "github",
+        "audit",
+        "security",
+        "code-quality"
+      ]
+    },
+    {
+      "name": "podcast-summarizer",
+      "path": "claude-plugins/podcast-summarizer",
+      "description": "Extracts transcripts from technical podcasts or YouTube videos and synthesizes core arguments, guest insights, and actionable takeaways.",
+      "tags": [
+        "podcast",
+        "youtube",
+        "summary",
+        "learning"
+      ]
+    },
+    {
+      "name": "startup-scout",
+      "path": "claude-plugins/startup-scout",
+      "description": "Tracks Y Combinator, Product Hunt, and recent VC funding rounds to identify promising early-stage startups in a specific sector.",
+      "tags": [
+        "startups",
+        "vc",
+        "funding",
+        "market-research"
+      ]
+    },
+    {
+      "name": "crypto-tracker",
+      "path": "claude-plugins/crypto-tracker",
+      "description": "Analyzes tokenomics, whitepapers, and crypto Twitter sentiment to provide fundamental analysis of crypto projects.",
+      "tags": [
+        "crypto",
+        "web3",
+        "defi",
+        "finance"
+      ]
+    }
+  ]
+}

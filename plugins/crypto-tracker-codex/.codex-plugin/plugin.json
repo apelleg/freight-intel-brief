@@ -1,0 +1,21 @@
+{
+  "name": "crypto-tracker-codex",
+  "version": "1.0.0",
+  "description": "Analyzes tokenomics, whitepapers, and crypto Twitter sentiment to provide fundamental analysis of crypto projects.",
+  "author": {
+    "name": "Research Ops",
+    "email": "ops@example.com"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Crypto Tracker",
+    "shortDescription": "Analyzes tokenomics, whitepapers, and crypto Twitt",
+    "longDescription": "Analyzes tokenomics, whitepapers, and crypto Twitter sentiment to provide fundamental analysis of crypto projects.",
+    "developerName": "Research Ops",
+    "category": "Finance",
+    "capabilities": [
+      "Read",
+      "WebSearch"
+    ]
+  }
+}

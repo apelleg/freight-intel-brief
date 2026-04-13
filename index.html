@@ -59,9 +59,10 @@
     <ul class="nav-links">
       <li><a href="#architecture">Architecture</a></li>
       <li><a href="#e2e">E2E</a></li>
-      <li><a href="#operations">Operations</a></li>
-      <li><a href="#makefile">Makefile</a></li>
+      <li><a href="#topics">Topics</a></li>
       <li><a href="#custom-brief">Custom Brief</a></li>
+      <li><a href="#plugins">Plugins</a></li>
+      <li><a href="#makefile">Makefile</a></li>
       <li><a href="#delivery">Delivery</a></li>
       <li><a href="#obsidian">Obsidian</a></li>
       <li><a href="#tests">Tests</a></li>
@@ -73,6 +74,7 @@
       </svg>
     </button>
   </div>
+  <div class="scroll-progress"></div>
 </nav>
 
 <section class="hero">
@@ -92,6 +94,38 @@
       Open README
     </a>
   </div>
+
+  <div class="hero-marquee reveal">
+    <div class="marquee-content">
+      <span class="tech-tag c-orange">Claude Code</span>
+      <span class="tech-tag c-green">Codex</span>
+      <span class="tech-tag c-blue">Gemini</span>
+      <span class="tech-tag c-purple">GitHub Copilot</span>
+      <span class="tech-tag c-pink">Notion MCP</span>
+      <span class="tech-tag c-cyan">Obsidian</span>
+      <span class="tech-tag c-yellow">Bash</span>
+      <span class="tech-tag c-blue">PowerShell</span>
+      <span class="tech-tag c-green">Python</span>
+      <span class="tech-tag c-purple">Microsoft Teams</span>
+      <span class="tech-tag c-pink">Slack</span>
+      <span class="tech-tag c-orange">macOS launchd</span>
+      <span class="tech-tag c-cyan">Task Scheduler</span>
+      <!-- Duplicate for seamless loop -->
+      <span class="tech-tag c-orange">Claude Code</span>
+      <span class="tech-tag c-green">Codex</span>
+      <span class="tech-tag c-blue">Gemini</span>
+      <span class="tech-tag c-purple">GitHub Copilot</span>
+      <span class="tech-tag c-pink">Notion MCP</span>
+      <span class="tech-tag c-cyan">Obsidian</span>
+      <span class="tech-tag c-yellow">Bash</span>
+      <span class="tech-tag c-blue">PowerShell</span>
+      <span class="tech-tag c-green">Python</span>
+      <span class="tech-tag c-purple">Microsoft Teams</span>
+      <span class="tech-tag c-pink">Slack</span>
+      <span class="tech-tag c-orange">macOS launchd</span>
+      <span class="tech-tag c-cyan">Task Scheduler</span>
+    </div>
+  </div>
 </section>
 
 <section class="section" id="architecture">
@@ -99,6 +133,9 @@
     <div class="section-label">Architecture</div>
     <h2 class="section-title">Current system topology</h2>
     <p class="section-desc">From scheduler trigger to Notion, Obsidian vault, and optional multi-channel webhook delivery (Teams + Slack).</p>
+    <p class="section-desc" style="margin-top: 1rem; color: #a78bfa;">
+      The system operates across five primary layers: a platform-native scheduler (launchd or Task Scheduler), a scripted entry point, an AI CLI engine registry (Claude, Codex, Gemini, or Copilot), the AI execution layer, and the output destinations. This modular design ensures that the core prompting and research logic remains decoupled from the specific OS or AI model being used.
+    </p>
   </div>
 
   <div class="mermaid-wrap">
@@ -256,6 +293,9 @@ sequenceDiagram
     <div class="section-label">E2E Contracts</div>
     <h2 class="section-title">Execution guarantees and gaps</h2>
     <p class="section-desc">What each stage expects, produces, and where failures usually happen.</p>
+    <p class="section-desc" style="margin-top: 1rem; color: #a78bfa;">
+      Our end-to-end flow is completely headless and automated. From the moment the scheduler fires, the entry scripts handle environment sanitization, log rotation, and secure API execution. The system guarantees that if the primary AI engine fails, it gracefully falls back through a pre-defined chain of available models, ensuring your daily briefing is delivered consistently.
+    </p>
   </div>
 
   <div class="table-wrap" style="margin-bottom: 2rem;">
@@ -324,19 +364,73 @@ flowchart TD
 <section class="section" id="topics">
   <div class="section-header">
     <div class="section-label">Coverage</div>
-    <h2 class="section-title">9 topic areas searched daily</h2>
-    <p class="section-desc">The briefing targets short-horizon AI news (past 24 hours) across the following domains.</p>
+    <h2 class="section-title">9 Core Topic Areas Searched Daily</h2>
+    <p class="section-desc">Our automated briefing engine targets ultra short-horizon AI news (strictly the past 24 hours). By segmenting the web search across these 9 highly specific domains, we bypass algorithmic noise and surface the exact technical, financial, and strategic updates you actually care about.</p>
   </div>
   <div class="topics-grid">
-    <div class="topic-card"><div class="topic-num">1</div><div><h4>Claude Code / Anthropic</h4><p>Releases, features, Anthropic updates</p></div></div>
-    <div class="topic-card"><div class="topic-num">2</div><div><h4>OpenAI / Codex / ChatGPT</h4><p>Model changes, API updates, product launches</p></div></div>
-    <div class="topic-card"><div class="topic-num">3</div><div><h4>AI Coding IDEs</h4><p>Cursor, Windsurf, Copilot, JetBrains, Xcode AI</p></div></div>
-    <div class="topic-card"><div class="topic-num">4</div><div><h4>Agentic AI Ecosystem</h4><p>LangChain, CrewAI, AutoGen, MCP and agents</p></div></div>
-    <div class="topic-card"><div class="topic-num">5</div><div><h4>AI Industry</h4><p>Major lab announcements, benchmarks, launches</p></div></div>
-    <div class="topic-card"><div class="topic-num">6</div><div><h4>Open Source AI</h4><p>Llama, Mistral, DeepSeek, Hugging Face</p></div></div>
-    <div class="topic-card"><div class="topic-num">7</div><div><h4>AI Startups &amp; Funding</h4><p>Rounds, acquisitions, startup launches</p></div></div>
-    <div class="topic-card"><div class="topic-num">8</div><div><h4>AI Policy &amp; Regulation</h4><p>Government policy and AI safety regulation</p></div></div>
-    <div class="topic-card"><div class="topic-num">9</div><div><h4>Dev Tools &amp; Frameworks</h4><p>Vercel, Next.js, React Native, TypeScript tooling</p></div></div>
+    <div class="topic-card">
+      <div class="topic-num">1</div>
+      <div>
+        <h4>Anthropic & Claude Ecosystem</h4>
+        <p>Real-time monitoring of the Anthropic ecosystem. This covers unannounced model deprecations, API rate limit changes, new system prompt capabilities, Claude Code CLI updates, and official blog announcements regarding safety benchmarks or enterprise tier features.</p>
+      </div>
+    </div>
+    <div class="topic-card">
+      <div class="topic-num">2</div>
+      <div>
+        <h4>OpenAI, Codex & ChatGPT</h4>
+        <p>Comprehensive tracking of OpenAI's rapidly shifting product lines. We monitor silent API parameter updates, GPT model rollouts, OpenAI Codex integration news, ChatGPT Plus feature drops, and strategic partnership announcements (e.g., Apple, Microsoft).</p>
+      </div>
+    </div>
+    <div class="topic-card">
+      <div class="topic-num">3</div>
+      <div>
+        <h4>AI Coding IDEs & Workspaces</h4>
+        <p>The developer tooling war is moving fast. We track paradigm shifts in AI-native editors like Cursor and Windsurf, alongside major extension updates for GitHub Copilot, JetBrains AI Assistant, and the integration of local SLMs directly into Xcode and VS Code.</p>
+      </div>
+    </div>
+    <div class="topic-card">
+      <div class="topic-num">4</div>
+      <div>
+        <h4>Agentic AI & Orchestration</h4>
+        <p>Beyond single-turn chat, we track the execution layer. This includes the latest advancements in LangChain, CrewAI, and Microsoft AutoGen, alongside new integrations for the Model Context Protocol (MCP), browser-automation agents, and multi-agent consensus frameworks.</p>
+      </div>
+    </div>
+    <div class="topic-card">
+      <div class="topic-num">5</div>
+      <div>
+        <h4>Industry Titans & Hardware</h4>
+        <p>Macro-level shifts from the tech giants. We monitor Google DeepMind, Meta, and xAI for major lab announcements, while simultaneously tracking NVIDIA, AMD, and Groq for semiconductor news, cluster deployments, and inference hardware breakthroughs.</p>
+      </div>
+    </div>
+    <div class="topic-card">
+      <div class="topic-num">6</div>
+      <div>
+        <h4>Open Source & Local Models</h4>
+        <p>The bleeding edge of the open-weights community. We track Hugging Face leaderboards, new quantization methods (GGUF, AWQ), and massive drops like Llama 3/4 iterations, Mistral architectural shifts, and DeepSeek's latest parameter-efficient milestones.</p>
+      </div>
+    </div>
+    <div class="topic-card">
+      <div class="topic-num">7</div>
+      <div>
+        <h4>Startups, VC & M&amp;A</h4>
+        <p>Following the money in the AI boom. We scrape news of unannounced Seed and Series A funding rounds for stealth startups, major acqui-hires (talent poaching) between leading AI labs, and massive compute-infrastructure capital expenditures.</p>
+      </div>
+    </div>
+    <div class="topic-card">
+      <div class="topic-num">8</div>
+      <div>
+        <h4>Policy, Safety & Regulation</h4>
+        <p>The legal landscape defining AI's future. We track sweeping government policy changes (EU AI Act, US Executive Orders), copyright infringement lawsuits from major publishers against AI labs, and developments in cryptographic provenance and watermarking.</p>
+      </div>
+    </div>
+    <div class="topic-card">
+      <div class="topic-num">9</div>
+      <div>
+        <h4>Frontend Dev Tools & Frameworks</h4>
+        <p>How AI is fundamentally altering web development. We track Vercel's v0, Next.js AI integrations, React Native copilot generation, and the overall shift toward AI-generated UIs, dynamic rendering, and automated TypeScript type-safety tooling.</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -479,6 +573,9 @@ flowchart TD
     <div class="section-label">Operations</div>
     <h2 class="section-title">Install, run, backfill, inspect</h2>
     <p class="section-desc">Daily operation commands for both standard runs and historical date backfills.</p>
+    <p class="section-desc" style="margin-top: 1rem; color: #a78bfa;">
+      Operations are standardized around a cross-platform Makefile, giving you a unified surface to install schedulers, trigger runs, inspect logs, and validate the environment. All outputs are captured in date-stamped logs with an automatic 30-day rotation policy to keep your disk clean.
+    </p>
   </div>
 
   <div class="code-section" style="max-width: 780px; margin: 0 auto 1.5rem;">
@@ -541,6 +638,106 @@ flowchart TD
       <tr><td>Scheduler status</td><td><code>launchctl list | grep ainews</code></td><td><code>schtasks /query /tn AiNewsBriefing</code></td></tr>
       </tbody>
     </table>
+  </div>
+</section>
+
+<section class="section" id="plugins">
+  <div class="section-header">
+    <div class="section-label">Ecosystem</div>
+    <h2 class="section-title">Research Ops Plugins</h2>
+    <p class="section-desc">A unified suite of 10 intelligence agents built natively for Claude Code, OpenAI Codex, and Gemini CLI.</p>
+    <p class="section-desc" style="margin-top: 1rem; color: #a78bfa;">
+      We provide generic, highly-specialized research tools capable of scanning GitHub trends, parsing SEC filings, summarizing ArXiv papers, tracking crypto tokenomics, and performing deep social intelligence scraping across Reddit and X.
+    </p>
+  </div>
+
+  <div class="mermaid-wrap">
+    <pre class="mermaid">
+graph TD
+    subgraph "CLI Environments"
+        CC[Claude Code]
+        CX[OpenAI Codex]
+        GM[Gemini CLI]
+    end
+
+    subgraph "Marketplace Catalogs"
+        CMP[.claude-plugin/marketplace.json]
+        CXMP[.agents/plugins/marketplace.json]
+    end
+
+    subgraph "Plugin Types (10 Available)"
+        News[News & Media: ai-news, last30days, podcast-summarizer]
+        Dev[Tech & Dev: trend-spotter, paper-reader, repo-auditor]
+        Biz[Business: earnings, competitor-intel, startup-scout, crypto]
+    end
+
+    CC -->|/plugin install| CMP
+    CX -->|Local UI| CXMP
+    GM -->|extensions link| News
+    GM -->|extensions link| Dev
+    GM -->|extensions link| Biz
+
+    CMP --> News
+    CMP --> Dev
+    CMP --> Biz
+
+    CXMP --> News
+    CXMP --> Dev
+    CXMP --> Biz
+    </pre>
+  </div>
+
+  <div class="features" style="margin-top: 3rem;">
+    <div class="feature-card">
+      <div class="feature-icon purple">📰</div>
+      <h3>ai-news-briefing</h3>
+      <p>Automates daily AI news research, Notion publishing, and Teams/Slack webhooks. Deep multi-angle research.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon orange">🔥</div>
+      <h3>last30days</h3>
+      <p>AI agent search engine scored by upvotes and real money. Searches Reddit, X, HN, YouTube, and Polymarket.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon green">📈</div>
+      <h3>trend-spotter</h3>
+      <p>Analyzes GitHub trending repos, package downloads, and tech Twitter to identify emerging developer tools.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon blue">💰</div>
+      <h3>earnings-analyzer</h3>
+      <p>Fetches SEC filings and earnings call transcripts to synthesize an objective business briefing.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon cyan">📚</div>
+      <h3>paper-reader</h3>
+      <p>Connects to ArXiv and Semantic Scholar to explain complex methodology in plain English (ELI5).</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon rose">⚔️</div>
+      <h3>competitor-intel</h3>
+      <p>Finds top competitors, compares feature releases, pricing changes, and customer sentiment on Reddit/G2.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon amber">🛡️</div>
+      <h3>repo-auditor</h3>
+      <p>Analyzes GitHub repos for security vulnerabilities, stale dependencies, code quality, and bus factor.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon purple">🎙️</div>
+      <h3>podcast-summarizer</h3>
+      <p>Extracts transcripts from YouTube/podcasts and synthesizes actionable takeaways in a scannable format.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon cyan">🚀</div>
+      <h3>startup-scout</h3>
+      <p>Tracks Y Combinator, Product Hunt, and VC funding rounds to identify promising early-stage startups.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon green">🪙</div>
+      <h3>crypto-tracker</h3>
+      <p>Analyzes tokenomics, whitepapers, on-chain activity, and crypto Twitter sentiment for Web3 projects.</p>
+    </div>
   </div>
 </section>
 
@@ -624,6 +821,9 @@ flowchart TD
     <div class="section-label">Delivery</div>
     <h2 class="section-title">Teams, Slack, and Obsidian publishing paths</h2>
     <p class="section-desc">Teams and Slack reuse the same <code>logs/YYYY-MM-DD-card.json</code>. Obsidian uses the dedicated <code>logs/YYYY-MM-DD-obsidian.md</code> with <code>[[wikilinks]]</code> for graph visualization.</p>
+    <p class="section-desc" style="margin-top: 1rem; color: #a78bfa;">
+      The notification pipeline employs a highly scalable fan-out architecture. A single JSON Adaptive Card is generated during the AI run, which is then dynamically converted into platform-specific formats (like Slack Block Kit) and dispatched across multiple webhook URLs seamlessly without needing any intermediate service.
+    </p>
   </div>
 
   <div class="mermaid-wrap" style="margin-bottom: 2rem;">
@@ -862,6 +1062,9 @@ graph LR
     <div class="section-label">Tests</div>
     <h2 class="section-title">201 non-blocking tests</h2>
     <p class="section-desc">Verify syntax, structure, arg handling, template substitution, card JSON, notification error paths, Obsidian vault publishing, and cross-platform portability. No external services called.</p>
+    <p class="section-desc" style="margin-top: 1rem; color: #a78bfa;">
+      Reliability is paramount. We maintain a comprehensive suite of 201 non-blocking tests across Bash and PowerShell. These tests validate syntax, argument handling, prompt templates, and notification schemas without requiring active API connections, ensuring the pipeline remains robust across all platforms.
+    </p>
   </div>
 
   <div class="mermaid-wrap" style="margin-bottom: 2rem;">
@@ -1053,20 +1256,24 @@ flowchart TD
 
 <footer class="footer">
   <div class="footer-inner">
-    <p>AI News Briefing - Powered by Claude Code, Codex, Gemini, and Copilot CLIs with Notion MCP, WebSearch, multi-agent research, Obsidian graph view, and multi-channel delivery.</p>
-    <p style="margin-top: 0.5rem; color: #8888a0; font-size: 0.85rem;">
-      Automated daily briefings + on-demand deep topic research with Notion, Obsidian, Teams, and Slack publishing.
-    </p>
-    <div class="footer-links">
-      <a href="README.md">README</a>
-      <a href="ARCHITECTURE.md">Architecture</a>
-      <a href="CUSTOM_BRIEF.md">Custom Brief</a>
-      <a href="SETUP.md">Setup</a>
-      <a href="E2E_FLOW.md">E2E Flow</a>
-      <a href="NOTIFY_TEAMS.md">Teams</a>
-      <a href="NOTIFY_SLACK.md">Slack</a>
-      <a href="prompt.md">Prompt</a>
-      <a href="LICENSE">MIT License</a>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 22h16a2 2 0 002-2V4a2 2 0 00-2-2H8a2 2 0 00-2 2v16a2 2 0 01-2 2zm0 0a2 2 0 01-2-2v-9c0-1.1.9-2 2-2h2"/>
+          <path d="M18 14h-8M15 18h-5M10 6h8v4h-8z"/>
+        </svg>
+        <span>AI News Briefing</span>
+      </div>
+      <div class="footer-social">
+        <a href="https://github.com/hoangsonww/AI-News-Briefing" target="_blank" aria-label="GitHub">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-divider"></div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 <a href="https://sonnguyenhoang.com" target="_blank" class="link-styled" style="font-weight: 700;">Son Nguyen</a>. Released under the MIT License.</p>
+      <p class="footer-tagline">Automating intelligence across Claude, Codex, and Gemini.</p>
     </div>
   </div>
 </footer>

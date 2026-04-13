@@ -1,0 +1,17 @@
+{
+  "name": "paper-reader",
+  "description": "Connects to ArXiv and Semantic Scholar to find the latest AI/ML research papers, summarize their abstracts, and explain the methodology.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Research Ops",
+    "url": "https://github.com/hoangsonww"
+  },
+  "homepage": "https://github.com/hoangsonww/AI-News-Briefing",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hoangsonww/AI-News-Briefing.git"
+  },
+  "license": "MIT",
+  "keywords": ["research", "papers", "arxiv", "ai", "machine-learning"],
+  "categories": ["research", "education", "ai"]
+}

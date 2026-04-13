@@ -1,0 +1,17 @@
+{
+  "name": "competitor-intel",
+  "description": "Given a company/product, finds its top competitors, compares their latest feature releases, pricing changes, and customer sentiment.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Research Ops",
+    "url": "https://github.com/hoangsonww"
+  },
+  "homepage": "https://github.com/hoangsonww/AI-News-Briefing",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hoangsonww/AI-News-Briefing.git"
+  },
+  "license": "MIT",
+  "keywords": ["competitors", "intelligence", "market-research", "business"],
+  "categories": ["research", "business", "market-analysis"]
+}

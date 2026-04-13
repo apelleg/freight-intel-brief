@@ -1,0 +1,9 @@
+{
+  "name": "paper-reader",
+  "version": "1.0.0",
+  "description": "Finds the latest AI/ML research papers, summarizes their abstracts, and explains the methodology in plain English.",
+  "author": {
+    "name": "Research Ops"
+  },
+  "license": "MIT"
+}

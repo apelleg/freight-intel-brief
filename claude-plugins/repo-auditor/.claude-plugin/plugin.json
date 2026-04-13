@@ -1,0 +1,25 @@
+{
+  "name": "repo-auditor",
+  "description": "Analyzes a given GitHub repository for security vulnerabilities, stale dependencies, code quality, and bus factor.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Research Ops",
+    "url": "https://github.com/hoangsonww"
+  },
+  "homepage": "https://github.com/hoangsonww/AI-News-Briefing",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hoangsonww/AI-News-Briefing.git"
+  },
+  "license": "MIT",
+  "keywords": [
+    "github",
+    "audit",
+    "security",
+    "code-quality"
+  ],
+  "categories": [
+    "developer tools",
+    "research"
+  ]
+}

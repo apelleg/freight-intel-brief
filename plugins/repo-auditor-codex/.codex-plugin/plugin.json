@@ -1,0 +1,21 @@
+{
+  "name": "repo-auditor-codex",
+  "version": "1.0.0",
+  "description": "Analyzes a given GitHub repository for security vulnerabilities, stale dependencies, code quality, and bus factor.",
+  "author": {
+    "name": "Research Ops",
+    "email": "ops@example.com"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Repo Auditor",
+    "shortDescription": "Analyzes a given GitHub repository for security vu",
+    "longDescription": "Analyzes a given GitHub repository for security vulnerabilities, stale dependencies, code quality, and bus factor.",
+    "developerName": "Research Ops",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Read",
+      "WebSearch"
+    ]
+  }
+}

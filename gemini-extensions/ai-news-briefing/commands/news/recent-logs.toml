@@ -1,0 +1,6 @@
+prompt = """
+List the log files in the `logs` directory. Give me a brief summary of the last 3 runs based on the log files.
+
+Logs:
+!{ls -lh logs/ | tail -n 5}
+"""

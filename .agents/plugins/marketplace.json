@@ -1,0 +1,128 @@
+{
+  "name": "ai-news-briefing-marketplace",
+  "interface": {
+    "displayName": "AI News Briefing Ecosystem (Codex)"
+  },
+  "plugins": [
+    {
+      "name": "ai-news-briefing-codex",
+      "source": {
+        "source": "local",
+        "path": "./plugins/ai-news-briefing-codex"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "last30days-codex",
+      "source": {
+        "source": "local",
+        "path": "./plugins/last30days-codex"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research"
+    },
+    {
+      "name": "trend-spotter-codex",
+      "source": {
+        "source": "local",
+        "path": "./plugins/trend-spotter-codex"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research"
+    },
+    {
+      "name": "earnings-analyzer-codex",
+      "source": {
+        "source": "local",
+        "path": "./plugins/earnings-analyzer-codex"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Finance"
+    },
+    {
+      "name": "paper-reader-codex",
+      "source": {
+        "source": "local",
+        "path": "./plugins/paper-reader-codex"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Education"
+    },
+    {
+      "name": "competitor-intel-codex",
+      "source": {
+        "source": "local",
+        "path": "./plugins/competitor-intel-codex"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Business"
+    },
+    {
+      "name": "repo-auditor-codex",
+      "source": {
+        "source": "local",
+        "path": "./plugins/repo-auditor-codex"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
+    },
+    {
+      "name": "podcast-summarizer-codex",
+      "source": {
+        "source": "local",
+        "path": "./plugins/podcast-summarizer-codex"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Education"
+    },
+    {
+      "name": "startup-scout-codex",
+      "source": {
+        "source": "local",
+        "path": "./plugins/startup-scout-codex"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Business"
+    },
+    {
+      "name": "crypto-tracker-codex",
+      "source": {
+        "source": "local",
+        "path": "./plugins/crypto-tracker-codex"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Finance"
+    }
+  ]
+}
