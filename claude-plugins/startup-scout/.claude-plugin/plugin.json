@@ -1,0 +1,25 @@
+{
+  "name": "startup-scout",
+  "description": "Tracks Y Combinator, Product Hunt, and recent VC funding rounds to identify promising early-stage startups in a specific sector.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Research Ops",
+    "url": "https://github.com/hoangsonww"
+  },
+  "homepage": "https://github.com/hoangsonww/AI-News-Briefing",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hoangsonww/AI-News-Briefing.git"
+  },
+  "license": "MIT",
+  "keywords": [
+    "startups",
+    "vc",
+    "funding",
+    "market-research"
+  ],
+  "categories": [
+    "business",
+    "research"
+  ]
+}

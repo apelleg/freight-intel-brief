@@ -1,0 +1,16 @@
+{
+  "name": "last30days",
+  "description": "An AI agent-led search engine scored by upvotes, likes, and real money. Searches Reddit, X, YouTube, HN, Polymarket, and the web from the last 30 days.",
+  "version": "3.0.0",
+  "author": {
+    "name": "Open Source Community"
+  },
+  "homepage": "https://github.com/mvanhorn/last30days-skill",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mvanhorn/last30days-skill.git"
+  },
+  "license": "MIT",
+  "keywords": ["research", "reddit", "twitter", "youtube", "hackernews", "trends", "recency"],
+  "categories": ["research", "productivity", "search"]
+}

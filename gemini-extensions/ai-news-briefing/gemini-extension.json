@@ -1,0 +1,49 @@
+{
+  "name": "ai-news-briefing",
+  "version": "1.0.0",
+  "description": "Comprehensive AI news tracking, deep research agents, and automated Notion/Teams/Slack publishing for Gemini CLI.",
+  "author": {
+    "name": "Son Nguyen"
+  },
+  "license": "MIT",
+  "contextFileName": "GEMINI.md",
+  "settings": [
+    {
+      "name": "Notion API Token",
+      "description": "Token for the Notion MCP server to create/update briefing pages.",
+      "envVar": "NOTION_API_TOKEN",
+      "sensitive": true
+    },
+    {
+      "name": "Obsidian Vault Path",
+      "description": "Absolute path to your Obsidian vault for publishing.",
+      "envVar": "AI_BRIEFING_OBSIDIAN_VAULT",
+      "sensitive": false
+    },
+    {
+      "name": "Teams Webhook",
+      "description": "Optional webhook URL for Microsoft Teams notifications.",
+      "envVar": "AI_BRIEFING_TEAMS_WEBHOOK",
+      "sensitive": true
+    },
+    {
+      "name": "Slack Webhook",
+      "description": "Optional webhook URL for Slack notifications.",
+      "envVar": "AI_BRIEFING_SLACK_WEBHOOK",
+      "sensitive": true
+    }
+  ],
+  "mcpServers": {
+    "notion": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-notion"],
+      "env": {
+        "NOTION_API_TOKEN": "${NOTION_API_TOKEN}"
+      }
+    },
+    "fetch": {
+      "command": "uvx",
+      "args": ["mcp-server-fetch"]
+    }
+  }
+}

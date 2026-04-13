@@ -1,0 +1,17 @@
+{
+  "name": "earnings-analyzer",
+  "description": "Fetches SEC filings, earnings call transcripts, and financial news to synthesize a business/financial briefing on a specific public company.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Research Ops",
+    "url": "https://github.com/hoangsonww"
+  },
+  "homepage": "https://github.com/hoangsonww/AI-News-Briefing",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hoangsonww/AI-News-Briefing.git"
+  },
+  "license": "MIT",
+  "keywords": ["finance", "earnings", "sec", "stocks", "research"],
+  "categories": ["research", "finance", "business"]
+}

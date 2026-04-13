@@ -1,0 +1,17 @@
+{
+  "name": "trend-spotter",
+  "description": "Analyzes GitHub trending repos, PyPI/NPM download spikes, and tech Twitter to identify emerging developer trends before they hit mainstream news.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Research Ops",
+    "url": "https://github.com/hoangsonww"
+  },
+  "homepage": "https://github.com/hoangsonww/AI-News-Briefing",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hoangsonww/AI-News-Briefing.git"
+  },
+  "license": "MIT",
+  "keywords": ["trends", "github", "pypi", "npm", "developer", "research"],
+  "categories": ["research", "analytics", "developer-tools"]
+}

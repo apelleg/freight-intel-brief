@@ -1,0 +1,9 @@
+{
+  "name": "podcast-summarizer",
+  "version": "1.0.0",
+  "description": "Extracts transcripts from technical podcasts or YouTube videos and synthesizes core arguments, guest insights, and actionable takeaways.",
+  "author": {
+    "name": "Research Ops"
+  },
+  "license": "MIT"
+}

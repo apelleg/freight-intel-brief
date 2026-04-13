@@ -1,0 +1,29 @@
+{
+  "name": "ai-news-briefing",
+  "description": "Comprehensive AI news tracking, deep research agents, and automated Notion/Teams/Slack publishing.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Son Nguyen",
+    "url": "https://github.com/hoangsonww"
+  },
+  "homepage": "https://github.com/hoangsonww/AI-News-Briefing",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hoangsonww/AI-News-Briefing.git"
+  },
+  "license": "MIT",
+  "keywords": [
+    "news",
+    "briefing",
+    "research",
+    "automation",
+    "notion",
+    "teams",
+    "slack"
+  ],
+  "categories": [
+    "news",
+    "productivity",
+    "research"
+  ]
+}

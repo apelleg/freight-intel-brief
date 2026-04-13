@@ -233,6 +233,26 @@ make custom-brief T="test topic"
 
 ---
 
+## 7. Multi-CLI Plugin Setup
+
+Install or link any of the 10 intelligence plugins into your environment:
+
+### Claude Code
+```bash
+/plugin install ai-news-briefing
+```
+
+### OpenAI Codex
+Enable via **Plugin Directory** in UI (discovers `.agents/` folder).
+
+### Gemini CLI
+```bash
+cd gemini-extensions/ai-news-briefing
+gemini extensions link .
+```
+
+---
+
 ## Quick Reference
 
 ```mermaid

@@ -1,0 +1,19 @@
+{
+  "name": "ai-news-briefing-codex",
+  "version": "1.0.0",
+  "description": "AI News tracking, deep research, and Notion/Teams publishing for Codex.",
+  "author": {
+    "name": "AI News Briefing Project",
+    "email": "team@example.com"
+  },
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "AI News Briefing",
+    "shortDescription": "AI News pipeline & research skills",
+    "longDescription": "Automated daily AI news pipeline, deep research tools, and webhook publishers.",
+    "developerName": "AI News Briefing Project",
+    "category": "Productivity",
+    "capabilities": ["Read", "Write"]
+  }
+}

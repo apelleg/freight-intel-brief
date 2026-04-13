@@ -45,8 +45,9 @@ The system is cross-platform, supporting macOS (launchd) and Windows (Task Sched
 8. [Error Handling](#8-error-handling)
 9. [File System Layout](#9-file-system-layout)
 10. [Security Considerations](#10-security-considerations)
-11. [Teams and Slack Notification Pipelines](#11-teams-and-slack-notification-pipelines)
-12. [Future Enhancements / Extension Points](#12-future-enhancements--extension-points)
+11. [Teams, Slack, and Obsidian Pipelines](#11-teams-slack-and-obsidian-pipelines)
+12. [Research Ops Plugin Ecosystem](#12-research-ops-plugin-ecosystem)
+13. [Future Enhancements / Extension Points](#13-future-enhancements--extension-points)
 
 > **See also:** [Section 3.11 -- Custom Topic Briefing Pipeline](#311-custom-topic-briefing-pipeline), [Section 3.12 -- Test Suite](#312-test-suite), [CUSTOM_BRIEF.md](CUSTOM_BRIEF.md), [TESTS.md](TESTS.md)
 
@@ -1210,7 +1211,34 @@ See [Section 3.9](#39-teams-notification-pipeline), [Section 3.10](#310-slack-no
 
 ---
 
-## 12. Future Enhancements / Extension Points
+## 12. Research Ops Plugin Ecosystem
+
+Beyond the automated pipeline, this project has evolved into a **Unified Research Ops Ecosystem** containing 10 deeply integrated intelligence plugins available natively for **Claude Code**, **OpenAI Codex**, and **Gemini CLI**.
+
+The architecture abstracts core logic into platform-agnostic Agent Skills and leverages localized marketplace discovery mechanisms.
+
+```mermaid
+graph TD
+    subgraph "Core Logic"
+        Instr[SKILL.md / Agent Personas]
+    end
+    subgraph "Claude Code"
+        CP[.claude-plugin/plugin.json]
+    end
+    subgraph "OpenAI Codex"
+        CXP[.codex-plugin/plugin.json]
+    end
+    subgraph "Gemini CLI"
+        GP[gemini-extension.json]
+    end
+    Instr --> CP & CXP & GP
+```
+
+For complete technical specifications, see [PLUGINS.md](PLUGINS.md).
+
+---
+
+## 13. Future Enhancements / Extension Points
 
 ### Adding or Modifying Topics
 

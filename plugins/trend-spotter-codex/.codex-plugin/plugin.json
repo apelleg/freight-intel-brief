@@ -1,0 +1,18 @@
+{
+  "name": "trend-spotter-codex",
+  "version": "1.0.0",
+  "description": "Analyzes GitHub trending repos, package registries, and developer social media to identify emerging developer trends.",
+  "author": {
+    "name": "Research Ops",
+    "email": "ops@example.com"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Trend Spotter",
+    "shortDescription": "Early-stage developer trend detection",
+    "longDescription": "Scans GitHub trending, NPM/PyPI registries, and developer social media to detect early-stage technology shifts before they hit mainstream news.",
+    "developerName": "Research Ops",
+    "category": "Research",
+    "capabilities": ["Read", "WebSearch"]
+  }
+}

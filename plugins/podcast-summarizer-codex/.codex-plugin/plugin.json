@@ -1,0 +1,21 @@
+{
+  "name": "podcast-summarizer-codex",
+  "version": "1.0.0",
+  "description": "Extracts transcripts from technical podcasts or YouTube videos and synthesizes core arguments, guest insights, and actionable takeaways.",
+  "author": {
+    "name": "Research Ops",
+    "email": "ops@example.com"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Podcast Summarizer",
+    "shortDescription": "Extracts transcripts from technical podcasts or Yo",
+    "longDescription": "Extracts transcripts from technical podcasts or YouTube videos and synthesizes core arguments, guest insights, and actionable takeaways.",
+    "developerName": "Research Ops",
+    "category": "Education",
+    "capabilities": [
+      "Read",
+      "WebSearch"
+    ]
+  }
+}

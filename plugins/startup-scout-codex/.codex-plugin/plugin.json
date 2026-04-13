@@ -1,0 +1,21 @@
+{
+  "name": "startup-scout-codex",
+  "version": "1.0.0",
+  "description": "Tracks Y Combinator, Product Hunt, and recent VC funding rounds to identify promising early-stage startups in a specific sector.",
+  "author": {
+    "name": "Research Ops",
+    "email": "ops@example.com"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Startup Scout",
+    "shortDescription": "Tracks Y Combinator, Product Hunt, and recent VC f",
+    "longDescription": "Tracks Y Combinator, Product Hunt, and recent VC funding rounds to identify promising early-stage startups in a specific sector.",
+    "developerName": "Research Ops",
+    "category": "Business",
+    "capabilities": [
+      "Read",
+      "WebSearch"
+    ]
+  }
+}

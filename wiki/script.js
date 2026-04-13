@@ -63,3 +63,46 @@ document.querySelectorAll('.code-copy').forEach((btn) => {
     });
   });
 });
+
+// Scroll Progress Bar
+const progressBar = document.querySelector('.scroll-progress');
+window.addEventListener('scroll', () => {
+  const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const scrolled = (winScroll / height) * 100;
+  if (progressBar) progressBar.style.width = scrolled + '%';
+});
+
+// Reveal Animations Initialization
+document.addEventListener('DOMContentLoaded', () => {
+  // Auto-add reveal class to elements
+  const elementsToReveal = document.querySelectorAll('.section-header, .mermaid-wrap, .table-wrap, .code-section, .feature-card, .topic-card, .cost-card, .file-tree');
+  elementsToReveal.forEach((el) => {
+    el.classList.add('reveal');
+  });
+
+  // Hero elements get special treatment to reveal on load
+  const heroElements = document.querySelectorAll('.hero-badge, .hero h1, .hero-sub, .hero-actions');
+  heroElements.forEach((el, index) => {
+    el.classList.add('reveal');
+    setTimeout(() => {
+      el.classList.add('active');
+    }, index * 150 + 100);
+  });
+
+  revealElements();
+});
+
+function revealElements() {
+  const reveals = document.querySelectorAll('.reveal:not(.active)');
+  const windowHeight = window.innerHeight;
+  const elementVisible = 80; // trigger point
+
+  reveals.forEach((reveal) => {
+    const elementTop = reveal.getBoundingClientRect().top;
+    if (elementTop < windowHeight - elementVisible) {
+      reveal.classList.add('active');
+    }
+  });
+}
+window.addEventListener('scroll', revealElements);

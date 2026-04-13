@@ -1,0 +1,9 @@
+{
+  "name": "earnings-analyzer",
+  "version": "1.0.0",
+  "description": "Fetches SEC filings, earnings call transcripts, and financial news to synthesize a business briefing.",
+  "author": {
+    "name": "Research Ops"
+  },
+  "license": "MIT"
+}

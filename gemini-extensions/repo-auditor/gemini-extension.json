@@ -1,0 +1,9 @@
+{
+  "name": "repo-auditor",
+  "version": "1.0.0",
+  "description": "Analyzes a given GitHub repository for security vulnerabilities, stale dependencies, code quality, and bus factor.",
+  "author": {
+    "name": "Research Ops"
+  },
+  "license": "MIT"
+}

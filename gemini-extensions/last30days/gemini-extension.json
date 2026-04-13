@@ -1,0 +1,18 @@
+{
+  "name": "last30days",
+  "version": "3.0.0",
+  "description": "An AI agent-led search engine scored by upvotes, likes, and real money. Searches Reddit, X, YouTube, HN, from the last 30 days.",
+  "author": {
+    "name": "Open Source Community"
+  },
+  "license": "MIT",
+  "contextFileName": "GEMINI.md",
+  "settings": [
+    {
+      "name": "OpenRouter API Key",
+      "description": "Optional: For Perplexity Sonar grounded web search citations.",
+      "envVar": "OPENROUTER_API_KEY",
+      "sensitive": true
+    }
+  ]
+}

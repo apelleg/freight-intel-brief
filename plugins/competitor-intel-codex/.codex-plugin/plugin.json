@@ -1,0 +1,18 @@
+{
+  "name": "competitor-intel-codex",
+  "version": "1.0.0",
+  "description": "Finds a target product's competitors, compares feature releases, pricing, and customer sentiment.",
+  "author": {
+    "name": "Research Ops",
+    "email": "ops@example.com"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Competitor Intel",
+    "shortDescription": "Competitive market analysis",
+    "longDescription": "Conducts deep competitive intelligence on a target product or company, mapping out rivals, feature gaps, and market sentiment.",
+    "developerName": "Research Ops",
+    "category": "Business",
+    "capabilities": ["Read", "WebSearch"]
+  }
+}

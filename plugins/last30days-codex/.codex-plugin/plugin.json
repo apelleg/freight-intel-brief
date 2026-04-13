@@ -1,0 +1,17 @@
+{
+  "name": "last30days-codex",
+  "version": "3.0.0",
+  "description": "An AI agent-led search engine scored by upvotes, likes, and real money. Searches Reddit, X, YouTube, HN, from the last 30 days.",
+  "author": {
+    "name": "Open Source Community"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Last 30 Days Research",
+    "shortDescription": "Social intelligence & trend research",
+    "longDescription": "Searches Reddit, X, YouTube, HN, Polymarket, and the web from the last 30 days, synthesizing a grounded summary based on human engagement.",
+    "developerName": "Open Source Community",
+    "category": "Research",
+    "capabilities": ["Read", "WebSearch"]
+  }
+}

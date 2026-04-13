@@ -1,0 +1,9 @@
+{
+  "name": "trend-spotter",
+  "version": "1.0.0",
+  "description": "Analyzes GitHub trending repos, PyPI/NPM download spikes, and tech Twitter to identify emerging developer trends.",
+  "author": {
+    "name": "Research Ops"
+  },
+  "license": "MIT"
+}

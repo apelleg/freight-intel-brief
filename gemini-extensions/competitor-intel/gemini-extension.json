@@ -1,0 +1,9 @@
+{
+  "name": "competitor-intel",
+  "version": "1.0.0",
+  "description": "Finds a target product's competitors, compares feature releases, pricing, and customer sentiment.",
+  "author": {
+    "name": "Research Ops"
+  },
+  "license": "MIT"
+}

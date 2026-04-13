@@ -1,0 +1,9 @@
+{
+  "name": "crypto-tracker",
+  "version": "1.0.0",
+  "description": "Analyzes tokenomics, whitepapers, and crypto Twitter sentiment to provide fundamental analysis of crypto projects.",
+  "author": {
+    "name": "Research Ops"
+  },
+  "license": "MIT"
+}

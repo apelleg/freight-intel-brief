@@ -1,0 +1,25 @@
+{
+  "name": "podcast-summarizer",
+  "description": "Extracts transcripts from technical podcasts or YouTube videos and synthesizes core arguments, guest insights, and actionable takeaways.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Research Ops",
+    "url": "https://github.com/hoangsonww"
+  },
+  "homepage": "https://github.com/hoangsonww/AI-News-Briefing",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hoangsonww/AI-News-Briefing.git"
+  },
+  "license": "MIT",
+  "keywords": [
+    "podcast",
+    "youtube",
+    "summary",
+    "learning"
+  ],
+  "categories": [
+    "education",
+    "research"
+  ]
+}
