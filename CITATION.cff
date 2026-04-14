@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "AI News Briefing"
+type: software
+authors:
+  - family-names: Nguyen
+    given-names: Son
+license: MIT
+repository-code: "https://github.com/hoangsonww/ai-news-briefing"
+url: "https://github.com/hoangsonww/ai-news-briefing"
+abstract: "Automated daily AI news research and briefing pipeline that searches the web, compiles structured reports, and publishes results to Notion/Obsidian with optional Teams and Slack delivery."
+keywords:
+  - "ai"
+  - "news"
+  - "automation"
+  - "notion"
+  - "obsidian"
