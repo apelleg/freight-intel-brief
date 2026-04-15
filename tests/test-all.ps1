@@ -20,6 +20,9 @@ function Assert-True { param([bool]$Cond, [string]$Name); if ($Cond) { Test-Pass
 function Assert-Contains { param([string]$Text, [string]$Pattern, [string]$Name)
     if ($Text -match [regex]::Escape($Pattern)) { Test-Pass $Name } else { Test-Fail "$Name (missing '$Pattern')" }
 }
+function Assert-NotContains { param([string]$Text, [string]$Pattern, [string]$Name)
+    if ($Text -notmatch [regex]::Escape($Pattern)) { Test-Pass $Name } else { Test-Fail "$Name (unexpected '$Pattern')" }
+}
 
 Write-Host ""
 Write-Host "   _____                                                                 _____ " -ForegroundColor DarkGray
@@ -166,7 +169,37 @@ Assert-Contains $cbScript "notify-slack.ps1" "cb ps1: calls Slack notifier"
 Assert-Contains $cbScript "CLAUDECODE" "cb ps1: clears CLAUDECODE env"
 
 # =====================================================================
-#  7. CARD JSON VALIDATION
+#  7. ENGINE INVOCATION LOGIC
+# =====================================================================
+Write-Host ""
+Write-Host "=== Engine invocation logic ===" -ForegroundColor Cyan
+
+$dailyPs = Get-Content (Join-Path $ScriptDir "briefing.ps1") -Raw
+$dailySh = Get-Content (Join-Path $ScriptDir "briefing.sh") -Raw
+$customSh = Get-Content (Join-Path $ScriptDir "custom-brief.sh") -Raw
+
+Assert-Contains $dailyPs "exec --full-auto" "daily ps1: codex uses exec --full-auto"
+Assert-Contains $dailyPs "--allow-all-tools --allow-all-paths --allow-all-urls" "daily ps1: copilot uses headless allow flags"
+Assert-NotContains $dailyPs "-q --full-auto" "daily ps1: codex legacy -q removed"
+Assert-NotContains $dailyPs "copilot -p" "daily ps1: copilot legacy -p removed"
+
+Assert-Contains $cbScript "exec --full-auto" "custom ps1: codex uses exec --full-auto"
+Assert-Contains $cbScript "--allow-all-tools --allow-all-paths --allow-all-urls" "custom ps1: copilot uses headless allow flags"
+Assert-NotContains $cbScript "-q --full-auto" "custom ps1: codex legacy -q removed"
+Assert-NotContains $cbScript "copilot -p" "custom ps1: copilot legacy -p removed"
+
+Assert-Contains $dailySh "exec --full-auto" "daily sh: codex uses exec --full-auto"
+Assert-Contains $dailySh "--allow-all-tools --allow-all-paths --allow-all-urls" "daily sh: copilot uses headless allow flags"
+Assert-NotContains $dailySh "-q --full-auto" "daily sh: codex legacy -q removed"
+Assert-NotContains $dailySh "copilot -p" "daily sh: copilot legacy -p removed"
+
+Assert-Contains $customSh "exec --full-auto" "custom sh: codex uses exec --full-auto"
+Assert-Contains $customSh "--allow-all-tools --allow-all-paths --allow-all-urls" "custom sh: copilot uses headless allow flags"
+Assert-NotContains $customSh "-q --full-auto" "custom sh: codex legacy -q removed"
+Assert-NotContains $customSh "copilot -p" "custom sh: copilot legacy -p removed"
+
+# =====================================================================
+#  8. CARD JSON VALIDATION
 # =====================================================================
 Write-Host ""
 Write-Host "=== Card JSON validation ===" -ForegroundColor Cyan
@@ -204,7 +237,7 @@ if ($cards.Count -gt 0) {
 }
 
 # =====================================================================
-#  8. TEAMS-TO-SLACK CONVERTER
+#  9. TEAMS-TO-SLACK CONVERTER
 # =====================================================================
 Write-Host ""
 Write-Host "=== Teams-to-Slack converter ===" -ForegroundColor Cyan
@@ -238,7 +271,7 @@ if ($cards.Count -gt 0) {
 }
 
 # =====================================================================
-#  9. NOTIFICATION SCRIPT STRUCTURE
+#  10. NOTIFICATION SCRIPT STRUCTURE
 # =====================================================================
 Write-Host ""
 Write-Host "=== Notification script structure ===" -ForegroundColor Cyan
@@ -254,7 +287,7 @@ Assert-Contains $slackPs "AI_BRIEFING_SLACK_WEBHOOK" "notify-slack.ps1: reads we
 Assert-Contains $slackPs "teams-to-slack.py" "notify-slack.ps1: calls converter"
 
 # =====================================================================
-#  10. DOCUMENTATION
+#  11. DOCUMENTATION
 # =====================================================================
 Write-Host ""
 Write-Host "=== Documentation ===" -ForegroundColor Cyan

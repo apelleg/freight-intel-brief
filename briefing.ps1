@@ -83,13 +83,6 @@ function Resolve-CliBinary {
             return $null
         }
         "copilot" {
-            $gh = Get-Command "gh" -ErrorAction SilentlyContinue
-            if ($gh) {
-                try {
-                    $exts = & gh extension list 2>$null
-                    if ($exts -match "copilot") { return $gh.Source }
-                } catch {}
-            }
             $cmd = Get-Command "copilot" -ErrorAction SilentlyContinue
             if ($cmd) { return $cmd.Source }
             return $null
@@ -110,14 +103,10 @@ function Invoke-Engine {
     try {
         $output = switch ($CliName) {
             "claude"  { & $Binary -p --model $model --dangerously-skip-permissions $Prompt 2>&1 }
-            "codex"   { & $Binary -q --full-auto $Prompt 2>&1 }
+            "codex"   { & $Binary exec --full-auto $Prompt 2>&1 }
             "gemini"  { & $Binary -p $Prompt 2>&1 }
             "copilot" {
-                if ($Binary -match '[/\\]gh(\.exe)?$') {
-                    & $Binary copilot -p $Prompt 2>&1
-                } else {
-                    & $Binary -p $Prompt 2>&1
-                }
+                & $Binary --prompt $Prompt --allow-all-tools --allow-all-paths --allow-all-urls 2>&1
             }
         }
         $output | Out-File -FilePath $LogFile -Append -Encoding utf8

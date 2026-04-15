@@ -25,8 +25,8 @@ You need at least one of the following CLI engines. Install one or more for fall
 |---|---|---|
 | **Claude Code** | [code.claude.com](https://code.claude.com) | `claude --version` |
 | **Codex** | `npm install -g @openai/codex` | `codex --version` |
-| **Gemini** | `npm install -g @anthropic-ai/gemini-cli` or see [Google AI docs](https://ai.google.dev) | `gemini --version` |
-| **Copilot** | `npm install -g @githubnext/github-copilot-cli` or via GitHub CLI extension | `copilot --version` |
+| **Gemini** | `npm install -g @google/gemini-cli` or see [Google AI docs](https://ai.google.dev) | `gemini --version` |
+| **Copilot** | `npm install -g @github/copilot` | `copilot --version` |
 
 The daily briefing auto-detects installed engines and falls back in order: `claude` → `codex` → `gemini` → `copilot`. Set `AI_BRIEFING_CLI` to force a specific engine:
 

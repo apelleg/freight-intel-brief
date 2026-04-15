@@ -19,7 +19,7 @@ flowchart TD
 
     subgraph "Research Pipeline"
         CLI -->|Injects topic + flags| P[prompt-custom-brief.md]
-        P -->|"claude/codex/gemini/copilot -p"| C[AI Engine]
+        P -->|"headless engine invocation"| C[AI Engine]
 
         C -->|Phase 1: Parallel| A1[Agent 1: Breaking News]
         C -->|Phase 1: Parallel| A2[Agent 2: Technical Analysis]
