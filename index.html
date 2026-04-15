@@ -78,7 +78,7 @@
 </nav>
 
 <section class="hero">
-  <div class="hero-badge"><span class="dot"></span> Last refreshed: April 11, 2026</div>
+  <div class="hero-badge"><span class="dot"></span> Last refreshed: April 15, 2026</div>
   <h1>AI News Briefing<br><span class="gradient">Comprehensive Project Wiki</span></h1>
   <p class="hero-sub">
     End-to-end reference for the automated daily pipeline and on-demand deep research: scheduler triggers, multi-engine CLI execution (Claude, Codex, Gemini, Copilot),
@@ -244,7 +244,7 @@ sequenceDiagram
     S->>E: Start briefing script
     E->>E: Setup date, logs, env
     E->>E: Refresh webhook env (Windows)
-    E->>C: invoke selected engine (fallback chain)
+    E->>C: invoke selected engine (AI_BRIEFING_CLI or daily fallback)
 
     C->>C: Step 0a read logs/covered-stories.txt
     C->>N: Step 0b fetch most recent briefing
@@ -294,7 +294,7 @@ sequenceDiagram
     <h2 class="section-title">Execution guarantees and gaps</h2>
     <p class="section-desc">What each stage expects, produces, and where failures usually happen.</p>
     <p class="section-desc" style="margin-top: 1rem; color: #a78bfa;">
-      Our end-to-end flow is completely headless and automated. From the moment the scheduler fires, the entry scripts handle environment sanitization, log rotation, and secure API execution. The system guarantees that if the primary AI engine fails, it gracefully falls back through a pre-defined chain of available models, ensuring your daily briefing is delivered consistently.
+      Our end-to-end flow is completely headless and automated. From the moment the scheduler fires, the entry scripts handle environment sanitization, log rotation, and secure API execution. Daily briefing supports fallback (`claude → codex → gemini → copilot`) when no explicit engine is set. Custom brief supports the same engines, but uses explicit selection (`--cli` / `-Cli`), then `AI_BRIEFING_CLI`, then defaults to `claude` (no fallback chain).
     </p>
   </div>
 
@@ -537,6 +537,9 @@ flowchart TD
 <span class="comment"># Interactive mode (prompts for topic and destinations)</span>
 <span class="cmd">./custom-brief.sh</span>
 
+<span class="comment"># Pick a specific engine</span>
+<span class="cmd">./custom-brief.sh</span> <span class="flag">--cli</span> <span class="string">codex</span> <span class="flag">-t</span> <span class="string">"AI safety"</span> <span class="flag">-n</span>
+
 <span class="comment"># PowerShell</span>
 <span class="cmd">.\custom-brief.ps1</span> <span class="flag">-Topic</span> <span class="string">"AI regulation EU"</span> <span class="flag">-Notion -Teams -Obsidian</span>
 
@@ -560,6 +563,7 @@ flowchart TD
       <tr><td>Depth</td><td>Broad scan (search per topic)</td><td>Deep (5 parallel agents + follow-ups)</td></tr>
       <tr><td>Deduplication</td><td>Yes (covered-stories.txt)</td><td>No (standalone)</td></tr>
       <tr><td>Notion title</td><td><code>YYYY-MM-DD - AI Daily Briefing</code></td><td><code>YYYY-MM-DD - Custom Brief: [Topic]</code></td></tr>
+      <tr><td>Engine selection</td><td><code>AI_BRIEFING_CLI</code> or fallback chain</td><td><code>--cli/-Cli</code> → <code>AI_BRIEFING_CLI</code> → <code>claude</code></td></tr>
       <tr><td>Obsidian vault file</td><td><code>AI-News-Briefings/YYYY-MM-DD.md</code></td><td><code>AI-News-Briefings/YYYY-MM-DD - [Topic].md</code></td></tr>
       <tr><td>CLI output</td><td>Logged to file only</td><td>Printed to terminal + logged</td></tr>
       <tr><td>Card filename</td><td><code>logs/YYYY-MM-DD-card.json</code></td><td><code>logs/custom-TIMESTAMP-card.json</code></td></tr>
