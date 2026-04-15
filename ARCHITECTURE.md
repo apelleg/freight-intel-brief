@@ -58,7 +58,7 @@ The system is cross-platform, supporting macOS (launchd) and Windows (Task Sched
 
 ## 1. System Architecture Overview
 
-The system is composed of five primary layers: a platform-native scheduler, a scripted entry point, a CLI engine selection layer, the AI engine itself, and the Notion API as the output destination. The engine selection layer implements a registry pattern -- it checks for installed engines (Claude Code, Codex, Gemini, Copilot) and selects one based on the `AI_BRIEFING_CLI` environment variable or an automatic fallback chain (`claude` → `codex` → `gemini` → `copilot`). The core logic (prompt, search, compilation, Notion write, card generation) is identical across platforms and engines -- only the scheduling, scripting, and engine selection layers differ.
+The system is composed of five primary layers: a platform-native scheduler, a scripted entry point, a CLI engine selection layer, the AI engine itself, and the Notion API as the output destination. The daily pipeline implements a registry pattern -- it checks for installed engines (Claude Code, Codex, Gemini, Copilot) and selects one based on the `AI_BRIEFING_CLI` environment variable or an automatic fallback chain (`claude` → `codex` → `gemini` → `copilot`). The custom-brief pipeline also supports all four engines, but does not run a fallback chain: it uses explicit `--cli/-Cli` when provided, otherwise `AI_BRIEFING_CLI`, otherwise `claude`. The core logic (prompt, search, compilation, Notion write, card generation) is identical across platforms and engines -- only the scheduling, scripting, and engine selection layers differ.
 
 ```mermaid
 graph TD
@@ -108,7 +108,7 @@ graph TD
 **Key design principles:**
 
 - **Headless execution.** The entire pipeline runs without user interaction via the selected engine's headless/print mode.
-- **Multi-engine support.** Four AI CLI engines are supported (Claude Code, Codex, Gemini, Copilot) with automatic fallback. The `AI_BRIEFING_CLI` env var overrides the fallback chain, and `AI_BRIEFING_MODEL` overrides the default model.
+- **Multi-engine support.** Four AI CLI engines are supported (Claude Code, Codex, Gemini, Copilot). Daily briefings use automatic fallback; custom briefs support explicit engine selection and default to `AI_BRIEFING_CLI` or `claude`.
 - **Cross-platform.** Platform-specific code is isolated to the entry point scripts and scheduler configs. The prompt, search strategy, and output format are shared.
 - **Single responsibility.** Each file has one job: scheduling, orchestration, prompt definition, or installation.
 - **Cost containment.** A hard budget cap of $2.00 per run prevents runaway API costs.
@@ -569,7 +569,7 @@ flowchart TD
         SH -->|"Inject {{TOPIC}}, {{DATE}}, flags"| PT[prompt-custom-brief.md]
         PS -->|"Inject {{TOPIC}}, {{DATE}}, flags"| PT
         SK -->|Interactive params| CC
-        PT --> CC[Claude Code CLI]
+        PT --> CC[Selected AI CLI]
     end
 
     subgraph "Phase 1: Broad Discovery (Parallel)"
@@ -632,7 +632,7 @@ Each of the 5 agents receives a targeted search brief and returns findings with 
 
 #### Prompt Template Variable Injection
 
-The CLI scripts perform string replacement on `prompt-custom-brief.md` before passing it to Claude:
+The CLI scripts perform string replacement on `prompt-custom-brief.md` before passing it to the selected AI CLI engine:
 
 ```mermaid
 flowchart LR
@@ -641,8 +641,19 @@ flowchart LR
     S -->|"Replace {{TOPIC}}"| P["prompt-custom-brief.md"]
     S -->|"Replace {{DATE}}"| P
     S -->|"Replace {{PUBLISH_*}}"| P
-    P -->|"claude -p --model opus"| C[Claude Code]
+    P -->|"engine-specific headless invocation"| C[Selected AI CLI]
 ```
+
+#### Custom Brief Engine Selection
+
+Custom brief supports all four engines (`claude`, `codex`, `gemini`, `copilot`) on both Bash and PowerShell entry scripts:
+
+1. `--cli` / `-Cli` explicitly selects an engine.
+2. If omitted, `AI_BRIEFING_CLI` is used when set.
+3. If still unset, default is `claude`.
+4. Interactive REPL mode lets users pick from the listed engines and shows availability.
+
+Unlike daily briefing, custom brief does **not** run an automatic fallback chain after a failed engine run.
 
 #### Relationship to Daily Briefing
 
@@ -1072,7 +1083,14 @@ When `AI_BRIEFING_CLI` is not set, the entry scripts implement a fallback chain 
 
 When `AI_BRIEFING_CLI` is explicitly set, only that engine is tried. This is useful for CI environments or when you want deterministic engine selection.
 
-Each engine is invoked with equivalent flags for headless mode, model selection, and budget caps. The `AI_BRIEFING_MODEL` env var overrides the default model regardless of which engine is selected.
+Daily entry scripts invoke engines with engine-specific headless commands:
+
+- Claude: `claude -p --model <model> --dangerously-skip-permissions "<prompt>"`
+- Codex: `codex exec --full-auto "<prompt>"`
+- Gemini: `gemini -p "<prompt>"`
+- Copilot: `copilot --prompt "<prompt>" --allow-all-tools --allow-all-paths --allow-all-urls`
+
+`AI_BRIEFING_MODEL` is currently applied to Claude invocations.
 
 ---
 
@@ -1246,7 +1264,7 @@ Edit `prompt.md`, Section "Topics to Search". Update the `Topics` property value
 
 ### Changing the AI Model
 
-Set the `AI_BRIEFING_MODEL` environment variable, or change `--model sonnet` in the entry script for your platform. Consider adjusting `--max-budget-usd` accordingly. The model override applies to whichever engine is selected.
+Set the `AI_BRIEFING_MODEL` environment variable, or change the `--model` argument in the Claude entry script for your platform (current default: `opus`).
 
 ### Multi-Engine Support
 
@@ -1260,9 +1278,9 @@ Set the `AI_BRIEFING_MODEL` environment variable, or change `--model sonnet` in 
 
 | Channel | Status | Implementation Approach |
 |---|---|---|
-| Microsoft Teams | **Implemented** | Claude Code writes Adaptive Card JSON (Step 4), `notify-teams.sh/.ps1` validates and POSTs to Power Automate webhook. See [Section 3.9](#39-teams-notification-pipeline). |
+| Microsoft Teams | **Implemented** | Selected AI engine writes Adaptive Card JSON (Step 4), `notify-teams.sh/.ps1` validates and POSTs to Power Automate webhook. See [Section 3.9](#39-teams-notification-pipeline). |
 | Slack | **Implemented** | `notify-slack.sh/.ps1` converts the Teams card JSON to Slack Block Kit using `teams-to-slack.py` and POSTs to Slack webhook. See [Section 3.10](#310-slack-notification-pipeline). |
-| Obsidian | **Implemented** | Claude Code writes graph-ready markdown (Step 5) with `[[wikilinks]]` and YAML frontmatter. `publish-obsidian.sh/.ps1` copies to vault and creates topic stub pages. See [Section 3.12](#312-obsidian-publishing-pipeline). |
+| Obsidian | **Implemented** | Selected AI engine writes graph-ready markdown (Step 5) with `[[wikilinks]]` and YAML frontmatter. `publish-obsidian.sh/.ps1` copies to vault and creates topic stub pages. See [Section 3.12](#312-obsidian-publishing-pipeline). |
 | macOS notification | Planned | `osascript -e 'display notification ...'` in `briefing.sh` |
 | Windows toast | Planned | `New-BurntToastNotification` or `[Windows.UI.Notifications]` in `briefing.ps1` |
 | Email | Planned | `mail`/`sendmail` (macOS) or `Send-MailMessage` (Windows) in the entry script |

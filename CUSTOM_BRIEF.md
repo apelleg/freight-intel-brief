@@ -146,7 +146,7 @@ Claude will ask for the topic and destinations, then run the research pipeline i
 | Flag | Description |
 |------|-------------|
 | `--topic`, `-t` | Topic to research (required in non-interactive mode) |
-| `--cli` | AI engine to use: `claude`, `codex`, `gemini`, `copilot` (default: auto-detect) |
+| `--cli` | AI engine to use: `claude`, `codex`, `gemini`, `copilot` (default: `AI_BRIEFING_CLI`, else `claude`) |
 | `--notion`, `-n` | Publish briefing to Notion |
 | `--obsidian`, `-o` | Publish briefing to Obsidian vault (requires `AI_BRIEFING_OBSIDIAN_VAULT`) |
 | `--teams` | Send Adaptive Card to Teams |
@@ -158,7 +158,7 @@ Claude will ask for the topic and destinations, then run the research pipeline i
 | Parameter | Description |
 |-----------|-------------|
 | `-Topic` | Topic to research (required in non-interactive mode) |
-| `-Cli` | AI engine to use: `claude`, `codex`, `gemini`, `copilot` (default: auto-detect) |
+| `-Cli` | AI engine to use: `claude`, `codex`, `gemini`, `copilot` (default: `AI_BRIEFING_CLI`, else `claude`) |
 | `-Notion` | Publish briefing to Notion |
 | `-Obsidian` | Publish briefing to Obsidian vault (requires `AI_BRIEFING_OBSIDIAN_VAULT`) |
 | `-Teams` | Send Adaptive Card to Teams |
@@ -169,11 +169,23 @@ Claude will ask for the topic and destinations, then run the research pipeline i
 | Variable | Description |
 |----------|-------------|
 | `T` | Topic (required) |
-| `CLI` | AI engine to use: `claude`, `codex`, `gemini`, `copilot` (default: auto-detect) |
+| `CLI` | AI engine to use: `claude`, `codex`, `gemini`, `copilot` (default: `AI_BRIEFING_CLI`, else `claude`) |
 | `NOTION` | Set to `1` to publish to Notion |
 | `OBSIDIAN` | Set to `1` to publish to Obsidian vault |
 | `TEAMS` | Set to `1` to send to Teams |
 | `SLACK` | Set to `1` to send to Slack |
+
+---
+
+## Engine Selection Behavior
+
+Custom brief lets you choose any supported engine (`claude`, `codex`, `gemini`, `copilot`) in three ways:
+
+1. Pass `--cli` / `-Cli` / `CLI=<engine>` explicitly.
+2. Leave it unset and rely on `AI_BRIEFING_CLI` if present.
+3. If neither is set, it defaults to `claude`.
+
+In interactive mode, the REPL lists engine availability and lets you pick one. Unlike daily briefing, custom brief does not run an automatic fallback chain after a failed engine run.
 
 ---
 

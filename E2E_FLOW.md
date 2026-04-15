@@ -1,6 +1,6 @@
 # End-to-End Flow: AI News Briefing Pipeline
 
-This document describes the real runtime flow of this repository as of March 24, 2026.
+This document describes the real runtime flow of this repository as of April 15, 2026.
 It is based on the current implementation in:
 
 - `briefing.sh`
@@ -38,8 +38,9 @@ flowchart TD
 
     B1 --> C[prompt.md loaded into memory]
     B2 --> C
-
-    C --> D[Claude Code CLI\n-p --model opus\n--dangerously-skip-permissions]
+    B1 --> ER[Engine resolver\nAI_BRIEFING_CLI or fallback]
+    B2 --> ER
+    ER --> D[Selected AI CLI\nclaude/codex/gemini/copilot\n(headless mode)]
 
     D --> E[WebSearch tool calls]
     D --> F[Notion MCP calls]
@@ -89,7 +90,7 @@ flowchart TD
 sequenceDiagram
     participant S as Scheduler/Manual Trigger
     participant E as Entry Script
-    participant C as Claude CLI
+    participant C as Selected AI CLI
     participant W as WebSearch
     participant N as Notion MCP
     participant L as logs/YYYY-MM-DD.log
@@ -107,7 +108,7 @@ sequenceDiagram
     E->>E: Ensure logs/ exists
     E->>E: Load prompt.md
 
-    E->>C: Run Claude with prompt text
+    E->>C: Run selected engine with prompt text
     C->>W: Search news by topic
     W-->>C: Recent results
     C->>N: Create Notion page
@@ -158,12 +159,19 @@ Entry scripts do the same core setup:
 2. Clear `CLAUDECODE` to avoid nested-session failures.
 3. Create `logs/` if missing.
 4. Read `prompt.md` as one string.
-5. Invoke Claude CLI with the configured model (`opus` in current scripts).
+5. Resolve engine (`AI_BRIEFING_CLI` or fallback chain) and invoke selected CLI in headless mode.
 6. Append output to `logs/YYYY-MM-DD.log`.
 7. Attempt Teams notify when Teams webhook env var is present.
 8. Attempt Slack notify when Slack webhook env var is present.
 9. Attempt Obsidian publish when vault env var is present.
 10. Delete only old `*.log` files (>30 days).
+
+Daily engine invocation templates:
+
+- Claude: `claude -p --model <model> --dangerously-skip-permissions "<prompt>"`
+- Codex: `codex exec --full-auto "<prompt>"`
+- Gemini: `gemini -p "<prompt>"`
+- Copilot: `copilot --prompt "<prompt>" --allow-all-tools --allow-all-paths --allow-all-urls`
 
 ### Stage B: Date Override / Backfill Path
 
@@ -280,12 +288,12 @@ Current `briefing.sh` and `briefing.ps1` invoke both notifiers in all-URL mode (
 stateDiagram-v2
     [*] --> Triggered
     Triggered --> Setup
-    Setup --> ClaudeRun
+    Setup --> EngineRun
 
-    ClaudeRun --> ClaudeFailed: non-zero exit / runtime error
-    ClaudeRun --> ClaudeSucceeded: exit 0
+    EngineRun --> EngineFailed: non-zero exit / runtime error
+    EngineRun --> EngineSucceeded: exit 0
 
-    ClaudeSucceeded --> TeamsCheck
+    EngineSucceeded --> TeamsCheck
     TeamsCheck --> TeamsSkipped: teams env not set
     TeamsCheck --> TeamsNotifyAttempt: teams env set
     TeamsNotifyAttempt --> TeamsFailed: missing card / invalid json / non-2xx
@@ -300,7 +308,7 @@ stateDiagram-v2
     SlackNotifyAttempt --> SlackFailed: missing card / conversion error / non-2xx
     SlackNotifyAttempt --> SlackDone: slack notify success
 
-    ClaudeFailed --> Cleanup
+    EngineFailed --> Cleanup
     SlackSkipped --> Cleanup
     SlackFailed --> Cleanup
     SlackDone --> Cleanup
@@ -332,10 +340,10 @@ Notes:
 
 | Artifact | Producer | Consumer | Required for success |
 |---|---|---|---|
-| `logs/YYYY-MM-DD.log` | entry scripts + Claude stdout/stderr | humans, diagnostic scripts | No (diagnostic) |
-| Notion page | Claude via Notion MCP | Notion workspace | Yes |
-| `logs/YYYY-MM-DD-card.json` | Claude (expected) | notify-teams scripts, notify-slack scripts, teams-to-slack.py | Yes for Teams and Slack paths |
-| `logs/YYYY-MM-DD-obsidian.md` | Claude (expected) | publish-obsidian scripts | Yes for Obsidian path |
+| `logs/YYYY-MM-DD.log` | entry scripts + selected engine stdout/stderr | humans, diagnostic scripts | No (diagnostic) |
+| Notion page | selected engine via Notion MCP | Notion workspace | Yes |
+| `logs/YYYY-MM-DD-card.json` | selected engine (expected) | notify-teams scripts, notify-slack scripts, teams-to-slack.py | Yes for Teams and Slack paths |
+| `logs/YYYY-MM-DD-obsidian.md` | selected engine (expected) | publish-obsidian scripts | Yes for Obsidian path |
 | Converted Slack payload (temp) | notify-slack scripts | Slack webhook endpoint | Yes for Slack path |
 | Teams message | notify-teams scripts | Teams channel | Optional |
 | Slack message | notify-slack scripts | Slack channel | Optional |
@@ -344,7 +352,7 @@ Notes:
 
 ## 8. Operational Checklist
 
-1. Ensure Claude CLI path exists (`~/.local/bin/claude` or `.exe`).
+1. Ensure at least one supported CLI path exists (`claude`, `codex`, `gemini`, or `copilot`).
 2. Ensure Notion MCP is configured and has DB access.
 3. Ensure `prompt.md` Step 4 still writes `logs/YYYY-MM-DD-card.json`.
 4. Ensure `prompt.md` Step 5 still writes `logs/YYYY-MM-DD-obsidian.md`.
@@ -362,3 +370,4 @@ Notes:
 - **Slack integration:** `notify-slack.sh/.ps1` converts the Teams card JSON to Slack Block Kit format using `teams-to-slack.py` and POSTs it to Slack webhooks. No separate card generation needed — reuses the Teams card.
 - **Obsidian integration:** `publish-obsidian.sh/.ps1` copies graph-ready markdown (with `[[wikilinks]]` and YAML frontmatter) to an Obsidian vault. Topic stub pages are auto-created for graph connectivity. Set `AI_BRIEFING_OBSIDIAN_VAULT` to enable.
 - **Prompt/runtime alignment:** `prompt.md` Step 4 now writes `logs/YYYY-MM-DD-card.json` directly. Step 5 writes `logs/YYYY-MM-DD-obsidian.md`. The legacy `build-teams-card.py` parser is no longer part of the active pipeline.
+- **Headless engine updates:** Codex now runs via `codex exec --full-auto`, and Copilot runs via `copilot --prompt ... --allow-all-tools --allow-all-paths --allow-all-urls` for non-interactive execution.
