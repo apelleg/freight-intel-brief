@@ -59,11 +59,6 @@ resolve_binary() {
       return 1
       ;;
     copilot)
-      if command -v gh >/dev/null 2>&1; then
-        if gh extension list 2>/dev/null | grep -q copilot; then
-          echo "gh"; return 0
-        fi
-      fi
       command -v copilot 2>/dev/null && return 0
       return 1
       ;;
@@ -93,7 +88,7 @@ run_engine() {
         "$prompt" 2>&1 | tee -a "$log"
       ;;
     codex)
-      "$binary" -q --full-auto \
+      "$binary" exec --full-auto \
         "$prompt" 2>&1 | tee -a "$log"
       ;;
     gemini)
@@ -101,13 +96,8 @@ run_engine() {
         "$prompt" 2>&1 | tee -a "$log"
       ;;
     copilot)
-      if [ "$binary" = "gh" ]; then
-        "$binary" copilot -p \
-          "$prompt" 2>&1 | tee -a "$log"
-      else
-        "$binary" -p \
-          "$prompt" 2>&1 | tee -a "$log"
-      fi
+      "$binary" --prompt "$prompt" \
+        --allow-all-tools --allow-all-paths --allow-all-urls 2>&1 | tee -a "$log"
       ;;
   esac
 }

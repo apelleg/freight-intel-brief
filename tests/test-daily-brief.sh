@@ -17,6 +17,7 @@ fi
 pass() { PASS=$((PASS + 1)); echo -e "  ${GRN}PASS${R}  $1"; }
 fail() { FAIL=$((FAIL + 1)); echo -e "  ${RED}FAIL${R}  $1"; }
 assert_contains() { if echo "$1" | grep -qF -- "$2"; then pass "$3"; else fail "$3 ${D}(missing '$2')${R}"; fi; }
+assert_not_contains() { if echo "$1" | grep -qF -- "$2"; then fail "$3 ${D}(unexpected '$2')${R}"; else pass "$3"; fi; }
 assert_eq() { if [[ "$1" == "$2" ]]; then pass "$3"; else fail "$3 ${D}(expected '$2', got '$1')${R}"; fi; }
 section() { echo ""; echo -e "  ${CYN}${B}$1${R}"; }
 
@@ -83,6 +84,10 @@ entry=$(cat "$SCRIPT_DIR/briefing.sh")
 assert_contains "$entry" "fallback" "briefing.sh: uses fallback chain (explicit error handling)"
 assert_contains "$entry" "prompt.md" "briefing.sh: reads prompt.md"
 assert_contains "$entry" "claude" "briefing.sh: invokes Claude CLI"
+assert_contains "$entry" "exec --full-auto" "briefing.sh: codex uses exec headless mode"
+assert_contains "$entry" "--allow-all-tools --allow-all-paths --allow-all-urls" "briefing.sh: copilot uses headless allow flags"
+assert_not_contains "$entry" "-q --full-auto" "briefing.sh: removes legacy codex -q flag"
+assert_not_contains "$entry" "copilot -p" "briefing.sh: removes legacy copilot -p invocation"
 assert_contains "$entry" "notify-teams" "briefing.sh: calls Teams notifier"
 assert_contains "$entry" "notify-slack" "briefing.sh: calls Slack notifier"
 assert_contains "$entry" "CLAUDECODE" "briefing.sh: clears CLAUDECODE env"
@@ -94,6 +99,10 @@ ps_entry=$(cat "$SCRIPT_DIR/briefing.ps1")
 assert_contains "$ps_entry" "StrictMode" "briefing.ps1: uses strict mode"
 assert_contains "$ps_entry" "prompt.md" "briefing.ps1: reads prompt.md"
 assert_contains "$ps_entry" "claude" "briefing.ps1: invokes Claude CLI"
+assert_contains "$ps_entry" "exec --full-auto" "briefing.ps1: codex uses exec headless mode"
+assert_contains "$ps_entry" "--allow-all-tools --allow-all-paths --allow-all-urls" "briefing.ps1: copilot uses headless allow flags"
+assert_not_contains "$ps_entry" "-q --full-auto" "briefing.ps1: removes legacy codex -q flag"
+assert_not_contains "$ps_entry" "copilot -p" "briefing.ps1: removes legacy copilot -p invocation"
 assert_contains "$ps_entry" "notify-teams" "briefing.ps1: calls Teams notifier"
 assert_contains "$ps_entry" "notify-slack" "briefing.ps1: calls Slack notifier"
 assert_contains "$ps_entry" "CLAUDECODE" "briefing.ps1: clears CLAUDECODE env"

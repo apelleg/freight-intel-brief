@@ -21,6 +21,7 @@ pass() { PASS=$((PASS + 1)); echo -e "  ${GRN}PASS${R}  $1"; }
 fail() { FAIL=$((FAIL + 1)); echo -e "  ${RED}FAIL${R}  $1"; }
 assert_eq() { if [[ "$1" == "$2" ]]; then pass "$3"; else fail "$3 ${D}(expected '$2', got '$1')${R}"; fi; }
 assert_contains() { if echo "$1" | grep -qF -- "$2"; then pass "$3"; else fail "$3 ${D}(missing '$2')${R}"; fi; }
+assert_not_contains() { if echo "$1" | grep -qF -- "$2"; then fail "$3 ${D}(unexpected '$2')${R}"; else pass "$3"; fi; }
 section() { echo ""; echo -e "  ${CYN}${B}$1${R}"; }
 
 echo ""
@@ -153,6 +154,17 @@ cb=$(cat "$CUSTOM_BRIEF")
 assert_contains "$cb" "PUBLISH_OBSIDIAN" "custom-brief.sh: has PUBLISH_OBSIDIAN variable"
 assert_contains "$cb" "obsidian" "custom-brief.sh: has obsidian flag handling"
 assert_contains "$cb" "publish-obsidian" "custom-brief.sh: calls publish-obsidian script"
+assert_contains "$cb" "exec --full-auto" "custom-brief.sh: codex uses exec headless mode"
+assert_contains "$cb" "--allow-all-tools --allow-all-paths --allow-all-urls" "custom-brief.sh: copilot uses headless allow flags"
+assert_not_contains "$cb" "-q --full-auto" "custom-brief.sh: removes legacy codex -q flag"
+assert_not_contains "$cb" "copilot -p" "custom-brief.sh: removes legacy copilot -p invocation"
+
+section "Engine invocation logic (custom-brief.ps1)"
+cb_ps=$(cat "$SCRIPT_DIR/custom-brief.ps1")
+assert_contains "$cb_ps" "exec --full-auto" "custom-brief.ps1: codex uses exec headless mode"
+assert_contains "$cb_ps" "--allow-all-tools --allow-all-paths --allow-all-urls" "custom-brief.ps1: copilot uses headless allow flags"
+assert_not_contains "$cb_ps" "-q --full-auto" "custom-brief.ps1: removes legacy codex -q flag"
+assert_not_contains "$cb_ps" "copilot -p" "custom-brief.ps1: removes legacy copilot -p invocation"
 
 # -- Obsidian integration (prompt template) ----------------
 section "Obsidian integration (prompt-custom-brief.md)"
