@@ -9,13 +9,18 @@ const hamburger = document.querySelector('.nav-hamburger');
 const navLinks = document.querySelector('.nav-links');
 const MENU_ICON = 'M3 12h18M3 6h18M3 18h18';
 const CLOSE_ICON = 'M18 6L6 18M6 6l12 12';
+const navIconPath = hamburger ? hamburger.querySelector('path') : null;
+
+function setMobileMenuOpen(isOpen) {
+  if (!navLinks || !navIconPath) return;
+  navLinks.classList.toggle('open', isOpen);
+  navIconPath.setAttribute('d', isOpen ? CLOSE_ICON : MENU_ICON);
+}
 
 if (hamburger) {
   hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('open');
-    const path = hamburger.querySelector('path');
     const isOpen = navLinks.classList.contains('open');
-    path.setAttribute('d', isOpen ? CLOSE_ICON : MENU_ICON);
+    setMobileMenuOpen(!isOpen);
   });
 }
 
@@ -41,7 +46,7 @@ sections.forEach((s) => observer.observe(s));
 // Close mobile nav on link click
 navAnchors.forEach((a) => {
   a.addEventListener('click', () => {
-    navLinks.classList.remove('open');
+    setMobileMenuOpen(false);
   });
 });
 
