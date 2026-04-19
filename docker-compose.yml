@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  briefing:
+    build: .
+    image: ghcr.io/${GITHUB_REPOSITORY_OWNER}/ai-news-briefing:latest
+    volumes:
+      # Mount Claude auth configuration
+      - ~/.config/claude:/root/.config/claude
+      # Mount workspace for local execution
+      - .:/app
+    env_file:
+      - .env
+    command: bash briefing.sh
