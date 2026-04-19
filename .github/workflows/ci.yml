@@ -170,11 +170,35 @@ jobs:
           done
           exit $status
 
+  # ── Job 6: Docker → GHCR ────────────────────────────────────
+  docker:
+    name: "🐳 Docker → GHCR"
+    needs: [test-bash, validate]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: ./Dockerfile
+          push: ${{ github.event_name != 'pull_request' }}
+          tags: |
+            ghcr.io/${{ github.repository_owner }}/ai-news-briefing:${{ github.sha }}
+            ghcr.io/${{ github.repository_owner }}/ai-news-briefing:latest
+
   # ── Summary ─────────────────────────────────────────────────
   summary:
     name: 📊 Summary
     if: always()
-    needs: [lint, test-bash, test-powershell, validate, docs]
+    needs: [lint, test-bash, test-powershell, validate, docs, docker]
     runs-on: ubuntu-latest
     steps:
       - name: Pipeline results
@@ -189,13 +213,15 @@ jobs:
           | 🪟 Test (PowerShell) | `${{ needs.test-powershell.result }}` |
           | ✅ Validate | `${{ needs.validate.result }}` |
           | 📚 Docs | `${{ needs.docs.result }}` |
+          | 🐳 Docker | `${{ needs.docker.result }}` |
           EOF
 
           # Fail if any required job failed (lint excluded — advisory only)
           if [[ "${{ needs.test-bash.result }}" == "failure" ]] || \
              [[ "${{ needs.test-powershell.result }}" == "failure" ]] || \
              [[ "${{ needs.validate.result }}" == "failure" ]] || \
-             [[ "${{ needs.docs.result }}" == "failure" ]]; then
+             [[ "${{ needs.docs.result }}" == "failure" ]] || \
+             [[ "${{ needs.docker.result }}" == "failure" ]]; then
             echo "" >> "$GITHUB_STEP_SUMMARY"
             echo "> [!CAUTION]" >> "$GITHUB_STEP_SUMMARY"
             echo "> Some checks failed." >> "$GITHUB_STEP_SUMMARY"
