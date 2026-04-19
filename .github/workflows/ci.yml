@@ -1,4 +1,4 @@
-name: 🔬 CI
+name: 🔬 CI Pipeline for AI News Briefing Research Ops System
 
 on:
   push:
