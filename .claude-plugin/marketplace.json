@@ -1,13 +1,17 @@
 {
-  "name": "AI News Briefing Ecosystem",
+  "name": "ai-news-briefing-ecosystem",
   "description": "Official plugin marketplace for comprehensive research, analytics, and intelligence tools.",
-  "homepage": "https://github.com/hoangsonww/AI-News-Briefing",
-  "repository": "https://github.com/hoangsonww/AI-News-Briefing",
+  "version": "1.0.0",
+  "owner": {
+    "name": "Son Nguyen",
+    "email": "hoangson091104@gmail.com"
+  },
   "plugins": [
     {
       "name": "ai-news-briefing",
-      "path": "claude-plugins/ai-news-briefing",
+      "source": "./claude-plugins/ai-news-briefing",
       "description": "Comprehensive AI news tracking, deep research agents, and automated Notion/Teams/Slack publishing.",
+      "category": "research",
       "tags": [
         "news",
         "briefing",
@@ -18,8 +22,9 @@
     },
     {
       "name": "last30days",
-      "path": "claude-plugins/last30days",
+      "source": "./claude-plugins/last30days",
       "description": "An AI agent-led search engine scored by upvotes, likes, and real money. Searches Reddit, X, YouTube, HN, Polymarket, and the web from the last 30 days.",
+      "category": "research",
       "tags": [
         "research",
         "social",
@@ -30,8 +35,9 @@
     },
     {
       "name": "trend-spotter",
-      "path": "claude-plugins/trend-spotter",
+      "source": "./claude-plugins/trend-spotter",
       "description": "Analyzes GitHub trending repos, PyPI/NPM download spikes, and tech Twitter to identify emerging developer trends before they hit mainstream news.",
+      "category": "research",
       "tags": [
         "trends",
         "github",
@@ -41,8 +47,9 @@
     },
     {
       "name": "earnings-analyzer",
-      "path": "claude-plugins/earnings-analyzer",
+      "source": "./claude-plugins/earnings-analyzer",
       "description": "Fetches SEC filings, earnings call transcripts, and financial news to synthesize a business/financial briefing on a specific public company.",
+      "category": "finance",
       "tags": [
         "finance",
         "earnings",
@@ -52,8 +59,9 @@
     },
     {
       "name": "paper-reader",
-      "path": "claude-plugins/paper-reader",
+      "source": "./claude-plugins/paper-reader",
       "description": "Connects to ArXiv and Semantic Scholar to find the latest AI/ML research papers, summarize their abstracts, and explain the methodology (ELI5).",
+      "category": "research",
       "tags": [
         "research",
         "arxiv",
@@ -63,8 +71,9 @@
     },
     {
       "name": "competitor-intel",
-      "path": "claude-plugins/competitor-intel",
+      "source": "./claude-plugins/competitor-intel",
       "description": "Given a company/product, finds its top competitors, compares feature releases, pricing changes, and customer sentiment.",
+      "category": "business",
       "tags": [
         "competitors",
         "intelligence",
@@ -73,8 +82,9 @@
     },
     {
       "name": "repo-auditor",
-      "path": "claude-plugins/repo-auditor",
+      "source": "./claude-plugins/repo-auditor",
       "description": "Analyzes a given GitHub repository for security vulnerabilities, stale dependencies, code quality, and bus factor.",
+      "category": "developer-tools",
       "tags": [
         "github",
         "audit",
@@ -84,8 +94,9 @@
     },
     {
       "name": "podcast-summarizer",
-      "path": "claude-plugins/podcast-summarizer",
+      "source": "./claude-plugins/podcast-summarizer",
       "description": "Extracts transcripts from technical podcasts or YouTube videos and synthesizes core arguments, guest insights, and actionable takeaways.",
+      "category": "education",
       "tags": [
         "podcast",
         "youtube",
@@ -95,8 +106,9 @@
     },
     {
       "name": "startup-scout",
-      "path": "claude-plugins/startup-scout",
+      "source": "./claude-plugins/startup-scout",
       "description": "Tracks Y Combinator, Product Hunt, and recent VC funding rounds to identify promising early-stage startups in a specific sector.",
+      "category": "business",
       "tags": [
         "startups",
         "vc",
@@ -106,8 +118,9 @@
     },
     {
       "name": "crypto-tracker",
-      "path": "claude-plugins/crypto-tracker",
+      "source": "./claude-plugins/crypto-tracker",
       "description": "Analyzes tokenomics, whitepapers, and crypto Twitter sentiment to provide fundamental analysis of crypto projects.",
+      "category": "finance",
       "tags": [
         "crypto",
         "web3",
