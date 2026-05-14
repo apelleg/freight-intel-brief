@@ -1,18 +1,19 @@
 {
   "name": "ai-news-briefing-codex",
-  "version": "1.0.0",
-  "description": "AI News tracking, deep research, and Notion/Teams publishing for Codex.",
+  "version": "1.1.0",
+  "description": "AI News tracking, deep research, Notion/Teams/Slack publishing, and a 5-axis LLM-as-judge quality eval harness for Codex.",
   "author": {
-    "name": "AI News Briefing Project",
-    "email": "team@example.com"
+    "name": "Son Nguyen",
+    "email": "hoangson091104@gmail.com"
   },
   "skills": "./skills/",
+  "agents": "./agents/",
   "mcpServers": "./.mcp.json",
   "interface": {
     "displayName": "AI News Briefing",
-    "shortDescription": "AI News pipeline & research skills",
-    "longDescription": "Automated daily AI news pipeline, deep research tools, and webhook publishers.",
-    "developerName": "AI News Briefing Project",
+    "shortDescription": "AI News pipeline, research, and quality eval skills",
+    "longDescription": "Automated daily AI news pipeline, deep research tools, webhook publishers, and an LLM-as-judge eval harness (rubric, drift detection, golden regression, dashboard).",
+    "developerName": "Son Nguyen",
     "category": "Productivity",
     "capabilities": ["Read", "Write"]
   }

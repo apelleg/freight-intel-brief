@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI News Briefing - Eval Dashboard</title>
+<meta name="description" content="Interactive dashboard for the AI News Briefing LLM-as-judge quality eval harness.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+<style>
+:root {
+  --bg: #0a0a0f;
+  --bg-alt: #12121a;
+  --bg-card: #1a1a26;
+  --border: #2a2a3a;
+  --text: #e4e4ef;
+  --text-dim: #a0a0b8;
+  --accent: #6366f1;
+  --accent-2: #8b7ad4;
+  --good: #5bd49b;
+  --warn: #d49b5b;
+  --bad: #d4685b;
+  --info: #5b8dd8;
+  --pie-f: #d4685b;
+  --pie-n: #d49b5b;
+  --pie-d: #d4c25b;
+  --pie-s: #5bd49b;
+  --pie-c: #8b7ad4;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif; }
+.wrap { max-width: 1400px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem; }
+header h1 { margin: 0; font-size: 1.75rem; font-weight: 700; letter-spacing: -0.02em; }
+header h1 .accent { background: linear-gradient(90deg, #6366f1, #8b7ad4); -webkit-background-clip: text; background-clip: text; color: transparent; }
+header .meta { color: var(--text-dim); font-size: 0.85rem; font-family: 'JetBrains Mono', ui-monospace, monospace; }
+header .meta a { color: var(--accent-2); text-decoration: none; }
+header .meta a:hover { text-decoration: underline; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; margin-bottom: 1.5rem; }
+.stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 1rem 1.25rem; }
+.stat .label { font-size: 0.75rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
+.stat .value { font-size: 1.75rem; font-weight: 700; line-height: 1; }
+.stat .sub { font-size: 0.8rem; color: var(--text-dim); margin-top: 0.4rem; }
+.stat.good .value { color: var(--good); }
+.stat.warn .value { color: var(--warn); }
+.stat.bad .value { color: var(--bad); }
+.stat.info .value { color: var(--info); }
+.grid2 { display: grid; grid-template-columns: 2fr 1fr; gap: 1.25rem; margin-bottom: 1.5rem; }
+@media (max-width: 980px) { .grid2 { grid-template-columns: 1fr; } }
+.panel { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 1.25rem; }
+.panel h2 { margin: 0 0 1rem; font-size: 1.05rem; font-weight: 600; color: var(--text); letter-spacing: -0.01em; }
+.panel h2 .hint { color: var(--text-dim); font-weight: 400; font-size: 0.8rem; margin-left: 0.5rem; }
+.chart-wrap { position: relative; height: 320px; }
+.chart-wrap.small { height: 280px; }
+.badge { display: inline-block; padding: 0.15rem 0.55rem; border-radius: 999px; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; }
+.badge.good { background: rgba(91, 212, 155, 0.15); color: var(--good); border: 1px solid rgba(91, 212, 155, 0.35); }
+.badge.warn { background: rgba(212, 155, 91, 0.15); color: var(--warn); border: 1px solid rgba(212, 155, 91, 0.35); }
+.badge.bad { background: rgba(212, 104, 91, 0.15); color: var(--bad); border: 1px solid rgba(212, 104, 91, 0.35); }
+.badge.info { background: rgba(91, 141, 216, 0.15); color: var(--info); border: 1px solid rgba(91, 141, 216, 0.35); }
+table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+table th, table td { padding: 0.55rem 0.6rem; text-align: left; border-bottom: 1px solid var(--border); }
+table th { font-weight: 600; color: var(--text-dim); text-transform: uppercase; font-size: 0.72rem; letter-spacing: 0.06em; user-select: none; }
+table th[data-sort] { cursor: pointer; }
+table th[data-sort]:hover { color: var(--text); }
+table th[data-sort].active::after { content: ' \25BE'; color: var(--accent-2); }
+table th[data-sort].active.asc::after { content: ' \25B4'; color: var(--accent-2); }
+table tbody tr { transition: background 0.12s; cursor: pointer; }
+table tbody tr:hover { background: rgba(99, 102, 241, 0.08); }
+table tbody tr.selected { background: rgba(99, 102, 241, 0.16); }
+table td.num { font-family: 'JetBrains Mono', ui-monospace, monospace; text-align: right; }
+table td .delta-pos { color: var(--good); }
+table td .delta-neg { color: var(--bad); }
+table td .delta-flat { color: var(--text-dim); }
+.notes { color: var(--text-dim); font-size: 0.82rem; line-height: 1.5; max-width: 56ch; }
+.toolbar { display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center; margin-bottom: 0.75rem; }
+.toolbar input[type=search] { flex: 1; min-width: 180px; padding: 0.45rem 0.7rem; background: var(--bg); border: 1px solid var(--border); border-radius: 8px; color: var(--text); font-size: 0.85rem; }
+.toolbar input[type=search]:focus { outline: none; border-color: var(--accent-2); }
+.toolbar .filter-btn { padding: 0.4rem 0.75rem; background: var(--bg); border: 1px solid var(--border); border-radius: 8px; color: var(--text-dim); font-size: 0.78rem; cursor: pointer; transition: all 0.15s; }
+.toolbar .filter-btn:hover { color: var(--text); border-color: var(--accent-2); }
+.toolbar .filter-btn.active { background: var(--accent); color: white; border-color: var(--accent); }
+.detail { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem; }
+@media (max-width: 720px) { .detail { grid-template-columns: 1fr; } }
+.detail .field { background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 0.75rem 1rem; }
+.detail .field .label { font-size: 0.7rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.3rem; }
+.detail .field .value { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 0.92rem; }
+.empty { padding: 2rem; text-align: center; color: var(--text-dim); }
+footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 0.78rem; text-align: center; }
+footer a { color: var(--accent-2); text-decoration: none; }
+.legend-pill { display: inline-flex; align-items: center; gap: 0.35rem; padding: 0.25rem 0.6rem; background: var(--bg); border: 1px solid var(--border); border-radius: 999px; font-size: 0.74rem; color: var(--text-dim); margin-right: 0.5rem; margin-bottom: 0.4rem; }
+.legend-pill .sw { width: 10px; height: 10px; border-radius: 2px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <h1>AI News Briefing - <span class="accent">Eval Dashboard</span></h1>
+    <div class="meta">
+      <span id="generated"></span> ·
+      <a href="https://github.com/hoangsonww/AI-News-Briefing/blob/main/eval/README.md" target="_blank" rel="noopener">harness docs ↗</a>
+    </div>
+  </header>
+
+  <section class="cards" id="stats"></section>
+
+  <section class="grid2">
+    <div class="panel">
+      <h2>Composite trend <span class="hint">latest run per card_date</span></h2>
+      <div class="chart-wrap"><canvas id="trendChart"></canvas></div>
+    </div>
+    <div class="panel">
+      <h2>Axis medians <span class="hint">across all cards</span></h2>
+      <div class="chart-wrap small"><canvas id="radarChart"></canvas></div>
+    </div>
+  </section>
+
+  <section class="grid2">
+    <div class="panel">
+      <h2>Composite distribution</h2>
+      <div class="chart-wrap small"><canvas id="histChart"></canvas></div>
+    </div>
+    <div class="panel">
+      <h2>Per-card axis stacks <span class="hint">click a card row to highlight</span></h2>
+      <div class="chart-wrap"><canvas id="stackChart"></canvas></div>
+    </div>
+  </section>
+
+  <section class="panel" style="margin-bottom: 1.5rem;">
+    <h2>Per-card detail</h2>
+    <div class="toolbar">
+      <input type="search" id="search" placeholder="Filter by date, judge, or note…">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="gate-fail">Below gate (3.0)</button>
+      <button class="filter-btn" data-filter="regression">Regressed vs baseline</button>
+      <button class="filter-btn" data-filter="strong">Composite ≥ 4.0</button>
+    </div>
+    <div style="overflow-x: auto;">
+      <table id="cardTable">
+        <thead>
+          <tr>
+            <th data-sort="card_date" class="active asc">Date</th>
+            <th data-sort="composite" class="num">Composite</th>
+            <th data-sort="delta_vs_baseline" class="num">Δ vs baseline</th>
+            <th data-sort="factuality" class="num">F</th>
+            <th data-sort="novelty" class="num">N</th>
+            <th data-sort="source_diversity" class="num">D</th>
+            <th data-sort="signal_density" class="num">S</th>
+            <th data-sort="coherence" class="num">C</th>
+            <th>Judge</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody id="rows"></tbody>
+      </table>
+    </div>
+    <div id="empty" class="empty" hidden>No rows match the current filter.</div>
+    <div id="detail" hidden>
+      <div class="detail" id="detailGrid"></div>
+    </div>
+  </section>
+
+  <footer>
+    Data: <code>eval/store.sqlite</code> + <code>eval/golden/</code> · rendered offline ·
+    refresh with <code>make eval-dashboard</code> ·
+    <a href="https://github.com/hoangsonww/AI-News-Briefing" target="_blank" rel="noopener">source ↗</a>
+  </footer>
+
+</div>
+
+<script src="data.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+<script>
+(function () {
+  const data = window.EVAL_DATA;
+  if (!data) {
+    document.querySelector('.wrap').innerHTML = '<div class="empty">No <code>data.js</code> found. Run <code>make eval-dashboard</code> first.</div>';
+    return;
+  }
+
+  // --- Helpers ----------------------------------------------------------
+  const AXES = data.axes;
+  const AXIS_COLORS = {
+    factuality: '#d4685b',
+    novelty: '#d49b5b',
+    source_diversity: '#d4c25b',
+    signal_density: '#5bd49b',
+    coherence: '#8b7ad4',
+  };
+  const fmtPct = (n) => (n == null ? '-' : n.toFixed(2));
+  const composites = data.cards.map((c) => c.composite);
+  const labels = data.cards.map((c) => c.card_date);
+
+  // --- Header meta ------------------------------------------------------
+  document.getElementById('generated').textContent =
+    `generated ${data.generated_at} · ${data.summary.card_count} cards · ${data.summary.golden_count} goldens · judges: ${data.summary.judges.join(', ')}`;
+
+  // --- Stat cards -------------------------------------------------------
+  const statsEl = document.getElementById('stats');
+  const driftBadgeClass = data.drift.status === 'alert' ? 'bad' : data.drift.status === 'no_data' ? 'warn' : 'good';
+  const gateFails = data.cards.filter((c) => c.composite < 3.0).length;
+  const regressions = data.cards.filter(
+    (c) => c.delta_vs_baseline != null && c.delta_vs_baseline < -0.5,
+  ).length;
+  const stats = [
+    { label: 'Composite (median)', value: fmtPct(data.summary.composite_median), sub: `min ${fmtPct(data.summary.composite_min)} · max ${fmtPct(data.summary.composite_max)}`, cls: 'good' },
+    { label: 'Composite (mean)', value: fmtPct(data.summary.composite_mean), sub: `${data.summary.card_count} cards judged`, cls: 'info' },
+    { label: 'Drift status', value: data.drift.status.toUpperCase(), sub: data.drift.z != null ? `z=${data.drift.z}` : 'insufficient history', cls: driftBadgeClass },
+    { label: 'Below gate (3.0)', value: gateFails, sub: gateFails ? 'would block publish' : 'all cards pass gate', cls: gateFails ? 'warn' : 'good' },
+    { label: 'Regressions', value: regressions, sub: regressions ? 'Δ < -0.5 vs golden' : 'no regressions', cls: regressions ? 'bad' : 'good' },
+  ];
+  for (const s of stats) {
+    const el = document.createElement('div');
+    el.className = `stat ${s.cls}`;
+    el.innerHTML = `<div class="label">${s.label}</div><div class="value">${s.value}</div><div class="sub">${s.sub}</div>`;
+    statsEl.appendChild(el);
+  }
+
+  // --- Common Chart.js theming -----------------------------------------
+  Chart.defaults.color = '#a0a0b8';
+  Chart.defaults.borderColor = '#2a2a3a';
+  Chart.defaults.font.family = "-apple-system, 'Segoe UI', Inter, sans-serif";
+
+  // --- Trend chart ------------------------------------------------------
+  const baselines = data.cards.map((c) => c.baseline_composite);
+  new Chart(document.getElementById('trendChart'), {
+    type: 'line',
+    data: {
+      labels,
+      datasets: [
+        {
+          label: 'composite (current)',
+          data: composites,
+          borderColor: '#6366f1',
+          backgroundColor: 'rgba(99, 102, 241, 0.18)',
+          tension: 0.25,
+          fill: true,
+          pointRadius: 3,
+          pointHoverRadius: 6,
+        },
+        {
+          label: 'baseline',
+          data: baselines,
+          borderColor: '#d49b5b',
+          borderDash: [4, 4],
+          backgroundColor: 'transparent',
+          pointRadius: 0,
+          tension: 0.0,
+        },
+        {
+          label: 'gate threshold (3.0)',
+          data: composites.map(() => 3.0),
+          borderColor: 'rgba(212, 104, 91, 0.55)',
+          borderDash: [2, 6],
+          pointRadius: 0,
+          tension: 0,
+        },
+      ],
+    },
+    options: {
+      maintainAspectRatio: false,
+      responsive: true,
+      interaction: { mode: 'index', intersect: false },
+      scales: {
+        y: { min: 1, max: 5, ticks: { stepSize: 1 }, grid: { color: '#1f1f2c' } },
+        x: { grid: { color: '#1f1f2c' } },
+      },
+      plugins: {
+        legend: { position: 'bottom', labels: { boxWidth: 14, padding: 12 } },
+        tooltip: { callbacks: { label: (ctx) => `${ctx.dataset.label}: ${ctx.parsed.y == null ? '-' : ctx.parsed.y.toFixed(2)}` } },
+      },
+    },
+  });
+
+  // --- Radar chart ------------------------------------------------------
+  new Chart(document.getElementById('radarChart'), {
+    type: 'radar',
+    data: {
+      labels: AXES,
+      datasets: [
+        {
+          label: 'median',
+          data: AXES.map((a) => data.summary.axis_medians[a]),
+          borderColor: '#6366f1',
+          backgroundColor: 'rgba(99, 102, 241, 0.25)',
+          pointBackgroundColor: '#6366f1',
+        },
+      ],
+    },
+    options: {
+      maintainAspectRatio: false,
+      scales: {
+        r: {
+          min: 0, max: 5,
+          ticks: { stepSize: 1, backdropColor: 'transparent', color: '#6a6a82' },
+          angleLines: { color: '#2a2a3a' },
+          grid: { color: '#2a2a3a' },
+          pointLabels: { color: '#e4e4ef', font: { size: 11 } },
+        },
+      },
+      plugins: { legend: { display: false } },
+    },
+  });
+
+  // --- Histogram --------------------------------------------------------
+  const bins = [
+    { label: '< 2.5', range: (x) => x < 2.5, count: 0 },
+    { label: '2.5 – 3.0', range: (x) => x >= 2.5 && x < 3.0, count: 0 },
+    { label: '3.0 – 3.5', range: (x) => x >= 3.0 && x < 3.5, count: 0 },
+    { label: '3.5 – 4.0', range: (x) => x >= 3.5 && x < 4.0, count: 0 },
+    { label: '4.0 – 4.5', range: (x) => x >= 4.0 && x < 4.5, count: 0 },
+    { label: '≥ 4.5', range: (x) => x >= 4.5, count: 0 },
+  ];
+  for (const c of composites) for (const b of bins) if (b.range(c)) { b.count++; break; }
+  new Chart(document.getElementById('histChart'), {
+    type: 'bar',
+    data: {
+      labels: bins.map((b) => b.label),
+      datasets: [{
+        data: bins.map((b) => b.count),
+        backgroundColor: ['#d4685b', '#d49b5b', '#d4c25b', '#5bd49b', '#5b8dd8', '#8b7ad4'],
+        borderRadius: 6,
+      }],
+    },
+    options: {
+      maintainAspectRatio: false,
+      indexAxis: 'y',
+      scales: {
+        x: { beginAtZero: true, ticks: { stepSize: 1 }, grid: { color: '#1f1f2c' } },
+        y: { grid: { display: false } },
+      },
+      plugins: { legend: { display: false }, tooltip: { callbacks: { label: (ctx) => `${ctx.parsed.x} cards` } } },
+    },
+  });
+
+  // --- Stacked axis bars -------------------------------------------------
+  const stackDatasets = AXES.map((a) => ({
+    label: a,
+    data: data.cards.map((c) => c.axes[a] * data.weights[a]),
+    backgroundColor: AXIS_COLORS[a],
+    borderWidth: 0,
+  }));
+  const stackChart = new Chart(document.getElementById('stackChart'), {
+    type: 'bar',
+    data: { labels, datasets: stackDatasets },
+    options: {
+      maintainAspectRatio: false,
+      responsive: true,
+      scales: {
+        x: { stacked: true, grid: { color: '#1f1f2c' }, ticks: { autoSkip: true, maxRotation: 60, minRotation: 60 } },
+        y: { stacked: true, min: 0, max: 5, grid: { color: '#1f1f2c' } },
+      },
+      plugins: {
+        legend: { position: 'bottom', labels: { boxWidth: 12, padding: 10 } },
+        tooltip: {
+          callbacks: {
+            label: (ctx) => {
+              const a = ctx.dataset.label;
+              const raw = data.cards[ctx.dataIndex].axes[a];
+              return `${a}: ${raw} × ${data.weights[a]} = ${ctx.parsed.y.toFixed(2)}`;
+            },
+            footer: (items) => {
+              if (!items.length) return '';
+              const c = data.cards[items[0].dataIndex];
+              return `composite ${c.composite.toFixed(2)}` + (c.baseline_composite != null ? ` · baseline ${c.baseline_composite.toFixed(2)}` : '');
+            },
+          },
+        },
+      },
+    },
+  });
+
+  // --- Table + filter + sort + selection --------------------------------
+  const tbody = document.getElementById('rows');
+  const emptyEl = document.getElementById('empty');
+  const detailWrap = document.getElementById('detail');
+  const detailGrid = document.getElementById('detailGrid');
+  const searchEl = document.getElementById('search');
+  const filterBtns = [...document.querySelectorAll('.filter-btn')];
+
+  let state = {
+    sortKey: 'card_date',
+    sortAsc: true,
+    filter: 'all',
+    query: '',
+    selectedDate: null,
+  };
+
+  function visibleRows() {
+    let rows = [...data.cards];
+    if (state.filter === 'gate-fail') rows = rows.filter((r) => r.composite < 3.0);
+    if (state.filter === 'regression') rows = rows.filter((r) => r.delta_vs_baseline != null && r.delta_vs_baseline < -0.5);
+    if (state.filter === 'strong') rows = rows.filter((r) => r.composite >= 4.0);
+    if (state.query) {
+      const q = state.query.toLowerCase();
+      rows = rows.filter((r) =>
+        r.card_date.includes(q) ||
+        (r.judge_model || '').toLowerCase().includes(q) ||
+        (r.notes || '').toLowerCase().includes(q)
+      );
+    }
+    rows.sort((a, b) => {
+      let av = a[state.sortKey];
+      let bv = b[state.sortKey];
+      if (av == null && bv == null) return 0;
+      if (av == null) return 1;
+      if (bv == null) return -1;
+      if (typeof av === 'number') return state.sortAsc ? av - bv : bv - av;
+      return state.sortAsc ? String(av).localeCompare(String(bv)) : String(bv).localeCompare(String(av));
+    });
+    return rows;
+  }
+
+  function renderTable() {
+    const rows = visibleRows();
+    tbody.innerHTML = '';
+    if (!rows.length) { emptyEl.hidden = false; return; }
+    emptyEl.hidden = true;
+    for (const r of rows) {
+      const tr = document.createElement('tr');
+      tr.dataset.date = r.card_date;
+      if (r.card_date === state.selectedDate) tr.classList.add('selected');
+      const delta = r.delta_vs_baseline;
+      const deltaCls = delta == null ? 'delta-flat' : delta < -0.001 ? 'delta-neg' : delta > 0.001 ? 'delta-pos' : 'delta-flat';
+      const deltaStr = delta == null ? '-' : (delta > 0 ? '+' : '') + delta.toFixed(2);
+      tr.innerHTML = `
+        <td>${r.card_date}</td>
+        <td class="num">${r.composite.toFixed(2)}</td>
+        <td class="num"><span class="${deltaCls}">${deltaStr}</span></td>
+        <td class="num">${r.axes.factuality}</td>
+        <td class="num">${r.axes.novelty}</td>
+        <td class="num">${r.axes.source_diversity}</td>
+        <td class="num">${r.axes.signal_density}</td>
+        <td class="num">${r.axes.coherence}</td>
+        <td><span class="badge ${r.judge_model.startsWith('claude') ? 'info' : 'warn'}">${r.judge_model.replace('claude-', 'c-').replace('-20251001', '')}</span></td>
+        <td class="notes">${(r.notes || '').slice(0, 110)}${(r.notes || '').length > 110 ? '…' : ''}</td>
+      `;
+      tr.addEventListener('click', () => selectRow(r.card_date));
+      tbody.appendChild(tr);
+    }
+  }
+
+  function selectRow(d) {
+    state.selectedDate = d;
+    [...tbody.querySelectorAll('tr')].forEach((tr) => tr.classList.toggle('selected', tr.dataset.date === d));
+    const c = data.cards.find((r) => r.card_date === d);
+    if (!c) { detailWrap.hidden = true; return; }
+    detailWrap.hidden = false;
+    const fields = [
+      ['date', c.card_date],
+      ['judge', c.judge_model],
+      ['prompt version', c.prompt_version],
+      ['ran at', c.ran_at],
+      ['composite', c.composite.toFixed(2)],
+      ['baseline composite', c.baseline_composite != null ? c.baseline_composite.toFixed(2) : '-'],
+      ['Δ vs baseline', c.delta_vs_baseline != null ? (c.delta_vs_baseline > 0 ? '+' : '') + c.delta_vs_baseline.toFixed(2) : '-'],
+      ['notes', c.notes || '-'],
+    ];
+    detailGrid.innerHTML = fields.map(([k, v]) => `<div class="field"><div class="label">${k}</div><div class="value">${v}</div></div>`).join('');
+    // Highlight the selected bar in the stack chart
+    stackChart.data.datasets.forEach((ds) => {
+      ds.borderColor = data.cards.map((card) => (card.card_date === d ? '#ffffff' : 'transparent'));
+      ds.borderWidth = data.cards.map((card) => (card.card_date === d ? 2 : 0));
+    });
+    stackChart.update();
+  }
+
+  // Sort headers
+  document.querySelectorAll('th[data-sort]').forEach((th) => {
+    th.addEventListener('click', () => {
+      const key = th.dataset.sort;
+      if (state.sortKey === key) state.sortAsc = !state.sortAsc;
+      else { state.sortKey = key; state.sortAsc = true; }
+      document.querySelectorAll('th[data-sort]').forEach((t) => { t.classList.remove('active', 'asc'); });
+      th.classList.add('active');
+      if (state.sortAsc) th.classList.add('asc');
+      renderTable();
+    });
+  });
+
+  // Filter buttons
+  filterBtns.forEach((b) => {
+    b.addEventListener('click', () => {
+      filterBtns.forEach((x) => x.classList.remove('active'));
+      b.classList.add('active');
+      state.filter = b.dataset.filter;
+      renderTable();
+    });
+  });
+
+  // Search
+  searchEl.addEventListener('input', (e) => { state.query = e.target.value; renderTable(); });
+
+  renderTable();
+  if (data.cards.length) selectRow(data.cards[data.cards.length - 1].card_date);
+})();
+</script>
+</body>
+</html>

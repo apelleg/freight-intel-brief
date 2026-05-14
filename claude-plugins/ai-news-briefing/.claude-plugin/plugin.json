@@ -1,7 +1,7 @@
 {
   "name": "ai-news-briefing",
-  "description": "Comprehensive AI news tracking, deep research agents, and automated Notion/Teams/Slack publishing.",
-  "version": "1.0.0",
+  "description": "Comprehensive AI news tracking, deep research agents, automated Notion/Teams/Slack publishing, and a 5-axis LLM-as-judge quality eval harness with offline dashboard.",
+  "version": "1.1.0",
   "author": {
     "name": "Son Nguyen",
     "url": "https://github.com/hoangsonww"
@@ -19,11 +19,17 @@
     "automation",
     "notion",
     "teams",
-    "slack"
+    "slack",
+    "eval",
+    "llm-as-judge",
+    "quality",
+    "drift-detection",
+    "dashboard"
   ],
   "categories": [
     "news",
     "productivity",
-    "research"
+    "research",
+    "evaluation"
   ]
 }

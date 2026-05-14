@@ -335,6 +335,7 @@ The project includes a cross-platform `Makefile` that auto-detects your OS and r
 | `make eval-regression JUDGE=claude` | Re-score golden set, fail on > 0.5 composite drop |
 | `make eval-drift D=YYYY-MM-DD [ALERT_EXIT=1]` | Rolling-window drift detector |
 | `make eval-report D=YYYY-MM-DD W=7 [OUT=path]` | Weekly Markdown report |
+| `make eval-dashboard [DASHBOARD_JUDGE=...] [OPEN=1]` | Build interactive HTML dashboard |
 | `make eval-show` | Dump stored eval rows |
 | `make eval-test` | Run eval-harness unit tests |
 | `CLI=<engine>` | Parameter: choose engine (`claude`, `codex`, `gemini`, `copilot`) |
@@ -720,7 +721,12 @@ Every published briefing is silently judged by an LLM-as-judge on a 5-axis rubri
 - **Regression** — `make eval-regression` re-scores the golden set in `eval/golden/` and fails if any card drops more than 0.5 composite points vs. its pinned baseline.
 - **Drift** — `make eval-drift D=YYYY-MM-DD ALERT_EXIT=1` alerts when the trailing-7d median falls more than 1.5 MADs below the trailing-30d median for two consecutive days.
 - **Report** — `make eval-report D=YYYY-MM-DD W=7` emits a Markdown weekly digest.
+- **Interactive dashboard** — `make eval-dashboard OPEN=1` builds `eval/dashboard/index.html`, a single-file offline UI with trend, axis radar, composite histogram, per-card stacked bars, and a sortable/filterable card table backed by `eval/store.sqlite` + `eval/golden/`.
 - **Publish gate** (optional) — invoke `runner.py score --gate --gate-threshold 3.0` ahead of the publish step to block low-quality briefings.
+
+<p align="center">
+    <img src="eval/dashboard/ui.png" alt="Screenshot of the eval dashboard" width="100%">
+</p>
 
 Judge backends shell out to the existing CLIs (`claude` / `codex` / `gemini`) so no new auth is required. Default judge model is `claude-haiku-4-5-20251001` (~$0.002/card). The store schema is keyed on `(card_date, prompt_version, judge_model)`, so bumping the rubric or switching judges keeps history rather than overwriting it.
 
@@ -856,7 +862,12 @@ ai-news-briefing/
 │   ├── runner.py                # CLI: score / backfill / regression / show
 │   ├── drift.py                 # Trailing-window drift detector
 │   ├── report.py                # Weekly Markdown report builder
+│   ├── seed_golden.py           # Re-baseliner: lift store rows to golden/
+│   ├── export_dashboard.py      # Export store + golden -> dashboard/data.js
 │   ├── golden/                  # Pinned baseline composites per card
+│   ├── dashboard/               # Interactive offline HTML dashboard
+│   │   ├── index.html           # Chart.js trend + radar + histogram + table
+│   │   └── data.js              # Generated from store.sqlite (window.EVAL_DATA)
 │   └── tests/                   # Unit tests for the harness
 ├── .gitignore
 ├── ARCHITECTURE.md              # Detailed architecture documentation

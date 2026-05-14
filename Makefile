@@ -1,4 +1,4 @@
-.PHONY: help run run-bg custom-brief custom-brief-bg tail log logs status install uninstall clean-logs check validate prompt eval eval-backfill eval-regression eval-seed-golden eval-drift eval-report eval-show eval-test
+.PHONY: help run run-bg custom-brief custom-brief-bg tail log logs status install uninstall clean-logs check validate prompt eval eval-backfill eval-regression eval-seed-golden eval-drift eval-report eval-show eval-test eval-dashboard
 
 SHELL := /bin/bash
 DATE  := $(shell date +%Y-%m-%d)
@@ -285,6 +285,16 @@ eval-show: ## Dump stored eval rows
 
 eval-test: ## Run unit tests for the eval harness
 	@python3 -m unittest discover -s "$(SCRIPT_DIR)/eval/tests" -v
+
+DASHBOARD_JUDGE ?= claude-haiku-4-5-20251001
+
+eval-dashboard: ## Build interactive dashboard. Options: DASHBOARD_JUDGE=<model> OPEN=1
+	@python3 "$(SCRIPT_DIR)/eval/export_dashboard.py" \
+		--judge $(DASHBOARD_JUDGE) \
+		$(if $(OPEN),--open)
+	@echo ""
+	@echo "Open eval/dashboard/index.html in your browser, or:"
+	@echo "  make eval-dashboard OPEN=1"
 
 ## —— Info —————————————————————————————————————————————
 info: ## Show project configuration summary

@@ -1298,9 +1298,9 @@ flowchart TD
   <div class="section-header">
     <div class="section-label">Quality Eval</div>
     <h2 class="section-title">LLM-as-judge harness</h2>
-    <p class="section-desc">Every published briefing is silently scored on a 5-axis rubric so we catch prompt drift, source rot, and model regressions before readers notice. Backends shell out to the same CLIs the daily pipeline uses (Claude / Codex / Gemini); an offline <code>stub</code> backend lets tests and CI run with zero API cost.</p>
+    <p class="section-desc">Every briefing gets graded on five quality axes — factuality, novelty, source diversity, signal density, and coherence — so silent regressions stop slipping past your readers.</p>
     <p class="section-desc" style="margin-top: 1rem; color: #a78bfa;">
-      State lives in <code>eval/store.sqlite</code> keyed on <code>(card_date, prompt_version, judge_model)</code>. Switching judges or bumping the prompt appends rather than overwrites, so history stays apples-to-apples across rebaselines.
+      Catch prompt drift the day it happens. Block bad cards before they publish. See trends, not just the latest result.
     </p>
   </div>
 
@@ -1361,6 +1361,9 @@ flowchart LR
 <span class="comment"># Weekly Markdown report</span>
 <span class="cmd">make</span> eval-report D=2026-03-18 W=7 OUT=logs/eval-week.md
 
+<span class="comment"># Interactive offline dashboard (Chart.js trend + radar + histogram + table)</span>
+<span class="cmd">make</span> eval-dashboard <span class="flag">OPEN=1</span>
+
 <span class="comment"># Optional publish gate (exit 2 if composite &lt; 3.0)</span>
 <span class="cmd">python3</span> eval/runner.py score --date <span class="str">"$DATE"</span> --judge claude <span class="flag">--gate</span></pre>
     </div>
@@ -1383,10 +1386,43 @@ flowchart LR
       <tr><td><code>eval/runner.py</code></td><td>CLI: <code>score</code> / <code>backfill</code> (parallel <code>--workers</code>) / <code>regression</code> / <code>show</code>, with optional <code>--gate</code></td></tr>
       <tr><td><code>eval/drift.py</code></td><td>Median + MAD-based z-score across rolling windows; robust to small-sample outliers</td></tr>
       <tr><td><code>eval/report.py</code></td><td>Weekly Markdown digest: coverage, composite stats, axis medians, per-day table</td></tr>
+      <tr><td><code>eval/seed_golden.py</code></td><td>Re-baseliner. Lifts store rows into <code>golden/</code> after a fresh backfill.</td></tr>
+      <tr><td><code>eval/export_dashboard.py</code></td><td>Serializes <code>store.sqlite</code> + <code>golden/</code> into <code>dashboard/data.js</code> for the offline UI.</td></tr>
       <tr><td><code>eval/golden/*.json</code></td><td>Pinned baseline composites for regression gate</td></tr>
+      <tr><td><code>eval/dashboard/</code></td><td>Single-file offline UI (<code>index.html</code> + <code>data.js</code>) — trend, radar, histogram, stacked bars, sortable card table.</td></tr>
       <tr><td><code>eval/tests/</code></td><td>10 unittest cases against the stub backend - <code>make eval-test</code></td></tr>
       </tbody>
     </table>
+  </div>
+
+  <div class="section-header" style="margin-top: 4rem; margin-bottom: 2rem;">
+    <div class="section-label">Eval Dashboard</div>
+    <h2 class="section-title" style="font-size: clamp(1.5rem, 3vw, 2rem);">Interactive dashboard</h2>
+    <p class="section-desc" style="max-width: 760px;">
+      <code>eval/dashboard/index.html</code> is a single-file, offline-renderable UI over <code>eval/store.sqlite</code> + <code>eval/golden/</code>.
+      <code>make eval-dashboard</code> serializes the store into <code>data.js</code> (<code>window.EVAL_DATA</code>); Chart.js renders the
+      trend, radar, histogram, and per-card stacked bars. The table is sortable, filterable, and searchable; clicking a row populates
+      a detail panel and highlights that card in the stack chart. No backend, no build step.
+    </p>
+  </div>
+
+  <div style="max-width: 1100px; margin: 0 auto 2rem; text-align: center;">
+    <img src="eval/dashboard/ui.png" alt="Eval harness dashboard screenshot" style="max-width: 100%; border: 1px solid var(--border); border-radius: 12px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);">
+  </div>
+
+  <div class="mermaid-wrap" style="margin-bottom: 2rem;">
+    <pre class="mermaid">
+flowchart LR
+    DB[("eval/store.sqlite")]
+    GD["eval/golden/*.json"]
+    EX["export_dashboard.py<br/>--judge filter<br/>--open"]
+    JS["eval/dashboard/data.js<br/>window.EVAL_DATA"]
+    HTML["eval/dashboard/index.html<br/>Chart.js + vanilla JS<br/>works over file://"]
+
+    DB --> EX
+    GD --> EX
+    EX --> JS --> HTML
+    </pre>
   </div>
 
   <div style="text-align: center; margin-top: 1.5rem;">

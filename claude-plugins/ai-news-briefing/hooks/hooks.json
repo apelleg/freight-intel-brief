@@ -3,7 +3,18 @@
     "PostToolUse": [
       {
         "matcher": "mcp__notion__notion-create-pages",
-        "hooks": [{ "type": "command", "command": "echo 'Notion page successfully created.' >> logs/notion-publish-audit.log" }]
+        "hooks": [
+          { "type": "command", "command": "echo \"$(date -u +%FT%TZ) Notion page created.\" >> logs/notion-publish-audit.log" }
+        ]
+      },
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "jq -r '.tool_input.file_path // empty' | grep -E 'logs/[0-9]{4}-[0-9]{2}-[0-9]{2}-card\\.json$' | while read -r f; do date=$(basename \"$f\" -card.json); python3 eval/runner.py score --date \"$date\" --judge stub 2>>logs/eval-auto.log || true; done"
+          }
+        ]
       }
     ]
   }
