@@ -1,6 +1,4 @@
 #Requires -Version 5.1
-Set-StrictMode -Version Latest
-$ErrorActionPreference = "Stop"
 
 # eval-summary.ps1 -- At-a-glance summary of eval/store.sqlite contents.
 #
@@ -10,12 +8,19 @@ $ErrorActionPreference = "Stop"
 #   .\scripts\eval-summary.ps1 -Since 2026-03-01 -Until 2026-03-18
 #   .\scripts\eval-summary.ps1 -ListJudges
 
+# NOTE: `param(...)` must be the first executable statement in a .ps1.
+# Putting Set-StrictMode / $ErrorActionPreference above it causes the
+# Windows PS7 parser to treat `param(...)` as a method invocation and
+# reject `[string]$Judge = ""` as "not an assignable expression".
 param(
     [string]$Judge = "",
     [string]$Since = "",
     [string]$Until = "",
     [switch]$ListJudges
 )
+
+Set-StrictMode -Version Latest
+$ErrorActionPreference = "Stop"
 
 $ScriptDir = Split-Path -Parent (Split-Path -Parent $MyInvocation.MyCommand.Definition)
 $Db = Join-Path $ScriptDir "eval/store.sqlite"

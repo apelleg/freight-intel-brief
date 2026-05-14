@@ -30,9 +30,11 @@ foreach ($name in $NewScripts) {
 }
 
 Section "Strict-mode header"
+# Whole-file check; Set-StrictMode now lives below `param(...)` because
+# the latter must be the first executable statement (PS7 parser quirk).
 foreach ($name in $NewScripts) {
-    $head = (Get-Content (Join-Path $RepoRoot "scripts/$name.ps1") -TotalCount 5) -join "`n"
-    Assert-Contains $head "Set-StrictMode" "scripts/$name.ps1 uses Set-StrictMode"
+    $body = Get-Content (Join-Path $RepoRoot "scripts/$name.ps1") -Raw
+    Assert-Contains $body "Set-StrictMode" "scripts/$name.ps1 uses Set-StrictMode"
 }
 
 Section "Typed parameters"

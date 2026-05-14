@@ -1,6 +1,4 @@
 #Requires -Version 5.1
-Set-StrictMode -Version Latest
-$ErrorActionPreference = "Stop"
 
 # plugin-validate.ps1 -- Lint every plugin/extension manifest, marketplace entry,
 # SKILL.md frontmatter, and agent file. Non-zero exit on any error.
@@ -10,10 +8,16 @@ $ErrorActionPreference = "Stop"
 #   .\scripts\plugin-validate.ps1 -Strict     # also fail on warnings
 #   .\scripts\plugin-validate.ps1 -Json       # emit machine-readable report
 
+# `param(...)` must come before any executable statement; otherwise the
+# Windows PS7 parser treats it as a method call and StrictMode rejects
+# the parens at runtime.
 param(
     [switch]$Strict,
     [switch]$Json
 )
+
+Set-StrictMode -Version Latest
+$ErrorActionPreference = "Stop"
 
 $ScriptDir = Split-Path -Parent $MyInvocation.MyCommand.Definition
 $RepoRoot  = Split-Path -Parent $ScriptDir

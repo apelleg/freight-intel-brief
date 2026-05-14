@@ -1,6 +1,4 @@
 #Requires -Version 5.1
-Set-StrictMode -Version Latest
-$ErrorActionPreference = "Stop"
 
 # eval-watch.ps1 -- Live tail of eval-judge logs + newly written eval rows.
 #
@@ -10,11 +8,15 @@ $ErrorActionPreference = "Stop"
 #   .\scripts\eval-watch.ps1 -Interval 5
 #   .\scripts\eval-watch.ps1 -NoDb
 
+# `param(...)` must come before any executable statement, see eval-summary.ps1.
 param(
     [string]$Date = (Get-Date -Format "yyyy-MM-dd"),
     [int]$Interval = 2,
     [switch]$NoDb
 )
+
+Set-StrictMode -Version Latest
+$ErrorActionPreference = "Stop"
 
 $ScriptDir = Split-Path -Parent (Split-Path -Parent $MyInvocation.MyCommand.Definition)
 $Db = Join-Path $ScriptDir "eval/store.sqlite"

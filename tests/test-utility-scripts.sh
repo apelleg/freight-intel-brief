@@ -64,9 +64,11 @@ done
 
 # -- PowerShell strict mode header ---------------------------------------
 section "PowerShell strict mode header"
+# Whole-file check; Set-StrictMode lives below `param(...)` in these scripts
+# because the PS7 parser requires param to be the first executable statement.
 for name in "${NEW_SCRIPTS[@]}"; do
-  HEADER="$(head -5 "$SCRIPT_DIR/scripts/$name.ps1")"
-  assert_contains "$HEADER" "Set-StrictMode" "scripts/$name.ps1 uses Set-StrictMode"
+  BODY="$(cat "$SCRIPT_DIR/scripts/$name.ps1")"
+  assert_contains "$BODY" "Set-StrictMode" "scripts/$name.ps1 uses Set-StrictMode"
 done
 
 # -- --help exits 0 with usage ---------------------------------------------

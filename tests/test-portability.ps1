@@ -27,8 +27,10 @@ foreach ($f in $ps1Files) {
 
 Section "Strict mode + ErrorActionPreference"
 foreach ($f in $ps1Files) {
-    $head = (Get-Content $f.FullName -TotalCount 12) -join "`n"
-    Assert-Contains $head "Set-StrictMode" "$($f.Name) declares Set-StrictMode"
+    # Whole-file check -- Set-StrictMode lives below `param(...)` in newer
+    # scripts because PS7 requires param to be the first executable statement.
+    $body = Get-Content $f.FullName -Raw
+    Assert-Contains $body "Set-StrictMode" "$($f.Name) declares Set-StrictMode"
 }
 
 Section "Requires header on entry-point ps1"

@@ -1,6 +1,4 @@
 #Requires -Version 5.1
-Set-StrictMode -Version Latest
-$ErrorActionPreference = "Stop"
 
 # eval-compare.ps1 -- Side-by-side comparison of two judges (or two prompt versions).
 #
@@ -9,6 +7,7 @@ $ErrorActionPreference = "Stop"
 #   .\scripts\eval-compare.ps1 -A claude-haiku-4-5-20251001 -B gemini-cli -Threshold 0.5
 #   .\scripts\eval-compare.ps1 -APrompt v1 -BPrompt v2 -Judge claude-haiku-4-5-20251001
 
+# `param(...)` must come before any executable statement, see eval-summary.ps1.
 param(
     [string]$A = "",
     [string]$B = "",
@@ -17,6 +16,9 @@ param(
     [string]$Judge = "",
     [double]$Threshold = 0.5
 )
+
+Set-StrictMode -Version Latest
+$ErrorActionPreference = "Stop"
 
 $ScriptDir = Split-Path -Parent (Split-Path -Parent $MyInvocation.MyCommand.Definition)
 $Db = Join-Path $ScriptDir "eval/store.sqlite"

@@ -347,12 +347,14 @@ foreach ($name in $NewScripts) {
     }
 }
 
-# Strict mode header (each ps1)
+# Strict mode header (each ps1). Checked against the whole file -- the
+# `param(...)` block MUST be the first executable statement on PS7, so
+# Set-StrictMode sits below it now (see eval-summary.ps1 comment).
 foreach ($name in $NewScripts) {
     $path = Join-Path $ScriptDir "scripts/$name.ps1"
     if (Test-Path $path) {
-        $head = (Get-Content $path -TotalCount 5) -join "`n"
-        Assert-Contains $head "Set-StrictMode" "scripts/$name.ps1 uses Set-StrictMode"
+        $body = Get-Content $path -Raw
+        Assert-Contains $body "Set-StrictMode" "scripts/$name.ps1 uses Set-StrictMode"
     }
 }
 

@@ -1,6 +1,4 @@
 #Requires -Version 5.1
-Set-StrictMode -Version Latest
-$ErrorActionPreference = "Stop"
 
 # scaffold-plugin.ps1 -- Bootstrap a new plugin across all three platforms.
 #
@@ -10,6 +8,7 @@ $ErrorActionPreference = "Stop"
 #   .\scripts\scaffold-plugin.ps1 -Name my-plugin -Description "..." -WithAgent reviewer
 #   .\scripts\scaffold-plugin.ps1 -Name my-plugin -Description "..." -DryRun
 
+# `param(...)` must come before any executable statement, see eval-summary.ps1.
 param(
     [Parameter(Mandatory=$true)] [string]$Name,
     [Parameter(Mandatory=$true)] [string]$Description,
@@ -19,6 +18,9 @@ param(
     [string]$AuthorUrl = "https://github.com/hoangsonww",
     [switch]$DryRun
 )
+
+Set-StrictMode -Version Latest
+$ErrorActionPreference = "Stop"
 
 $ScriptDir = Split-Path -Parent (Split-Path -Parent $MyInvocation.MyCommand.Definition)
 Set-Location $ScriptDir
