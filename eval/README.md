@@ -477,7 +477,7 @@ Measured: 18 cards in **235 s** with 4 workers (~13 s / card amortized), vs ~30 
 
 Each subprocess invocation appends a block to `logs/eval-judge-YYYY-MM-DD.log`:
 
-```
+````text
 --- 2026-05-13T19:48:03 rc=0 elapsed=31.2s ---
 CMD: /Users/.../claude -p --model claude-haiku-4-5-20251001 --dangerously-skip-permissions <prompt>
 STDIN[:200]: ...
@@ -489,7 +489,7 @@ STDOUT[:2000]:
   ...
 }
 ```
-```
+````
 
 So you can `tail -f` and watch real progress instead of staring at silent subprocesses.
 
