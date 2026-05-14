@@ -147,7 +147,7 @@ for root in ("claude-plugins/ai-news-briefing",
     for skill in sorted(glob.glob(f"{root}/skills/*/SKILL.md")):
         skill_count += 1
         c = open(skill).read()
-        m = re.match(r"^---\n(.*?)\n---\n", c, re.DOTALL)
+        m = re.match(r"^---\r?\n(.*?)\r?\n---\r?\n", c, re.DOTALL)
         if not m:
             err(skill, "no YAML frontmatter")
             continue
@@ -169,7 +169,7 @@ for root in ("claude-plugins/ai-news-briefing",
     for agent in sorted(glob.glob(f"{root}/agents/*.md")):
         agent_count += 1
         c = open(agent).read()
-        m = re.match(r"^---\n(.*?)\n---\n", c, re.DOTALL)
+        m = re.match(r"^---\r?\n(.*?)\r?\n---\r?\n", c, re.DOTALL)
         if not m:
             err(agent, "no YAML frontmatter")
             continue

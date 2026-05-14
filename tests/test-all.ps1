@@ -326,12 +326,15 @@ foreach ($name in $NewScripts) {
     }
 }
 
-# PowerShell syntax check via PSParser
+# PowerShell syntax check via the modern Language.Parser (matches the
+# briefing.ps1/custom-brief.ps1 check above). PSParser is the legacy
+# tokenizer and trips on syntax like `$using:var` even when the script
+# is valid PowerShell 5.1+.
 foreach ($name in $NewScripts) {
     $path = Join-Path $ScriptDir "scripts/$name.ps1"
     if (Test-Path $path) {
         $errors = $null
-        [void][System.Management.Automation.PSParser]::Tokenize((Get-Content $path -Raw), [ref]$errors)
+        $null = [System.Management.Automation.Language.Parser]::ParseFile($path, [ref]$null, [ref]$errors)
         Assert-True ($errors.Count -eq 0) "scripts/$name.ps1 parses without errors"
     } else {
         Test-Fail "scripts/$name.ps1 parses (missing)"

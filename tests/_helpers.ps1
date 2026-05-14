@@ -38,7 +38,7 @@ function Assert-ParsesPS {
     param([string]$Path, [string]$Name)
     if (-not (Test-Path $Path)) { Test-Fail "$Name (missing)"; return }
     $errors = $null
-    [void][System.Management.Automation.PSParser]::Tokenize((Get-Content $Path -Raw), [ref]$errors)
+    $null = [System.Management.Automation.Language.Parser]::ParseFile($Path, [ref]$null, [ref]$errors)
     if ($errors.Count -eq 0) { Test-Pass $Name } else { Test-Fail "$Name ($($errors.Count) parse error(s))" }
 }
 

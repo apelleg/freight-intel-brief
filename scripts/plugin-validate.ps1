@@ -121,7 +121,7 @@ for root in ("claude-plugins/ai-news-briefing", "plugins/ai-news-briefing-codex"
     for skill in sorted(glob.glob(f"{root}/skills/*/SKILL.md")):
         n_s += 1
         c = _open(skill).read()
-        m = re.match(r"^---\n(.*?)\n---\n", c, re.DOTALL)
+        m = re.match(r"^---\r?\n(.*?)\r?\n---\r?\n", c, re.DOTALL)
         if not m: err(skill, "no frontmatter"); continue
         if "description:" not in m.group(1): err(skill, "missing description")
         d = os.path.basename(os.path.dirname(skill))
@@ -134,7 +134,7 @@ for root in ("claude-plugins/ai-news-briefing", "plugins/ai-news-briefing-codex"
     for agent in sorted(glob.glob(f"{root}/agents/*.md")):
         n_a += 1
         c = _open(agent).read()
-        m = re.match(r"^---\n(.*?)\n---\n", c, re.DOTALL)
+        m = re.match(r"^---\r?\n(.*?)\r?\n---\r?\n", c, re.DOTALL)
         if not m: err(agent, "no frontmatter"); continue
         fm = m.group(1)
         if "name:" not in fm: err(agent, "missing name")
