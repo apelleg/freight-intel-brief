@@ -3,13 +3,158 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI News Briefing - Project Wiki</title>
-  <meta name="description" content="Comprehensive wiki for AI News Briefing: architecture, E2E flow, operations, multi-channel delivery (Teams + Slack), Obsidian vault publishing with graph view, and maintenance runbook.">
+  <title>AI News Briefing — Automated Daily AI News Pipeline + Research Ops Ecosystem | Wiki</title>
+
+  <!-- Primary SEO -->
+  <meta name="description" content="Open-source automated daily AI news briefing pipeline. Multi-engine (Claude, Codex, Gemini, Copilot), 10-plugin research ops ecosystem, Notion + Teams + Slack + Obsidian delivery, custom topic deep research, 201 tests, and a 5-axis LLM-as-judge quality eval harness.">
+  <meta name="keywords" content="AI news briefing, automated AI news, Claude Code, Codex, Gemini CLI, Copilot CLI, Anthropic, OpenAI, agentic AI, multi-agent research, Notion MCP, Teams Adaptive Card, Slack Block Kit, Obsidian graph, knowledge graph, LLM-as-judge, eval harness, briefing automation, daily briefing, MCP server, plugin marketplace, deep research agent, research ops, hoangsonww">
+  <meta name="author" content="Son Nguyen (hoangsonww)">
+  <meta name="copyright" content="© 2026 Son Nguyen — MIT License">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="googlebot" content="index, follow">
+  <meta name="bingbot" content="index, follow">
+  <meta name="referrer" content="no-referrer-when-downgrade">
+  <meta name="rating" content="general">
+  <meta name="theme-color" content="#0a0a0f">
+  <meta name="color-scheme" content="dark light">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="generator" content="Static HTML, hand-authored">
+  <meta name="application-name" content="AI News Briefing">
+  <meta name="apple-mobile-web-app-title" content="AI News Briefing">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="mobile-web-app-capable" content="yes">
+
+  <!-- Geo / language -->
+  <meta name="language" content="English">
+  <meta http-equiv="content-language" content="en">
+
+  <!-- Canonical + alternates -->
+  <link rel="canonical" href="https://hoangsonww.github.io/AI-News-Briefing/">
+  <link rel="alternate" type="text/html" hreflang="en" href="https://hoangsonww.github.io/AI-News-Briefing/">
+  <link rel="alternate" type="text/html" hreflang="x-default" href="https://hoangsonww.github.io/AI-News-Briefing/">
+  <link rel="alternate" type="application/rss+xml" title="AI News Briefing — Repo Activity" href="https://github.com/hoangsonww/AI-News-Briefing/commits/main.atom">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="AI News Briefing">
+  <meta property="og:title" content="AI News Briefing — Automated Daily AI News Pipeline + Research Ops Ecosystem">
+  <meta property="og:description" content="Open-source automated daily AI news briefing. Multi-engine CLI (Claude / Codex / Gemini / Copilot), 10-plugin research ops, Notion + Teams + Slack + Obsidian delivery, custom deep research, and a 5-axis LLM-as-judge quality eval harness.">
+  <meta property="og:url" content="https://hoangsonww.github.io/AI-News-Briefing/">
+  <meta property="og:image" content="https://hoangsonww.github.io/AI-News-Briefing/img/tests.png">
+  <meta property="og:image:alt" content="AI News Briefing test runner CLI output banner">
+  <meta property="og:image:width" content="1280">
+  <meta property="og:image:height" content="720">
+  <meta property="og:locale" content="en_US">
+  <meta property="article:author" content="https://github.com/hoangsonww">
+  <meta property="article:publisher" content="https://github.com/hoangsonww">
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@hoangsonww">
+  <meta name="twitter:creator" content="@hoangsonww">
+  <meta name="twitter:title" content="AI News Briefing — Automated Daily AI News Pipeline">
+  <meta name="twitter:description" content="Multi-engine AI news automation: Claude / Codex / Gemini / Copilot. Notion + Teams + Slack + Obsidian delivery, 10 research plugins, LLM-as-judge eval harness. MIT licensed.">
+  <meta name="twitter:image" content="https://hoangsonww.github.io/AI-News-Briefing/img/tests.png">
+  <meta name="twitter:image:alt" content="AI News Briefing test runner CLI output banner">
+  <meta name="twitter:url" content="https://hoangsonww.github.io/AI-News-Briefing/">
+
+  <!-- LinkedIn / Pinterest -->
+  <meta property="linkedin:owner" content="https://www.linkedin.com/in/hoangsonw/">
+  <meta property="pinterest:description" content="Open-source automated daily AI news briefing pipeline with multi-agent research and LLM-as-judge eval.">
+
+  <!-- Discovery files -->
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="/AI-News-Briefing/sitemap.xml">
+  <link rel="manifest" href="/AI-News-Briefing/site.webmanifest">
+  <link rel="search" type="application/opensearchdescription+xml" title="AI News Briefing" href="/AI-News-Briefing/opensearch.xml">
+  <link rel="author" type="text/plain" href="/AI-News-Briefing/humans.txt">
+  <link rel="license" href="https://opensource.org/licenses/MIT">
+
+  <!-- DNS prefetch + preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="dns-prefetch" href="https://github.com">
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="wiki/style.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📰</text></svg>">
+  <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📰</text></svg>">
+
+  <!-- JSON-LD: SoftwareSourceCode + WebSite + Person -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareSourceCode",
+        "@id": "https://hoangsonww.github.io/AI-News-Briefing/#software",
+        "name": "AI News Briefing",
+        "alternateName": "AI News Briefing Research Ops Ecosystem",
+        "description": "Automated daily AI news briefing pipeline with multi-engine CLI execution (Claude, Codex, Gemini, Copilot), 10-plugin research ops ecosystem, Notion + Teams + Slack + Obsidian delivery, custom deep research agents, and a 5-axis LLM-as-judge quality eval harness.",
+        "codeRepository": "https://github.com/hoangsonww/AI-News-Briefing",
+        "url": "https://hoangsonww.github.io/AI-News-Briefing/",
+        "license": "https://opensource.org/licenses/MIT",
+        "programmingLanguage": ["Bash", "PowerShell", "Python", "Markdown"],
+        "runtimePlatform": ["macOS", "Linux", "Windows"],
+        "operatingSystem": ["macOS", "Linux", "Windows"],
+        "applicationCategory": "DeveloperApplication",
+        "keywords": "AI news, agentic AI, MCP, Claude Code, Codex, Gemini CLI, Notion, Teams, Slack, Obsidian, eval harness, LLM-as-judge, research ops",
+        "author": {
+          "@id": "https://github.com/hoangsonww#person"
+        },
+        "maintainer": {
+          "@id": "https://github.com/hoangsonww#person"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://hoangsonww.github.io/AI-News-Briefing/#website",
+        "url": "https://hoangsonww.github.io/AI-News-Briefing/",
+        "name": "AI News Briefing — Project Wiki",
+        "description": "Comprehensive wiki for AI News Briefing: architecture, E2E flow, plugins, custom brief, eval harness, and operational runbook.",
+        "inLanguage": "en",
+        "publisher": { "@id": "https://github.com/hoangsonww#person" },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://github.com/hoangsonww/AI-News-Briefing/search?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://github.com/hoangsonww#person",
+        "name": "Son Nguyen",
+        "alternateName": ["David Nguyen", "hoangsonww"],
+        "url": "https://sonnguyenhoang.com",
+        "sameAs": [
+          "https://github.com/hoangsonww",
+          "https://www.linkedin.com/in/hoangsonw/",
+          "https://sonnguyenhoang.com"
+        ],
+        "jobTitle": "Software Engineer",
+        "knowsAbout": ["Agentic AI", "LLM evaluation", "Claude Code", "MCP servers", "Knowledge graphs", "Research automation"]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://hoangsonww.github.io/AI-News-Briefing/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Source",
+            "item": "https://github.com/hoangsonww/AI-News-Briefing"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
   <script type="module">
     import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
     mermaid.initialize({
@@ -54,7 +199,7 @@
         <path d="M4 22h16a2 2 0 002-2V4a2 2 0 00-2-2H8a2 2 0 00-2 2v16a2 2 0 01-2 2zm0 0a2 2 0 01-2-2v-9c0-1.1.9-2 2-2h2"/>
         <path d="M18 14h-8M15 18h-5M10 6h8v4h-8z"/>
       </svg>
-      AI News Briefing Wiki
+      AI News Briefing
     </a>
     <ul class="nav-links">
       <li><a href="#architecture">Architecture</a></li>

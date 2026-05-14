@@ -1,0 +1,43 @@
+# robots.txt for https://hoangsonww.github.io/AI-News-Briefing/
+# Project: AI News Briefing (https://github.com/hoangsonww/AI-News-Briefing)
+# Maintainer: Son Nguyen (hoangsonww)
+
+User-agent: *
+Allow: /
+
+# Encourage indexing of structured data + docs
+Allow: /AI-News-Briefing/index.html
+Allow: /AI-News-Briefing/llms.txt
+Allow: /AI-News-Briefing/sitemap.xml
+Allow: /AI-News-Briefing/README.md
+Allow: /AI-News-Briefing/ARCHITECTURE.md
+Allow: /AI-News-Briefing/E2E_FLOW.md
+Allow: /AI-News-Briefing/TESTS.md
+Allow: /AI-News-Briefing/PLUGINS.md
+Allow: /AI-News-Briefing/eval/
+
+# Keep transient runtime + caches out of the index
+Disallow: /AI-News-Briefing/logs/
+Disallow: /AI-News-Briefing/backups/
+Disallow: /AI-News-Briefing/.claude/
+Disallow: /AI-News-Briefing/.agents/
+Disallow: /AI-News-Briefing/eval/store.sqlite
+
+# AI-specific crawlers — opt in (documentation, not training data)
+User-agent: GPTBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: Claude-Web
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: anthropic-ai
+Allow: /
+User-agent: cohere-ai
+Allow: /
+
+Sitemap: https://hoangsonww.github.io/AI-News-Briefing/sitemap.xml
+Host: https://hoangsonww.github.io/AI-News-Briefing/
