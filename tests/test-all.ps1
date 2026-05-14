@@ -326,16 +326,22 @@ foreach ($name in $NewScripts) {
     }
 }
 
-# PowerShell syntax check via the modern Language.Parser (matches the
-# briefing.ps1/custom-brief.ps1 check above). PSParser is the legacy
-# tokenizer and trips on syntax like `$using:var` even when the script
-# is valid PowerShell 5.1+.
+# PowerShell syntax check via the modern Language.Parser. We dump the
+# actual parse errors when assertion fails -- the bare "parses without
+# errors" failure has burned too much time on this PR already.
 foreach ($name in $NewScripts) {
     $path = Join-Path $ScriptDir "scripts/$name.ps1"
     if (Test-Path $path) {
+        $tokens = $null
         $errors = $null
-        $null = [System.Management.Automation.Language.Parser]::ParseFile($path, [ref]$null, [ref]$errors)
-        Assert-True ($errors.Count -eq 0) "scripts/$name.ps1 parses without errors"
+        $null = [System.Management.Automation.Language.Parser]::ParseFile($path, [ref]$tokens, [ref]$errors)
+        $errCount = if ($null -eq $errors) { 0 } else { @($errors).Count }
+        Assert-True ($errCount -eq 0) "scripts/$name.ps1 parses without errors"
+        if ($errCount -gt 0) {
+            foreach ($e in $errors) {
+                Write-Host ("        -> [line {0}, col {1}] {2}" -f $e.Extent.StartLineNumber, $e.Extent.StartColumnNumber, $e.Message) -ForegroundColor DarkRed
+            }
+        }
     } else {
         Test-Fail "scripts/$name.ps1 parses (missing)"
     }
@@ -402,9 +408,20 @@ if ((Get-Command python3 -ErrorAction SilentlyContinue) -or (Get-Command python 
     try {
         $pvOutput = & powershell -ExecutionPolicy Bypass -File (Join-Path $ScriptDir "scripts/plugin-validate.ps1") 2>&1 | Out-String
         $pvExit = $LASTEXITCODE
-        Assert-True ($pvExit -eq 0) "plugin-validate.ps1 exits 0 on current repo"
+        $passExit = ($pvExit -eq 0)
+        $passMentions = ($pvOutput -match [regex]::Escape("ai-news-briefing"))
+        $passZero = ($pvOutput -match [regex]::Escape("0 errors"))
+        Assert-True $passExit "plugin-validate.ps1 exits 0 on current repo"
         Assert-Contains $pvOutput "ai-news-briefing" "plugin-validate.ps1 mentions ai-news-briefing"
         Assert-Contains $pvOutput "0 errors" "plugin-validate.ps1 reports 0 errors"
+        if (-not $passExit -or -not $passZero) {
+            Write-Host "        -> plugin-validate.ps1 exit=$pvExit, output:" -ForegroundColor DarkRed
+            foreach ($line in ($pvOutput -split "`r?`n")) {
+                if ($line.Trim().Length -gt 0) {
+                    Write-Host ("           | " + $line) -ForegroundColor DarkGray
+                }
+            }
+        }
     } catch {
         Test-Fail "plugin-validate.ps1 raised: $_"
     }
