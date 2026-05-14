@@ -310,6 +310,118 @@ Assert-Contains $cbDoc "--topic" "CUSTOM_BRIEF.md: documents --topic flag"
 Assert-Contains $cbDoc "--notion" "CUSTOM_BRIEF.md: documents --notion flag"
 
 # =====================================================================
+#  UTILITY SCRIPTS (eval + plugin tooling) — sh + ps1 parity, syntax,
+#  strict mode, --help, arg validation, scaffold-plugin dry-run.
+# =====================================================================
+Write-Host ""
+Write-Host "  Utility Scripts (eval + plugin tooling)" -ForegroundColor Cyan
+
+$NewScripts = @("eval-summary", "eval-watch", "eval-compare", "plugin-validate", "scaffold-plugin")
+
+# Existence — sh + ps1 pairs
+foreach ($name in $NewScripts) {
+    foreach ($ext in @("sh", "ps1")) {
+        $p = Join-Path $ScriptDir "scripts/$name.$ext"
+        Assert-True (Test-Path $p) "scripts/$name.$ext exists"
+    }
+}
+
+# PowerShell syntax check via PSParser
+foreach ($name in $NewScripts) {
+    $path = Join-Path $ScriptDir "scripts/$name.ps1"
+    if (Test-Path $path) {
+        $errors = $null
+        [void][System.Management.Automation.PSParser]::Tokenize((Get-Content $path -Raw), [ref]$errors)
+        Assert-True ($errors.Count -eq 0) "scripts/$name.ps1 parses without errors"
+    } else {
+        Test-Fail "scripts/$name.ps1 parses (missing)"
+    }
+}
+
+# Strict mode header (each ps1)
+foreach ($name in $NewScripts) {
+    $path = Join-Path $ScriptDir "scripts/$name.ps1"
+    if (Test-Path $path) {
+        $head = (Get-Content $path -TotalCount 5) -join "`n"
+        Assert-Contains $head "Set-StrictMode" "scripts/$name.ps1 uses Set-StrictMode"
+    }
+}
+
+# Param block declares parameters (scaffold-plugin requires mandatory Name + Description)
+$scaffoldPs1 = Get-Content (Join-Path $ScriptDir "scripts/scaffold-plugin.ps1") -Raw
+Assert-Contains $scaffoldPs1 "Mandatory=`$true" "scaffold-plugin.ps1 declares mandatory parameters"
+Assert-Contains $scaffoldPs1 "[string]`$Name" "scaffold-plugin.ps1 has -Name parameter"
+Assert-Contains $scaffoldPs1 "[string]`$Description" "scaffold-plugin.ps1 has -Description parameter"
+Assert-Contains $scaffoldPs1 "kebab-case" "scaffold-plugin.ps1 validates kebab-case"
+
+# eval-summary.ps1 has key features
+$evalSummaryPs1 = Get-Content (Join-Path $ScriptDir "scripts/eval-summary.ps1") -Raw
+Assert-Contains $evalSummaryPs1 "ListJudges" "eval-summary.ps1 has -ListJudges switch"
+Assert-Contains $evalSummaryPs1 "sqlite3" "eval-summary.ps1 invokes sqlite3"
+Assert-Contains $evalSummaryPs1 "axis_medians" -ErrorAction SilentlyContinue 2>$null
+Assert-Contains $evalSummaryPs1 "publish gate" "eval-summary.ps1 reports publish gate"
+
+# eval-compare.ps1 has Threshold parameter
+$evalComparePs1 = Get-Content (Join-Path $ScriptDir "scripts/eval-compare.ps1") -Raw
+Assert-Contains $evalComparePs1 "[double]`$Threshold" "eval-compare.ps1 has -Threshold parameter (typed)"
+Assert-Contains $evalComparePs1 "FLAGGED" "eval-compare.ps1 emits FLAGGED label"
+
+# plugin-validate.ps1 delegates to python3 (parity with bash)
+$pluginValidatePs1 = Get-Content (Join-Path $ScriptDir "scripts/plugin-validate.ps1") -Raw
+Assert-Contains $pluginValidatePs1 "python3" "plugin-validate.ps1 delegates to python3"
+Assert-Contains $pluginValidatePs1 "-Strict" "plugin-validate.ps1 has -Strict switch"
+Assert-Contains $pluginValidatePs1 "-Json" "plugin-validate.ps1 has -Json switch"
+
+# eval-watch.ps1 has Interval + NoDb
+$evalWatchPs1 = Get-Content (Join-Path $ScriptDir "scripts/eval-watch.ps1") -Raw
+Assert-Contains $evalWatchPs1 "[int]`$Interval" "eval-watch.ps1 has -Interval parameter (typed int)"
+Assert-Contains $evalWatchPs1 "NoDb" "eval-watch.ps1 has -NoDb switch"
+Assert-Contains $evalWatchPs1 "Get-Content" "eval-watch.ps1 uses Get-Content for tailing"
+
+# Functional smoke: scaffold-plugin.ps1 dry-run mode (won't actually write because -DryRun)
+# This test runs the actual PowerShell script in dry-run mode and asserts on the output.
+$tmpName = "test-ps-scaffold-$([guid]::NewGuid().ToString('N').Substring(0,8))"
+try {
+    $dryRunOutput = & powershell -ExecutionPolicy Bypass -File (Join-Path $ScriptDir "scripts/scaffold-plugin.ps1") `
+        -Name $tmpName -Description "ps test" -DryRun 2>&1 | Out-String
+    Assert-Contains $dryRunOutput "claude-plugins/$tmpName" "scaffold-plugin.ps1 -DryRun lists claude path"
+    Assert-Contains $dryRunOutput "plugins/$tmpName-codex" "scaffold-plugin.ps1 -DryRun lists codex path"
+    Assert-Contains $dryRunOutput "gemini-extensions/$tmpName" "scaffold-plugin.ps1 -DryRun lists gemini path"
+    Assert-Contains $dryRunOutput "no files written" "scaffold-plugin.ps1 -DryRun reports no writes"
+    # Verify it didn't actually create anything
+    Assert-True (-not (Test-Path (Join-Path $ScriptDir "claude-plugins/$tmpName"))) "scaffold-plugin.ps1 -DryRun did not write claude dir"
+} catch {
+    Test-Fail "scaffold-plugin.ps1 -DryRun raised: $_"
+}
+
+# plugin-validate.ps1 functional smoke (skip if python3 unavailable)
+if (Get-Command python3 -ErrorAction SilentlyContinue) {
+    try {
+        $pvOutput = & powershell -ExecutionPolicy Bypass -File (Join-Path $ScriptDir "scripts/plugin-validate.ps1") 2>&1 | Out-String
+        $pvExit = $LASTEXITCODE
+        Assert-True ($pvExit -eq 0) "plugin-validate.ps1 exits 0 on current repo"
+        Assert-Contains $pvOutput "ai-news-briefing" "plugin-validate.ps1 mentions ai-news-briefing"
+        Assert-Contains $pvOutput "0 errors" "plugin-validate.ps1 reports 0 errors"
+    } catch {
+        Test-Fail "plugin-validate.ps1 raised: $_"
+    }
+} else {
+    Write-Host "  SKIP  plugin-validate.ps1 functional smoke (python3 not on PATH)" -ForegroundColor Yellow
+}
+
+# Makefile targets (cross-platform: Make routes to ps1 on Windows)
+$makefile = Get-Content (Join-Path $ScriptDir "Makefile") -Raw
+foreach ($tgt in $NewScripts) {
+    Assert-True ($makefile -match "(?m)^${tgt}:") "Makefile has $tgt target"
+}
+
+# README/ARCH coverage of new scripts
+$readmeUtil = Get-Content (Join-Path $ScriptDir "README.md") -Raw
+foreach ($tgt in @("eval-summary", "eval-watch", "eval-compare", "plugin-validate", "scaffold-plugin")) {
+    Assert-Contains $readmeUtil $tgt "README.md mentions $tgt"
+}
+
+# =====================================================================
 #  SUMMARY
 # =====================================================================
 Write-Host ""
