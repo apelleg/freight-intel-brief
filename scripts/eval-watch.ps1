@@ -2,7 +2,7 @@
 Set-StrictMode -Version Latest
 $ErrorActionPreference = "Stop"
 
-# eval-watch.ps1 — Live tail of eval-judge logs + newly written eval rows.
+# eval-watch.ps1 -- Live tail of eval-judge logs + newly written eval rows.
 #
 # Usage:
 #   .\scripts\eval-watch.ps1
@@ -25,7 +25,7 @@ New-Item -ItemType Directory -Force -Path $LogDir | Out-Null
 if (-not (Test-Path $Log)) { New-Item -ItemType File -Force -Path $Log | Out-Null }
 
 Write-Host ""
-Write-Host ("  eval-watch — {0}" -f (Get-Date -Format "HH:mm:ss")) -ForegroundColor White
+Write-Host ("  eval-watch -- {0}" -f (Get-Date -Format "HH:mm:ss")) -ForegroundColor White
 Write-Host "  ============================"
 Write-Host ("  log:      {0}" -f $Log)
 Write-Host ("  store:    {0}" -f $Db)

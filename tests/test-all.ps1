@@ -358,7 +358,7 @@ Assert-Contains $scaffoldPs1 "kebab-case" "scaffold-plugin.ps1 validates kebab-c
 $evalSummaryPs1 = Get-Content (Join-Path $ScriptDir "scripts/eval-summary.ps1") -Raw
 Assert-Contains $evalSummaryPs1 "ListJudges" "eval-summary.ps1 has -ListJudges switch"
 Assert-Contains $evalSummaryPs1 "sqlite3" "eval-summary.ps1 invokes sqlite3"
-Assert-Contains $evalSummaryPs1 "axis_medians" -ErrorAction SilentlyContinue 2>$null
+Assert-Contains $evalSummaryPs1 "Axis medians" "eval-summary.ps1 outputs axis medians"
 Assert-Contains $evalSummaryPs1 "publish gate" "eval-summary.ps1 reports publish gate"
 
 # eval-compare.ps1 has Threshold parameter
@@ -394,8 +394,8 @@ try {
     Test-Fail "scaffold-plugin.ps1 -DryRun raised: $_"
 }
 
-# plugin-validate.ps1 functional smoke (skip if python3 unavailable)
-if (Get-Command python3 -ErrorAction SilentlyContinue) {
+# plugin-validate.ps1 functional smoke (skip if python unavailable)
+if ((Get-Command python3 -ErrorAction SilentlyContinue) -or (Get-Command python -ErrorAction SilentlyContinue) -or (Get-Command py -ErrorAction SilentlyContinue)) {
     try {
         $pvOutput = & powershell -ExecutionPolicy Bypass -File (Join-Path $ScriptDir "scripts/plugin-validate.ps1") 2>&1 | Out-String
         $pvExit = $LASTEXITCODE

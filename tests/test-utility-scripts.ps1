@@ -53,6 +53,8 @@ Assert-Contains $watch 'NoDb'           "eval-watch.ps1 has -NoDb switch"
 $summary = Get-Content (Join-Path $RepoRoot "scripts/eval-summary.ps1") -Raw
 Assert-Contains $summary 'ListJudges' "eval-summary.ps1 has -ListJudges switch"
 Assert-Contains $summary 'sqlite3'    "eval-summary.ps1 invokes sqlite3"
+Assert-Contains $summary 'Axis medians' "eval-summary.ps1 outputs axis medians"
+Assert-Contains $summary 'publish gate' "eval-summary.ps1 reports publish gate"
 
 $validate = Get-Content (Join-Path $RepoRoot "scripts/plugin-validate.ps1") -Raw
 Assert-Contains $validate 'python3' "plugin-validate.ps1 delegates to python3"

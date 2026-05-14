@@ -38,15 +38,12 @@ while [ $# -gt 0 ]; do
   esac
 done
 
-if [ ! -f "$DB" ]; then
-  echo "No eval store at $DB. Run a backfill first." >&2
-  exit 1
-fi
-
-# Resolve A vs B: either two judges (default) or two prompts under one judge
+# Resolve A vs B: either two judges (default) or two prompts under one judge.
+# IMPORTANT: validate args BEFORE checking DB existence so users with no eval
+# store yet still get a clear usage message instead of "no DB" + exit 1.
 if [ -n "$A_PROMPT" ] || [ -n "$B_PROMPT" ]; then
   if [ -z "$A_PROMPT" ] || [ -z "$B_PROMPT" ] || [ -z "$SHARED_JUDGE" ]; then
-    echo "When comparing prompt versions, pass --a-prompt, --b-prompt, and --judge." >&2
+    echo "ERROR: when comparing prompt versions, pass --a-prompt, --b-prompt, and --judge." >&2
     exit 2
   fi
   A_WHERE="judge_model = '$SHARED_JUDGE' AND prompt_version = '$A_PROMPT'"
@@ -55,14 +52,19 @@ if [ -n "$A_PROMPT" ] || [ -n "$B_PROMPT" ]; then
   B_LABEL="$SHARED_JUDGE/$B_PROMPT"
 else
   if [ -z "$A_JUDGE" ] || [ -z "$B_JUDGE" ]; then
-    echo "Pass --a and --b (judge_model) or --a-prompt/--b-prompt/--judge." >&2
-    bash "$0" --help
+    echo "ERROR: pass --a and --b (judge_model), or --a-prompt/--b-prompt/--judge." >&2
+    echo "Run: bash $0 --help" >&2
     exit 2
   fi
   A_WHERE="judge_model = '$A_JUDGE'"
   B_WHERE="judge_model = '$B_JUDGE'"
   A_LABEL="$A_JUDGE"
   B_LABEL="$B_JUDGE"
+fi
+
+if [ ! -f "$DB" ]; then
+  echo "No eval store at $DB. Run a backfill first." >&2
+  exit 1
 fi
 
 green() { printf "\033[32m%s\033[0m" "$1"; }

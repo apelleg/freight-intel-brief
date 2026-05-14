@@ -2,7 +2,7 @@
 Set-StrictMode -Version Latest
 $ErrorActionPreference = "Stop"
 
-# eval-compare.ps1 — Side-by-side comparison of two judges (or two prompt versions).
+# eval-compare.ps1 -- Side-by-side comparison of two judges (or two prompt versions).
 #
 # Usage:
 #   .\scripts\eval-compare.ps1 -A claude-haiku-4-5-20251001 -B stub-v1

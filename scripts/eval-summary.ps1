@@ -2,7 +2,7 @@
 Set-StrictMode -Version Latest
 $ErrorActionPreference = "Stop"
 
-# eval-summary.ps1 — At-a-glance summary of eval/store.sqlite contents.
+# eval-summary.ps1 -- At-a-glance summary of eval/store.sqlite contents.
 #
 # Usage:
 #   .\scripts\eval-summary.ps1
@@ -26,7 +26,7 @@ if (-not (Test-Path $Db)) {
     exit 1
 }
 
-# Require sqlite3 — sqlite3 ships with Windows 10+ but verify
+# Require sqlite3 -- sqlite3 ships with Windows 10+ but verify
 if (-not (Get-Command sqlite3 -ErrorAction SilentlyContinue)) {
     Write-Host "ERROR: sqlite3 not on PATH. Install from https://sqlite.org/download.html" -ForegroundColor Red
     exit 1

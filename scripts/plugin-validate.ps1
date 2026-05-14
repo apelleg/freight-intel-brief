@@ -2,7 +2,7 @@
 Set-StrictMode -Version Latest
 $ErrorActionPreference = "Stop"
 
-# plugin-validate.ps1 — Lint every plugin/extension manifest, marketplace entry,
+# plugin-validate.ps1 -- Lint every plugin/extension manifest, marketplace entry,
 # SKILL.md frontmatter, and agent file. Non-zero exit on any error.
 #
 # Usage:
@@ -18,8 +18,16 @@ param(
 $ScriptDir = Split-Path -Parent (Split-Path -Parent $MyInvocation.MyCommand.Definition)
 Set-Location $ScriptDir
 
-if (-not (Get-Command python3 -ErrorAction SilentlyContinue)) {
-    Write-Host "python3 required (also used by the eval harness)." -ForegroundColor Red
+# Windows GitHub runners ship `python` (not `python3`). Probe both.
+$pyExe = $null
+foreach ($candidate in @("python3", "python", "py")) {
+    if (Get-Command $candidate -ErrorAction SilentlyContinue) {
+        $pyExe = $candidate
+        break
+    }
+}
+if (-not $pyExe) {
+    Write-Host "python3 / python / py required (also used by the eval harness)." -ForegroundColor Red
     exit 1
 }
 
@@ -174,7 +182,7 @@ sys.exit(1 if errors or (STRICT and warnings) else 0)
 $tmp = New-TemporaryFile
 try {
     [System.IO.File]::WriteAllText($tmp.FullName, $py)
-    & python3 $tmp.FullName $strictArg $jsonArg
+    & $pyExe $tmp.FullName $strictArg $jsonArg
     $rc = $LASTEXITCODE
 } finally {
     Remove-Item $tmp -Force -ErrorAction SilentlyContinue

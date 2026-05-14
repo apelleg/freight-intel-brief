@@ -20,7 +20,7 @@ Write-Host "   _____                                                            
 Write-Host "  ( ___ )---------------------------------------------------------------( ___ )" -ForegroundColor DarkGray
 Write-Host "   |   |                                                                 |   | " -ForegroundColor DarkGray
 Write-Host "   |   |" -ForegroundColor DarkGray -NoNewline
-Write-Host "       PowerShell Test Runner — AI News Briefing                       " -ForegroundColor Cyan -NoNewline
+Write-Host "       PowerShell Test Runner -- AI News Briefing                       " -ForegroundColor Cyan -NoNewline
 Write-Host "|   | " -ForegroundColor DarkGray
 Write-Host "  (_____)---------------------------------------------------------------(_____)" -ForegroundColor DarkGray
 Write-Host ""

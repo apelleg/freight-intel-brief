@@ -45,7 +45,7 @@ type: briefing
 date: 2026-03-18
 topics: [Claude Code, OpenAI, Anthropic]
 ---
-# AI Daily Briefing — 2026-03-18
+# AI Daily Briefing -- 2026-03-18
 
 ## [[Claude Code]] / [[Anthropic]]
 - Sample bullet.

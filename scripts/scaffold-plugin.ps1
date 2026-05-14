@@ -2,7 +2,7 @@
 Set-StrictMode -Version Latest
 $ErrorActionPreference = "Stop"
 
-# scaffold-plugin.ps1 — Bootstrap a new plugin across all three platforms.
+# scaffold-plugin.ps1 -- Bootstrap a new plugin across all three platforms.
 #
 # Usage:
 #   .\scripts\scaffold-plugin.ps1 -Name my-plugin -Description "what it does"
@@ -91,7 +91,7 @@ function Write-Agent {
     @"
 ---
 name: $AgentName
-description: TODO — describe when this agent activates and what it does. Be specific so the model knows the trigger.
+description: TODO -- describe when this agent activates and what it does. Be specific so the model knows the trigger.
 ---
 
 You are the $AgentName agent. TODO: replace with the agent's persona, goals, and constraints.
@@ -167,7 +167,7 @@ You are the $Name agent. TODO: replace with the system instructions Gemini shoul
 
 ## Available skills
 
-- $Skill — TODO describe.
+- $Skill -- TODO describe.
 "@ | Set-Content -Path "$GeminiDir/GEMINI.md" -Encoding UTF8
 Write-Skill "$GeminiDir/skills/$Skill/SKILL.md"
 
