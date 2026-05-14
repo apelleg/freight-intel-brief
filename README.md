@@ -342,7 +342,9 @@ The project includes a cross-platform `Makefile` that auto-detects your OS and r
 
 ### Utility Scripts Reference
 
-The `scripts/` directory contains 13 utility script pairs (`.sh` for macOS/Linux, `.ps1` for Windows) for managing and troubleshooting the system.
+The `scripts/` directory contains 21 utility script pairs (`.sh` for macOS/Linux, `.ps1` for Windows) for managing, troubleshooting, evaluating, and extending the system. Grouped by concern below.
+
+**Pipeline operations**
 
 | Script | Description | Example Usage |
 |---|---|---|
@@ -356,12 +358,34 @@ The `scripts/` directory contains 13 utility script pairs (`.sh` for macOS/Linux
 | `backup-prompt` | Version prompt.md with timestamped backups | `bash scripts/backup-prompt.sh --list` |
 | `topic-edit` | Add, remove, or list topics in prompt.md | `bash scripts/topic-edit.sh --add "AI Hardware" "GPU news"` |
 | `update-schedule` | Change daily run time | `bash scripts/update-schedule.sh --hour 7 --minute 30` |
+| `uninstall` | Remove scheduler; `--all` also removes logs and backups | `bash scripts/uninstall.sh --all` |
+
+**Delivery (Teams / Slack / Obsidian)**
+
+| Script | Description | Example Usage |
+|---|---|---|
 | `notify` | Send native OS notification for briefing status | `bash scripts/notify.sh` |
 | `notify-teams` | Validate and POST pre-built `card.json` to Microsoft Teams webhooks | `bash scripts/notify-teams.sh` or `--all` for multiple |
 | `notify-slack` | Convert Teams card to Slack Block Kit and POST to Slack webhooks | `bash scripts/notify-slack.sh` or `--all` for multiple |
-| `uninstall` | Remove scheduler; `--all` also removes logs and backups | `bash scripts/uninstall.sh --all` |
+| `publish-obsidian` | Copy obsidian.md to vault, auto-create topic stub pages | `bash scripts/publish-obsidian.sh` |
+| `test-obsidian` | Verify vault path is writable; dry-run the publish flow | `bash scripts/test-obsidian.sh` |
 
-**Windows equivalents** use the same names with `.ps1` extension and PowerShell parameter syntax (e.g., `.\scripts\health-check.ps1`, `.\scripts\topic-edit.ps1 -Action add -Name "AI Hardware" -Description "GPU news"`).
+**Quality eval harness operations**
+
+| Script | Description | Example Usage |
+|---|---|---|
+| `eval-summary` | At-a-glance stats from `eval/store.sqlite` — composite distribution, axis medians, gate fails, recent runs, drift | `bash scripts/eval-summary.sh --judge claude-haiku-4-5-20251001` |
+| `eval-watch` | Live `tail -F` of today's `eval-judge-*.log` + announces newly persisted DB rows | `bash scripts/eval-watch.sh --interval 2` |
+| `eval-compare` | Side-by-side compare of two judges (or two prompt versions) across overlapping dates; flags rows above threshold | `bash scripts/eval-compare.sh --a claude-haiku-4-5-20251001 --b stub-v1` |
+
+**Plugin authoring**
+
+| Script | Description | Example Usage |
+|---|---|---|
+| `plugin-validate` | Lint every plugin manifest, marketplace entry, SKILL.md frontmatter, agent file, hooks schema, and cross-platform parity | `bash scripts/plugin-validate.sh` (add `--strict` to fail on warnings) |
+| `scaffold-plugin` | Bootstrap a new plugin across `claude-plugins/`, `plugins/<name>-codex/`, and `gemini-extensions/<name>/` in one command | `bash scripts/scaffold-plugin.sh --name my-plugin --description "..." --with-agent reviewer` |
+
+**Windows equivalents** use the same names with `.ps1` extension and PowerShell parameter syntax — for example `.\scripts\health-check.ps1`, `.\scripts\eval-summary.ps1 -Judge claude-haiku-4-5-20251001`, `.\scripts\plugin-validate.ps1 -Strict`, or `.\scripts\scaffold-plugin.ps1 -Name my-plugin -Description "..." -WithAgent reviewer`. Every eval and plugin script is also wrapped by a Makefile target (`make eval-summary`, `make plugin-validate`, `make scaffold-plugin NAME=... DESC=...`, etc.) that auto-routes to the correct platform.
 
 ---
 
