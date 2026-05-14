@@ -8,51 +8,56 @@
 
 ```mermaid
 flowchart TD
-    subgraph "Bash Test Suites"
-        R["tests/run-all.sh"] --> T1["test-custom-brief.sh"]
-        R --> T2["test-daily-brief.sh"]
-        R --> T3["test-notifications.sh"]
-        R --> T4["test-portability.sh"]
-        R --> T5["test-obsidian.sh"]
+    classDef runner fill:#2a2440,stroke:#8b7ad4,color:#e4e4ef
+    classDef bash   fill:#1e3a5f,stroke:#5b8dd8,color:#d4e4f8
+    classDef pwsh   fill:#3a2a1e,stroke:#d49b5b,color:#f5e6c8
+    classDef py     fill:#1e3a2f,stroke:#5bd49b,color:#d4f8e2
+    classDef legacy fill:#2a2030,stroke:#6a5a7a,color:#a0a0b8
+
+    ROOT["tests/"]:::runner
+
+    subgraph BASH["Bash · macOS / Linux / Git Bash"]
+        direction TB
+        BR["run-all.sh"]:::runner
+        T1["test-custom-brief.sh<br/>args · template · prompt · skill"]:::bash
+        T2["test-daily-brief.sh<br/>steps · 9 topics · changelogs · dedup"]:::bash
+        T3["test-notifications.sh<br/>card JSON · converter · errors"]:::bash
+        T4["test-obsidian.sh<br/>publish · wikilinks · vault sim"]:::bash
+        T5["test-portability.sh<br/>bash 3.2 · awk · date · ANSI"]:::bash
+        T6["test-utility-scripts.sh<br/>eval-* · plugin-* · scaffold"]:::bash
+        BR --> T1 --> T2 --> T3 --> T4 --> T5 --> T6
     end
 
-    subgraph "PowerShell Test Suite"
-        PS["tests/test-all.ps1"]
+    subgraph PWSH["PowerShell · Windows"]
+        direction TB
+        PR["run-all.ps1"]:::runner
+        H["_helpers.ps1<br/>(dot-sourced by every suite)"]:::pwsh
+        P1["test-custom-brief.ps1"]:::pwsh
+        P2["test-daily-brief.ps1"]:::pwsh
+        P3["test-notifications.ps1"]:::pwsh
+        P4["test-obsidian.ps1"]:::pwsh
+        P5["test-portability.ps1<br/>(ps1 parse · BOM · Makefile routing)"]:::pwsh
+        P6["test-utility-scripts.ps1"]:::pwsh
+        PS_LEGACY["test-all.ps1<br/>(legacy monolith)"]:::legacy
+        PR --> P1 --> P2 --> P3 --> P4 --> P5 --> P6
+        H -.-> P1
+        H -.-> P2
+        H -.-> P3
+        H -.-> P4
+        H -.-> P5
+        H -.-> P6
     end
 
-    subgraph "What Gets Tested"
-        T1 --> C1["Arg parsing & REPL"]
-        T1 --> C2["Template substitution"]
-        T1 --> C3["Prompt structure"]
-        T1 --> C4["Skill structure"]
-
-        T2 --> D1["Prompt steps & topics"]
-        T2 --> D2["Changelog URLs"]
-        T2 --> D3["Entry script structure"]
-        T2 --> D4["Dedup file format"]
-
-        T3 --> N1["Card JSON validation"]
-        T3 --> N2["Card structure"]
-        T3 --> N3["Teams-to-Slack converter"]
-        T3 --> N4["Error handling"]
-
-        T4 --> P1["Bash 3.2 compat"]
-        T4 --> P2["awk/date portability"]
-        T4 --> P3["-f not -x checks"]
-        T4 --> P4["ANSI color safety"]
-
-        T5 --> O1["Publish script structure"]
-        T5 --> O2["Wikilink extraction"]
-        T5 --> O3["Error handling"]
-        T5 --> O4["Vault simulation"]
-
-        PS --> C1
-        PS --> C2
-        PS --> D1
-        PS --> N1
-        PS --> N2
-        PS --> N3
+    subgraph PYTEST["Python · cross-platform"]
+        direction TB
+        PY_RUN["make eval-test"]:::runner
+        PY_SUITE["eval/tests/test_harness.py<br/>extract · judge · store · drift · report"]:::py
+        PY_RUN --> PY_SUITE
     end
+
+    ROOT --> BASH
+    BASH --> PWSH
+    PWSH --> PYTEST
 ```
 
 ---
@@ -72,13 +77,30 @@ bash tests/test-custom-brief.sh     # Custom brief: args, template, prompt, skil
 bash tests/test-daily-brief.sh      # Daily brief: prompt, topics, changelogs, scripts
 bash tests/test-notifications.sh    # Notifications: cards, converter, error handling
 bash tests/test-portability.sh      # Portability: bash version, awk, date, colors
+bash tests/test-utility-scripts.sh  # Utility scripts: eval-* + plugin-* + scaffold-plugin
 ```
 
 ### PowerShell (Windows)
 
+Per-suite mirrors of the bash files, plus a `run-all.ps1` runner that auto-discovers them:
+
 ```powershell
+# Run every PowerShell suite
+powershell -ExecutionPolicy Bypass -File tests\run-all.ps1
+
+# Run individual suites
+powershell -ExecutionPolicy Bypass -File tests\test-custom-brief.ps1
+powershell -ExecutionPolicy Bypass -File tests\test-daily-brief.ps1
+powershell -ExecutionPolicy Bypass -File tests\test-notifications.ps1
+powershell -ExecutionPolicy Bypass -File tests\test-obsidian.ps1
+powershell -ExecutionPolicy Bypass -File tests\test-portability.ps1
+powershell -ExecutionPolicy Bypass -File tests\test-utility-scripts.ps1
+
+# Legacy monolithic suite (still works, kept for backwards compatibility)
 powershell -ExecutionPolicy Bypass -File tests\test-all.ps1
 ```
+
+Shared helpers (`tests\_helpers.ps1`) are dot-sourced by every per-suite file and provide `Test-Pass` / `Test-Fail` / `Assert-True` / `Assert-Contains` / `Assert-NotContains` / `Assert-Match` / `Assert-FileExists` / `Assert-ParsesPS` / `Section` / `Test-Summary`.
 
 ### From Make
 
@@ -246,6 +268,50 @@ flowchart LR
 | Notify invocation | 4 | Uses `-f` not `-x`, calls via `bash` not direct execution |
 | Color safety | 1 | No raw ANSI escapes when output is piped |
 
+### test-utility-scripts.sh (79 tests)
+
+Bash integration suite for the new utility scripts: `eval-summary`, `eval-watch`, `eval-compare`, `plugin-validate`, `scaffold-plugin`. Tests run against temp SQLite databases seeded inside the test process — no real eval store is touched, and `scaffold-plugin` cleans up its scaffolded plugin after asserting JSON validity.
+
+```mermaid
+flowchart LR
+    subgraph "test-utility-scripts.sh"
+        A["Existence + parity"]
+        B["bash -n syntax"]
+        C["Strict-mode header"]
+        D["--help"]
+        E["Argument validation"]
+        F["scaffold-plugin dry-run"]
+        G["scaffold-plugin real write"]
+        H["plugin-validate on repo"]
+        I["eval-summary temp DB"]
+        J["eval-compare temp DB"]
+        K["Makefile targets"]
+        A --> B --> C --> D --> E --> F --> G --> H --> I --> J --> K
+    end
+```
+
+| Category | Tests | What it verifies |
+|---|---|---|
+| Existence | 10 | All 5 scripts ship as `.sh` and `.ps1` pairs. |
+| Syntax | 5 | `bash -n` passes for every new shell script. |
+| Strict mode | 10 | `.sh` uses `set -euo pipefail`; `.ps1` uses `Set-StrictMode`. |
+| `--help` | 5 | Every script's `--help` exits 0 with "Usage:" in output. |
+| Arg validation | 6 | `scaffold-plugin` rejects missing args and non-kebab names; `eval-compare` rejects empty `--a`/`--b`. |
+| `scaffold-plugin --dry-run` | 8 | Lists all 10 paths (claude + codex + gemini, plugin manifests + skills + agent), writes nothing. |
+| `scaffold-plugin` real | 10 | Creates valid `plugin.json` × 3 platforms + `GEMINI.md` + `SKILL.md` + agent file; refuses to overwrite. |
+| `plugin-validate` | 4 | Exits 0 on current repo; reports `ai-news-briefing`; reports `0 errors`; `--json` emits parseable JSON with `ok:true`. |
+| `eval-summary` | 7 | Runs against temp DB with seeded judge; shows judge name, row count, gate-below cards; `--judges` mode lists judges. |
+| `eval-compare` | 5 | Flags `Δ > threshold` and exits 3; A=B reports within tolerance. |
+| Makefile targets | 5 | All 5 new targets present in `Makefile`. |
+
+Test isolation: temp DBs are created via `mktemp -d`; scaffolded plugins use a `$$`-suffixed name and are `rm -rf`'d after JSON validation. No state leaks back into the working tree.
+
+Run via:
+
+```bash
+bash tests/test-utility-scripts.sh
+```
+
 ### eval/tests/test_harness.py (10 tests)
 
 Python unit tests for the quality eval harness. Use only the Python stdlib and the offline `stub` judge, so they require no AI CLI and no network.
@@ -276,7 +342,7 @@ make eval-test
 python3 -m unittest discover -s eval/tests -v
 ```
 
-### test-all.ps1 (91 tests)
+### test-all.ps1 (~112 tests)
 
 PowerShell-native test suite covering everything above from a Windows perspective.
 
@@ -349,16 +415,25 @@ The `run-all.sh` runner displays an ASCII art banner and an aggregate result:
 
 ```
 tests/
-  run-all.sh               # Bash test runner (runs all test-*.sh suites)
-  test-custom-brief.sh     # Custom brief: args, template, prompt, skill, Obsidian
-  test-daily-brief.sh      # Daily brief: prompt, topics, changelogs, scripts, Obsidian
-  test-notifications.sh    # Notifications: cards, converter, error paths
-  test-obsidian.sh         # Obsidian: publish script, wikilinks, vault simulation
-  test-portability.sh      # Cross-platform: bash compat, awk, date, colors
-  test-all.ps1             # PowerShell suite (all categories in one file)
+  _helpers.ps1               # Shared PowerShell helpers (dot-sourced by every test-*.ps1)
+  run-all.sh                 # Bash runner — discovers test-*.sh
+  run-all.ps1                # PowerShell runner — discovers test-*.ps1
+  test-custom-brief.sh       # Custom brief: args, template, prompt, skill, Obsidian
+  test-custom-brief.ps1      #  ↳ PowerShell mirror
+  test-daily-brief.sh        # Daily brief: prompt, topics, changelogs, scripts, Obsidian
+  test-daily-brief.ps1       #  ↳ PowerShell mirror
+  test-notifications.sh      # Notifications: cards, converter, error paths
+  test-notifications.ps1     #  ↳ PowerShell mirror
+  test-obsidian.sh           # Obsidian: publish script, wikilinks, vault simulation
+  test-obsidian.ps1          #  ↳ PowerShell mirror
+  test-portability.sh        # bash 3.2 / awk / date / ANSI safety
+  test-portability.ps1       #  ↳ PowerShell side: ps1 syntax, strict-mode, BOM, Makefile routing
+  test-utility-scripts.sh    # eval-* + plugin-* + scaffold-plugin
+  test-utility-scripts.ps1   #  ↳ PowerShell mirror
+  test-all.ps1               # Legacy monolithic PowerShell suite (kept for backwards compat)
 
 eval/tests/
-  test_harness.py          # Python unittest: extract, judge, store, drift, report
+  test_harness.py            # Python unittest: extract, judge, store, drift, report
 ```
 
 ---

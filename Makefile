@@ -1,4 +1,4 @@
-.PHONY: help run run-bg custom-brief custom-brief-bg tail log logs status install uninstall clean-logs check validate prompt eval eval-backfill eval-regression eval-seed-golden eval-drift eval-report eval-show eval-test eval-dashboard
+.PHONY: help run run-bg custom-brief custom-brief-bg tail log logs status install uninstall clean-logs check validate prompt eval eval-backfill eval-regression eval-seed-golden eval-drift eval-report eval-show eval-test eval-dashboard eval-summary eval-watch eval-compare plugin-validate scaffold-plugin
 
 SHELL := /bin/bash
 DATE  := $(shell date +%Y-%m-%d)
@@ -295,6 +295,69 @@ eval-dashboard: ## Build interactive dashboard. Options: DASHBOARD_JUDGE=<model>
 	@echo ""
 	@echo "Open eval/dashboard/index.html in your browser, or:"
 	@echo "  make eval-dashboard OPEN=1"
+
+eval-summary: ## At-a-glance summary of eval/store.sqlite. Options: JUDGE=<model> SINCE=YYYY-MM-DD UNTIL=YYYY-MM-DD
+ifeq ($(PLATFORM),windows)
+	@powershell -ExecutionPolicy Bypass -File "$(SCRIPT_DIR)/scripts/eval-summary.ps1" \
+		$(if $(JUDGE),-Judge $(JUDGE)) \
+		$(if $(SINCE),-Since $(SINCE)) \
+		$(if $(UNTIL),-Until $(UNTIL))
+else
+	@bash "$(SCRIPT_DIR)/scripts/eval-summary.sh" \
+		$(if $(JUDGE),--judge $(JUDGE)) \
+		$(if $(SINCE),--since $(SINCE)) \
+		$(if $(UNTIL),--until $(UNTIL))
+endif
+
+eval-watch: ## Live-tail eval-judge logs + new DB rows. Options: D=YYYY-MM-DD INTERVAL=2
+ifeq ($(PLATFORM),windows)
+	@powershell -ExecutionPolicy Bypass -File "$(SCRIPT_DIR)/scripts/eval-watch.ps1" \
+		$(if $(D),-Date $(D)) \
+		$(if $(INTERVAL),-Interval $(INTERVAL))
+else
+	@bash "$(SCRIPT_DIR)/scripts/eval-watch.sh" \
+		$(if $(D),--date $(D)) \
+		$(if $(INTERVAL),--interval $(INTERVAL))
+endif
+
+eval-compare: ## Compare two judges across the same dates. Options: A=<judge> B=<judge> THRESHOLD=0.5
+ifeq ($(PLATFORM),windows)
+	@powershell -ExecutionPolicy Bypass -File "$(SCRIPT_DIR)/scripts/eval-compare.ps1" \
+		$(if $(A),-A $(A)) \
+		$(if $(B),-B $(B)) \
+		$(if $(THRESHOLD),-Threshold $(THRESHOLD))
+else
+	@bash "$(SCRIPT_DIR)/scripts/eval-compare.sh" \
+		$(if $(A),--a $(A)) \
+		$(if $(B),--b $(B)) \
+		$(if $(THRESHOLD),--threshold $(THRESHOLD))
+endif
+
+plugin-validate: ## Lint every plugin manifest, marketplace entry, skill, and agent. Options: STRICT=1 JSON=1
+ifeq ($(PLATFORM),windows)
+	@powershell -ExecutionPolicy Bypass -File "$(SCRIPT_DIR)/scripts/plugin-validate.ps1" \
+		$(if $(STRICT),-Strict) \
+		$(if $(JSON),-Json)
+else
+	@bash "$(SCRIPT_DIR)/scripts/plugin-validate.sh" \
+		$(if $(STRICT),--strict) \
+		$(if $(JSON),--json)
+endif
+
+scaffold-plugin: ## Bootstrap a new plugin across all 3 platforms. Required: NAME=<name> DESC="..."
+ifeq ($(PLATFORM),windows)
+	@powershell -ExecutionPolicy Bypass -File "$(SCRIPT_DIR)/scripts/scaffold-plugin.ps1" \
+		-Name $(NAME) -Description "$(DESC)" \
+		$(if $(SKILL),-Skill $(SKILL)) \
+		$(if $(AGENT),-WithAgent $(AGENT)) \
+		$(if $(DRY_RUN),-DryRun)
+else
+	@bash "$(SCRIPT_DIR)/scripts/scaffold-plugin.sh" \
+		--name $(NAME) --description "$(DESC)" \
+		$(if $(SKILL),--skill $(SKILL)) \
+		$(if $(AGENT),--with-agent $(AGENT)) \
+		$(if $(DRY_RUN),--dry-run)
+endif
 
 ## —— Info —————————————————————————————————————————————
 info: ## Show project configuration summary

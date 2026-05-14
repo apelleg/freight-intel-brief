@@ -404,51 +404,71 @@ The `Makefile` provides a unified command interface across macOS, Windows (Git B
 
 ### 3.6 Utility Scripts (`scripts/`)
 
-The `scripts/` directory contains 12 paired utility scripts (`.sh` + `.ps1`) that support system management, diagnostics, and maintenance. Each pair implements identical functionality in platform-native languages.
+The `scripts/` directory contains **21 paired utility scripts** (`.sh` + `.ps1`) that support pipeline operations, delivery, quality evaluation, plugin authoring, diagnostics, and maintenance. Each pair implements identical functionality in platform-native languages; the Makefile auto-routes between them based on `$(PLATFORM)`.
 
 **Design decisions:**
 
 - **Cross-platform parity.** Every script exists as both a Bash and PowerShell variant. The two versions produce the same output and accept equivalent parameters.
 - **Auto-backup on mutation.** Scripts that modify `prompt.md` (`topic-edit`, `backup-prompt`) automatically create a timestamped backup before writing.
-- **Read-only by default.** Most scripts are diagnostic (health-check, log-summary, cost-report). Only `topic-edit`, `backup-prompt`, `update-schedule`, `uninstall`, and `export-logs` perform writes.
-- **No external dependencies.** All scripts use only built-in OS utilities (bash, PowerShell, grep, sed, Get-Content, Select-String).
+- **Read-only by default.** Most scripts are diagnostic. Only `topic-edit`, `backup-prompt`, `update-schedule`, `uninstall`, `export-logs`, and `scaffold-plugin` perform writes.
+- **No external dependencies.** All scripts use only built-in OS utilities (bash, PowerShell, grep, sed, Get-Content, Select-String, `sqlite3`, and `python3` where the eval store is involved).
 
 **Script categories:**
 
 | Category | Scripts | Purpose |
 |---|---|---|
 | Diagnostics | `health-check`, `log-summary`, `log-search`, `cost-report` | Inspect system health, run history, and spending |
-| Testing | `dry-run`, `test-notion` | Validate pipeline and MCP connectivity without side effects |
+| Testing | `dry-run`, `test-notion`, `test-obsidian` | Validate pipeline, MCP, and vault connectivity without side effects |
 | Data Management | `export-logs`, `backup-prompt` | Archive logs and version prompt.md |
 | Configuration | `topic-edit`, `update-schedule` | Modify topics and scheduler timing |
-| Lifecycle | `notify`, `uninstall` | Post-run notifications and full system removal |
+| Delivery | `notify`, `notify-teams`, `notify-slack`, `publish-obsidian` | Post briefing to OS, Teams, Slack, Obsidian vault |
+| **Eval harness** | `eval-summary`, `eval-watch`, `eval-compare` | Inspect `eval/store.sqlite`, tail eval logs live, compare two judges or prompt versions |
+| **Plugin authoring** | `plugin-validate`, `scaffold-plugin` | Lint every plugin/marketplace/SKILL.md/agent + parity check; bootstrap new plugins across 3 platforms |
+| Lifecycle | `uninstall` | Full system removal |
 
 **Interaction with other components:**
 
 ```mermaid
-graph LR
-    HC[health-check] -->|Validates| PM[prompt.md]
-    HC -->|Validates| CL[Claude CLI]
-    HC -->|Validates| SC[Scheduler]
+flowchart LR
+    classDef diag fill:#1e3a5f,stroke:#5b8dd8,color:#d4e4f8
+    classDef ops  fill:#3a2a1e,stroke:#d49b5b,color:#f5e6c8
+    classDef eval fill:#2a2440,stroke:#8b7ad4,color:#e4e4ef
+    classDef plug fill:#1e3a2f,stroke:#5bd49b,color:#d4f8e2
 
-    DR[dry-run] -->|Reads| PM
-    DR -->|Invokes| CL
-    TN[test-notion] -->|Invokes| CL
+    PM["prompt.md"]:::ops
+    CL["AI CLI"]:::ops
+    SC["scheduler"]:::ops
+    LG["logs/"]:::ops
+    STORE[("eval/store.sqlite")]:::eval
+    MFEST["plugin manifests<br/>+ marketplace.json"]:::plug
 
-    TE[topic-edit] -->|Modifies| PM
-    TE -->|Auto-backup| BP[backup-prompt]
-    BP -->|Versions| PM
+    HC["health-check"]:::diag       --> PM & CL & SC
+    DR["dry-run"]:::diag            --> PM & CL
+    TN["test-notion"]:::diag        --> CL
+    TE["topic-edit"]:::ops          --> PM
+    BP["backup-prompt"]:::ops       --> PM
+    US["update-schedule"]:::ops     --> SC
+    LS["log-summary<br/>log-search<br/>cost-report<br/>export-logs"]:::diag --> LG
+    UN["uninstall"]:::ops           --> SC
 
-    US[update-schedule] -->|Modifies| SC
+    ES["eval-summary"]:::eval       --> STORE
+    EW["eval-watch"]:::eval         --> LG
+    EW                              --> STORE
+    EC["eval-compare"]:::eval       --> STORE
 
-    LS[log-summary] -->|Reads| LG["logs/"]
-    LSR[log-search] -->|Reads| LG
-    CR[cost-report] -->|Reads| LG
-    EL[export-logs] -->|Archives| LG
-
-    NT[notify] -->|Reads| LG
-    UN[uninstall] -->|Removes| SC
+    PV["plugin-validate"]:::plug    --> MFEST
+    SP["scaffold-plugin"]:::plug    --> MFEST
 ```
+
+#### Eval and plugin script details
+
+| Script | Pairs with | Used when |
+| --- | --- | --- |
+| `eval-summary` | `make eval-summary` | After backfill, to glance at quality distribution + drift status + worst cards without spinning up the dashboard. |
+| `eval-watch` | `make eval-watch` | While a long `eval-backfill` is in flight; streams the `eval-judge-*.log` and announces each new DB row. |
+| `eval-compare` | `make eval-compare A=... B=...` | Validating a judge swap or prompt-version bump before re-baselining (Haiku vs Sonnet, v1 vs v2, real vs stub). |
+| `plugin-validate` | `make plugin-validate` | CI gate, post-edit smoke check, post-`scaffold-plugin` verification. Same Python implementation in both sh and ps1. |
+| `scaffold-plugin` | `make scaffold-plugin NAME=... DESC=...` | Bootstrapping a new plugin across Claude/Codex/Gemini in one command. Prints the marketplace.json snippet to paste. |
 
 ### 3.7 Manual CLI Trigger (macOS: `ai-news`)
 

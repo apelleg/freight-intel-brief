@@ -91,7 +91,6 @@ footer a { color: var(--accent-2); text-decoration: none; }
 </head>
 <body>
 <div class="wrap">
-
   <header>
     <h1>AI News Briefing - <span class="accent">Eval Dashboard</span></h1>
     <div class="meta">
@@ -99,9 +98,7 @@ footer a { color: var(--accent-2); text-decoration: none; }
       <a href="https://github.com/hoangsonww/AI-News-Briefing/blob/main/eval/README.md" target="_blank" rel="noopener">harness docs ↗</a>
     </div>
   </header>
-
   <section class="cards" id="stats"></section>
-
   <section class="grid2">
     <div class="panel">
       <h2>Composite trend <span class="hint">latest run per card_date</span></h2>
@@ -112,7 +109,6 @@ footer a { color: var(--accent-2); text-decoration: none; }
       <div class="chart-wrap small"><canvas id="radarChart"></canvas></div>
     </div>
   </section>
-
   <section class="grid2">
     <div class="panel">
       <h2>Composite distribution</h2>
@@ -123,7 +119,6 @@ footer a { color: var(--accent-2); text-decoration: none; }
       <div class="chart-wrap"><canvas id="stackChart"></canvas></div>
     </div>
   </section>
-
   <section class="panel" style="margin-bottom: 1.5rem;">
     <h2>Per-card detail</h2>
     <div class="toolbar">
@@ -157,15 +152,12 @@ footer a { color: var(--accent-2); text-decoration: none; }
       <div class="detail" id="detailGrid"></div>
     </div>
   </section>
-
   <footer>
     Data: <code>eval/store.sqlite</code> + <code>eval/golden/</code> · rendered offline ·
     refresh with <code>make eval-dashboard</code> ·
     <a href="https://github.com/hoangsonww/AI-News-Briefing" target="_blank" rel="noopener">source ↗</a>
   </footer>
-
 </div>
-
 <script src="data.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
 <script>
@@ -175,8 +167,6 @@ footer a { color: var(--accent-2); text-decoration: none; }
     document.querySelector('.wrap').innerHTML = '<div class="empty">No <code>data.js</code> found. Run <code>make eval-dashboard</code> first.</div>';
     return;
   }
-
-  // --- Helpers ----------------------------------------------------------
   const AXES = data.axes;
   const AXIS_COLORS = {
     factuality: '#d4685b',
@@ -188,12 +178,8 @@ footer a { color: var(--accent-2); text-decoration: none; }
   const fmtPct = (n) => (n == null ? '-' : n.toFixed(2));
   const composites = data.cards.map((c) => c.composite);
   const labels = data.cards.map((c) => c.card_date);
-
-  // --- Header meta ------------------------------------------------------
   document.getElementById('generated').textContent =
     `generated ${data.generated_at} · ${data.summary.card_count} cards · ${data.summary.golden_count} goldens · judges: ${data.summary.judges.join(', ')}`;
-
-  // --- Stat cards -------------------------------------------------------
   const statsEl = document.getElementById('stats');
   const driftBadgeClass = data.drift.status === 'alert' ? 'bad' : data.drift.status === 'no_data' ? 'warn' : 'good';
   const gateFails = data.cards.filter((c) => c.composite < 3.0).length;
@@ -213,13 +199,9 @@ footer a { color: var(--accent-2); text-decoration: none; }
     el.innerHTML = `<div class="label">${s.label}</div><div class="value">${s.value}</div><div class="sub">${s.sub}</div>`;
     statsEl.appendChild(el);
   }
-
-  // --- Common Chart.js theming -----------------------------------------
   Chart.defaults.color = '#a0a0b8';
   Chart.defaults.borderColor = '#2a2a3a';
   Chart.defaults.font.family = "-apple-system, 'Segoe UI', Inter, sans-serif";
-
-  // --- Trend chart ------------------------------------------------------
   const baselines = data.cards.map((c) => c.baseline_composite);
   new Chart(document.getElementById('trendChart'), {
     type: 'line',
@@ -269,8 +251,6 @@ footer a { color: var(--accent-2); text-decoration: none; }
       },
     },
   });
-
-  // --- Radar chart ------------------------------------------------------
   new Chart(document.getElementById('radarChart'), {
     type: 'radar',
     data: {
@@ -299,8 +279,6 @@ footer a { color: var(--accent-2); text-decoration: none; }
       plugins: { legend: { display: false } },
     },
   });
-
-  // --- Histogram --------------------------------------------------------
   const bins = [
     { label: '< 2.5', range: (x) => x < 2.5, count: 0 },
     { label: '2.5 – 3.0', range: (x) => x >= 2.5 && x < 3.0, count: 0 },
@@ -330,8 +308,6 @@ footer a { color: var(--accent-2); text-decoration: none; }
       plugins: { legend: { display: false }, tooltip: { callbacks: { label: (ctx) => `${ctx.parsed.x} cards` } } },
     },
   });
-
-  // --- Stacked axis bars -------------------------------------------------
   const stackDatasets = AXES.map((a) => ({
     label: a,
     data: data.cards.map((c) => c.axes[a] * data.weights[a]),
@@ -367,15 +343,12 @@ footer a { color: var(--accent-2); text-decoration: none; }
       },
     },
   });
-
-  // --- Table + filter + sort + selection --------------------------------
   const tbody = document.getElementById('rows');
   const emptyEl = document.getElementById('empty');
   const detailWrap = document.getElementById('detail');
   const detailGrid = document.getElementById('detailGrid');
   const searchEl = document.getElementById('search');
   const filterBtns = [...document.querySelectorAll('.filter-btn')];
-
   let state = {
     sortKey: 'card_date',
     sortAsc: true,
@@ -383,7 +356,6 @@ footer a { color: var(--accent-2); text-decoration: none; }
     query: '',
     selectedDate: null,
   };
-
   function visibleRows() {
     let rows = [...data.cards];
     if (state.filter === 'gate-fail') rows = rows.filter((r) => r.composite < 3.0);
@@ -408,7 +380,6 @@ footer a { color: var(--accent-2); text-decoration: none; }
     });
     return rows;
   }
-
   function renderTable() {
     const rows = visibleRows();
     tbody.innerHTML = '';
@@ -437,7 +408,6 @@ footer a { color: var(--accent-2); text-decoration: none; }
       tbody.appendChild(tr);
     }
   }
-
   function selectRow(d) {
     state.selectedDate = d;
     [...tbody.querySelectorAll('tr')].forEach((tr) => tr.classList.toggle('selected', tr.dataset.date === d));
@@ -462,8 +432,6 @@ footer a { color: var(--accent-2); text-decoration: none; }
     });
     stackChart.update();
   }
-
-  // Sort headers
   document.querySelectorAll('th[data-sort]').forEach((th) => {
     th.addEventListener('click', () => {
       const key = th.dataset.sort;
@@ -475,8 +443,6 @@ footer a { color: var(--accent-2); text-decoration: none; }
       renderTable();
     });
   });
-
-  // Filter buttons
   filterBtns.forEach((b) => {
     b.addEventListener('click', () => {
       filterBtns.forEach((x) => x.classList.remove('active'));
@@ -485,10 +451,7 @@ footer a { color: var(--accent-2); text-decoration: none; }
       renderTable();
     });
   });
-
-  // Search
   searchEl.addEventListener('input', (e) => { state.query = e.target.value; renderTable(); });
-
   renderTable();
   if (data.cards.length) selectRow(data.cards[data.cards.length - 1].card_date);
 })();
