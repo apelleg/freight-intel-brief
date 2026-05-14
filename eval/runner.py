@@ -51,7 +51,13 @@ def _score_one(card_date: str, backend: str) -> dict:
 
 
 def cmd_score(args: argparse.Namespace) -> int:
+    import time
+    print(f"[{time.strftime('%H:%M:%S')}] judging {args.date} via {args.judge!r}... "
+          f"(tail -f logs/eval-judge-{time.strftime('%Y-%m-%d')}.log for progress)",
+          flush=True, file=sys.stderr)
+    t0 = time.monotonic()
     out = _score_one(args.date, args.judge)
+    out["elapsed_seconds"] = round(time.monotonic() - t0, 1)
     print(json.dumps(out, indent=2))
     if args.gate and out["composite"] < args.gate_threshold:
         print(f"GATE FAIL: composite {out['composite']} < {args.gate_threshold}", file=sys.stderr)
@@ -60,6 +66,9 @@ def cmd_score(args: argparse.Namespace) -> int:
 
 
 def cmd_backfill(args: argparse.Namespace) -> int:
+    import time
+    from concurrent.futures import ThreadPoolExecutor, as_completed
+
     card_dir = CARD_DIR_DEFAULT
     cards = sorted(p.name[:10] for p in card_dir.glob("*-card.json"))
     if not cards:
@@ -72,16 +81,47 @@ def cmd_backfill(args: argparse.Namespace) -> int:
             file=sys.stderr,
         )
         return 1
-    print(f"Backfilling {len(cards)} cards with backend={args.judge!r} ...")
+
+    workers = max(1, args.workers)
+    if args.judge == "stub":
+        workers = 1  # stub is instant; serial keeps output ordered
+    log_hint = f"logs/eval-judge-{time.strftime('%Y-%m-%d')}.log"
+    print(
+        f"Backfilling {len(cards)} cards | backend={args.judge!r} | workers={workers}",
+        flush=True,
+    )
+    print(f"Per-call trace: tail -f {log_hint}", flush=True)
+    t0 = time.monotonic()
     failures = 0
-    for d in cards:
-        try:
-            r = _score_one(d, args.judge)
-            print(f"  {d}: composite={r['composite']}")
-        except Exception as e:  # keep going through the set
-            failures += 1
-            print(f"  {d}: ERROR {e}", file=sys.stderr)
-    print(f"Done. {len(cards) - failures}/{len(cards)} succeeded.")
+
+    def _job(d: str):
+        ts = time.strftime("%H:%M:%S")
+        print(f"  [{ts}] {d}: judging...", flush=True)
+        return d, _score_one(d, args.judge)
+
+    if workers == 1:
+        for d in cards:
+            try:
+                _, r = _job(d)
+                print(f"  {d}: composite={r['composite']}", flush=True)
+            except Exception as e:
+                failures += 1
+                print(f"  {d}: ERROR {e}", file=sys.stderr, flush=True)
+    else:
+        with ThreadPoolExecutor(max_workers=workers) as ex:
+            futures = {ex.submit(_job, d): d for d in cards}
+            for fut in as_completed(futures):
+                d = futures[fut]
+                try:
+                    _, r = fut.result()
+                    print(f"  {d}: composite={r['composite']}", flush=True)
+                except Exception as e:
+                    failures += 1
+                    print(f"  {d}: ERROR {e}", file=sys.stderr, flush=True)
+
+    dt = time.monotonic() - t0
+    print(f"Done. {len(cards) - failures}/{len(cards)} succeeded in {dt:.1f}s "
+          f"({dt / max(len(cards), 1):.1f}s/card).")
     return 0 if failures == 0 else 1
 
 
@@ -153,6 +193,8 @@ def main(argv: list[str] | None = None) -> int:
 
     bp = sub.add_parser("backfill", parents=[common], help="Score every card in example-cards/")
     bp.add_argument("--max-calls", type=int, default=MAX_JUDGE_CALLS_DEFAULT)
+    bp.add_argument("--workers", type=int, default=4,
+                    help="Concurrent judge calls (real backends only; stub forces 1)")
     bp.set_defaults(func=cmd_backfill)
 
     rp = sub.add_parser("regression", parents=[common], help="Re-judge golden set, fail on drift")

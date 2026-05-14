@@ -14,6 +14,7 @@ import os
 import re
 import shutil
 import subprocess
+import sys
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -65,14 +66,46 @@ def parse_judge_response(text: str) -> dict:
 # --- Backends -----------------------------------------------------------------
 
 
-def _run_cli(cmd: list[str], stdin: str, timeout: int = 120) -> str:
-    proc = subprocess.run(
-        cmd,
-        input=stdin,
-        capture_output=True,
-        text=True,
-        timeout=timeout,
-    )
+LOG_DIR = Path(__file__).resolve().parent.parent / "logs"
+
+
+def _log_call(cmd: list[str], stdin: str, stdout: str, stderr: str, rc: int, elapsed: float) -> None:
+    """Append a per-call trace to logs/eval-judge-YYYY-MM-DD.log."""
+    try:
+        LOG_DIR.mkdir(exist_ok=True)
+        import datetime as _dt
+        day = _dt.date.today().isoformat()
+        log_path = LOG_DIR / f"eval-judge-{day}.log"
+        with log_path.open("a") as f:
+            f.write(f"--- {_dt.datetime.now().isoformat(timespec='seconds')} "
+                    f"rc={rc} elapsed={elapsed:.1f}s ---\n")
+            f.write(f"CMD: {' '.join(cmd)}\n")
+            if stdin:
+                f.write(f"STDIN[:200]: {stdin[:200]}\n")
+            f.write(f"STDOUT[:2000]:\n{stdout[:2000]}\n")
+            if stderr:
+                f.write(f"STDERR[:800]:\n{stderr[:800]}\n")
+            f.write("\n")
+    except Exception:
+        pass  # logging must never break a run
+
+
+def _run_cli(cmd: list[str], stdin: str, timeout: int = 240) -> str:
+    # Match briefing.sh: clear CLAUDECODE so the judge CLI does not refuse to
+    # launch when invoked from inside an existing Claude Code session.
+    env = {k: v for k, v in os.environ.items() if k not in ("CLAUDECODE", "CLAUDE_CODE")}
+    import time as _time
+    t0 = _time.monotonic()
+    try:
+        proc = subprocess.run(
+            cmd, input=stdin, capture_output=True, text=True,
+            timeout=timeout, env=env,
+        )
+    except subprocess.TimeoutExpired as e:
+        _log_call(cmd, stdin, e.stdout or "", e.stderr or "", -1, _time.monotonic() - t0)
+        raise RuntimeError(f"Judge CLI timed out after {timeout}s") from e
+    elapsed = _time.monotonic() - t0
+    _log_call(cmd, stdin, proc.stdout, proc.stderr, proc.returncode, elapsed)
     if proc.returncode != 0:
         raise RuntimeError(
             f"Judge CLI failed (rc={proc.returncode}): {proc.stderr.strip()[:400]}"
@@ -107,7 +140,11 @@ def _backend_claude_cli(prompt: str) -> tuple[dict, str, str]:
     if not (claude and os.path.exists(claude)):
         raise RuntimeError("claude CLI not found; install or use --judge stub")
     model = os.environ.get("EVAL_JUDGE_MODEL", "claude-haiku-4-5-20251001")
-    raw = _run_cli([claude, "-p", "--model", model], prompt)
+    # Match briefing.sh invocation: prompt as positional arg, not stdin.
+    raw = _run_cli(
+        [claude, "-p", "--model", model, "--dangerously-skip-permissions", prompt],
+        "",
+    )
     return parse_judge_response(raw), raw, model
 
 
@@ -115,7 +152,7 @@ def _backend_codex_cli(prompt: str) -> tuple[dict, str, str]:
     codex = shutil.which("codex")
     if not codex:
         raise RuntimeError("codex CLI not found")
-    raw = _run_cli([codex, "exec", "-"], prompt)
+    raw = _run_cli([codex, "exec", "--full-auto", prompt], "")
     return parse_judge_response(raw), raw, "codex-cli"
 
 
