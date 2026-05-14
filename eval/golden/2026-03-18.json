@@ -1,7 +1,15 @@
 {
   "card_date": "2026-03-18",
-  "baseline_composite": 4.2,
-  "baseline_judge": "stub-v1",
+  "baseline_composite": 4.0,
+  "baseline_judge": "claude-haiku-4-5-20251001",
   "baseline_prompt_version": "v1",
-  "notes": "Seed baseline from initial stub backfill on 2026-05-13. Replace baseline_composite + baseline_judge when re-baselining against the real Claude judge."
+  "baseline_ran_at": "2026-05-14T02:51:27+00:00",
+  "baseline_axes": {
+    "factuality": 4,
+    "novelty": 3,
+    "source_diversity": 4,
+    "signal_density": 5,
+    "coherence": 4
+  },
+  "notes": "Novelty drags from GPT-5.4 mini pricing (prior headlines show arrival days before) and UK copyright report (expected delivery on Mar 18, not novel). TADA TTS and SAFECHAT Act are new; fourth Claude outage also new. Strong sourcing and concrete numbers throughout."
 }

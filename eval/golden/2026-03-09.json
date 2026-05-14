@@ -1,7 +1,15 @@
 {
   "card_date": "2026-03-09",
-  "baseline_composite": 4.2,
-  "baseline_judge": "stub-v1",
+  "baseline_composite": 3.85,
+  "baseline_judge": "claude-haiku-4-5-20251001",
   "baseline_prompt_version": "v1",
-  "notes": "Seed baseline from initial stub backfill on 2026-05-13."
+  "baseline_ran_at": "2026-05-14T02:49:15+00:00",
+  "baseline_axes": {
+    "factuality": 4,
+    "novelty": 4,
+    "source_diversity": 3,
+    "signal_density": 4,
+    "coherence": 4
+  },
+  "notes": "Six sources listed for twelve stories with no in-text attribution \u2014 source mapping opaque. Signal-dense on numbers/names (11K vulns, 97M MCP downloads, bill votes) but 'MiniMax praised for rivaling' and 'seven contenders' lack specifics. Excellent topical grouping but no coherent narrative arc tying themes together."
 }

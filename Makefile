@@ -1,4 +1,4 @@
-.PHONY: help run run-bg custom-brief custom-brief-bg tail log logs status install uninstall clean-logs check validate prompt eval eval-backfill eval-regression eval-drift eval-report eval-show eval-test
+.PHONY: help run run-bg custom-brief custom-brief-bg tail log logs status install uninstall clean-logs check validate prompt eval eval-backfill eval-regression eval-seed-golden eval-drift eval-report eval-show eval-test
 
 SHELL := /bin/bash
 DATE  := $(shell date +%Y-%m-%d)
@@ -263,6 +263,11 @@ eval-backfill: ## Score every card in example-cards/. JUDGE=stub by default
 
 eval-regression: ## Re-score golden cards, fail if composite drops > 0.5
 	@python3 "$(SCRIPT_DIR)/eval/runner.py" regression --judge $(JUDGE)
+
+eval-seed-golden: ## Seed eval/golden/ from store.sqlite. Options: JUDGE=<judge_model> CLEAN=1
+	@python3 "$(SCRIPT_DIR)/eval/seed_golden.py" \
+		$(if $(filter-out stub,$(JUDGE)),--judge claude-haiku-4-5-20251001) \
+		$(if $(CLEAN),--clean)
 
 eval-drift: ## Drift check. Options: D=YYYY-MM-DD ALERT_EXIT=1
 	@python3 "$(SCRIPT_DIR)/eval/drift.py" \

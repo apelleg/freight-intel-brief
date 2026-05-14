@@ -1,0 +1,15 @@
+{
+  "card_date": "2026-03-16",
+  "baseline_composite": 4.2,
+  "baseline_judge": "claude-haiku-4-5-20251001",
+  "baseline_prompt_version": "v1",
+  "baseline_ran_at": "2026-05-14T02:51:00+00:00",
+  "baseline_axes": {
+    "factuality": 4,
+    "novelty": 4,
+    "source_diversity": 4,
+    "signal_density": 5,
+    "coherence": 4
+  },
+  "notes": "Thematically organized but lacks synthesis or takeaway. Vera Rubin and Groq 3 LPU were previewed in prior coverage; briefing confirms details but doesn't advance narrative."
+}

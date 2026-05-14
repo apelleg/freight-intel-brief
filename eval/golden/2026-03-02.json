@@ -1,0 +1,15 @@
+{
+  "card_date": "2026-03-02",
+  "baseline_composite": 3.8,
+  "baseline_judge": "claude-haiku-4-5-20251001",
+  "baseline_prompt_version": "v1",
+  "baseline_ran_at": "2026-05-14T02:48:26+00:00",
+  "baseline_axes": {
+    "factuality": 4,
+    "novelty": 3,
+    "source_diversity": 4,
+    "signal_density": 4,
+    "coherence": 4
+  },
+  "notes": "Most briefing items are follow-ups from prior week: Trump ban \u2192 Anthropic legal challenge, MWC preview \u2192 Day 0 coverage, DeepSeek V4 launch (already expected), Apple Siri iOS rollout (already in motion). New elements present (#QuitGPT 2.5M supporters, Claude App Store #1, London protest with Extinction Rebellion, Deutsche Telekom 6G Hub, Nvidia optical partnerships) but don't offset heavy rehash of Anthropic ban, Pentagon deal, MWC, and GPT-5 launch cycle."
+}

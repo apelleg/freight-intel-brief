@@ -1,0 +1,15 @@
+{
+  "card_date": "2026-03-13",
+  "baseline_composite": 3.65,
+  "baseline_judge": "claude-haiku-4-5-20251001",
+  "baseline_prompt_version": "v1",
+  "baseline_ran_at": "2026-05-14T02:50:14+00:00",
+  "baseline_axes": {
+    "factuality": 4,
+    "novelty": 3,
+    "source_diversity": 4,
+    "signal_density": 4,
+    "coherence": 3
+  },
+  "notes": "NVIDIA Nemotron 3 Super was already covered Mar 10; recycling it as lead story weakens novelty. Header claims 10 stories but contains 14 items. While thematically organized (NVIDIA, xAI, Industry, Policy, Open Source, Research), no explicit synthesis or takeaway ties themes together."
+}

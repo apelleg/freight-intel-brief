@@ -1,0 +1,15 @@
+{
+  "card_date": "2026-03-11",
+  "baseline_composite": 3.25,
+  "baseline_judge": "claude-haiku-4-5-20251001",
+  "baseline_prompt_version": "v1",
+  "baseline_ran_at": "2026-05-14T02:50:03+00:00",
+  "baseline_axes": {
+    "factuality": 2,
+    "novelty": 4,
+    "source_diversity": 3,
+    "signal_density": 4,
+    "coherence": 4
+  },
+  "notes": "Sourcing gap: 75% of stories (outage, DryRun, NVIDIA, OpenRouter, World Labs, Replit, FTC, Washington HB 2225) lack any attribution. Seven sources provided but cover only ~5 stories; inline mapping missing. Novelty strong (78% new vs. prior 7 days) but some thematic repeats (Pentagon, DeepSeek V4, regulation)."
+}

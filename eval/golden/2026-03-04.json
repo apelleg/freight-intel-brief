@@ -1,0 +1,15 @@
+{
+  "card_date": "2026-03-04",
+  "baseline_composite": 3.2,
+  "baseline_judge": "claude-haiku-4-5-20251001",
+  "baseline_prompt_version": "v1",
+  "baseline_ran_at": "2026-05-14T02:48:17+00:00",
+  "baseline_axes": {
+    "factuality": 2,
+    "novelty": 3,
+    "source_diversity": 4,
+    "signal_density": 4,
+    "coherence": 4
+  },
+  "notes": "No sources cited anywhere (hard cap: factuality \u2264 2). Pentagon/Anthropic designation, DeepSeek V4, Samsung Gemini recycled from prior 7 days; novel additions (Meta\u2013News Corp deal, NY/Florida AI legislation) partially offset repetition."
+}

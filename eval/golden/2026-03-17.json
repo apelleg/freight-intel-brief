@@ -1,0 +1,15 @@
+{
+  "card_date": "2026-03-17",
+  "baseline_composite": 4.2,
+  "baseline_judge": "claude-haiku-4-5-20251001",
+  "baseline_prompt_version": "v1",
+  "baseline_ran_at": "2026-05-14T02:51:14+00:00",
+  "baseline_axes": {
+    "factuality": 3,
+    "novelty": 4,
+    "source_diversity": 5,
+    "signal_density": 5,
+    "coherence": 5
+  },
+  "notes": "Sources cited but not granularly mapped to claims. Unsourced specifics: '~250 users affected' (Claude outage), '1,016 Blackwell Ultra GPUs, 9,000+ petaflops' (Eli Lilly). Robotics mega-round (Mind, Rhoda, Sunday, Oxa) repeats prior week reporting."
+}

@@ -65,18 +65,57 @@ combination overwrite; switching judge or prompt version appends a new row.
 
 ## Golden set
 
-`eval/golden/*.json` — each file pins a `card_date` + `baseline_composite`.
-`make eval-regression` re-scores them and exits 2 if any drops more than
-0.5 composite points. Bump the baselines when re-scoring under a new judge:
+`eval/golden/*.json` — one file per card_date, each pinning the baseline
+composite + axis scores from the most recent intentional rebaseline. `make
+eval-regression` re-scores them and exits 2 if any drops more than 0.5
+composite points.
+
+The shipping golden set is the **full 18-card backfill** under
+`claude-haiku-4-5-20251001` v1 (real-judge composites span 2.9–4.2), so the
+regression gate catches degradation across the entire history, not just a
+hand-picked subset.
+
+Each file looks like:
 
 ```json
 {
   "card_date": "2026-03-18",
-  "baseline_composite": 4.2,
+  "baseline_composite": 4.0,
   "baseline_judge": "claude-haiku-4-5-20251001",
-  "baseline_prompt_version": "v1"
+  "baseline_prompt_version": "v1",
+  "baseline_ran_at": "2026-05-14T02:51:27+00:00",
+  "baseline_axes": {
+    "factuality": 4,
+    "novelty": 3,
+    "source_diversity": 4,
+    "signal_density": 5,
+    "coherence": 4
+  },
+  "notes": "Novelty drags from GPT-5.4 mini pricing (prior week)."
 }
 ```
+
+### Re-baselining
+
+When you intentionally change the judge prompt, switch to a more capable
+judge, or otherwise rebase quality expectations, regenerate the goldens
+from the store rather than hand-editing the JSON:
+
+```bash
+# 1. Run the new judge/prompt against every card
+make eval-backfill JUDGE=claude
+
+# 2. Lift the resulting scores into the golden set
+make eval-seed-golden JUDGE=claude       # latest-per-date, filtered to the real judge
+# or with --clean to wipe stale dates that no longer exist
+make eval-seed-golden JUDGE=claude CLEAN=1
+
+# 3. Verify the new gate passes
+make eval-regression JUDGE=claude
+```
+
+`eval/seed_golden.py` supports `--since`, `--until`, `--judge`,
+`--prompt-version`, `--dry-run`, and `--clean` for finer control.
 
 ## Drift detection
 

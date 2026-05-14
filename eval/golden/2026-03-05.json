@@ -1,0 +1,15 @@
+{
+  "card_date": "2026-03-05",
+  "baseline_composite": 3.2,
+  "baseline_judge": "claude-haiku-4-5-20251001",
+  "baseline_prompt_version": "v1",
+  "baseline_ran_at": "2026-05-14T02:48:41+00:00",
+  "baseline_axes": {
+    "factuality": 2,
+    "novelty": 3,
+    "source_diversity": 4,
+    "signal_density": 4,
+    "coherence": 4
+  },
+  "notes": "No sources cited anywhere\u2014hard cap applied. Claims align with prior headlines (Anthropic ban, DeepSeek delays, Qwen 3.5) but lack URLs or attribution for benchmarks (83% GDPval, 75% OSWorld-V), policy targets ($1.4T by 2030), or dates. GPT-5.4 launch and Anthropic lawsuit filing are new, but Qwen 3.5 and DeepSeek V4 delays are repeats from Feb 27\u2013Mar 4 coverage."
+}

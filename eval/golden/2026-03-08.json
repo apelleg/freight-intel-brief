@@ -1,0 +1,15 @@
+{
+  "card_date": "2026-03-08",
+  "baseline_composite": 3.0,
+  "baseline_judge": "claude-haiku-4-5-20251001",
+  "baseline_prompt_version": "v1",
+  "baseline_ran_at": "2026-05-14T02:49:56+00:00",
+  "baseline_axes": {
+    "factuality": 3,
+    "novelty": 3,
+    "source_diversity": 3,
+    "signal_density": 3,
+    "coherence": 3
+  },
+  "notes": "DeepSeek V4 (longest story) offers no concrete outcome \u2014 specs are explicitly unverified, launch is absent, echoing prior week's delay narrative. Signal is strong in featured stories (MacBook Neo specs, Pentagon analysis) but dragged down by speculative Quick Hits and What to Watch."
+}
