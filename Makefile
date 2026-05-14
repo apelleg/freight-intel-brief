@@ -1,4 +1,4 @@
-.PHONY: help run run-bg custom-brief custom-brief-bg tail log logs status install uninstall clean-logs check validate prompt
+.PHONY: help run run-bg custom-brief custom-brief-bg tail log logs status install uninstall clean-logs check validate prompt eval eval-backfill eval-regression eval-drift eval-report eval-show eval-test
 
 SHELL := /bin/bash
 DATE  := $(shell date +%Y-%m-%d)
@@ -247,6 +247,39 @@ validate: check ## Validate all project files exist and are well-formed
 
 prompt: ## Print the current prompt
 	@cat "$(SCRIPT_DIR)/prompt.md"
+
+## —— Eval Harness ————————————————————————————————————
+# JUDGE selects the backend: stub (default, no API), claude, codex, gemini.
+JUDGE ?= stub
+
+eval: ## Score today's card. Options: D=YYYY-MM-DD JUDGE=stub|claude|codex|gemini GATE=1
+	@python3 "$(SCRIPT_DIR)/eval/runner.py" score \
+		--date $(or $(D),$(DATE)) \
+		--judge $(JUDGE) \
+		$(if $(GATE),--gate)
+
+eval-backfill: ## Score every card in example-cards/. JUDGE=stub by default
+	@python3 "$(SCRIPT_DIR)/eval/runner.py" backfill --judge $(JUDGE)
+
+eval-regression: ## Re-score golden cards, fail if composite drops > 0.5
+	@python3 "$(SCRIPT_DIR)/eval/runner.py" regression --judge $(JUDGE)
+
+eval-drift: ## Drift check. Options: D=YYYY-MM-DD ALERT_EXIT=1
+	@python3 "$(SCRIPT_DIR)/eval/drift.py" \
+		--as-of $(or $(D),$(DATE)) \
+		$(if $(ALERT_EXIT),--exit-nonzero-on-alert)
+
+eval-report: ## Weekly Markdown report. Options: D=YYYY-MM-DD W=7 OUT=path
+	@python3 "$(SCRIPT_DIR)/eval/report.py" \
+		--as-of $(or $(D),$(DATE)) \
+		--window $(or $(W),7) \
+		$(if $(OUT),--out $(OUT))
+
+eval-show: ## Dump stored eval rows
+	@python3 "$(SCRIPT_DIR)/eval/runner.py" show
+
+eval-test: ## Run unit tests for the eval harness
+	@python3 -m unittest discover -s "$(SCRIPT_DIR)/eval/tests" -v
 
 ## —— Info —————————————————————————————————————————————
 info: ## Show project configuration summary

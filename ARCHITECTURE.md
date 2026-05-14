@@ -818,6 +818,111 @@ flowchart TD
 
 Full documentation: [TESTS.md](TESTS.md)
 
+### 3.14 Quality Eval Harness (`eval/`)
+
+A self-contained LLM-as-judge pipeline that scores every published briefing on a fixed 5-axis rubric, persists scores to SQLite, and flags quality drift before readers notice. The harness reuses the same AI CLIs the rest of the project shells out to (`claude` / `codex` / `gemini`) so it inherits the project's existing auth and engine selection.
+
+#### Architecture
+
+```mermaid
+flowchart TD
+    subgraph "Inputs"
+        CARD["example-cards/&lt;date&gt;-card.json<br/>(Teams Adaptive Card)"]
+        PRIOR["Prior 7 days of cards<br/>(novelty baseline)"]
+    end
+
+    subgraph "Harness (eval/)"
+        EX["extract.py<br/>Card → text + headlines + URLs"]
+        JU["judge.py<br/>backends: stub/claude/codex/gemini"]
+        ST["store.py<br/>SQLite upsert (date, prompt_ver, model)"]
+        DR["drift.py<br/>7d median vs 30d median ± MAD"]
+        RP["report.py<br/>Weekly Markdown digest"]
+        RUN["runner.py<br/>CLI: score / backfill / regression"]
+    end
+
+    subgraph "State"
+        DB[("eval/store.sqlite<br/>eval_runs table")]
+        GOLD["eval/golden/*.json<br/>baseline composites"]
+    end
+
+    subgraph "Consumers"
+        GATE["Publish gate<br/>(briefing.sh, optional)"]
+        ALERT["Drift alert<br/>(cron / GH Actions)"]
+        DASH["Weekly report<br/>(Notion / Teams)"]
+    end
+
+    CARD --> EX
+    PRIOR --> EX
+    EX --> JU --> RUN --> ST --> DB
+
+    GOLD --> RUN
+    DB --> DR --> ALERT
+    DB --> RP --> DASH
+    RUN -- "--gate" --> GATE
+```
+
+#### Scoring rubric
+
+Five integer axes (1–5), composite weighted mean:
+
+| Axis             | Weight |
+| ---------------- | -----: |
+| factuality       |   0.30 |
+| novelty          |   0.20 |
+| source_diversity |   0.15 |
+| signal_density   |   0.20 |
+| coherence        |   0.15 |
+
+Full definitions and pass thresholds: [`eval/rubric.md`](eval/rubric.md).
+
+#### Storage schema
+
+```sql
+CREATE TABLE eval_runs (
+    card_date        TEXT,
+    prompt_version   TEXT,
+    judge_model      TEXT,
+    ran_at           TEXT,
+    factuality       INTEGER CHECK (BETWEEN 1 AND 5),
+    novelty          INTEGER CHECK (BETWEEN 1 AND 5),
+    source_diversity INTEGER CHECK (BETWEEN 1 AND 5),
+    signal_density   INTEGER CHECK (BETWEEN 1 AND 5),
+    coherence        INTEGER CHECK (BETWEEN 1 AND 5),
+    composite        REAL,
+    notes            TEXT,
+    judge_raw        TEXT,
+    PRIMARY KEY (card_date, prompt_version, judge_model)
+);
+```
+
+The primary key intentionally includes both `prompt_version` and `judge_model`, so re-baselining (bumping the prompt or switching to a more capable judge) appends a new row rather than silently overwriting historic scores.
+
+#### Design decisions
+
+- **Stub backend.** A deterministic heuristic judge ships in `judge.py` so unit tests, CI, and offline development never hit a paid API. The same harness paths execute against the real judge.
+- **Median + MAD for drift, not mean + stddev.** With only ~30 daily samples and occasional sharp drops, MAD-based z-scores are far more robust to outliers and small-sample bias than parametric scaling.
+- **Idempotent runs.** Re-judging the same `(date, prompt_version, judge_model)` triple overwrites the row and updates `ran_at`, so reruns after a transient failure produce a clean store.
+- **Versioned prompt.** `PROMPT_VERSION` in `judge.py` is part of the key and is recorded with every score. Bump it whenever `eval/judge_prompt.md` changes substantively.
+- **Optional publish gate.** Calling `runner.py score --gate` exits non-zero when composite falls below threshold, so it can be wired into `briefing.sh` as a pre-publish check without changing default behavior.
+
+#### Files
+
+| File              | Role                                                       |
+| ----------------- | ---------------------------------------------------------- |
+| `rubric.md`       | Human-readable axis definitions, weights, thresholds.      |
+| `judge_prompt.md` | Exact prompt sent to the judge. Versioned.                 |
+| `extract.py`      | Adaptive-card JSON → flat text, headlines, source URLs.    |
+| `judge.py`        | Backends (stub / claude / codex / gemini) + JSON parser.   |
+| `store.py`        | SQLite upsert/fetch + composite formula.                   |
+| `runner.py`       | CLI entry point: `score`, `backfill`, `regression`, `show`.|
+| `drift.py`        | Trailing-window drift detector.                            |
+| `report.py`       | Weekly Markdown report.                                    |
+| `schema.sql`      | DB schema.                                                 |
+| `golden/`         | Pinned baseline composites per card.                       |
+| `tests/`          | `python -m unittest discover -s eval/tests`.               |
+
+Full documentation: [`eval/README.md`](eval/README.md).
+
 ---
 
 ## 4. Data Flow

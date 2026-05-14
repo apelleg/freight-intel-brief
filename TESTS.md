@@ -82,7 +82,15 @@ powershell -ExecutionPolicy Bypass -File tests\test-all.ps1
 
 ### From Make
 
-There is no Make target for tests (tests are not part of the daily pipeline). Run them directly via bash or PowerShell.
+The shell + PowerShell suites have no Make target (they are not part of the daily pipeline). Run them directly via bash or PowerShell.
+
+The Python eval-harness tests do have a Make target:
+
+```bash
+make eval-test          # python -m unittest discover -s eval/tests
+```
+
+These exercise the offline `stub` judge end-to-end (extract → judge → store → drift → report) and require only Python 3 stdlib.
 
 ---
 
@@ -238,6 +246,36 @@ flowchart LR
 | Notify invocation | 4 | Uses `-f` not `-x`, calls via `bash` not direct execution |
 | Color safety | 1 | No raw ANSI escapes when output is piped |
 
+### eval/tests/test_harness.py (10 tests)
+
+Python unit tests for the quality eval harness. Use only the Python stdlib and the offline `stub` judge, so they require no AI CLI and no network.
+
+```mermaid
+flowchart LR
+    subgraph "eval/tests/test_harness.py"
+        A["ExtractTests"] --> B["JudgeTests"]
+        B --> C["StoreTests"]
+        C --> D["DriftTests"]
+        D --> E["ReportTests"]
+    end
+```
+
+| Category | Tests | What it verifies |
+|---|---|---|
+| ExtractTests | 2 | Card → headlines + URLs; 7-day prior-headline window resolves |
+| JudgeTests | 3 | Stub returns 5 valid axes; parser rejects non-JSON; parser rejects out-of-range scores |
+| StoreTests | 2 | Weighted composite matches the rubric formula; upsert is idempotent on `(card_date, prompt_version, judge_model)` |
+| DriftTests | 2 | Flat history → no alert; 8-day drop streak → `status: alert` with ≥ 2 alert entries |
+| ReportTests | 1 | Weekly Markdown contains header, composite-median line, and per-day row |
+
+Run via:
+
+```bash
+make eval-test
+# or directly
+python3 -m unittest discover -s eval/tests -v
+```
+
 ### test-all.ps1 (91 tests)
 
 PowerShell-native test suite covering everything above from a Windows perspective.
@@ -318,6 +356,9 @@ tests/
   test-obsidian.sh         # Obsidian: publish script, wikilinks, vault simulation
   test-portability.sh      # Cross-platform: bash compat, awk, date, colors
   test-all.ps1             # PowerShell suite (all categories in one file)
+
+eval/tests/
+  test_harness.py          # Python unittest: extract, judge, store, drift, report
 ```
 
 ---

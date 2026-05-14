@@ -5,3 +5,7 @@ backups/
 .vs/
 .claude/
 __pycache__/
+eval/store.sqlite
+eval/store.sqlite-journal
+eval/store.sqlite-wal
+eval/store.sqlite-shm
