@@ -91,16 +91,35 @@ We currently maintain 10 distinct, production-ready intelligence plugins. Each p
 ### Category 1: News & Media Intelligence
 
 #### 1. `ai-news-briefing`
-**The Flagship Automated News Pipeline.**
-*   **The Problem**: Staying up to date with AI news requires checking 15 different newsletters, changelogs, and subreddits every morning.
+**The Flagship Automated News Pipeline + Quality Eval Harness.**
+*   **The Problem**: Staying up to date with AI news requires checking 15 different newsletters, changelogs, and subreddits every morning — and once you automate it, you have no way to know whether the output is silently degrading.
 *   **The Workflow**:
     1. Reads `logs/covered-stories.txt` to prevent duplicate reporting.
     2. Executes 5 parallel web searches across Models, Business, Policy, Open Source, and Dev Tools.
     3. Specifically crawls official changelogs (Cursor, Claude, Vercel) looking *only* for today's date.
     4. Formats a structured Markdown document.
     5. Publishes directly to a Notion Database via the `@modelcontextprotocol/server-notion` MCP server.
-*   **Key Skills**: `daily-briefing`, `custom-brief`, `health-check`.
-*   **Example Invocation**: `/ai-news-briefing:daily-briefing`
+    6. Optionally judges the resulting card on a 5-axis rubric and writes the score to `eval/store.sqlite` for trend tracking, drift alerts, and regression gating.
+*   **Skills**:
+    *   **Pipeline:** `daily-briefing`, `custom-brief`, `trigger-briefing`, `summarize-url`, `health-check`.
+    *   **Eval:** `eval-score`, `eval-backfill`, `eval-drift`, `eval-regression`, `eval-report`, `eval-dashboard`.
+*   **Agents**: `deep-researcher` (multi-agent research orchestration), `news-analyst` (editorial polish + fact-check), `quality-judge` (strict 5-axis rubric scorer with concrete fix recommendations).
+*   **Hooks**: `PostToolUse` on `Write|Edit` of `logs/*-card.json` auto-runs `eval-score` (stub backend) so every freshly published card gets scored without user action.
+*   **Quality eval rubric** (composite weighted mean, integer 1–5 per axis):
+
+    | Axis | Weight |
+    | --- | ---: |
+    | factuality | 0.30 |
+    | novelty | 0.20 |
+    | source_diversity | 0.15 |
+    | signal_density | 0.20 |
+    | coherence | 0.15 |
+
+    Hard caps: no sources → `factuality ≤ 2`; empty bullet bodies → `signal_density ≤ 2`. Shipping golden set is the full 18-card real-judge backfill under `claude-haiku-4-5-20251001` v1, composites spanning 2.9–4.2. Optional publish gate via `eval-score --gate --gate-threshold 3.0`. See [`eval/README.md`](eval/README.md) for the full architecture.
+*   **Example Invocations**:
+    *   `/ai-news-briefing:daily-briefing`
+    *   `/ai-news-briefing:eval-score D=2026-03-18 JUDGE=claude`
+    *   `/ai-news-briefing:eval-dashboard OPEN=1`
 
 #### 2. `last30days`
 **The Social Intelligence & Consensus Engine.**

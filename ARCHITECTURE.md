@@ -37,19 +37,22 @@ The system is cross-platform, supporting macOS (launchd) and Windows (Task Sched
 
 1. [System Architecture Overview](#1-system-architecture-overview)
 2. [Execution Flow](#2-execution-flow)
-3. [Component Details](#3-component-details)
-4. [Data Flow](#4-data-flow)
-5. [Search Strategy](#5-search-strategy)
-6. [Output Format](#6-output-format)
-7. [Scheduling Architecture](#7-scheduling-architecture)
-8. [Error Handling](#8-error-handling)
-9. [File System Layout](#9-file-system-layout)
-10. [Security Considerations](#10-security-considerations)
-11. [Teams, Slack, and Obsidian Pipelines](#11-teams-slack-and-obsidian-pipelines)
-12. [Research Ops Plugin Ecosystem](#12-research-ops-plugin-ecosystem)
-13. [Future Enhancements / Extension Points](#13-future-enhancements--extension-points)
-
-> **See also:** [Section 3.11 -- Custom Topic Briefing Pipeline](#311-custom-topic-briefing-pipeline), [Section 3.12 -- Test Suite](#312-test-suite), [CUSTOM_BRIEF.md](CUSTOM_BRIEF.md), [TESTS.md](TESTS.md)
+3. [Core Pipeline Components](#3-core-pipeline-components)
+4. [Teams Notification Pipeline](#4-teams-notification-pipeline)
+5. [Slack Notification Pipeline](#5-slack-notification-pipeline)
+6. [Custom Topic Briefing Pipeline](#6-custom-topic-briefing-pipeline)
+7. [Obsidian Publishing Pipeline](#7-obsidian-publishing-pipeline)
+8. [Test Suite](#8-test-suite)
+9. [Quality Eval Harness](#9-quality-eval-harness)
+10. [Research Ops Plugin Ecosystem](#10-research-ops-plugin-ecosystem)
+11. [Data Flow](#11-data-flow)
+12. [Search Strategy](#12-search-strategy)
+13. [Output Format](#13-output-format)
+14. [Scheduling Architecture](#14-scheduling-architecture)
+15. [Error Handling](#15-error-handling)
+16. [File System Layout](#16-file-system-layout)
+17. [Security Considerations](#17-security-considerations)
+18. [Future Enhancements and Extension Points](#18-future-enhancements-and-extension-points)
 
 > [!NOTE]
 > **Live Notion page:** [https://hoangsonw.notion.site/9c34d052d9354beda82a3423e2d2f404?v=d43c53fe405c4896bfd95ad0cc22246f](https://hoangsonw.notion.site/9c34d052d9354beda82a3423e2d2f404?v=d43c53fe405c4896bfd95ad0cc22246f)
@@ -192,7 +195,47 @@ Based on observed log data, a typical run takes approximately 3-5 minutes from s
 
 ---
 
-## 3. Component Details
+## 3. Core Pipeline Components
+
+The shared spine that every briefing variant (daily, custom, etc.) reuses. Schedulers fire entry-point scripts, which assemble a prompt, hand off to the selected AI CLI, and emit on-disk artifacts. Notification and publishing pipelines are kept out of this section — see Sections 4–7 for those.
+
+```mermaid
+flowchart TD
+    classDef sched fill:#3a2a1e,stroke:#d49b5b,color:#f5e6c8
+    classDef ep    fill:#1e3a5f,stroke:#5b8dd8,color:#d4e4f8
+    classDef prompt fill:#2a2440,stroke:#8b7ad4,color:#e4e4ef
+    classDef art    fill:#1e3a2f,stroke:#5bd49b,color:#d4f8e2
+
+    subgraph SCHED["3.1 Schedulers"]
+        S1["macOS launchd<br/>com.ainews.briefing.plist"]:::sched
+        S2["Windows Task Scheduler<br/>install-task.ps1"]:::sched
+    end
+
+    subgraph ENTRY["3.2 Entry-point scripts"]
+        E1["briefing.sh"]:::ep
+        E2["briefing.ps1"]:::ep
+    end
+
+    subgraph PROMPT["3.4 Prompt + skill"]
+        P1["prompt.md"]:::prompt
+        P2["commands/ai-news-briefing.md"]:::prompt
+    end
+
+    OPS["3.5 Makefile<br/>3.6 Utility scripts<br/>3.7 Manual CLI"]:::ep
+
+    ART["Output artifacts<br/>(logs/&lt;date&gt;-*.json,<br/>obsidian.md, .log)"]:::art
+
+    S1 --> E1
+    S2 --> E2
+    E1 -- reads --> P1
+    E2 -- reads --> P1
+    E1 -- invokes selected CLI --> CLI["AI engine<br/>claude / codex / gemini / copilot"]:::ep
+    E2 -- invokes selected CLI --> CLI
+    P2 -.-> CLI
+    CLI --> ART
+    OPS -.-> E1
+    OPS -.-> E2
+```
 
 ### 3.1 Schedulers
 
@@ -284,30 +327,48 @@ The AI's behavior is governed by prompt files and Claude Code skill definitions:
 The daily briefing prompts form the complete instruction set for a scheduled run. The custom brief prompt uses `{{TOPIC}}` and `{{PUBLISH_*}}` template variables that are injected by the CLI scripts at runtime. All prompts are shared across platforms with no platform-specific content.
 
 ```mermaid
-graph TD
-    A[prompt.md] --> B[Step 1: Search for News]
-    A --> C[Step 2: Compile the Briefing]
-    A --> D[Step 3: Write to Notion]
+flowchart TD
+    classDef src   fill:#2a2440,stroke:#8b7ad4,color:#e4e4ef
+    classDef step  fill:#1e3a5f,stroke:#5b8dd8,color:#d4e4f8
+    classDef leaf  fill:#1e3a2f,stroke:#5bd49b,color:#d4f8e2
 
-    SK["~/.claude/commands/ai-news-briefing.md"] --> B
-    SK --> C
-    SK --> D
-    SK --> F[Step 4: Write Adaptive Card JSON]
+    PM["prompt.md<br/>headless instructions"]:::src
+    SK["commands/ai-news-briefing.md<br/>Claude Code skill"]:::src
 
-    B --> B1[9 Topic Definitions]
-    B --> B2[Search Strategy Templates]
+    subgraph S1["Step 1: Search"]
+        direction TB
+        B1["9 topic definitions"]:::leaf
+        B2["Search query templates"]:::leaf
+    end
 
-    C --> C1[Tier 1: TL;DR - 10-15 bullets]
-    C --> C2[Tier 2: Full Briefing - 9 sections]
-    C --> C3[Key Takeaways Table]
+    subgraph S2["Step 2: Compile"]
+        direction TB
+        C1["Tier 1 — TL;DR<br/>10-15 bullets"]:::leaf
+        C2["Tier 2 — full briefing<br/>9 sections"]:::leaf
+        C3["Key takeaways<br/>table"]:::leaf
+    end
 
-    D --> D1[Notion Page Parameters]
-    D --> D2[Formatting Rules]
-    D --> D3[Important Constraints]
+    subgraph S3["Step 3: Write to Notion"]
+        direction TB
+        D1["Page parameters"]:::leaf
+        D2["Formatting rules"]:::leaf
+        D3["Constraints"]:::leaf
+    end
 
-    F --> F1["logs/YYYY-MM-DD-card.json"]
-    F --> F2[Adaptive Card v1.4 Schema]
-    F --> F3["ASCII-safe, ≤26KB"]
+    subgraph S4["Step 4: Adaptive Card"]
+        direction TB
+        F1["logs/&lt;date&gt;-card.json"]:::leaf
+        F2["Adaptive Card v1.4"]:::leaf
+        F3["ASCII-safe, ≤ 26 KB"]:::leaf
+    end
+
+    PM --> S1
+    PM --> S2
+    PM --> S3
+    SK --> S1
+    SK --> S2
+    SK --> S3
+    SK --> S4
 ```
 
 **How the prompt and skill guide Claude:**
@@ -341,7 +402,7 @@ The `Makefile` provides a unified command interface across macOS, Windows (Git B
 | Validation | `check`, `validate` | Verify environment and project health |
 | Info | `help`, `info`, `prompt` | Display configuration and documentation |
 
-### 3.7 Utility Scripts (`scripts/`)
+### 3.6 Utility Scripts (`scripts/`)
 
 The `scripts/` directory contains 12 paired utility scripts (`.sh` + `.ps1`) that support system management, diagnostics, and maintenance. Each pair implements identical functionality in platform-native languages.
 
@@ -389,29 +450,35 @@ graph LR
     UN[uninstall] -->|Removes| SC
 ```
 
-### 3.8 Manual CLI Trigger (macOS: `ai-news`)
+### 3.7 Manual CLI Trigger (macOS: `ai-news`)
 
 Located at `~/.local/bin/ai-news` on macOS, this is a convenience script for on-demand execution. It calls `launchctl kickstart` to trigger the same launchd job, reusing the exact execution environment defined in the plist.
 
 On Windows, the equivalent is `schtasks /run /tn AiNewsBriefing`, or simply `make run` on either platform.
 
-### 3.9 Teams Notification Pipeline
+## 4. Teams Notification Pipeline
 
 After a successful briefing run, the system can optionally post a summary to Microsoft Teams via webhook. The Teams path is intentionally thin: it takes the generated card file, validates JSON, resolves webhook URL(s), and POSTs as-is.
 
 ```mermaid
-flowchart LR
-    A["Claude Step 4 writes logs/YYYY-MM-DD-card.json"] --> B["notify-teams.sh / notify-teams.ps1"]
-    B --> C["Validate card file exists and JSON is valid"]
-    C --> D["Resolve Teams webhook URL(s)"]
-    D --> E{"All flag set?"}
-    E -->|"No"| F["POST to first webhook URL"]
-    E -->|"Yes"| G["POST to all configured URLs"]
-    F --> H["Teams channel message"]
+flowchart TD
+    classDef art    fill:#2a2440,stroke:#8b7ad4,color:#e4e4ef
+    classDef proc   fill:#1e3a5f,stroke:#5b8dd8,color:#d4e4f8
+    classDef branch fill:#3a2a1e,stroke:#d49b5b,color:#f5e6c8
+    classDef out    fill:#1e3a2f,stroke:#5bd49b,color:#d4f8e2
+
+    A["AI engine Step 4<br/>writes<br/>logs/&lt;date&gt;-card.json"]:::art
+    A --> B["notify-teams.sh<br/>notify-teams.ps1"]:::proc
+    B --> C["Validate card exists<br/>and JSON parses"]:::proc
+    C --> D["Resolve URLs from<br/>AI_BRIEFING_TEAMS_WEBHOOK<br/>(semicolon-separated)"]:::proc
+    D --> E{"--all / -All<br/>flag set?"}:::branch
+    E -- no  --> F["POST to first<br/>webhook URL"]:::proc
+    E -- yes --> G["POST to every<br/>configured URL"]:::proc
+    F --> H["Teams channel<br/>message"]:::out
     G --> H
 ```
 
-#### Runtime contract
+### Runtime contract
 
 1. Input: `logs/YYYY-MM-DD-card.json`.
 2. Validation: file exists and is valid JSON.
@@ -423,7 +490,7 @@ flowchart LR
    - fail only if all target URLs fail,
    - warn if partial failures occur.
 
-#### Files involved
+### Files involved
 
 | File | Language | Purpose |
 |---|---|---|
@@ -432,7 +499,7 @@ flowchart LR
 | `scripts/notify-teams.ps1` | PowerShell | Same behavior on Windows via `Invoke-WebRequest`. |
 | `scripts/build-teams-card.py` | Python 3 | **Legacy.** Old log-parsing card builder. No longer referenced by any script. Kept in repo for historical reference. |
 
-#### Payload contract
+### Payload contract
 
 The AI writes Adaptive Card JSON in Step 4 of `prompt.md`. This is the exact payload posted to Teams. No parser, no log extraction, no format conversion between generation and delivery.
 
@@ -443,7 +510,7 @@ Key constraints in the generation contract:
 - Adaptive Card v1.4 envelope,
 - required action button to Notion page URL.
 
-#### Teams webhook configuration
+### Teams webhook configuration
 
 `AI_BRIEFING_TEAMS_WEBHOOK` stores one or more Teams webhook URLs.
 
@@ -469,24 +536,30 @@ bash scripts/notify-teams.sh --all --card-file logs/2026-03-24-card.json
 .\scripts\notify-teams.ps1 -All -CardFile .\logs\2026-03-24-card.json
 ```
 
-### 3.10 Slack Notification Pipeline
+## 5. Slack Notification Pipeline
 
 Slack delivery reuses the same source card file from Step 4, then converts it to Block Kit before POST. This keeps generation centralized while still producing Slack-native rendering.
 
 ```mermaid
-flowchart LR
-    A["logs/YYYY-MM-DD-card.json"] --> B["teams-to-slack.py"]
-    B --> C["Slack Block Kit payload JSON"]
-    C --> D["notify-slack.sh / notify-slack.ps1"]
-    D --> E["Resolve Slack webhook URL(s)"]
-    E --> F{"All flag set?"}
-    F -->|"No"| G["POST to first webhook URL"]
-    F -->|"Yes"| H["POST to all configured URLs"]
-    G --> I["Slack channel message"]
+flowchart TD
+    classDef art    fill:#2a2440,stroke:#8b7ad4,color:#e4e4ef
+    classDef proc   fill:#1e3a5f,stroke:#5b8dd8,color:#d4e4f8
+    classDef branch fill:#3a2a1e,stroke:#d49b5b,color:#f5e6c8
+    classDef out    fill:#1e3a2f,stroke:#5bd49b,color:#d4f8e2
+
+    A["logs/&lt;date&gt;-card.json<br/>(shared with Teams)"]:::art
+    A --> B["teams-to-slack.py<br/>converter"]:::proc
+    B --> C["Slack Block Kit<br/>payload JSON"]:::art
+    C --> D["notify-slack.sh<br/>notify-slack.ps1"]:::proc
+    D --> E["Resolve URLs from<br/>AI_BRIEFING_SLACK_WEBHOOK"]:::proc
+    E --> F{"--all / -All<br/>flag set?"}:::branch
+    F -- no  --> G["POST to first<br/>webhook URL"]:::proc
+    F -- yes --> H["POST to every<br/>configured URL"]:::proc
+    G --> I["Slack channel<br/>message"]:::out
     H --> I
 ```
 
-#### Runtime contract
+### Runtime contract
 
 1. Input: same `logs/YYYY-MM-DD-card.json` generated for Teams.
 2. Conversion: `teams-to-slack.py` transforms Adaptive Card structure to Block Kit.
@@ -494,7 +567,7 @@ flowchart LR
 4. Target resolution: parse `AI_BRIEFING_SLACK_WEBHOOK` as semicolon-separated URL list.
 5. Delivery and exit semantics match Teams notifier behavior.
 
-#### Files involved
+### Files involved
 
 | File | Language | Purpose |
 |---|---|---|
@@ -502,15 +575,36 @@ flowchart LR
 | `scripts/notify-slack.sh` | Bash | macOS/Linux entry point. Calls converter, validates result, POSTs via `curl`. |
 | `scripts/notify-slack.ps1` | PowerShell | Windows entry point. Same logic using `Invoke-WebRequest`. |
 
-#### Teams-to-Slack mapping details
+### Teams-to-Slack mapping details
 
 ```mermaid
-flowchart TD
-    A["Adaptive Card header container"] --> B["Slack header block"]
-    C["Adaptive Card section title + bullets"] --> D["Slack section mrkdwn block"]
-    E["Adaptive Card sources emphasis container"] --> F["Slack context block"]
-    G["Adaptive Card OpenUrl action"] --> H["Slack button action block"]
+flowchart LR
+    classDef tc fill:#2a2440,stroke:#8b7ad4,color:#e4e4ef
+    classDef sl fill:#1e3a2f,stroke:#5bd49b,color:#d4f8e2
+
+    subgraph TEAMS["Microsoft Teams Adaptive Card v1.4"]
+        direction TB
+        A["Header container<br/>(date + title)"]:::tc
+        C["Section title<br/>+ bullet TextBlocks"]:::tc
+        E["Sources emphasis<br/>container"]:::tc
+        G["Action.OpenUrl<br/>(Notion link)"]:::tc
+    end
+
+    subgraph SLACK["Slack Block Kit"]
+        direction TB
+        B["header block<br/>(plain_text)"]:::sl
+        D["section block<br/>(mrkdwn body)"]:::sl
+        F["context block<br/>(source labels)"]:::sl
+        H["actions block<br/>(button → Notion)"]:::sl
+    end
+
+    A --> B
+    C --> D
+    E --> F
+    G --> H
 ```
+
+The converter is in `scripts/teams-to-slack.py`. It walks the adaptive-card tree, emits one Slack block per logical Teams element, and preserves the Notion deep-link button.
 
 Slack webhook configuration:
 
@@ -532,7 +626,7 @@ bash scripts/notify-slack.sh --all --card-file logs/2026-03-24-card.json
 .\scripts\notify-slack.ps1 -All -CardFile .\logs\2026-03-24-card.json
 ```
 
-#### Visual output examples
+### Visual output examples
 
 Teams:
 
@@ -551,11 +645,11 @@ Deep-dive docs:
 - [NOTIFY_TEAMS.md](NOTIFY_TEAMS.md)
 - [NOTIFY_SLACK.md](NOTIFY_SLACK.md)
 
-### 3.11 Custom Topic Briefing Pipeline
+## 6. Custom Topic Briefing Pipeline
 
 The custom brief is an on-demand deep research pipeline that investigates any user-defined topic using 5 parallel research agents. Unlike the daily briefing (which scans 9 fixed categories), the custom brief goes deep on a single topic from multiple angles.
 
-#### Architecture Overview
+### Architecture Overview
 
 ```mermaid
 flowchart TD
@@ -606,7 +700,41 @@ flowchart TD
   <img src="img/custom-brief.png" alt="Custom Brief Architecture" width="100%">
 </p>
 
-#### Research Agent Design
+### Phase timeline
+
+```mermaid
+sequenceDiagram
+    autonumber
+    participant U as Operator
+    participant SH as custom-brief.sh
+    participant CC as Selected AI CLI
+    participant A as 5 parallel agents
+    participant SY as Synthesizer
+    participant OUT as Outputs
+
+    U->>SH: make custom-brief T="topic" NOTION=1 TEAMS=1 OBSIDIAN=1
+    SH->>SH: inject {{TOPIC}}, {{DATE}}, output flags into prompt-custom-brief.md
+    SH->>CC: hand off composed prompt
+
+    Note over CC,A: Phase 1 — broad discovery (parallel)
+    CC->>A: launch Agent 1..5 concurrently
+    A-->>CC: findings with source URLs
+
+    Note over CC: Phase 2 — deep dive
+    CC->>CC: follow-up on top 5–8 findings
+    CC->>CC: cross-verify against primary sources
+
+    Note over CC,SY: Phase 3 — synthesize
+    CC->>SY: combine + dedupe + theme-group
+
+    Note over SY,OUT: Phase 4 — emit
+    SY->>OUT: terminal stdout (always)
+    SY->>OUT: Notion page (if NOTION=1)
+    SY->>OUT: Teams / Slack card (if TEAMS / SLACK)
+    SY->>OUT: Obsidian markdown (if OBSIDIAN=1)
+```
+
+### Research Agent Design
 
 Each of the 5 agents receives a targeted search brief and returns findings with source URLs and publication dates. They run in parallel (launched as concurrent Agent tool calls) and cover orthogonal perspectives:
 
@@ -618,7 +746,7 @@ Each of the 5 agents receives a targeted search brief and returns findings with 
 | 4 | Trend Trajectory | Milestones, evolution, future direction |
 | 5 | Policy & Ethics | Regulation, legislation, safety concerns |
 
-#### Files Involved
+### Files Involved
 
 | File | Purpose |
 |------|---------|
@@ -630,21 +758,31 @@ Each of the 5 agents receives a targeted search brief and returns findings with 
 | `logs/custom-TIMESTAMP-card.json` | Adaptive Card JSON (if Teams/Slack requested) |
 | `logs/custom-TIMESTAMP-obsidian.md` | Obsidian markdown with wikilinks (if Obsidian requested) |
 
-#### Prompt Template Variable Injection
+### Prompt Template Variable Injection
 
 The CLI scripts perform string replacement on `prompt-custom-brief.md` before passing it to the selected AI CLI engine:
 
 ```mermaid
-flowchart LR
-    T["--topic arg"] --> S["custom-brief.sh/.ps1"]
-    F["--notion/--teams/--slack/--obsidian"] --> S
-    S -->|"Replace {{TOPIC}}"| P["prompt-custom-brief.md"]
-    S -->|"Replace {{DATE}}"| P
-    S -->|"Replace {{PUBLISH_*}}"| P
-    P -->|"engine-specific headless invocation"| C[Selected AI CLI]
+flowchart TD
+    classDef arg  fill:#3a2a1e,stroke:#d49b5b,color:#f5e6c8
+    classDef proc fill:#1e3a5f,stroke:#5b8dd8,color:#d4e4f8
+    classDef tmpl fill:#2a2440,stroke:#8b7ad4,color:#e4e4ef
+    classDef out  fill:#1e3a2f,stroke:#5bd49b,color:#d4f8e2
+
+    subgraph ARGS["CLI arguments"]
+        direction TB
+        T["--topic &lt;value&gt;"]:::arg
+        F["--notion / --teams<br/>--slack / --obsidian"]:::arg
+    end
+
+    ARGS --> S["custom-brief.sh<br/>custom-brief.ps1"]:::proc
+    S -- "{{TOPIC}}" --> P["prompt-custom-brief.md<br/>(template)"]:::tmpl
+    S -- "{{DATE}}" --> P
+    S -- "{{PUBLISH_*}}" --> P
+    P -- "engine-specific<br/>headless invocation" --> C["Selected AI CLI"]:::out
 ```
 
-#### Custom Brief Engine Selection
+### Custom Brief Engine Selection
 
 Custom brief supports all four engines (`claude`, `codex`, `gemini`, `copilot`) on both Bash and PowerShell entry scripts:
 
@@ -655,7 +793,7 @@ Custom brief supports all four engines (`claude`, `codex`, `gemini`, `copilot`) 
 
 Unlike daily briefing, custom brief does **not** run an automatic fallback chain after a failed engine run.
 
-#### Relationship to Daily Briefing
+### Relationship to Daily Briefing
 
 The custom brief reuses the same infrastructure:
 
@@ -671,11 +809,11 @@ The custom brief reuses the same infrastructure:
 | Log naming | `logs/YYYY-MM-DD.log` | `logs/custom-YYYY-MM-DD-HHMMSS.log` |
 | Deduplication | Yes (covered-stories.txt) | No (standalone) |
 
-### 3.12 Obsidian Publishing Pipeline
+## 7. Obsidian Publishing Pipeline
 
 Obsidian is a local-first knowledge base that stores notes as plain markdown files in a "vault" directory. Unlike Notion (which requires an API), Obsidian integration works by writing `.md` files directly to the file system. Obsidian's graph view automatically visualizes connections between notes via `[[wikilinks]]`.
 
-#### Architecture Overview
+### Architecture Overview
 
 ```mermaid
 flowchart TD
@@ -706,7 +844,7 @@ flowchart TD
     end
 ```
 
-#### Wikilink Strategy
+### Wikilink Strategy
 
 The Obsidian markdown uses `[[wikilinks]]` extensively to create graph connections:
 
@@ -717,7 +855,7 @@ The Obsidian markdown uses `[[wikilinks]]` extensively to create graph connectio
 | Inline mentions | `...announced by [[OpenAI]] today...` | Entity edges |
 | Topic stub pages | `Topics/Claude Code.md` with backlinks | Hub nodes in graph |
 
-#### Topic Stub Pages
+### Topic Stub Pages
 
 The publish script extracts all `[[wikilinks]]` from the briefing markdown and creates stub pages in `Topics/` for any that don't already exist. Each stub has YAML frontmatter:
 
@@ -734,7 +872,7 @@ created: 2026-04-11
 
 This creates a growing knowledge graph where topics accumulate backlinks from each briefing that mentions them.
 
-#### Files Involved
+### Files Involved
 
 | File | Purpose |
 |------|---------|
@@ -743,13 +881,13 @@ This creates a growing knowledge graph where topics accumulate backlinks from ea
 | `scripts/test-obsidian.sh` | Bash: vault connectivity test (directory, permissions, config) |
 | `scripts/test-obsidian.ps1` | PowerShell: equivalent Windows implementation |
 
-#### Environment Variables
+### Environment Variables
 
 | Variable | Required | Description |
 |----------|----------|-------------|
 | `AI_BRIEFING_OBSIDIAN_VAULT` | Yes | Absolute path to the Obsidian vault root directory |
 
-#### Error Handling
+### Error Handling
 
 | Condition | Behavior |
 |-----------|----------|
@@ -760,51 +898,70 @@ This creates a growing knowledge graph where topics accumulate backlinks from ea
 | Topic stub already exists | Skip creation, count as existing |
 | Publish script missing | Warning message, skip publishing |
 
-### 3.13 Test Suite
+## 8. Test Suite
 
 201 non-blocking tests across bash and PowerShell verify the entire system without calling external services. Tests cover syntax, structure, argument handling, template substitution, card JSON validation, notification error paths, Obsidian publishing, and cross-platform portability.
 
-#### Test Architecture
+### Test Architecture
 
 ```mermaid
-flowchart TD
-    subgraph "Bash (macOS / Linux / Git Bash)"
-        R["tests/run-all.sh"] --> T1["test-custom-brief.sh<br/>48 tests"]
-        R --> T2["test-daily-brief.sh<br/>80 tests"]
-        R --> T3["test-notifications.sh<br/>17 tests"]
-        R --> T4["test-portability.sh<br/>26 tests"]
-        R --> T5["test-obsidian.sh<br/>30 tests"]
+flowchart LR
+    classDef sh fill:#1e3a5f,stroke:#5b8dd8,color:#d4e4f8
+    classDef ps fill:#3a2a1e,stroke:#d49b5b,color:#f5e6c8
+    classDef py fill:#1e3a2f,stroke:#5bd49b,color:#d4f8e2
+    classDef cov fill:#2a2440,stroke:#8b7ad4,color:#e4e4ef
+
+    subgraph BASH["Bash · macOS / Linux / Git Bash"]
+        direction TB
+        R["tests/run-all.sh"]:::sh
+        R --> T1["test-custom-brief.sh<br/>48 tests"]:::sh
+        R --> T2["test-daily-brief.sh<br/>80 tests"]:::sh
+        R --> T3["test-notifications.sh<br/>17 tests"]:::sh
+        R --> T4["test-portability.sh<br/>26 tests"]:::sh
+        R --> T5["test-obsidian.sh<br/>30 tests"]:::sh
     end
 
-    subgraph "PowerShell (Windows)"
-        PS["tests/test-all.ps1<br/>91 tests"]
+    subgraph PWSH["PowerShell · Windows"]
+        PS["tests/test-all.ps1<br/>91 tests"]:::ps
     end
 
-    subgraph "Coverage"
-        T1 --> X1["Arg parsing, template substitution,<br/>prompt structure, skill structure"]
-        T2 --> X2["Prompt steps, 9 topics, 8 changelogs,<br/>entry scripts, dedup file"]
-        T3 --> X3["Card JSON validity, Adaptive Card structure,<br/>Teams-to-Slack converter, error handling"]
-        T4 --> X4["Bash 3.2 compat, awk/date portability,<br/>-f vs -x checks, ANSI color safety"]
-
-        T5 --> X5["Publish script structure, wikilink extraction,<br/>error handling, vault simulation"]
-        PS --> X1
-        PS --> X2
-        PS --> X3
+    subgraph PYTEST["Python · cross-platform"]
+        PY["eval/tests/test_harness.py<br/>10 tests"]:::py
     end
+
+    subgraph COV["Coverage focus"]
+        direction TB
+        X1["Args, templates,<br/>prompt + skill structure"]:::cov
+        X2["Prompt steps, topics,<br/>changelogs, dedup"]:::cov
+        X3["Card JSON validity,<br/>Slack converter"]:::cov
+        X4["Bash 3.2, awk, date,<br/>ANSI safety"]:::cov
+        X5["Vault simulation,<br/>wikilink stubs"]:::cov
+        X6["Eval extract / judge /<br/>store / drift / report"]:::cov
+    end
+
+    T1 --> X1
+    T2 --> X2
+    T3 --> X3
+    T4 --> X4
+    T5 --> X5
+    PS --> X1
+    PS --> X2
+    PS --> X3
+    PY --> X6
 ```
 
 <p align="center">
   <img src="img/tests.png" alt="Test CLI" width="100%">
 </p>
 
-#### Design Decisions
+### Design Decisions
 
 - **Non-blocking.** No test calls Claude, Notion, Teams, Slack, or any external service. Tests validate contracts, not runtime behavior.
 - **No test framework.** Pure bash/PowerShell with simple `pass()`/`fail()` helpers. Zero dependencies.
 - **Cross-platform parity.** Bash tests cover macOS/Linux/Git Bash; PowerShell covers Windows. Both verify the same codebase from different angles.
 - **Portability verification.** Dedicated suite checks bash 3.2 compatibility (macOS), BSD awk, and ANSI color auto-disable.
 
-#### Files
+### Files
 
 | File | Tests | Focus |
 |---|---|---|
@@ -818,11 +975,11 @@ flowchart TD
 
 Full documentation: [TESTS.md](TESTS.md)
 
-### 3.14 Quality Eval Harness (`eval/`)
+## 9. Quality Eval Harness
 
 A self-contained LLM-as-judge pipeline that scores every published briefing on a fixed 5-axis rubric, persists scores to SQLite, and flags quality drift before readers notice. The harness reuses the same AI CLIs the rest of the project shells out to (`claude` / `codex` / `gemini`) so it inherits the project's existing auth and engine selection.
 
-#### Architecture
+### Architecture
 
 ```mermaid
 flowchart TD
@@ -838,17 +995,20 @@ flowchart TD
         DR["drift.py<br/>7d median vs 30d median ± MAD"]
         RP["report.py<br/>Weekly Markdown digest"]
         RUN["runner.py<br/>CLI: score / backfill / regression"]
+        ED["export_dashboard.py<br/>store + golden → data.js"]
     end
 
     subgraph "State"
         DB[("eval/store.sqlite<br/>eval_runs table")]
         GOLD["eval/golden/*.json<br/>baseline composites"]
+        DJS["eval/dashboard/data.js<br/>(window.EVAL_DATA)"]
     end
 
     subgraph "Consumers"
         GATE["Publish gate<br/>(briefing.sh, optional)"]
         ALERT["Drift alert<br/>(cron / GH Actions)"]
-        DASH["Weekly report<br/>(Notion / Teams)"]
+        REP["Weekly report<br/>(Notion / Teams)"]
+        UI["Interactive dashboard<br/>eval/dashboard/index.html<br/>Chart.js, offline"]
     end
 
     CARD --> EX
@@ -857,11 +1017,13 @@ flowchart TD
 
     GOLD --> RUN
     DB --> DR --> ALERT
-    DB --> RP --> DASH
+    DB --> RP --> REP
+    DB --> ED --> DJS --> UI
+    GOLD --> ED
     RUN -- "--gate" --> GATE
 ```
 
-#### Scoring rubric
+### Scoring rubric
 
 Five integer axes (1–5), composite weighted mean:
 
@@ -875,7 +1037,7 @@ Five integer axes (1–5), composite weighted mean:
 
 Full definitions and pass thresholds: [`eval/rubric.md`](eval/rubric.md).
 
-#### Storage schema
+### Storage schema
 
 ```sql
 CREATE TABLE eval_runs (
@@ -897,7 +1059,7 @@ CREATE TABLE eval_runs (
 
 The primary key intentionally includes both `prompt_version` and `judge_model`, so re-baselining (bumping the prompt or switching to a more capable judge) appends a new row rather than silently overwriting historic scores.
 
-#### Design decisions
+### Design decisions
 
 - **Stub backend.** A deterministic heuristic judge ships in `judge.py` so unit tests, CI, and offline development never hit a paid API. The same harness paths execute against the real judge.
 - **Median + MAD for drift, not mean + stddev.** With only ~30 daily samples and occasional sharp drops, MAD-based z-scores are far more robust to outliers and small-sample bias than parametric scaling.
@@ -905,7 +1067,7 @@ The primary key intentionally includes both `prompt_version` and `judge_model`, 
 - **Versioned prompt.** `PROMPT_VERSION` in `judge.py` is part of the key and is recorded with every score. Bump it whenever `eval/judge_prompt.md` changes substantively.
 - **Optional publish gate.** Calling `runner.py score --gate` exits non-zero when composite falls below threshold, so it can be wired into `briefing.sh` as a pre-publish check without changing default behavior.
 
-#### Files
+### Files
 
 | File              | Role                                                       |
 | ----------------- | ---------------------------------------------------------- |
@@ -918,27 +1080,140 @@ The primary key intentionally includes both `prompt_version` and `judge_model`, 
 | `drift.py`        | Trailing-window drift detector.                            |
 | `report.py`       | Weekly Markdown report.                                    |
 | `schema.sql`      | DB schema.                                                 |
+| `seed_golden.py`  | Re-baseliner: lift store rows into `golden/`.              |
+| `export_dashboard.py` | Export store + golden into `dashboard/data.js`.        |
 | `golden/`         | Pinned baseline composites per card.                       |
+| `dashboard/`      | Offline interactive UI (Chart.js trend + radar + table).   |
 | `tests/`          | `python -m unittest discover -s eval/tests`.               |
+
+### Interactive dashboard
+
+<p align="center">
+    <img src="eval/dashboard/ui.png" alt="Screenshot of the eval dashboard" width="100%">
+</p>
+
+The `eval/dashboard/index.html` file is a single-file, offline-renderable UI over `eval/store.sqlite` + `eval/golden/`. The page reads a pre-generated `data.js` (since browsers cannot open SQLite directly and we intentionally avoid a server dep). `make eval-dashboard` invokes `export_dashboard.py`, which writes the JSON payload as `window.EVAL_DATA` into `data.js`; Chart.js (loaded from CDN) consumes it.
+
+```mermaid
+flowchart LR
+    classDef src  fill:#3a2a1e,stroke:#d49b5b,color:#f5e6c8
+    classDef code fill:#1e3a5f,stroke:#5b8dd8,color:#d4e4f8
+    classDef out  fill:#1e3a2f,stroke:#5bd49b,color:#d4f8e2
+
+    DB[("eval/store.sqlite")]:::src
+    GD["eval/golden/*.json"]:::src
+    EX["export_dashboard.py<br/>(--judge filter,<br/>--open)"]:::code
+    JS["eval/dashboard/data.js<br/>window.EVAL_DATA = {...}"]:::out
+    HTML["eval/dashboard/index.html<br/>Chart.js + vanilla JS<br/>(file:// works)"]:::out
+
+    DB --> EX
+    GD --> EX
+    EX --> JS --> HTML
+```
+
+The dashboard surfaces: stat tiles (composite median/mean, drift status, gate fails, regressions), composite trend (with baseline + gate-threshold overlays), 5-axis radar of medians, composite histogram, per-card weighted-axis stacked bars, and a sortable/filterable/searchable card table with click-to-expand detail. Workflow: run `make eval-backfill JUDGE=claude` → `make eval-dashboard OPEN=1`.
 
 Full documentation: [`eval/README.md`](eval/README.md).
 
 ---
 
-## 4. Data Flow
+## 10. Research Ops Plugin Ecosystem
+
+Beyond the automated pipeline, this project has evolved into a **Unified Research Ops Ecosystem** containing 10 deeply integrated intelligence plugins available natively for **Claude Code**, **OpenAI Codex**, and **Gemini CLI**.
+
+The architecture abstracts core logic into platform-agnostic Agent Skills and leverages localized marketplace discovery mechanisms.
+
+### Platform abstraction
 
 ```mermaid
-graph LR
-    A[Web Sources] -->|WebSearch tool queries| B[Claude Code]
-    B -->|Aggregates and filters| C[Raw Search Results]
-    C -->|Compiled by Claude| D[Structured Briefing]
-    D -->|TL;DR + Full Sections + Table| E[Notion Markdown Content]
-    E -->|notion-create-pages MCP tool| F[Notion API]
-    F -->|Creates page in database| G[AI Daily Briefing - Notion Page]
+flowchart LR
+    classDef logic   fill:#2a2440,stroke:#8b7ad4,color:#e4e4ef
+    classDef manifest fill:#1e3a5f,stroke:#5b8dd8,color:#d4e4f8
+    classDef cli     fill:#1e3a2f,stroke:#5bd49b,color:#d4f8e2
 
-    H[prompt.md] -->|Instructions| B
-    B -->|stdout + stderr| I[Log File]
-    G -->|Page URL| I
+    Instr["SKILL.md<br/>+ Agent personas<br/>(platform-agnostic)"]:::logic
+
+    subgraph CC["Claude Code"]
+        CP["claude-plugins/&lt;name&gt;/<br/>.claude-plugin/plugin.json"]:::manifest
+        CCLI["claude CLI"]:::cli
+    end
+    subgraph CX["OpenAI Codex"]
+        CXP["plugins/&lt;name&gt;-codex/<br/>.codex-plugin/plugin.json"]:::manifest
+        XCLI["codex CLI"]:::cli
+    end
+    subgraph GM["Gemini CLI"]
+        GP["gemini-extensions/&lt;name&gt;/<br/>gemini-extension.json"]:::manifest
+        GCLI["gemini CLI"]:::cli
+    end
+
+    Instr --> CP --> CCLI
+    Instr --> CXP --> XCLI
+    Instr --> GP --> GCLI
+```
+
+### Plugin catalog
+
+```mermaid
+flowchart TD
+    classDef media fill:#3a2a1e,stroke:#d49b5b,color:#f5e6c8
+    classDef tech  fill:#1e3a5f,stroke:#5b8dd8,color:#d4e4f8
+    classDef biz   fill:#1e3a2f,stroke:#5bd49b,color:#d4f8e2
+    classDef ops   fill:#2a2440,stroke:#8b7ad4,color:#e4e4ef
+
+    ROOT["Research Ops Ecosystem<br/>(10 plugins · 3 platforms)"]:::ops
+
+    subgraph MEDIA["News & Media"]
+        direction TB
+        P1["ai-news-briefing<br/>daily AI brief"]:::media
+        P2["last30days<br/>30-day signal scan"]:::media
+        P3["podcast-summarizer<br/>tech podcasts"]:::media
+    end
+    subgraph TECH["Tech & Dev"]
+        direction TB
+        P4["trend-spotter<br/>GitHub · PyPI · NPM"]:::tech
+        P5["paper-reader<br/>arXiv · Semantic Scholar"]:::tech
+        P6["repo-auditor<br/>deps + bus factor"]:::tech
+    end
+    subgraph BIZ["Business & Finance"]
+        direction TB
+        P7["earnings-analyzer<br/>SEC + earnings calls"]:::biz
+        P8["competitor-intel<br/>market scan"]:::biz
+        P9["startup-scout<br/>YC + PH + VC"]:::biz
+        P10["crypto-tracker<br/>tokenomics + sentiment"]:::biz
+    end
+
+    ROOT --> MEDIA
+    MEDIA --> TECH
+    TECH --> BIZ
+```
+
+For complete technical specifications, see [PLUGINS.md](PLUGINS.md).
+
+---
+
+## 11. Data Flow
+
+```mermaid
+flowchart TD
+    classDef src   fill:#3a2a1e,stroke:#d49b5b,color:#f5e6c8
+    classDef agent fill:#2a2440,stroke:#8b7ad4,color:#e4e4ef
+    classDef proc  fill:#1e3a5f,stroke:#5b8dd8,color:#d4e4f8
+    classDef out   fill:#1e3a2f,stroke:#5bd49b,color:#d4f8e2
+
+    H["prompt.md<br/>instructions"]:::src
+    A["Web sources"]:::src
+
+    H -- loaded by --> B["AI engine<br/>(Claude / Codex / Gemini / Copilot)"]:::agent
+    A -- WebSearch tool --> B
+
+    B --> C["Raw search results"]:::proc
+    C -- aggregate + filter --> D["Structured briefing<br/>2-tier markdown"]:::proc
+    D -- TL;DR + sections + table --> E["Notion-flavored markdown"]:::proc
+    E -- notion-create-pages MCP --> F["Notion API"]:::proc
+    F -- creates page --> G["AI Daily Briefing<br/>Notion page"]:::out
+
+    B -- stdout + stderr --> I["logs/YYYY-MM-DD.log"]:::out
+    G -- page URL --> I
 ```
 
 **Data transformation stages:**
@@ -954,50 +1229,43 @@ graph LR
 
 ---
 
-## 5. Search Strategy
+## 12. Search Strategy
 
 The prompt defines 9 parallel topic searches. Each topic maps to a domain of AI news, and Claude executes multiple search queries per topic to ensure comprehensive coverage.
 
 ### Topic Search Architecture
 
 ```mermaid
-graph TD
-    S[Claude Code Search Phase] --> T1[1. Claude Code / Anthropic]
-    S --> T2[2. OpenAI / Codex / ChatGPT]
-    S --> T3[3. AI Coding IDEs]
-    S --> T4[4. Agentic AI Ecosystem]
-    S --> T5[5. AI Industry]
-    S --> T6[6. Open Source AI]
-    S --> T7[7. AI Startups and Funding]
-    S --> T8[8. AI Policy and Regulation]
-    S --> T9[9. Dev Tools and Frameworks]
+flowchart TD
+    classDef root  fill:#2a2440,stroke:#8b7ad4,color:#e4e4ef
+    classDef topic fill:#1e3a5f,stroke:#5b8dd8,color:#d4e4f8
 
-    T1 --> Q1A["'Claude Code news today YYYY-MM-DD'"]
-    T1 --> Q1B["'Anthropic announcement this week'"]
+    S["AI engine<br/>Search phase"]:::root
 
-    T2 --> Q2A["'OpenAI Codex latest update'"]
-    T2 --> Q2B["'ChatGPT new features March 2026'"]
+    subgraph PROD["Vendors and platforms"]
+        direction TB
+        T1["1. Claude Code / Anthropic<br/><i>Claude Code news today &lt;date&gt;</i><br/><i>Anthropic announcement this week</i>"]:::topic
+        T2["2. OpenAI / Codex / ChatGPT<br/><i>OpenAI Codex latest update</i><br/><i>ChatGPT new features &lt;month&gt;</i>"]:::topic
+        T3["3. AI Coding IDEs<br/><i>Cursor Windsurf Copilot news today</i><br/><i>AI coding IDE update this week</i>"]:::topic
+    end
 
-    T3 --> Q3A["'Cursor Windsurf Copilot news today'"]
-    T3 --> Q3B["'AI coding IDE update this week'"]
+    subgraph ECO["Agents, models, and open source"]
+        direction TB
+        T4["4. Agentic AI Ecosystem<br/><i>AI agent frameworks MCP news</i><br/><i>LangChain CrewAI AutoGen update</i>"]:::topic
+        T5["5. AI Industry<br/><i>AI model release benchmark today</i><br/><i>Major AI company announcement</i>"]:::topic
+        T6["6. Open Source AI<br/><i>Llama Mistral DeepSeek release</i><br/><i>Open source AI model news</i>"]:::topic
+    end
 
-    T4 --> Q4A["'AI agent frameworks MCP news'"]
-    T4 --> Q4B["'LangChain CrewAI AutoGen update'"]
+    subgraph BIZ["Business, policy, and tooling"]
+        direction TB
+        T7["7. AI Startups and Funding<br/><i>AI startup funding round today</i><br/><i>AI acquisition announcement</i>"]:::topic
+        T8["8. AI Policy and Regulation<br/><i>AI regulation policy news</i><br/><i>EU AI Act update &lt;month&gt;</i>"]:::topic
+        T9["9. Dev Tools and Frameworks<br/><i>Vercel Next.js AI tools update</i><br/><i>Developer tooling AI news today</i>"]:::topic
+    end
 
-    T5 --> Q5A["'AI model release benchmark today'"]
-    T5 --> Q5B["'Major AI company announcement'"]
-
-    T6 --> Q6A["'Llama Mistral DeepSeek release'"]
-    T6 --> Q6B["'Open source AI model news'"]
-
-    T7 --> Q7A["'AI startup funding round today'"]
-    T7 --> Q7B["'AI acquisition announcement'"]
-
-    T8 --> Q8A["'AI regulation policy news'"]
-    T8 --> Q8B["'EU AI Act update March 2026'"]
-
-    T9 --> Q9A["'Vercel Next.js AI tools update'"]
-    T9 --> Q9B["'Developer tooling AI news today'"]
+    S --> PROD
+    S --> ECO
+    S --> BIZ
 ```
 
 ### Topic Coverage Map
@@ -1018,39 +1286,45 @@ Claude has discretion over the exact number and phrasing of queries. The prompt 
 
 ---
 
-## 6. Output Format
+## 13. Output Format
 
 The briefing follows a two-tier structure designed for different reading depths: a quick scan (Tier 1) and a deep read (Tier 2).
 
 ### Briefing Structure
 
 ```mermaid
-graph TD
-    A[Notion Page] --> B["Title: YYYY-MM-DD - AI Daily Briefing"]
-    A --> C["Properties: Date, Status, Topics"]
-    A --> D[Content Body]
+flowchart TD
+    classDef page  fill:#2a2440,stroke:#8b7ad4,color:#e4e4ef
+    classDef meta  fill:#3a2a1e,stroke:#d49b5b,color:#f5e6c8
+    classDef tier  fill:#1e3a5f,stroke:#5b8dd8,color:#d4e4f8
+    classDef leaf  fill:#1e3a2f,stroke:#5bd49b,color:#d4f8e2
 
-    D --> E[Tier 1: TL;DR]
-    D --> F["Divider: ---"]
-    D --> G[Tier 2: Full Briefing]
+    A["Notion page"]:::page
+    A --> B["Title:<br/>YYYY-MM-DD — AI Daily Briefing"]:::meta
+    A --> C["Properties:<br/>Date · Status · Topics"]:::meta
+    A --> D["Content body"]:::page
 
-    E --> E1[10-15 bullet points]
-    E --> E2[One sentence each]
-    E --> E3[Approx 1 minute read]
+    D --> E["Tier 1: TL;DR"]:::tier
+    D --> F["Divider ---"]:::leaf
+    D --> G["Tier 2: Full briefing"]:::tier
 
-    G --> G1[Section 1: Claude Code / Anthropic]
-    G --> G2[Section 2: OpenAI / Codex / ChatGPT]
-    G --> G3[Section 3: AI Coding IDEs]
-    G --> G4[Section 4: Agentic AI Ecosystem]
-    G --> G5[Section 5: AI Industry]
-    G --> G6[Section 6: Open Source AI]
-    G --> G7[Section 7: AI Startups and Funding]
-    G --> G8[Section 8: AI Policy and Regulation]
-    G --> G9[Section 9: Dev Tools and Frameworks]
-    G --> G10[Key Takeaways Table]
+    E --> E1["10-15 bullet points<br/>one sentence each<br/>~1 minute read"]:::leaf
 
-    G1 --> H[3-8 bullets with source attribution]
-    G10 --> I[Theme and Signal columns]
+    subgraph SECTIONS["9 topic sections (3-8 bullets each, source-attributed)"]
+        direction TB
+        G1["1. Claude Code / Anthropic"]:::leaf
+        G2["2. OpenAI / Codex / ChatGPT"]:::leaf
+        G3["3. AI Coding IDEs"]:::leaf
+        G4["4. Agentic AI Ecosystem"]:::leaf
+        G5["5. AI Industry"]:::leaf
+        G6["6. Open Source AI"]:::leaf
+        G7["7. AI Startups + Funding"]:::leaf
+        G8["8. AI Policy + Regulation"]:::leaf
+        G9["9. Dev Tools + Frameworks"]:::leaf
+    end
+
+    G --> SECTIONS
+    G --> G10["Key takeaways table<br/>Theme · Signal columns"]:::leaf
 ```
 
 ### Notion Formatting Conventions
@@ -1076,7 +1350,7 @@ The parent database is identified by a hardcoded `data_source_id` in the prompt.
 
 ---
 
-## 7. Scheduling Architecture
+## 14. Scheduling Architecture
 
 ### Cross-Platform Scheduling Comparison
 
@@ -1119,7 +1393,7 @@ flowchart TD
 
 ---
 
-## 8. Error Handling
+## 15. Error Handling
 
 The system has multiple layers of error handling, from the script level down to the AI execution level. Both platform scripts implement the same error handling strategy.
 
@@ -1199,52 +1473,90 @@ Daily entry scripts invoke engines with engine-specific headless commands:
 
 ---
 
-## 9. File System Layout
+## 16. File System Layout
 
 ```mermaid
-graph TD
-    A["project root/"] --> IDX[index.html]
-    A --> W["wiki/"]
-    W --> WS[style.css]
-    W --> WJ[script.js]
-    A --> MK[Makefile]
-    A --> SC["scripts/"]
-    SC --> SC1["health-check.sh/.ps1"]
-    SC --> SC2["log-summary.sh/.ps1"]
-    SC --> SC3["dry-run.sh/.ps1"]
-    SC --> SC4["topic-edit.sh/.ps1"]
-    SC --> SC5["notify-teams.sh/.ps1"]
-    SC --> SC8["notify-slack.sh/.ps1"]
-    SC --> SC10["publish-obsidian.sh/.ps1"]
-    SC --> SC11["test-obsidian.sh/.ps1"]
-    SC --> SC9["teams-to-slack.py"]
-    SC --> SC6["build-teams-card.py (legacy)"]
-    SC --> SC7["+ 8 more pairs"]
-    A --> B[briefing.sh]
-    A --> B2[briefing.ps1]
-    A --> C[prompt.md]
-    A --> D[com.ainews.briefing.plist]
-    A --> D2[install-task.ps1]
-    A --> E[.gitignore]
-    A --> F[ARCHITECTURE.md]
-    A --> F2[README.md]
-    A --> G["logs/"]
-    A --> BK["backups/"]
+flowchart TD
+    classDef root  fill:#2a2440,stroke:#8b7ad4,color:#e4e4ef
+    classDef dir   fill:#1e3a5f,stroke:#5b8dd8,color:#d4e4f8
+    classDef file  fill:#1e3a2f,stroke:#5bd49b,color:#d4f8e2
+    classDef ext   fill:#3a2a1e,stroke:#d49b5b,color:#f5e6c8
 
-    G --> G1["YYYY-MM-DD.log"]
-    G --> G4["YYYY-MM-DD-card.json"]
-    G --> G5["YYYY-MM-DD-obsidian.md"]
-    G --> G2["launchd-stdout.log (macOS)"]
-    G --> G3["launchd-stderr.log (macOS)"]
+    A["project root/"]:::root
 
-    H["macOS: ~/Library/LaunchAgents/"] --> I["com.ainews.briefing.plist (copy)"]
-    I -.->|References| B
+    subgraph ENTRY["Entry + prompts"]
+        direction TB
+        B["briefing.sh"]:::file
+        B2["briefing.ps1"]:::file
+        C["prompt.md"]:::file
+        CB["custom-brief.sh / .ps1"]:::file
+        CBP["prompt-custom-brief.md"]:::file
+    end
 
-    J["macOS: ~/.local/bin/"] --> K[ai-news]
-    K -.->|Kickstarts| I
+    subgraph WIKI["wiki/ + index.html"]
+        direction TB
+        IDX["index.html"]:::file
+        W["wiki/style.css<br/>wiki/script.js"]:::file
+    end
 
-    L["Windows: Task Scheduler"] --> M[AiNewsBriefing task]
-    M -.->|Runs| B2
+    subgraph OPS["Make + scheduler bootstrap"]
+        direction TB
+        MK["Makefile"]:::file
+        D["com.ainews.briefing.plist"]:::file
+        D2["install-task.ps1"]:::file
+    end
+
+    subgraph SCRIPTS["scripts/ (13 sh + ps1 pairs)"]
+        direction TB
+        SC_NOTIFY["notify-teams · notify-slack"]:::file
+        SC_OBS["publish-obsidian · test-obsidian"]:::file
+        SC_OPS["health-check · log-summary · dry-run · topic-edit · ..."]:::file
+        SC_PY["teams-to-slack.py · build-teams-card.py (legacy)"]:::file
+    end
+
+    subgraph LOGS["logs/ (gitignored)"]
+        direction TB
+        G1["YYYY-MM-DD.log"]:::file
+        G4["YYYY-MM-DD-card.json"]:::file
+        G5["YYYY-MM-DD-obsidian.md"]:::file
+        G2["launchd-stdout.log · launchd-stderr.log"]:::file
+    end
+
+    subgraph DOCS["Top-level docs"]
+        direction TB
+        DOC1["README.md · ARCHITECTURE.md · E2E_FLOW.md"]:::file
+        DOC2["SETUP.md · TESTS.md · LOGS.md · PLUGINS.md"]:::file
+        DOC3["CUSTOM_BRIEF.md · NOTIFY_TEAMS.md · NOTIFY_SLACK.md"]:::file
+    end
+
+    subgraph EVAL["eval/ (LLM-as-judge)"]
+        direction TB
+        EV1["rubric.md · judge_prompt.md · schema.sql"]:::file
+        EV2["extract.py · judge.py · store.py · runner.py"]:::file
+        EV3["drift.py · report.py · seed_golden.py"]:::file
+        EV4["golden/ · tests/"]:::file
+    end
+
+    A --> ENTRY
+    A --> WIKI
+    A --> OPS
+    A --> SCRIPTS
+    A --> LOGS
+    A --> DOCS
+    A --> EVAL
+
+    subgraph PLATFORM["Platform install targets"]
+        direction TB
+        H["macOS<br/>~/Library/LaunchAgents/<br/>com.ainews.briefing.plist"]:::ext
+        K["macOS<br/>~/.local/bin/ai-news"]:::ext
+        M["Windows Task Scheduler<br/>AiNewsBriefing"]:::ext
+    end
+
+    D -. copied to .-> H
+    H -. invokes .-> B
+    K -. kickstarts .-> H
+    D2 -. registers .-> M
+    M -. runs .-> B2
 ```
 
 ### File Descriptions
@@ -1292,7 +1604,7 @@ graph TD
 
 ---
 
-## 10. Security Considerations
+## 17. Security Considerations
 
 ### Permission Model
 
@@ -1328,40 +1640,7 @@ No secrets are stored in any tracked file. Claude Code's API key and Notion inte
 
 ---
 
-## 11. Teams, Slack, and Obsidian Pipelines
-
-See [Section 3.9](#39-teams-notification-pipeline), [Section 3.10](#310-slack-notification-pipeline), and [Section 3.12](#312-obsidian-publishing-pipeline) for full architectural details. See also [NOTIFY_TEAMS.md](NOTIFY_TEAMS.md), [NOTIFY_SLACK.md](NOTIFY_SLACK.md), and `E2E_FLOW.md` for end-to-end walkthroughs and failure modes.
-
----
-
-## 12. Research Ops Plugin Ecosystem
-
-Beyond the automated pipeline, this project has evolved into a **Unified Research Ops Ecosystem** containing 10 deeply integrated intelligence plugins available natively for **Claude Code**, **OpenAI Codex**, and **Gemini CLI**.
-
-The architecture abstracts core logic into platform-agnostic Agent Skills and leverages localized marketplace discovery mechanisms.
-
-```mermaid
-graph TD
-    subgraph "Core Logic"
-        Instr[SKILL.md / Agent Personas]
-    end
-    subgraph "Claude Code"
-        CP[.claude-plugin/plugin.json]
-    end
-    subgraph "OpenAI Codex"
-        CXP[.codex-plugin/plugin.json]
-    end
-    subgraph "Gemini CLI"
-        GP[gemini-extension.json]
-    end
-    Instr --> CP & CXP & GP
-```
-
-For complete technical specifications, see [PLUGINS.md](PLUGINS.md).
-
----
-
-## 13. Future Enhancements / Extension Points
+## 18. Future Enhancements and Extension Points
 
 ### Adding or Modifying Topics
 
@@ -1377,15 +1656,15 @@ Set the `AI_BRIEFING_MODEL` environment variable, or change the `--model` argume
 
 ### Custom Topic Research
 
-**Implemented.** See [Section 3.11](#311-custom-topic-briefing-pipeline) and [CUSTOM_BRIEF.md](CUSTOM_BRIEF.md). Run `make custom-brief T="topic" NOTION=1 TEAMS=1` or `./custom-brief.sh --topic "topic" --notion --teams`.
+**Implemented.** See [Section 6](#6-custom-topic-briefing-pipeline) and [CUSTOM_BRIEF.md](CUSTOM_BRIEF.md). Run `make custom-brief T="topic" NOTION=1 TEAMS=1` or `./custom-brief.sh --topic "topic" --notion --teams`.
 
 ### Adding Notification Channels
 
 | Channel | Status | Implementation Approach |
 |---|---|---|
-| Microsoft Teams | **Implemented** | Selected AI engine writes Adaptive Card JSON (Step 4), `notify-teams.sh/.ps1` validates and POSTs to Power Automate webhook. See [Section 3.9](#39-teams-notification-pipeline). |
-| Slack | **Implemented** | `notify-slack.sh/.ps1` converts the Teams card JSON to Slack Block Kit using `teams-to-slack.py` and POSTs to Slack webhook. See [Section 3.10](#310-slack-notification-pipeline). |
-| Obsidian | **Implemented** | Selected AI engine writes graph-ready markdown (Step 5) with `[[wikilinks]]` and YAML frontmatter. `publish-obsidian.sh/.ps1` copies to vault and creates topic stub pages. See [Section 3.12](#312-obsidian-publishing-pipeline). |
+| Microsoft Teams | **Implemented** | Selected AI engine writes Adaptive Card JSON (Step 4), `notify-teams.sh/.ps1` validates and POSTs to Power Automate webhook. See [Section 4](#4-teams-notification-pipeline). |
+| Slack | **Implemented** | `notify-slack.sh/.ps1` converts the Teams card JSON to Slack Block Kit using `teams-to-slack.py` and POSTs to Slack webhook. See [Section 5](#5-slack-notification-pipeline). |
+| Obsidian | **Implemented** | Selected AI engine writes graph-ready markdown (Step 5) with `[[wikilinks]]` and YAML frontmatter. `publish-obsidian.sh/.ps1` copies to vault and creates topic stub pages. See [Section 7](#7-obsidian-publishing-pipeline). |
 | macOS notification | Planned | `osascript -e 'display notification ...'` in `briefing.sh` |
 | Windows toast | Planned | `New-BurntToastNotification` or `[Windows.UI.Notifications]` in `briefing.ps1` |
 | Email | Planned | `mail`/`sendmail` (macOS) or `Send-MailMessage` (Windows) in the entry script |

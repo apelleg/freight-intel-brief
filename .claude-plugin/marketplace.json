@@ -10,14 +10,17 @@
     {
       "name": "ai-news-briefing",
       "source": "./claude-plugins/ai-news-briefing",
-      "description": "Comprehensive AI news tracking, deep research agents, and automated Notion/Teams/Slack publishing.",
+      "description": "AI news tracking, deep research agents, Notion/Teams/Slack publishing, and a 5-axis LLM-as-judge quality eval harness with offline dashboard.",
       "category": "research",
       "tags": [
         "news",
         "briefing",
         "research",
         "mcp",
-        "automation"
+        "automation",
+        "eval",
+        "llm-as-judge",
+        "quality"
       ]
     },
     {

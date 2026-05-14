@@ -23,8 +23,9 @@ LLM-as-judge scoring for every published AI News Briefing card. Tracks composite
 13. [Re-baselining workflow](#re-baselining-workflow)
 14. [Drift detection](#drift-detection)
 15. [Weekly report](#weekly-report)
-16. [Publish gate](#publish-gate)
-17. [Failure-mode decision graph](#failure-mode-decision-graph)
+16. [Interactive dashboard](#interactive-dashboard)
+17. [Publish gate](#publish-gate)
+18. [Failure-mode decision graph](#failure-mode-decision-graph)
 18. [Cost model](#cost-model)
 19. [Testing](#testing)
 20. [File map](#file-map)
@@ -562,13 +563,13 @@ sequenceDiagram
 
     DEV->>DEV: Bump PROMPT_VERSION or switch judge
     DEV->>BF: backfill JUDGE=claude
-    BF->>DB: write 18 new rows (new prompt_version OR new judge_model)
+    BF->>DB: write 18 new rows under new prompt_version or judge_model
     DEV->>SG: seed-golden JUDGE=claude CLEAN=1
-    SG->>DB: SELECT latest per card_date<br/>filtered to claude-haiku-4-5-20251001
+    SG->>DB: SELECT latest row per card_date, filtered to claude-haiku-4-5-20251001
     SG->>GD: clean + write 18 new JSON files
     DEV->>RG: regression JUDGE=claude
-    RG->>DB: re-score; compare to new baselines
-    RG-->>DEV: 18 / 18 within Δ ≤ 0.50  → ship
+    RG->>DB: re-score and compare to new baselines
+    RG-->>DEV: 18 of 18 within delta 0.50 — ship
 ```
 
 Flags:
@@ -687,6 +688,58 @@ Example tail:
 
 ---
 
+## Interactive dashboard
+
+<p align="center">
+    <img src="dashboard/ui.png" alt="Screenshot of the eval dashboard" width="100%">
+</p>
+
+`eval/dashboard/index.html` is a single-file, offline-renderable dashboard that visualizes the contents of `eval/store.sqlite` + `eval/golden/`. No backend, no build step — just static HTML + Chart.js loaded from a CDN.
+
+```bash
+make eval-dashboard                 # export data.js from store
+make eval-dashboard OPEN=1          # also open in default browser
+make eval-dashboard DASHBOARD_JUDGE=claude-haiku-4-5-20251001
+```
+
+The dashboard shows:
+
+| Panel | What it visualizes |
+| --- | --- |
+| Stat cards | Composite median / mean, drift status, gate fails, regressions vs golden |
+| Composite trend | Line chart: current composite per card_date with baseline overlay + gate threshold |
+| Axis medians | Radar chart of the 5-axis medians across all cards |
+| Composite distribution | Histogram by composite bucket |
+| Per-card axis stacks | Stacked bar chart showing each card's weighted axis contribution |
+| Per-card table | Sortable, filterable, searchable rows with axis scores, judge, notes |
+| Detail panel | Selected card's full metadata + baseline + delta |
+
+Filters: `All`, `Below gate (3.0)`, `Regressed vs baseline`, `Composite ≥ 4.0`. Search matches date, judge, or notes substring. Click any column header to sort; click any row to highlight that card in the stack chart and load it into the detail panel.
+
+```mermaid
+flowchart LR
+    classDef src  fill:#3a2a1e,stroke:#d49b5b,color:#f5e6c8
+    classDef code fill:#1e3a5f,stroke:#5b8dd8,color:#d4e4f8
+    classDef out  fill:#1e3a2f,stroke:#5bd49b,color:#d4f8e2
+
+    DB[("eval/store.sqlite")]:::src
+    GD["eval/golden/*.json"]:::src
+    EX["export_dashboard.py<br/>(--judge filter)"]:::code
+    JS["dashboard/data.js<br/>(window.EVAL_DATA = ...)"]:::out
+    HTML["dashboard/index.html<br/>Chart.js + vanilla JS"]:::out
+    BROWSER["Browser<br/>(local file://)"]:::out
+
+    DB --> EX
+    GD --> EX
+    EX --> JS
+    JS --> HTML
+    HTML --> BROWSER
+```
+
+Regenerate `data.js` after any new `make eval` / `make eval-backfill` run; the HTML never reads the SQLite file directly (browsers can't, and we don't want a server dep).
+
+---
+
 ## Publish gate
 
 Optional. Default behavior is observational — scores are written but no pipeline step changes. To make the harness gate the publish step, call `runner.py score --gate` before the Notion / Teams / Slack publish:
@@ -729,7 +782,7 @@ flowchart TD
     F2[Card unparseable JSON]:::raise -.-> H2["json.loads raises<br/>backfill: print + continue"]
     F3[Judge CLI not installed]:::raise -.-> H3["_run_cli → RuntimeError<br/>'claude CLI not found; use --judge stub'"]
     F4[Judge CLI returns rc != 0]:::raise -.-> H4["RuntimeError with stderr[:400]"]
-    F5[Judge times out (240s)]:::raise -.-> H5["subprocess.TimeoutExpired → RuntimeError"]
+    F5["Judge times out at 240s"]:::raise -.-> H5["subprocess.TimeoutExpired → RuntimeError"]
     F6[Judge returns prose only]:::raise -.-> H6["parse_judge_response → ValueError"]
     F7[Axis out of 1-5]:::raise -.-> H7["parse_judge_response → ValueError"]
     F8[Same date judged twice]:::caught -.-> H8["ON CONFLICT DO UPDATE — latest wins"]
@@ -892,7 +945,7 @@ flowchart LR
 
     subgraph NEXT["Plausible next"]
         N1[Wire --gate into briefing.sh]:::next
-        N2[Cross-judge consensus<br/>(claude + gemini agree)]:::next
+        N2["Cross-judge consensus<br/>claude + gemini agree"]:::next
         N3[GitHub Actions cron for nightly drift]:::next
         N4[Per-topic axis breakdown]:::next
     end

@@ -22,63 +22,69 @@ It is based on the current implementation in:
 
 ```mermaid
 flowchart TD
-    subgraph Triggers
-        A1[macOS launchd\ncom.ainews.briefing.plist]
-        A2[Windows Task Scheduler\nAiNewsBriefing]
-        A3[Manual: make run / run-bg / run-scheduled]
-        A4[Manual direct: briefing.sh or briefing.ps1]
+    classDef trig fill:#3a2a1e,stroke:#d49b5b,color:#f5e6c8
+    classDef ep   fill:#1e3a5f,stroke:#5b8dd8,color:#d4e4f8
+    classDef ai   fill:#2a2440,stroke:#8b7ad4,color:#e4e4ef
+    classDef art  fill:#1e3a2f,stroke:#5bd49b,color:#d4f8e2
+    classDef dec  fill:#3b2e1e,stroke:#d4a35b,color:#f5e6c8
+    classDef fail fill:#3b1e1e,stroke:#a13a3a,color:#f8d4d4
+
+    subgraph TRIGGERS["Triggers"]
+        A1["macOS launchd<br/>com.ainews.briefing.plist"]:::trig
+        A2["Windows Task Scheduler<br/>AiNewsBriefing"]:::trig
+        A3["Manual: make run<br/>run-bg / run-scheduled"]:::trig
+        A4["Manual direct:<br/>briefing.sh / briefing.ps1"]:::trig
     end
 
-    A1 --> B1[briefing.sh]
-    A2 --> B2[briefing.ps1]
+    A1 --> B1["briefing.sh"]:::ep
+    A2 --> B2["briefing.ps1"]:::ep
     A3 --> B1
     A3 --> B2
     A4 --> B1
     A4 --> B2
 
-    B1 --> C[prompt.md loaded into memory]
+    B1 --> C["prompt.md loaded<br/>into memory"]:::ep
     B2 --> C
-    B1 --> ER[Engine resolver\nAI_BRIEFING_CLI or fallback]
+    B1 --> ER["Engine resolver<br/>AI_BRIEFING_CLI or fallback"]:::ep
     B2 --> ER
-    ER --> D[Selected AI CLI\nclaude/codex/gemini/copilot\n(headless mode)]
+    ER --> D["Selected AI CLI<br/>claude / codex / gemini / copilot<br/>headless mode"]:::ai
 
-    D --> E[WebSearch tool calls]
-    D --> F[Notion MCP calls]
+    D --> E["WebSearch tool calls"]:::ai
+    D --> F["Notion MCP calls"]:::ai
+    F --> G["Notion page created<br/>Date + Status + Topics"]:::art
 
-    F --> G[Notion page created\nDate + Status + Topics]
+    D --> H["logs/YYYY-MM-DD.log<br/>stdout + stderr"]:::art
+    D --> I["Teams artifact<br/>logs/YYYY-MM-DD-card.json"]:::art
+    D --> I2["Obsidian artifact<br/>logs/YYYY-MM-DD-obsidian.md"]:::art
 
-    D --> H[logs/YYYY-MM-DD.log\nstdout + stderr appended]
-    D --> I[Expected Teams artifact\nlogs/YYYY-MM-DD-card.json]
-    D --> I2[Expected Obsidian artifact\nlogs/YYYY-MM-DD-obsidian.md]
-
-    B1 --> J{AI_BRIEFING_TEAMS_WEBHOOK set?}
+    B1 --> J{"AI_BRIEFING_TEAMS_WEBHOOK<br/>set?"}:::dec
     B2 --> J
-    J -->|No| K[Skip Teams notify]
-    J -->|Yes| L[notify-teams.sh / notify-teams.ps1]
-    L --> M{card.json exists\nand valid JSON?}
-    M -->|No| N[Teams notify fails\nrun still completed]
-    M -->|Yes| O[POST card JSON to Teams webhooks]
-    O --> P[Teams channel card]
+    J -- no  --> K["Skip Teams notify"]
+    J -- yes --> L["notify-teams.sh / .ps1"]:::ep
+    L --> M{"card.json exists<br/>and valid JSON?"}:::dec
+    M -- no  --> N["Teams notify fails<br/>run still completed"]:::fail
+    M -- yes --> O["POST card JSON<br/>to Teams webhooks"]:::ep
+    O --> P["Teams channel card"]:::art
 
-    B1 --> R{AI_BRIEFING_SLACK_WEBHOOK set?}
+    B1 --> R{"AI_BRIEFING_SLACK_WEBHOOK<br/>set?"}:::dec
     B2 --> R
-    R -->|No| S[Skip Slack notify]
-    R -->|Yes| T[notify-slack.sh / notify-slack.ps1]
-    T --> U{card.json exists\nand conversion valid?}
-    U -->|No| V[Slack notify fails\nrun still completed]
-    U -->|Yes| W[Convert + POST to Slack webhooks]
-    W --> X[Slack channel message]
+    R -- no  --> S["Skip Slack notify"]
+    R -- yes --> T["notify-slack.sh / .ps1"]:::ep
+    T --> U{"card.json exists<br/>and conversion valid?"}:::dec
+    U -- no  --> V["Slack notify fails<br/>run still completed"]:::fail
+    U -- yes --> W["Convert + POST<br/>to Slack webhooks"]:::ep
+    W --> X["Slack channel message"]:::art
 
-    B1 --> OC{AI_BRIEFING_OBSIDIAN_VAULT set?}
+    B1 --> OC{"AI_BRIEFING_OBSIDIAN_VAULT<br/>set?"}:::dec
     B2 --> OC
-    OC -->|No| OD[Skip Obsidian publish]
-    OC -->|Yes| OE[publish-obsidian.sh / publish-obsidian.ps1]
-    OE --> OF{obsidian.md exists?}
-    OF -->|No| OG[Obsidian publish skipped\nrun still completed]
-    OF -->|Yes| OH[Copy to vault + create topic stubs]
-    OH --> OI[Obsidian vault updated\nGraph view shows connections]
+    OC -- no  --> OD["Skip Obsidian publish"]
+    OC -- yes --> OE["publish-obsidian.sh / .ps1"]:::ep
+    OE --> OF{"obsidian.md exists?"}:::dec
+    OF -- no  --> OG["Obsidian publish skipped<br/>run still completed"]:::fail
+    OF -- yes --> OH["Copy to vault<br/>+ create topic stubs"]:::ep
+    OH --> OI["Obsidian vault updated<br/>graph view shows connections"]:::art
 
-    B1 --> Q[Delete *.log older than 30 days]
+    B1 --> Q["Delete *.log older than 30 days"]:::ep
     B2 --> Q
 ```
 
@@ -256,9 +262,9 @@ flowchart TD
 
     OA -->|No| OB[Skip Obsidian step]
     OA -->|Yes| OC[Call publish-obsidian]
-    OC --> OD{obsidian.md exists\nand vault writable?}
+    OC --> OD{"obsidian.md exists<br/>and vault writable?"}
     OD -->|No| OE[Obsidian publish failed]
-    OD -->|Yes| OF[Copy to vault\n+ create topic stubs]
+    OD -->|Yes| OF["Copy to vault<br/>+ create topic stubs"]
     OF --> OG[Obsidian publish success]
 ```
 
