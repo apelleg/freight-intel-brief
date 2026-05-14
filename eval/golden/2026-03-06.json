@@ -1,0 +1,15 @@
+{
+  "card_date": "2026-03-06",
+  "baseline_composite": 3.7,
+  "baseline_judge": "claude-haiku-4-5-20251001",
+  "baseline_prompt_version": "v1",
+  "baseline_ran_at": "2026-05-14T02:49:09+00:00",
+  "baseline_axes": {
+    "factuality": 4,
+    "novelty": 4,
+    "source_diversity": 3,
+    "signal_density": 4,
+    "coherence": 3
+  },
+  "notes": "Sources concentrated in tech and government; 'Block employees publicly stated' is sole independent voice. Quick Hits section (5 disparate items) fragments narrative and dilutes focus from core stories."
+}

@@ -1,0 +1,15 @@
+{
+  "card_date": "2026-03-10",
+  "baseline_composite": 3.55,
+  "baseline_judge": "claude-haiku-4-5-20251001",
+  "baseline_prompt_version": "v1",
+  "baseline_ran_at": "2026-05-14T02:49:43+00:00",
+  "baseline_axes": {
+    "factuality": 3,
+    "novelty": 4,
+    "source_diversity": 3,
+    "signal_density": 4,
+    "coherence": 4
+  },
+  "notes": "Multiple concrete claims lack attribution: GPT-5.2 benchmarks, Cursor's 1M-user milestone, Coral Dev Board, and all three regulatory items presented without sources. 7 sources cited for 23 stories\u2014good primary/secondary mix where cited, but ~60% of claims orphaned."
+}

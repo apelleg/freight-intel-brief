@@ -280,6 +280,37 @@ The prompt and runtime pipeline are aligned on a shared card artifact and dual-c
 Additionally, `prompt.md` Step 3 now prevents duplicate Notion pages by checking for an existing page during Step 0b and updating rather than creating when one is found.
 Current `briefing.sh` and `briefing.ps1` invoke both notifiers in all-URL mode (`--all` / `-All`) when the corresponding env vars are set.
 
+### Stage E: Quality Eval (post-publish)
+
+After the card is written, the eval harness in `eval/` judges the briefing on a 5-axis rubric and persists the score:
+
+```mermaid
+flowchart LR
+    CARD["logs/YYYY-MM-DD-card.json<br/>(or example-cards/&lt;date&gt;-card.json)"]
+    PRIOR["Prior 7 days of cards"]
+    RUN["eval/runner.py score<br/>--judge claude --gate (optional)"]
+    JUDGE["AI CLI (claude/codex/gemini)<br/>or stub backend"]
+    DB[("eval/store.sqlite")]
+    DRIFT["eval/drift.py<br/>nightly cron"]
+    GATE{"composite ≥ 3.0?"}
+    PUB["Publish step proceeds"]
+    BLOCK["Block publish, log reason"]
+
+    CARD --> RUN
+    PRIOR --> RUN
+    RUN --> JUDGE --> RUN --> DB
+    DB --> DRIFT
+    RUN -- "--gate" --> GATE
+    GATE -- yes --> PUB
+    GATE -- no --> BLOCK
+```
+
+Behavior contract:
+
+- **No `--gate` flag (default):** the harness is observational. It writes a row to `eval_runs` and exits 0. Existing pipelines are unchanged.
+- **With `--gate --gate-threshold 3.0`:** the harness exits 2 when composite is below threshold, allowing the caller (e.g. `briefing.sh`) to abort the Notion/Teams/Slack publish step.
+- **Idempotent:** re-running the same `(card_date, prompt_version, judge_model)` overwrites the row. Bumping the prompt version or switching judge model appends rather than overwrites.
+
 ---
 
 ## 6. Failure-State Diagram

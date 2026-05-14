@@ -1,0 +1,15 @@
+{
+  "card_date": "2026-03-03",
+  "baseline_composite": 3.25,
+  "baseline_judge": "claude-haiku-4-5-20251001",
+  "baseline_prompt_version": "v1",
+  "baseline_ran_at": "2026-05-14T02:48:03+00:00",
+  "baseline_axes": {
+    "factuality": 4,
+    "novelty": 2,
+    "source_diversity": 3,
+    "signal_density": 3,
+    "coherence": 4
+  },
+  "notes": "Novelty is lowest. #QuitGPT, OpenAI Pentagon deal, and DeepSeek V4 launch were all previewed in prior week; briefing largely reports the expected next chapters rather than new developments. Qwen 3.5 was also pre-announced. Strong topical organization and most claims have sources, but limited signal density on OpenAI safeguards and Samsung Galaxy keynote (vague pending announcement)."
+}

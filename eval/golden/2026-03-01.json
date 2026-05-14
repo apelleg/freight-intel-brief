@@ -1,0 +1,15 @@
+{
+  "card_date": "2026-03-01",
+  "baseline_composite": 3.7,
+  "baseline_judge": "claude-haiku-4-5-20251001",
+  "baseline_prompt_version": "v1",
+  "baseline_ran_at": "2026-05-14T02:48:15+00:00",
+  "baseline_axes": {
+    "factuality": 3,
+    "novelty": 3,
+    "source_diversity": 4,
+    "signal_density": 5,
+    "coherence": 4
+  },
+  "notes": "Sources listed but not inline-mapped; claims like '500+ zero-days detected' and '70% of Claude Code tests' lack verification paths. Feb 5 Claude Opus story (24 days old) appears in a daily briefing dated March 1, suggesting recycled content if featured prior week."
+}

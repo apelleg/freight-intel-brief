@@ -1,0 +1,15 @@
+{
+  "card_date": "2026-03-14",
+  "baseline_composite": 4.05,
+  "baseline_judge": "claude-haiku-4-5-20251001",
+  "baseline_prompt_version": "v1",
+  "baseline_ran_at": "2026-05-14T02:50:44+00:00",
+  "baseline_axes": {
+    "factuality": 4,
+    "novelty": 4,
+    "source_diversity": 4,
+    "signal_density": 5,
+    "coherence": 3
+  },
+  "notes": "Briefing is organized by company/topic but lacks synthesis or takeaways. Meta's 20% layoff ($600B infra context), Stanford's entry-level hiring cuts, and BlackRock's bankruptcy prediction could synthesize into a labor-disruption narrative, but each remains isolated. ~40% overlap with prior-week headlines (Nscale, robotics funding, AMI Labs, Pentagon lawsuit all previously covered)."
+}

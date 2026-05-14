@@ -1,0 +1,15 @@
+{
+  "card_date": "2026-03-07",
+  "baseline_composite": 2.9,
+  "baseline_judge": "claude-haiku-4-5-20251001",
+  "baseline_prompt_version": "v1",
+  "baseline_ran_at": "2026-05-14T02:48:49+00:00",
+  "baseline_axes": {
+    "factuality": 3,
+    "novelty": 2,
+    "source_diversity": 1,
+    "signal_density": 5,
+    "coherence": 3
+  },
+  "notes": "Only TechCrunch explicitly cited; top stories (Claude #1, #QuitGPT surge, Oracle/Block layoffs, Samsung Gemini) already in prior-week headlines. New items (Google `gws` CLI, Anthropic lawsuit filings, Pro-Human declaration mainstream coverage) lack visible attribution."
+}

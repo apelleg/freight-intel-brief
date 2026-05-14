@@ -1,0 +1,56 @@
+{
+  "name": "AI News Briefing",
+  "short_name": "AI News",
+  "description": "Open-source automated daily AI news briefing pipeline with multi-engine CLI execution, 10-plugin research ops ecosystem, multi-channel delivery, and a 5-axis LLM-as-judge quality eval harness.",
+  "start_url": "/AI-News-Briefing/",
+  "scope": "/AI-News-Briefing/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0a0a0f",
+  "theme_color": "#0a0a0f",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": ["productivity", "developer", "news", "ai", "research"],
+  "icons": [
+    {
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📰</text></svg>",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "img/tests.png",
+      "type": "image/png",
+      "sizes": "1280x720",
+      "form_factor": "wide",
+      "label": "AI News Briefing test runner CLI output"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Architecture",
+      "url": "/AI-News-Briefing/#architecture"
+    },
+    {
+      "name": "Plugins",
+      "url": "/AI-News-Briefing/#plugins"
+    },
+    {
+      "name": "Eval Harness",
+      "url": "/AI-News-Briefing/#eval"
+    },
+    {
+      "name": "GitHub",
+      "url": "https://github.com/hoangsonww/AI-News-Briefing"
+    }
+  ],
+  "related_applications": [
+    {
+      "platform": "webapp",
+      "url": "https://hoangsonww.github.io/AI-News-Briefing/"
+    }
+  ],
+  "prefer_related_applications": false
+}

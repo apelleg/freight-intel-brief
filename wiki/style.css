@@ -905,7 +905,7 @@ a:hover {
 }
 
 /* ===== Responsive ===== */
-@media (max-width: 1200px) {
+@media (max-width: 1400px) {
   .nav-links {
     display: flex;
     position: absolute;
@@ -933,7 +933,9 @@ a:hover {
   .nav-hamburger {
     display: block;
   }
+}
 
+@media (max-width: 1200px) {
   .hero {
     padding: 8rem 1.5rem 3rem;
   }

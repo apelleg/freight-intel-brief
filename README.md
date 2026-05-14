@@ -330,6 +330,13 @@ The project includes a cross-platform `Makefile` that auto-detects your OS and r
 | `make validate` | Validate all project files and prompt structure |
 | `make prompt` | Print the current prompt |
 | `make info` | Show config summary (engines, model, paths) |
+| `make eval D=YYYY-MM-DD JUDGE=stub\|claude\|codex\|gemini [GATE=1]` | Judge one card on the 5-axis rubric |
+| `make eval-backfill JUDGE=stub` | Score every card in `example-cards/` |
+| `make eval-regression JUDGE=claude` | Re-score golden set, fail on > 0.5 composite drop |
+| `make eval-drift D=YYYY-MM-DD [ALERT_EXIT=1]` | Rolling-window drift detector |
+| `make eval-report D=YYYY-MM-DD W=7 [OUT=path]` | Weekly Markdown report |
+| `make eval-show` | Dump stored eval rows |
+| `make eval-test` | Run eval-harness unit tests |
 | `CLI=<engine>` | Parameter: choose engine (`claude`, `codex`, `gemini`, `copilot`) |
 
 ### Utility Scripts Reference
@@ -692,6 +699,35 @@ Full documentation: [TESTS.md](TESTS.md)
 
 ---
 
+## Quality Eval Harness
+
+Every published briefing is silently judged by an LLM-as-judge on a 5-axis rubric so we can detect quality drift before readers notice it. The harness lives in `eval/` and is fully offline-testable via a `stub` backend that exercises the full pipeline without burning API credits.
+
+**Axes** (composite = weighted mean):
+
+| Axis             | Weight | What it measures                                   |
+| ---------------- | -----: | -------------------------------------------------- |
+| factuality       |   0.30 | Concrete claims map to cited sources               |
+| novelty          |   0.20 | New vs. prior 7-day window of cards                |
+| source_diversity |   0.15 | Domain spread, primary + secondary mix             |
+| signal_density   |   0.20 | Numbers, named entities, concrete outcomes         |
+| coherence        |   0.15 | Thematic grouping, not bullet soup                 |
+
+**Pipelines provided:**
+
+- **Score** — `make eval D=YYYY-MM-DD JUDGE=claude` writes a row to `eval/store.sqlite`.
+- **Backfill** — `make eval-backfill` scores every card under `example-cards/`.
+- **Regression** — `make eval-regression` re-scores the golden set in `eval/golden/` and fails if any card drops more than 0.5 composite points vs. its pinned baseline.
+- **Drift** — `make eval-drift D=YYYY-MM-DD ALERT_EXIT=1` alerts when the trailing-7d median falls more than 1.5 MADs below the trailing-30d median for two consecutive days.
+- **Report** — `make eval-report D=YYYY-MM-DD W=7` emits a Markdown weekly digest.
+- **Publish gate** (optional) — invoke `runner.py score --gate --gate-threshold 3.0` ahead of the publish step to block low-quality briefings.
+
+Judge backends shell out to the existing CLIs (`claude` / `codex` / `gemini`) so no new auth is required. Default judge model is `claude-haiku-4-5-20251001` (~$0.002/card). The store schema is keyed on `(card_date, prompt_version, judge_model)`, so bumping the rubric or switching judges keeps history rather than overwriting it.
+
+Full documentation: [eval/README.md](eval/README.md).
+
+---
+
 ## Troubleshooting
 
 ### "Claude Code cannot be launched inside another Claude Code session"
@@ -809,6 +845,19 @@ ai-news-briefing/
 │   └── test-all.ps1             # PowerShell test suite
 ├── logs/                        # Run logs (git-ignored)
 ├── backups/                     # Prompt backups (git-ignored)
+├── eval/                        # Quality eval harness (LLM-as-judge)
+│   ├── README.md                # Harness documentation
+│   ├── rubric.md                # 5-axis rubric + weights + thresholds
+│   ├── judge_prompt.md          # Versioned judge prompt
+│   ├── schema.sql               # SQLite schema for eval_runs
+│   ├── extract.py               # Adaptive-card JSON -> text/headlines/URLs
+│   ├── judge.py                 # Backends: stub/claude/codex/gemini
+│   ├── store.py                 # Upsert + fetch + composite formula
+│   ├── runner.py                # CLI: score / backfill / regression / show
+│   ├── drift.py                 # Trailing-window drift detector
+│   ├── report.py                # Weekly Markdown report builder
+│   ├── golden/                  # Pinned baseline composites per card
+│   └── tests/                   # Unit tests for the harness
 ├── .gitignore
 ├── ARCHITECTURE.md              # Detailed architecture documentation
 ├── E2E_FLOW.md                  # End-to-end pipeline walkthrough

@@ -3,13 +3,158 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI News Briefing - Project Wiki</title>
-  <meta name="description" content="Comprehensive wiki for AI News Briefing: architecture, E2E flow, operations, multi-channel delivery (Teams + Slack), Obsidian vault publishing with graph view, and maintenance runbook.">
+  <title>AI News Briefing - Automated Daily AI News Pipeline + Research Ops Ecosystem | Wiki</title>
+
+  <!-- Primary SEO -->
+  <meta name="description" content="Open-source automated daily AI news briefing pipeline. Multi-engine (Claude, Codex, Gemini, Copilot), 10-plugin research ops ecosystem, Notion + Teams + Slack + Obsidian delivery, custom topic deep research, 201 tests, and a 5-axis LLM-as-judge quality eval harness.">
+  <meta name="keywords" content="AI news briefing, automated AI news, Claude Code, Codex, Gemini CLI, Copilot CLI, Anthropic, OpenAI, agentic AI, multi-agent research, Notion MCP, Teams Adaptive Card, Slack Block Kit, Obsidian graph, knowledge graph, LLM-as-judge, eval harness, briefing automation, daily briefing, MCP server, plugin marketplace, deep research agent, research ops, hoangsonww">
+  <meta name="author" content="Son Nguyen (hoangsonww)">
+  <meta name="copyright" content="© 2026 Son Nguyen - MIT License">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="googlebot" content="index, follow">
+  <meta name="bingbot" content="index, follow">
+  <meta name="referrer" content="no-referrer-when-downgrade">
+  <meta name="rating" content="general">
+  <meta name="theme-color" content="#0a0a0f">
+  <meta name="color-scheme" content="dark light">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="generator" content="Static HTML, hand-authored">
+  <meta name="application-name" content="AI News Briefing">
+  <meta name="apple-mobile-web-app-title" content="AI News Briefing">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="mobile-web-app-capable" content="yes">
+
+  <!-- Geo / language -->
+  <meta name="language" content="English">
+  <meta http-equiv="content-language" content="en">
+
+  <!-- Canonical + alternates -->
+  <link rel="canonical" href="https://hoangsonww.github.io/AI-News-Briefing/">
+  <link rel="alternate" type="text/html" hreflang="en" href="https://hoangsonww.github.io/AI-News-Briefing/">
+  <link rel="alternate" type="text/html" hreflang="x-default" href="https://hoangsonww.github.io/AI-News-Briefing/">
+  <link rel="alternate" type="application/rss+xml" title="AI News Briefing - Repo Activity" href="https://github.com/hoangsonww/AI-News-Briefing/commits/main.atom">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="AI News Briefing">
+  <meta property="og:title" content="AI News Briefing - Automated Daily AI News Pipeline + Research Ops Ecosystem">
+  <meta property="og:description" content="Open-source automated daily AI news briefing. Multi-engine CLI (Claude / Codex / Gemini / Copilot), 10-plugin research ops, Notion + Teams + Slack + Obsidian delivery, custom deep research, and a 5-axis LLM-as-judge quality eval harness.">
+  <meta property="og:url" content="https://hoangsonww.github.io/AI-News-Briefing/">
+  <meta property="og:image" content="https://hoangsonww.github.io/AI-News-Briefing/img/tests.png">
+  <meta property="og:image:alt" content="AI News Briefing test runner CLI output banner">
+  <meta property="og:image:width" content="1280">
+  <meta property="og:image:height" content="720">
+  <meta property="og:locale" content="en_US">
+  <meta property="article:author" content="https://github.com/hoangsonww">
+  <meta property="article:publisher" content="https://github.com/hoangsonww">
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@hoangsonww">
+  <meta name="twitter:creator" content="@hoangsonww">
+  <meta name="twitter:title" content="AI News Briefing - Automated Daily AI News Pipeline">
+  <meta name="twitter:description" content="Multi-engine AI news automation: Claude / Codex / Gemini / Copilot. Notion + Teams + Slack + Obsidian delivery, 10 research plugins, LLM-as-judge eval harness. MIT licensed.">
+  <meta name="twitter:image" content="https://hoangsonww.github.io/AI-News-Briefing/img/tests.png">
+  <meta name="twitter:image:alt" content="AI News Briefing test runner CLI output banner">
+  <meta name="twitter:url" content="https://hoangsonww.github.io/AI-News-Briefing/">
+
+  <!-- LinkedIn / Pinterest -->
+  <meta property="linkedin:owner" content="https://www.linkedin.com/in/hoangsonw/">
+  <meta property="pinterest:description" content="Open-source automated daily AI news briefing pipeline with multi-agent research and LLM-as-judge eval.">
+
+  <!-- Discovery files -->
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="/AI-News-Briefing/sitemap.xml">
+  <link rel="manifest" href="/AI-News-Briefing/site.webmanifest">
+  <link rel="search" type="application/opensearchdescription+xml" title="AI News Briefing" href="/AI-News-Briefing/opensearch.xml">
+  <link rel="author" type="text/plain" href="/AI-News-Briefing/humans.txt">
+  <link rel="license" href="https://opensource.org/licenses/MIT">
+
+  <!-- DNS prefetch + preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="dns-prefetch" href="https://github.com">
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="wiki/style.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📰</text></svg>">
+  <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📰</text></svg>">
+
+  <!-- JSON-LD: SoftwareSourceCode + WebSite + Person -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareSourceCode",
+        "@id": "https://hoangsonww.github.io/AI-News-Briefing/#software",
+        "name": "AI News Briefing",
+        "alternateName": "AI News Briefing Research Ops Ecosystem",
+        "description": "Automated daily AI news briefing pipeline with multi-engine CLI execution (Claude, Codex, Gemini, Copilot), 10-plugin research ops ecosystem, Notion + Teams + Slack + Obsidian delivery, custom deep research agents, and a 5-axis LLM-as-judge quality eval harness.",
+        "codeRepository": "https://github.com/hoangsonww/AI-News-Briefing",
+        "url": "https://hoangsonww.github.io/AI-News-Briefing/",
+        "license": "https://opensource.org/licenses/MIT",
+        "programmingLanguage": ["Bash", "PowerShell", "Python", "Markdown"],
+        "runtimePlatform": ["macOS", "Linux", "Windows"],
+        "operatingSystem": ["macOS", "Linux", "Windows"],
+        "applicationCategory": "DeveloperApplication",
+        "keywords": "AI news, agentic AI, MCP, Claude Code, Codex, Gemini CLI, Notion, Teams, Slack, Obsidian, eval harness, LLM-as-judge, research ops",
+        "author": {
+          "@id": "https://github.com/hoangsonww#person"
+        },
+        "maintainer": {
+          "@id": "https://github.com/hoangsonww#person"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://hoangsonww.github.io/AI-News-Briefing/#website",
+        "url": "https://hoangsonww.github.io/AI-News-Briefing/",
+        "name": "AI News Briefing - Project Wiki",
+        "description": "Comprehensive wiki for AI News Briefing: architecture, E2E flow, plugins, custom brief, eval harness, and operational runbook.",
+        "inLanguage": "en",
+        "publisher": { "@id": "https://github.com/hoangsonww#person" },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://github.com/hoangsonww/AI-News-Briefing/search?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://github.com/hoangsonww#person",
+        "name": "Son Nguyen",
+        "alternateName": ["David Nguyen", "hoangsonww"],
+        "url": "https://sonnguyenhoang.com",
+        "sameAs": [
+          "https://github.com/hoangsonww",
+          "https://www.linkedin.com/in/hoangsonw/",
+          "https://sonnguyenhoang.com"
+        ],
+        "jobTitle": "Software Engineer",
+        "knowsAbout": ["Agentic AI", "LLM evaluation", "Claude Code", "MCP servers", "Knowledge graphs", "Research automation"]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://hoangsonww.github.io/AI-News-Briefing/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Source",
+            "item": "https://github.com/hoangsonww/AI-News-Briefing"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
   <script type="module">
     import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
     mermaid.initialize({
@@ -54,7 +199,7 @@
         <path d="M4 22h16a2 2 0 002-2V4a2 2 0 00-2-2H8a2 2 0 00-2 2v16a2 2 0 01-2 2zm0 0a2 2 0 01-2-2v-9c0-1.1.9-2 2-2h2"/>
         <path d="M18 14h-8M15 18h-5M10 6h8v4h-8z"/>
       </svg>
-      AI News Briefing Wiki
+      AI News Briefing
     </a>
     <ul class="nav-links">
       <li><a href="#architecture">Architecture</a></li>
@@ -66,6 +211,7 @@
       <li><a href="#delivery">Delivery</a></li>
       <li><a href="#obsidian">Obsidian</a></li>
       <li><a href="#tests">Tests</a></li>
+      <li><a href="#eval">Eval</a></li>
       <li><a href="#docs">Docs</a></li>
     </ul>
     <button class="nav-hamburger" aria-label="Toggle navigation">
@@ -82,14 +228,14 @@
   <h1>AI News Briefing<br><span class="gradient">Comprehensive Project Wiki</span></h1>
   <p class="hero-sub">
     End-to-end reference for the automated daily pipeline and on-demand deep research: scheduler triggers, multi-engine CLI execution (Claude, Codex, Gemini, Copilot),
-    multi-agent research, Notion publishing, Obsidian vault integration with graph visualization, Teams and Slack delivery, custom topic briefs, and maintenance workflows.
+    multi-agent research, Notion publishing, Obsidian vault integration with graph visualization, Teams and Slack delivery, custom topic briefs, a 5-axis LLM-as-judge quality eval harness, and maintenance workflows.
   </p>
   <div class="hero-actions">
     <a href="#obsidian" class="btn btn-primary">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
       View Obsidian Integration
     </a>
-    <a href="README.md" class="btn btn-secondary">
+    <a href="https://github.com/hoangsonww/AI-News-Briefing/blob/main/README.md" class="btn btn-secondary">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
       Open README
     </a>
@@ -1048,8 +1194,8 @@ graph LR
       <tr><td>Graph Edges</td><td>Each <code>[[wikilink]]</code> creates a bidirectional edge in Obsidian's graph view</td></tr>
       <tr><td>Cross-Briefing Links</td><td>"Related Topics" header links all topics at top of each briefing for maximum connectivity</td></tr>
       <tr><td>Tags</td><td>YAML <code>tags</code> array enables tag-based filtering in Obsidian search</td></tr>
-      <tr><td>Env Variable</td><td><code>AI_BRIEFING_OBSIDIAN_VAULT</code> — absolute path to vault root directory</td></tr>
-      <tr><td>Local-First</td><td>No API, no cloud sync — files written directly to disk. Obsidian Sync is optional.</td></tr>
+      <tr><td>Env Variable</td><td><code>AI_BRIEFING_OBSIDIAN_VAULT</code> - absolute path to vault root directory</td></tr>
+      <tr><td>Local-First</td><td>No API, no cloud sync - files written directly to disk. Obsidian Sync is optional.</td></tr>
       </tbody>
     </table>
   </div>
@@ -1138,12 +1284,118 @@ flowchart TD
   </div>
 
   <div style="text-align: center; margin-top: 1.5rem;">
-    <a href="TESTS.md" class="btn btn-secondary">
+    <a href="https://github.com/hoangsonww/AI-News-Briefing/blob/main/TESTS.md" class="btn btn-secondary">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
         <polyline points="14 2 14 8 20 8"/>
       </svg>
       Full test documentation: TESTS.md
+    </a>
+  </div>
+</section>
+
+<section class="section" id="eval">
+  <div class="section-header">
+    <div class="section-label">Quality Eval</div>
+    <h2 class="section-title">LLM-as-judge harness</h2>
+    <p class="section-desc">Every published briefing is silently scored on a 5-axis rubric so we catch prompt drift, source rot, and model regressions before readers notice. Backends shell out to the same CLIs the daily pipeline uses (Claude / Codex / Gemini); an offline <code>stub</code> backend lets tests and CI run with zero API cost.</p>
+    <p class="section-desc" style="margin-top: 1rem; color: #a78bfa;">
+      State lives in <code>eval/store.sqlite</code> keyed on <code>(card_date, prompt_version, judge_model)</code>. Switching judges or bumping the prompt appends rather than overwrites, so history stays apples-to-apples across rebaselines.
+    </p>
+  </div>
+
+  <div class="mermaid-wrap" style="margin-bottom: 2rem;">
+    <pre class="mermaid">
+flowchart LR
+    CARD["example-cards/&lt;date&gt;-card.json"] --> EX["extract.py\ntext + headlines + URLs"]
+    PRIOR["Prior 7 days\nof cards"] --> EX
+    EX --> JU["judge.py\nstub / claude / codex / gemini"]
+    JU --> RUN["runner.py\nscore | backfill | regression"]
+    RUN --> DB[("eval/store.sqlite")]
+    DB --> DR["drift.py\n7d vs 30d median ± MAD"]
+    DB --> RP["report.py\nweekly Markdown"]
+    RUN -- "--gate" --> PUB{"composite ≥ 3.0?"}
+    PUB -- yes --> OK["publish proceeds"]
+    PUB -- no --> BLOCK["abort, log composite"]
+    </pre>
+  </div>
+
+  <div class="table-wrap" style="max-width: 860px; margin: 0 auto 2rem;">
+    <table>
+      <thead>
+      <tr>
+        <th>Axis</th>
+        <th>Weight</th>
+        <th>What it measures</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr><td><code>factuality</code></td><td>0.30</td><td>Concrete claims map to cited sources (hard cap 2 if no sources)</td></tr>
+      <tr><td><code>novelty</code></td><td>0.20</td><td>New vs. prior 7-day window of cards</td></tr>
+      <tr><td><code>source_diversity</code></td><td>0.15</td><td>Distinct domains, primary + secondary mix</td></tr>
+      <tr><td><code>signal_density</code></td><td>0.20</td><td>Numbers, named entities, concrete outcomes per item</td></tr>
+      <tr><td><code>coherence</code></td><td>0.15</td><td>Thematic grouping with takeaways, not bullet soup</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="code-section" style="max-width: 780px; margin: 0 auto 1.5rem;">
+    <div class="code-header">
+      <div class="code-dots"><span class="red"></span><span class="yellow"></span><span class="green"></span></div>
+      <span class="code-title">eval workflows</span>
+      <button class="code-copy">Copy</button>
+    </div>
+    <div class="code-body">
+<pre><span class="comment"># Score one card with the real Claude Haiku judge</span>
+<span class="cmd">make</span> eval D=2026-03-18 <span class="flag">JUDGE=claude</span>
+
+<span class="comment"># Score every card under example-cards/ in parallel (4 workers)</span>
+<span class="cmd">make</span> eval-backfill <span class="flag">JUDGE=claude</span>
+
+<span class="comment"># Re-score golden set, fail if any drops &gt; 0.5 composite points</span>
+<span class="cmd">make</span> eval-regression <span class="flag">JUDGE=claude</span>
+
+<span class="comment"># Drift check: 7d median vs 30d median ± MAD, exit 3 on alert</span>
+<span class="cmd">make</span> eval-drift D=2026-03-18 <span class="flag">ALERT_EXIT=1</span>
+
+<span class="comment"># Weekly Markdown report</span>
+<span class="cmd">make</span> eval-report D=2026-03-18 W=7 OUT=logs/eval-week.md
+
+<span class="comment"># Optional publish gate (exit 2 if composite &lt; 3.0)</span>
+<span class="cmd">python3</span> eval/runner.py score --date <span class="str">"$DATE"</span> --judge claude <span class="flag">--gate</span></pre>
+    </div>
+  </div>
+
+  <div class="table-wrap" style="max-width: 860px; margin: 0 auto;">
+    <table>
+      <thead>
+      <tr>
+        <th>Component</th>
+        <th>Role</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr><td><code>eval/rubric.md</code></td><td>5-axis definitions, weights, pass thresholds (publish gate, regression gate, drift alert)</td></tr>
+      <tr><td><code>eval/judge_prompt.md</code></td><td>Versioned judge prompt (v1). PROMPT_VERSION is part of the store key.</td></tr>
+      <tr><td><code>eval/extract.py</code></td><td>Adaptive-card JSON → flat text + headlines + source URLs; pulls prior 7 days for novelty</td></tr>
+      <tr><td><code>eval/judge.py</code></td><td>Backends: stub (offline heuristic), claude, codex, gemini. Per-call trace to <code>logs/eval-judge-YYYY-MM-DD.log</code>.</td></tr>
+      <tr><td><code>eval/store.py</code> + <code>schema.sql</code></td><td>SQLite, idempotent upsert on <code>(card_date, prompt_version, judge_model)</code></td></tr>
+      <tr><td><code>eval/runner.py</code></td><td>CLI: <code>score</code> / <code>backfill</code> (parallel <code>--workers</code>) / <code>regression</code> / <code>show</code>, with optional <code>--gate</code></td></tr>
+      <tr><td><code>eval/drift.py</code></td><td>Median + MAD-based z-score across rolling windows; robust to small-sample outliers</td></tr>
+      <tr><td><code>eval/report.py</code></td><td>Weekly Markdown digest: coverage, composite stats, axis medians, per-day table</td></tr>
+      <tr><td><code>eval/golden/*.json</code></td><td>Pinned baseline composites for regression gate</td></tr>
+      <tr><td><code>eval/tests/</code></td><td>10 unittest cases against the stub backend - <code>make eval-test</code></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div style="text-align: center; margin-top: 1.5rem;">
+    <a href="https://github.com/hoangsonww/AI-News-Briefing/blob/main/eval/README.md" class="btn btn-secondary">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+        <polyline points="14 2 14 8 20 8"/>
+      </svg>
+      Full eval harness documentation: eval/README.md
     </a>
   </div>
 </section>
@@ -1187,51 +1439,55 @@ flowchart TD
 
   <div class="features">
     <div class="feature-card">
-      <h3><a href="README.md">README.md</a></h3>
+      <h3><a href="https://github.com/hoangsonww/AI-News-Briefing/blob/main/README.md">README.md</a></h3>
       <p>User-facing setup, topic scope, scheduler installation, Makefile commands, Teams, Slack, and Obsidian delivery overview.</p>
     </div>
     <div class="feature-card">
-      <h3><a href="ARCHITECTURE.md">ARCHITECTURE.md</a></h3>
+      <h3><a href="https://github.com/hoangsonww/AI-News-Briefing/blob/main/ARCHITECTURE.md">ARCHITECTURE.md</a></h3>
       <p>Deep architecture walkthrough with component-level design decisions and operational constraints.</p>
     </div>
     <div class="feature-card">
-      <h3><a href="E2E_FLOW.md">E2E_FLOW.md</a></h3>
+      <h3><a href="https://github.com/hoangsonww/AI-News-Briefing/blob/main/E2E_FLOW.md">E2E_FLOW.md</a></h3>
       <p>Detailed end-to-end execution, sequence, failure paths, artifact contracts, and alignment options.</p>
     </div>
     <div class="feature-card">
-      <h3><a href="NOTIFY_TEAMS.md">NOTIFY_TEAMS.md</a></h3>
+      <h3><a href="https://github.com/hoangsonww/AI-News-Briefing/blob/main/NOTIFY_TEAMS.md">NOTIFY_TEAMS.md</a></h3>
       <p>Teams webhook setup, multi-webhook configuration, Adaptive Card behavior, and troubleshooting delivery issues.</p>
     </div>
     <div class="feature-card">
-      <h3><a href="scripts/teams-to-slack.py">scripts/teams-to-slack.py</a></h3>
+      <h3><a href="https://github.com/hoangsonww/AI-News-Briefing/blob/main/scripts/teams-to-slack.py">scripts/teams-to-slack.py</a></h3>
       <p>Converter that transforms Teams Adaptive Card JSON into Slack Block Kit payloads for Slack webhook delivery.</p>
     </div>
     <div class="feature-card">
-      <h3><a href="prompt.md">prompt.md</a></h3>
+      <h3><a href="https://github.com/hoangsonww/AI-News-Briefing/blob/main/prompt.md">prompt.md</a></h3>
       <p>Agent instructions for search scope, formatting requirements, Notion write, and Obsidian markdown with [[wikilinks]].</p>
     </div>
     <div class="feature-card">
-      <h3><a href="CUSTOM_BRIEF.md">CUSTOM_BRIEF.md</a></h3>
+      <h3><a href="https://github.com/hoangsonww/AI-News-Briefing/blob/main/CUSTOM_BRIEF.md">CUSTOM_BRIEF.md</a></h3>
       <p>Custom topic deep research: CLI usage, agent architecture, output formats, Obsidian graph support, and comparison with daily briefing.</p>
     </div>
     <div class="feature-card">
-      <h3><a href="SETUP.md">SETUP.md</a></h3>
+      <h3><a href="https://github.com/hoangsonww/AI-News-Briefing/blob/main/SETUP.md">SETUP.md</a></h3>
       <p>Full setup guide: AI CLI engines, Notion MCP, Obsidian vault, webhook configuration, scheduler install, and verification.</p>
     </div>
     <div class="feature-card">
-      <h3><a href="NOTIFY_SLACK.md">NOTIFY_SLACK.md</a></h3>
+      <h3><a href="https://github.com/hoangsonww/AI-News-Briefing/blob/main/NOTIFY_SLACK.md">NOTIFY_SLACK.md</a></h3>
       <p>Slack webhook setup, Block Kit conversion, multi-webhook configuration, and troubleshooting.</p>
     </div>
     <div class="feature-card">
-      <h3><a href="TESTS.md">TESTS.md</a></h3>
+      <h3><a href="https://github.com/hoangsonww/AI-News-Briefing/blob/main/TESTS.md">TESTS.md</a></h3>
       <p>Test suite documentation: architecture, per-suite coverage tables (including Obsidian suite), run commands, design principles.</p>
     </div>
     <div class="feature-card">
-      <h3><a href="LOGS.md">LOGS.md</a></h3>
+      <h3><a href="https://github.com/hoangsonww/AI-News-Briefing/blob/main/eval/README.md">eval/README.md</a></h3>
+      <p>Quality eval harness: 5-axis rubric, judge backends, SQLite store schema, drift detection, golden set regression, publish gate, and weekly report.</p>
+    </div>
+    <div class="feature-card">
+      <h3><a href="https://github.com/hoangsonww/AI-News-Briefing/blob/main/LOGS.md">LOGS.md</a></h3>
       <p>Log tailing and management: live tail, read, search, summarize, export, and cleanup for daily and custom briefs.</p>
     </div>
     <div class="feature-card">
-      <h3><a href="Makefile">Makefile</a></h3>
+      <h3><a href="https://github.com/hoangsonww/AI-News-Briefing/blob/main/Makefile">Makefile</a></h3>
       <p>Cross-platform operator interface for run, schedule, custom-brief, log, validation, and status workflows.</p>
     </div>
   </div>
@@ -1252,6 +1508,12 @@ flowchart TD
     <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="file" style="color:#a78bfa;">test-obsidian.sh / .ps1</span> <span class="dim"># Obsidian vault connectivity test</span></div>
     <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="file">teams-to-slack.py</span> <span class="dim"># Adaptive Card to Block Kit converter</span></div>
     <div>&nbsp;&nbsp;<span class="dir" style="color:#6366f1;">tests/</span> <span class="dim"># 201 non-blocking tests (bash + PowerShell)</span></div>
+    <div>&nbsp;&nbsp;<span class="dir" style="color:#a78bfa;">eval/</span> <span class="dim"># LLM-as-judge quality harness</span></div>
+    <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="file">rubric.md / judge_prompt.md</span> <span class="dim"># versioned scoring spec</span></div>
+    <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="file">extract.py / judge.py / store.py</span> <span class="dim"># card → score → sqlite</span></div>
+    <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="file">runner.py / drift.py / report.py</span> <span class="dim"># CLI + drift + weekly report</span></div>
+    <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="file">golden/*.json</span> <span class="dim"># pinned regression baselines</span></div>
+    <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="dir">tests/</span> <span class="dim"># 10 unittest cases against stub backend</span></div>
     <div>&nbsp;&nbsp;<span class="dir">logs/</span> <span class="dim"># runtime output (gitignored)</span></div>
     <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="file">covered-stories.txt</span> <span class="dim"># dedup headline tracker</span></div>
     <div>&nbsp;&nbsp;<span class="file">README.md</span> <span class="dim"># setup + usage</span></div>
@@ -1260,6 +1522,7 @@ flowchart TD
     <div>&nbsp;&nbsp;<span class="file" style="color:#6366f1;">SETUP.md</span> <span class="dim"># full setup guide</span></div>
     <div>&nbsp;&nbsp;<span class="file">E2E_FLOW.md</span> <span class="dim"># execution contracts</span></div>
     <div>&nbsp;&nbsp;<span class="file">NOTIFY_TEAMS.md / NOTIFY_SLACK.md</span> <span class="dim"># integration guides</span></div>
+    <div>&nbsp;&nbsp;<span class="file" style="color:#a78bfa;">eval/README.md</span> <span class="dim"># quality eval harness manual</span></div>
     <div>&nbsp;&nbsp;<span class="file">index.html</span> <span class="dim"># this wiki page</span></div>
   </div>
 </section>

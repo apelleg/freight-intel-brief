@@ -1,0 +1,32 @@
+/* TEAM */
+Maintainer: Son Nguyen
+Aliases: David Nguyen, hoangsonww
+Site: https://sonnguyenhoang.com
+GitHub: https://github.com/hoangsonww
+LinkedIn: https://www.linkedin.com/in/hoangsonw/
+Location: Palo Alto, California, USA
+
+/* CONTRIBUTORS */
+See: https://github.com/hoangsonww/AI-News-Briefing/graphs/contributors
+
+/* THANKS */
+Anthropic — Claude + Claude Code, MCP protocol, prompt patterns
+OpenAI — Codex CLI
+Google — Gemini CLI
+GitHub — Copilot CLI, GitHub Actions, Pages hosting
+Microsoft — Teams Adaptive Cards, GitHub
+Notion — MCP server, Databases API
+Obsidian — Vault format, graph view, wikilinks
+
+/* SITE */
+Last update: 2026-05-13
+Standards: HTML5, CSS3, JSON-LD (schema.org), llms.txt, sitemap protocol 0.9, robots exclusion standard
+Components: vanilla CSS + ES modules (mermaid.js for diagrams), no build step
+Hosting: GitHub Pages
+License: MIT
+
+/* PROJECT */
+Repo: https://github.com/hoangsonww/AI-News-Briefing
+Wiki: https://hoangsonww.github.io/AI-News-Briefing/
+Docker image: ghcr.io/hoangsonww/ai-news-briefing
+Marketplace: claude-plugins/ + plugins/ + gemini-extensions/

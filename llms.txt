@@ -1,0 +1,51 @@
+# AI News Briefing
+
+> Open-source automated daily AI news briefing pipeline. Multi-engine CLI (Claude, Codex, Gemini, Copilot) drives an agentic prompt that searches the web, deduplicates against prior coverage, compiles a two-tier briefing, and publishes to Notion, Microsoft Teams, Slack, and an Obsidian vault. Ships with a 10-plugin research ops ecosystem and a 5-axis LLM-as-judge quality eval harness.
+
+- Repo: https://github.com/hoangsonww/AI-News-Briefing
+- Wiki: https://hoangsonww.github.io/AI-News-Briefing/
+- License: MIT
+- Maintainer: Son Nguyen (hoangsonww)
+
+This file follows the [llms.txt](https://llmstxt.org) convention so AI assistants and language models can find authoritative project documentation directly. Markdown links point at the canonical source for each topic.
+
+## Core documentation
+
+- [README](https://github.com/hoangsonww/AI-News-Briefing/blob/main/README.md): User-facing setup, topic scope, scheduler installation, Makefile commands, Teams + Slack + Obsidian delivery overview.
+- [ARCHITECTURE](https://github.com/hoangsonww/AI-News-Briefing/blob/main/ARCHITECTURE.md): Component-level architecture, design decisions, operational constraints, and the eval harness section (§3.14).
+- [E2E_FLOW](https://github.com/hoangsonww/AI-News-Briefing/blob/main/E2E_FLOW.md): End-to-end execution contract — trigger, AI execution, delivery pipelines, post-publish eval gate, failure paths.
+- [SETUP](https://github.com/hoangsonww/AI-News-Briefing/blob/main/SETUP.md): Full setup guide for all four AI CLI engines, Notion MCP, Obsidian vault, webhooks, scheduler install, verification.
+- [TESTS](https://github.com/hoangsonww/AI-News-Briefing/blob/main/TESTS.md): 201 non-blocking tests across Bash and PowerShell, plus 10 Python unittest cases for the eval harness.
+- [LOGS](https://github.com/hoangsonww/AI-News-Briefing/blob/main/LOGS.md): Log tailing, search, summarize, export, cleanup.
+
+## Custom topic research
+
+- [CUSTOM_BRIEF](https://github.com/hoangsonww/AI-News-Briefing/blob/main/CUSTOM_BRIEF.md): Custom topic deep research CLI, multi-agent prompt architecture, Notion + Obsidian publishing, comparison with the daily briefing.
+- [prompt-custom-brief.md](https://github.com/hoangsonww/AI-News-Briefing/blob/main/prompt-custom-brief.md): The multi-agent research prompt template (Agents 1–5, Phases 1–3).
+
+## Plugin ecosystem (10 plugins for Claude Code / Codex / Gemini)
+
+- [PLUGINS](https://github.com/hoangsonww/AI-News-Briefing/blob/main/PLUGINS.md): Plugin developer manual.
+- [claude-plugins/README](https://github.com/hoangsonww/AI-News-Briefing/blob/main/claude-plugins/README.md): Claude Code marketplace + plugin layout.
+- [Marketplace manifest](https://github.com/hoangsonww/AI-News-Briefing/blob/main/.claude-plugin/marketplace.json): Catalog (ai-news-briefing, last30days, trend-spotter, earnings-analyzer, paper-reader, competitor-intel, repo-auditor, podcast-summarizer, startup-scout, crypto-tracker).
+- [Codex plugins](https://github.com/hoangsonww/AI-News-Briefing/blob/main/plugins/README.md): Mirrored 10-plugin ecosystem for the Codex CLI.
+- [Gemini extensions](https://github.com/hoangsonww/AI-News-Briefing/tree/main/gemini-extensions): Gemini CLI extension manifests.
+
+## Delivery integrations
+
+- [NOTIFY_TEAMS](https://github.com/hoangsonww/AI-News-Briefing/blob/main/NOTIFY_TEAMS.md): Teams webhook setup, Adaptive Card schema, multi-webhook configuration.
+- [NOTIFY_SLACK](https://github.com/hoangsonww/AI-News-Briefing/blob/main/NOTIFY_SLACK.md): Slack webhook setup, Teams-to-Block-Kit conversion, troubleshooting.
+- [teams-to-slack.py](https://github.com/hoangsonww/AI-News-Briefing/blob/main/scripts/teams-to-slack.py): Pure-stdlib Python converter from Microsoft Teams Adaptive Card JSON to Slack Block Kit.
+
+## Quality eval harness
+
+- [eval/README](https://github.com/hoangsonww/AI-News-Briefing/blob/main/eval/README.md): 5-axis rubric (factuality, novelty, source diversity, signal density, coherence), judge backends (stub / claude / codex / gemini), SQLite store schema, drift detection, golden-set regression, publish gate, weekly Markdown report.
+- [eval/rubric.md](https://github.com/hoangsonww/AI-News-Briefing/blob/main/eval/rubric.md): Axis definitions, weights, pass thresholds.
+- [eval/judge_prompt.md](https://github.com/hoangsonww/AI-News-Briefing/blob/main/eval/judge_prompt.md): Versioned judge prompt (v1).
+
+## Optional
+
+- [Makefile](https://github.com/hoangsonww/AI-News-Briefing/blob/main/Makefile): Cross-platform operator interface — run, schedule, custom brief, eval, log, validation, status.
+- [Docker](https://github.com/hoangsonww/AI-News-Briefing/blob/main/Dockerfile): Containerized runtime, GHCR-published image.
+- [example-cards/](https://github.com/hoangsonww/AI-News-Briefing/tree/main/example-cards): Real adaptive-card JSON outputs from past daily runs, used by the eval harness for backfill.
+- [Contact](https://sonnguyenhoang.com): Maintainer site for Son Nguyen.

@@ -1,0 +1,15 @@
+{
+  "card_date": "2026-03-15",
+  "baseline_composite": 3.0,
+  "baseline_judge": "claude-haiku-4-5-20251001",
+  "baseline_prompt_version": "v1",
+  "baseline_ran_at": "2026-05-14T02:51:00+00:00",
+  "baseline_axes": {
+    "factuality": 3,
+    "novelty": 2,
+    "source_diversity": 3,
+    "signal_density": 4,
+    "coherence": 3
+  },
+  "notes": "Weak novelty: ~50% rehash of prior 7 days (Pentagon dispute, GPT-5.1 retirement, Windsurf Wave 13, AAIF/MCP 10K servers, Meta 20% cuts, Gemini Embedding 2, Nscale $2B). Only ~40% new (GigaTIME, Copilot Health, Granite 4.0, Vercel SDK 6, Next.js 16, policy statements). No synthesis or takeaways within sections."
+}
