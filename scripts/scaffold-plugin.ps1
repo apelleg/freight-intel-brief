@@ -191,13 +191,16 @@ Write-Host "  1. Edit skills/$Skill/SKILL.md in each platform dir."
 if ($WithAgent) { Write-Host "  1b. Edit agents/$WithAgent.md (3 copies)." }
 Write-Host "  2. Paste this into .claude-plugin/marketplace.json:"
 Write-Host ""
-Write-Host "    {"
-Write-Host "      `"name`": `"$Name`","
-Write-Host "      `"source`": `"./$ClaudeDir`","
-Write-Host "      `"description`": `"$Description`","
-Write-Host "      `"category`": `"research`","
-Write-Host "      `"tags`": []"
-Write-Host "    },"
+$marketplaceSnippet = @"
+    {
+      "name": "$Name",
+      "source": "./$ClaudeDir",
+      "description": "$Description",
+      "category": "research",
+      "tags": []
+    },
+"@
+Write-Host $marketplaceSnippet
 Write-Host ""
 Write-Host "  3. Run: .\scripts\plugin-validate.ps1"
 Write-Host ""

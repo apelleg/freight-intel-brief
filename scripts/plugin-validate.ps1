@@ -42,6 +42,9 @@ STRICT = sys.argv[1] == "1"
 JSON_OUT = sys.argv[2] == "1"
 errors, warnings = [], []
 
+def _open(p):
+    return open(p, encoding="utf-8")
+
 def ok(label):
     if not JSON_OUT: print(f"  OK   {label}")
 def err(label, why):
@@ -65,12 +68,12 @@ for path, label in [
 ]:
     if not os.path.exists(path):
         err(f"{label} ({path})", "file missing"); continue
-    try: json.load(open(path)); ok(f"{label}: {path}")
+    try: json.load(_open(path)); ok(f"{label}: {path}")
     except Exception as e: err(f"{label} ({path})", f"invalid JSON: {e}")
 
 section("Marketplace schema")
 try:
-    mp = json.load(open(".claude-plugin/marketplace.json"))
+    mp = json.load(_open(".claude-plugin/marketplace.json"))
     for k in ("name", "owner", "plugins"):
         if k not in mp: err("marketplace", f"missing required field: {k}")
     name = mp.get("name", "")
@@ -94,7 +97,7 @@ try:
                 if not os.path.isfile(m): err(f"plugin '{n}'", f"no plugin.json at {m}")
                 else:
                     try:
-                        pj = json.load(open(m))
+                        pj = json.load(_open(m))
                         if pj.get("name") != n: warn(f"plugin '{n}'", f"plugin.json name={pj.get('name')!r} differs")
                     except Exception as e: err(f"plugin '{n}'", f"invalid JSON: {e}")
     if not errors: ok(f"marketplace ({len(mp.get('plugins', []))} plugins resolve)")
@@ -103,7 +106,7 @@ except FileNotFoundError: err("marketplace", "missing")
 section("Plugin manifests")
 for mf in sorted(glob.glob("claude-plugins/*/.claude-plugin/plugin.json")):
     try:
-        p = json.load(open(mf))
+        p = json.load(_open(mf))
         name = p.get("name", "")
         if not re.match(r"^[a-z0-9]+(-[a-z0-9]+)*$", name):
             err(mf, f"name not kebab-case: {name!r}")
@@ -117,7 +120,7 @@ n_s = 0
 for root in ("claude-plugins/ai-news-briefing", "plugins/ai-news-briefing-codex", "gemini-extensions/ai-news-briefing"):
     for skill in sorted(glob.glob(f"{root}/skills/*/SKILL.md")):
         n_s += 1
-        c = open(skill).read()
+        c = _open(skill).read()
         m = re.match(r"^---\n(.*?)\n---\n", c, re.DOTALL)
         if not m: err(skill, "no frontmatter"); continue
         if "description:" not in m.group(1): err(skill, "missing description")
@@ -130,7 +133,7 @@ n_a = 0
 for root in ("claude-plugins/ai-news-briefing", "plugins/ai-news-briefing-codex", "gemini-extensions/ai-news-briefing"):
     for agent in sorted(glob.glob(f"{root}/agents/*.md")):
         n_a += 1
-        c = open(agent).read()
+        c = _open(agent).read()
         m = re.match(r"^---\n(.*?)\n---\n", c, re.DOTALL)
         if not m: err(agent, "no frontmatter"); continue
         fm = m.group(1)
@@ -140,7 +143,7 @@ ok(f"{n_a} agent files checked")
 
 section("hooks.json")
 try:
-    h = json.load(open("claude-plugins/ai-news-briefing/hooks/hooks.json"))
+    h = json.load(_open("claude-plugins/ai-news-briefing/hooks/hooks.json"))
     valid_events = {"PreToolUse","PostToolUse","UserPromptSubmit","SessionStart","SessionEnd","Notification","Stop"}
     valid_types = {"command","http","mcp_tool","prompt","agent"}
     for event, entries in h.get("hooks", {}).items():
