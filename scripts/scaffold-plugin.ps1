@@ -63,51 +63,45 @@ if ($DryRun) {
     exit 0
 }
 
-function Write-Skill {
-    param([string]$Path)
-    $dir = Split-Path -Parent $Path
-    New-Item -ItemType Directory -Force -Path $dir | Out-Null
-    @"
+# Templates use {{PLACEHOLDERS}} -> .Replace() substitution rather than
+# double-quoted here-strings with $var interpolation. The interpolating
+# form parses fine in pwsh 7 but the Windows PowerShell 5.1 parser on
+# the GitHub runner flags it as a parse error in CI; the literal form
+# below is unambiguous and works in both.
+
+$SkillTemplate = @'
 ---
-description: $Description
+description: {{DESCRIPTION}}
 ---
 
-# $Skill
+# {{SKILL}}
 
 TODO: replace this body with the actual agent instructions.
 
 Suggested structure:
-1. State the user's goal in one sentence.
+1. State the user goal in one sentence.
 2. List the tools/MCP servers this skill uses.
 3. Outline the steps the agent should take.
 4. Specify the output format.
-"@ | Set-Content -Path $Path -Encoding UTF8
-}
+'@
 
-function Write-Agent {
-    param([string]$Path, [string]$AgentName)
-    $dir = Split-Path -Parent $Path
-    New-Item -ItemType Directory -Force -Path $dir | Out-Null
-    @"
+$AgentTemplate = @'
 ---
-name: $AgentName
+name: {{AGENT}}
 description: TODO -- describe when this agent activates and what it does. Be specific so the model knows the trigger.
 ---
 
-You are the $AgentName agent. TODO: replace with the agent's persona, goals, and constraints.
-"@ | Set-Content -Path $Path -Encoding UTF8
-}
+You are the {{AGENT}} agent. TODO: replace with the agent persona, goals, and constraints.
+'@
 
-# Claude
-New-Item -ItemType Directory -Force -Path "$ClaudeDir/.claude-plugin" | Out-Null
-@"
+$ClaudePluginJson = @'
 {
-  "name": "$Name",
-  "description": "$Description",
+  "name": "{{NAME}}",
+  "description": "{{DESCRIPTION}}",
   "version": "0.1.0",
   "author": {
-    "name": "$Author",
-    "url": "$AuthorUrl"
+    "name": "{{AUTHOR}}",
+    "url": "{{AUTHOR_URL}}"
   },
   "homepage": "https://github.com/hoangsonww/AI-News-Briefing",
   "repository": {
@@ -118,57 +112,102 @@ New-Item -ItemType Directory -Force -Path "$ClaudeDir/.claude-plugin" | Out-Null
   "keywords": [],
   "categories": []
 }
-"@ | Set-Content -Path "$ClaudeDir/.claude-plugin/plugin.json" -Encoding UTF8
-Write-Skill "$ClaudeDir/skills/$Skill/SKILL.md"
+'@
 
-# Codex
-New-Item -ItemType Directory -Force -Path "$CodexDir/.codex-plugin" | Out-Null
-@"
+$CodexPluginJson = @'
 {
-  "name": "$Name-codex",
+  "name": "{{NAME}}-codex",
   "version": "0.1.0",
-  "description": "$Description",
+  "description": "{{DESCRIPTION}}",
   "author": {
-    "name": "$Author"
+    "name": "{{AUTHOR}}"
   },
   "skills": "./skills/",
   "agents": "./agents/",
   "interface": {
-    "displayName": "$Name",
-    "shortDescription": "$Description",
-    "longDescription": "$Description",
-    "developerName": "$Author",
+    "displayName": "{{NAME}}",
+    "shortDescription": "{{DESCRIPTION}}",
+    "longDescription": "{{DESCRIPTION}}",
+    "developerName": "{{AUTHOR}}",
     "category": "Productivity",
     "capabilities": ["Read", "Write"]
   }
 }
-"@ | Set-Content -Path "$CodexDir/.codex-plugin/plugin.json" -Encoding UTF8
-Write-Skill "$CodexDir/skills/$Skill/SKILL.md"
+'@
 
-# Gemini
-New-Item -ItemType Directory -Force -Path "$GeminiDir" | Out-Null
-@"
+$GeminiExtensionJson = @'
 {
-  "name": "$Name",
+  "name": "{{NAME}}",
   "version": "0.1.0",
-  "description": "$Description",
+  "description": "{{DESCRIPTION}}",
   "author": {
-    "name": "$Author"
+    "name": "{{AUTHOR}}"
   },
   "license": "MIT",
   "contextFileName": "GEMINI.md"
 }
-"@ | Set-Content -Path "$GeminiDir/gemini-extension.json" -Encoding UTF8
+'@
 
-@"
-# $Name
+$GeminiContextMd = @'
+# {{NAME}}
 
-You are the $Name agent. TODO: replace with the system instructions Gemini should load on every session.
+You are the {{NAME}} agent. TODO: replace with the system instructions Gemini should load on every session.
 
 ## Available skills
 
-- $Skill -- TODO describe.
-"@ | Set-Content -Path "$GeminiDir/GEMINI.md" -Encoding UTF8
+- {{SKILL}} -- TODO describe.
+'@
+
+$MarketplaceSnippet = @'
+    {
+      "name": "{{NAME}}",
+      "source": "./{{CLAUDE_DIR}}",
+      "description": "{{DESCRIPTION}}",
+      "category": "research",
+      "tags": []
+    },
+'@
+
+function Expand-Template {
+    param([string]$Text)
+    return $Text.
+        Replace('{{NAME}}',        $Name).
+        Replace('{{DESCRIPTION}}', $Description).
+        Replace('{{SKILL}}',       $Skill).
+        Replace('{{AUTHOR}}',      $Author).
+        Replace('{{AUTHOR_URL}}',  $AuthorUrl).
+        Replace('{{CLAUDE_DIR}}',  $ClaudeDir)
+}
+
+function Write-Skill {
+    param([string]$Path)
+    $dir = Split-Path -Parent $Path
+    New-Item -ItemType Directory -Force -Path $dir | Out-Null
+    Set-Content -Path $Path -Value (Expand-Template $SkillTemplate) -Encoding UTF8
+}
+
+function Write-Agent {
+    param([string]$Path, [string]$AgentName)
+    $dir = Split-Path -Parent $Path
+    New-Item -ItemType Directory -Force -Path $dir | Out-Null
+    $body = $AgentTemplate.Replace('{{AGENT}}', $AgentName)
+    Set-Content -Path $Path -Value $body -Encoding UTF8
+}
+
+# Claude
+New-Item -ItemType Directory -Force -Path "$ClaudeDir/.claude-plugin" | Out-Null
+Set-Content -Path "$ClaudeDir/.claude-plugin/plugin.json" -Value (Expand-Template $ClaudePluginJson) -Encoding UTF8
+Write-Skill "$ClaudeDir/skills/$Skill/SKILL.md"
+
+# Codex
+New-Item -ItemType Directory -Force -Path "$CodexDir/.codex-plugin" | Out-Null
+Set-Content -Path "$CodexDir/.codex-plugin/plugin.json" -Value (Expand-Template $CodexPluginJson) -Encoding UTF8
+Write-Skill "$CodexDir/skills/$Skill/SKILL.md"
+
+# Gemini
+New-Item -ItemType Directory -Force -Path "$GeminiDir" | Out-Null
+Set-Content -Path "$GeminiDir/gemini-extension.json" -Value (Expand-Template $GeminiExtensionJson) -Encoding UTF8
+Set-Content -Path "$GeminiDir/GEMINI.md" -Value (Expand-Template $GeminiContextMd) -Encoding UTF8
 Write-Skill "$GeminiDir/skills/$Skill/SKILL.md"
 
 if ($WithAgent) {
@@ -191,16 +230,7 @@ Write-Host "  1. Edit skills/$Skill/SKILL.md in each platform dir."
 if ($WithAgent) { Write-Host "  1b. Edit agents/$WithAgent.md (3 copies)." }
 Write-Host "  2. Paste this into .claude-plugin/marketplace.json:"
 Write-Host ""
-$marketplaceSnippet = @"
-    {
-      "name": "$Name",
-      "source": "./$ClaudeDir",
-      "description": "$Description",
-      "category": "research",
-      "tags": []
-    },
-"@
-Write-Host $marketplaceSnippet
+Write-Host (Expand-Template $MarketplaceSnippet)
 Write-Host ""
 Write-Host "  3. Run: .\scripts\plugin-validate.ps1"
 Write-Host ""
