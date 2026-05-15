@@ -23,7 +23,19 @@
     "https://simplywall.st/stocks/us/software/nasdaq-aur/aurora-innovation/news/aurora-innovation-aur-is-up-155-after-driverless-dallashoust",
     "https://ir.aurora.tech/news-events/press-releases/detail/129/detmar-selects-aurora-to-deploy-expanded-fleet-of-autonomous-trucks-for-major-energy-producer",
     "https://www.tipranks.com/news/company-announcements/c-h-robinson-shareholders-approve-proposals-at-2026-meeting",
-    "https://www.prnewswire.com/news-releases/thoma-bravo-to-acquire-wwex-group-and-combine-with-auctane-to-form-global-logistics-leader-302702040.html"
+    "https://www.prnewswire.com/news-releases/thoma-bravo-to-acquire-wwex-group-and-combine-with-auctane-to-form-global-logistics-leader-302702040.html",
+    "https://www.dat.com/company/news-events/news-releases/dat-typical-may-truckload-rates-volumes-masked-tariff-turmoil",
+    "https://nrf.com/media-center/press-releases/import-cargo-volume-expected-to-see-year-over-year-drop-during-first-half-of-2026",
+    "http://www.prnewswire.com/news-releases/echo-global-logistics-launches-echoparcel-for-scalable-and-reliable-parcel-shipping-services-302771403.html",
+    "https://www.freightwaves.com/news/echo-global-logistics-acquires-its-logistics-to-create-5-4-billion-combined-entity",
+    "https://www.stattimes.com/air-cargo/flexport-eyes-profitability-and-ipo-after-restructuring-phase-1358160",
+    "https://www.autoconnectedcar.com/2026/05/autonomous-self-driving-vehicle-news-waymo-aurora-hertz-oro-uber-deeproute-ai-venti-fedex-innoviz-aeye-syntech-ibm-dallara/",
+    "https://roboticsandautomationnews.com/2026/05/08/inside-torc-robotics-how-autonomous-trucking-is-moving-toward-commercial-reality/101319/",
+    "https://www.freightwaves.com/news/fmcsa-final-rule-and-dalilahs-law-target-cdl-eligibility-what-trucking-needs-to-know",
+    "https://www.freightwaves.com/news/florida-carrier-with-57-drivers-files-for-chapter-11-bankruptcy",
+    "https://www.truckingdive.com/news/echo-global-acquiring-its-logistics/810154/",
+    "https://landline.media/echo-global-snags-fast-growing-logistics-company-in-major-deal/",
+    "https://www.prnewswire.com/news-releases/echo-global-logistics-completes-acquisition-of-its-logistics-expanding-integrated-full-supply-chain-solutions-302724368.html"
   ],
   "seen_story_hashes": [
     "dat dry van load-to-truck ratio hits 9.0 week of may 3-9 2026 up from 8.3dat freight",
@@ -42,32 +54,26 @@
     "uber freight q1 2026 gross bookings 1.33b +6% yoy first return to growth two yearsuber ir",
     "uber freight fraud incidents down 20% tightened carrier onboardinguber freight",
     "small fleet trucking bankruptcies wave april-may 2026 small carriers exitingfreightwaves",
-    "goldman sachs av trucks cost parity human drivers expected 2028axios"
+    "goldman sachs av trucks cost parity human drivers expected 2028axios",
+    "echo global logistics launches echoparcel scalable reliable parcel shipping services fedex echoshippr newswire",
+    "nrf may 2026 container import forecast 2.13m teu +9.3% yoy h1 2026 total 12.27m teu -2% yoy tariff base effectnrf",
+    "hertz oro mobility nuro uber robotaxi lucid sf bay area late 2026 autonomous vehicle asset managementauto connected car news",
+    "torc robotics nick elder vp commercialization driverless late 2026 freightliner cascadia daimler truck may 8robotics automation news",
+    "fmcsa dalilahs law cdl eligibility final rule anprm female driver anti-harassment protections may 2026freightwaves",
+    "bound logistics florida carrier 57 drivers chapter 11 bankruptcy new jersey district may 2026freightwaves",
+    "flexport blackrock 250m lending capacity supply chain finance ipo readiness 30% revenue growth 2026stattimes"
   ],
   "last_30_days": [
     {
       "date": "2026-05-15",
       "stories": [
-        "DAT dry van load-to-truck ratio hit 9.0 week of May 3-9 2026, up from 8.3 prior week; reefer 16.4; flatbed 64.4",
-        "Spot truckload rates at multiyear highs: dry van $2.01/mile +26% YoY, reefer $2.36/mile, flatbed $2.70/mile near all-time high, week of May 8-14 2026",
-        "CVSA Roadcheck Week, Mother's Day floral surge, and SE produce season created tightest capacity week of 2026",
-        "Flexport launched Buy Your Refund Claims product offering IEEPA duty refunds in 2 weeks, May 7 2026",
-        "RXO CEO expressed freight market recovery optimism at Q1 2026 results, May 7 2026",
-        "C.H. Robinson unveiled truckload appointment scheduling software, May 2026",
-        "Thoma Bravo acquiring WWEX Group and combining with Auctane in ~$5B deal expected to close Q2 2026",
-        "Aurora and McLane launched fully driverless Dallas-Houston freight service after 280k-mile pilot, May 6 2026",
-        "Aurora announced Hirschbach Motor Lines deal for 500 Aurora-powered trucks beginning delivery 2027",
-        "Aurora Volvo Autonomous Solutions launched Fort Worth-Phoenix 1000-mile driverless route; 200+ driverless trucks by year-end 2026",
-        "Bot Auto completed first fully driverless commercial revenue load Houston-Dallas at $1.89/mile for Ryan Transportation, May 2026",
-        "Goldman Sachs expects AV trucks to undercut human-driven cost per mile by 2028",
-        "FMCSA Motus carrier registration system went live May 14 2026",
-        "FMCSA removed Safe ELD and MYLOGS ELD from registered device list May 1 2026",
-        "FMCSA second broker transparency NPRM and ADS inspection standards rulemaking targeted May 2026",
-        "Uber Freight Q1 2026 gross bookings $1.33B +6% YoY, first return to growth in nearly two years",
-        "Uber Freight fraud incidents fell 20% via tightened carrier onboarding",
-        "Industry first-tender acceptance at 85% in 2026, down from 92% last year",
-        "Wave of small fleet trucking bankruptcies continued April-May 2026, tightening supply",
-        "US import volumes at major container ports expected significant YoY decline H1 2026 as tariff pull-forward fades"
+        "Echo Global Logistics launched EchoParcel on May 14 2026 via FedEx partnership within EchoShip platform, covering parcel+LTL+TL after ITS Logistics acquisition close",
+        "NRF forecasts May 2026 US container imports at 2.13M TEU +9.3% YoY but H1 2026 total down 2% YoY due to tariff base effect from April 2025",
+        "Hertz formed Oro Mobility as AV asset management platform supporting Uber robotaxi program with Nuro/Lucid vehicles, SF Bay Area launch late 2026",
+        "Torc Robotics VP detailed path to driver-out highway deployments late 2026, commercial scale 2027, on Freightliner Cascadia with Daimler Truck backing",
+        "FMCSA published Dalilah's Law final rule tightening CDL eligibility standards and planned ANPRM on female driver anti-harassment protections May 2026",
+        "Bound Logistics LLC Florida carrier with 57 drivers filed Chapter 11 bankruptcy in District of New Jersey May 2026",
+        "Flexport targeting 30% revenue growth and IPO readiness in 2026; BlackRock-managed funds committing $250M to nearly double supply chain lending capacity"
       ]
     }
   ]
