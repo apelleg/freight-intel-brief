@@ -20,91 +20,20 @@ Before searching for anything, load the deduplication list to avoid repeating st
 
 ## Step 1: Search for Freight News
 
-Search for news from the **past 24 hours only** across each of the 8 topics below. Make 2–3 searches per topic. Discard anything older or undated.
+First, use the `Read` tool to read `topics.json`. This file defines all topics to cover — it is the single source of truth. Do not hardcode any topic list; always read from this file.
 
-### Topic 1: Spot Rates & Capacity
-Search these authoritative sources directly — do not rely on general search alone:
-- FreightWaves SONAR (freightwaves.com)
-- DAT Freight & Analytics (dat.com)
-- Cass Freight Index (cassinfo.com)
-- Journal of Commerce / JOC (joc.com)
+Each topic in `topics.json` has:
+- `name` — the topic label
+- `search_type` — either `"explicit"` (search the listed sources directly) or `"open"` (general web search)
+- `sources` — authoritative sources to prioritize when `search_type` is `"explicit"`
+- `search_hints` — suggested search queries to run
 
-Searches to run:
-- "spot rate truckload today [current date]"
-- "DAT load-to-truck ratio [current date]"
-- "freight capacity market [current date]"
-- "Cass freight index latest"
-
-Key metrics to capture if available: spot rate direction, load-to-truck ratio, any notable capacity events (port congestion, weather, strikes).
-
-### Topic 2: Competitor Intelligence
-Open web search — no source constraints. Cover Uber Freight's direct competitors.
-
-Searches to run:
-- "Flexport news [current date]"
-- "Echo Global Logistics [current date]"
-- "XPO Logistics announcement [current date]"
-- "C.H. Robinson news [current date]"
-- "Transfix [current date]"
-- "digital freight broker news [current date]"
-
-### Topic 3: Shipper Sentiment & Enterprise Freight
-Open web search. Focus on demand signals, not carrier-side news.
-
-Searches to run:
-- "supply chain disruption [current date]"
-- "retail inventory freight demand [current date]"
-- "US import export volume [current date]"
-- "shipper freight outlook [current date]"
-
-### Topic 4: Carrier & Capacity News
-Search these sources directly:
-- American Trucking Associations (trucking.org)
-- FreightWaves (freightwaves.com)
-- Transport Topics (ttnews.com)
-
-Searches to run:
-- "trucking carrier bankruptcy [current date]"
-- "ELD HOS regulation news [current date]"
-- "trucking fleet capacity [current date]"
-- "ATA trucking news [current date]"
-
-### Topic 5: Freight Tech & AI
-Open web search. Focus on tech directly relevant to freight operations.
-
-Searches to run:
-- "Aurora autonomous trucking [current date]"
-- "Waymo Via freight [current date]"
-- "AI freight brokerage [current date]"
-- "autonomous truck news [current date]"
-
-### Topic 6: Regulatory & Policy
-Search these authoritative sources:
-- FMCSA (fmcsa.dot.gov)
-- trucking.org
-- FreightWaves regulatory coverage
-
-Searches to run:
-- "FMCSA rule [current date]"
-- "trucking regulation [current date]"
-- "freight infrastructure policy [current date]"
-- "clean trucking emissions [current date]"
-
-### Topic 7: Uber & Uber Freight
-Open web search. Capture press, analyst coverage, job postings, LinkedIn mentions.
-
-Searches to run:
-- "Uber Freight news [current date]"
-- "Uber Freight announcement [current date]"
-- "Uber logistics [current date]"
-
-### Topic 8: M&A, Funding & Industry Structure
-Open web search. Acquisitions, funding rounds, consolidation.
-
-Searches to run:
-- "freight logistics acquisition [current date]"
-- "trucking startup funding [current date]"
-- "logistics industry consolidation [current date]"
+For each topic in the file:
+- Run 2–3 searches using the `search_hints` as a guide, substituting `[current date]` with today's actual date
+- If `search_type` is `"explicit"`, search within or prioritize the listed `sources`; do not rely on general search alone
+- If `search_type` is `"open"`, use general web search with no source constraints
+- Discard anything older than 24 hours or undated
+- Apply dedup from Step 0 throughout
 
 ---
 
