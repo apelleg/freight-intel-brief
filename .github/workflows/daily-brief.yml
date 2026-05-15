@@ -1,0 +1,52 @@
+# daily-brief.yml — GitHub Actions scheduler for Uber Freight Intel Brief.
+#
+# STATUS: STUBBED — not yet wired to the Anthropic API.
+# Currently the brief runs via Claude Code CLI (run-brief.sh) using a Claude subscription.
+# Phase 4 will complete this workflow with direct API calls.
+#
+# To enable: set these repo secrets in GitHub → Settings → Secrets & Variables → Actions:
+#   ANTHROPIC_API_KEY  — Anthropic API key (get from console.anthropic.com)
+#   SLACK_WEBHOOK      — Slack incoming webhook URL
+#   NOTION_TOKEN       — (optional) Notion integration token
+#   NOTION_DATABASE_ID — (optional) Notion database ID for archiving
+
+name: Daily Freight Brief
+
+on:
+  schedule:
+    - cron: '0 13 * * 1-5'   # 6am PT, weekdays only (UTC 13:00 = 6am PT)
+  workflow_dispatch:           # manual trigger via GitHub UI or API
+
+jobs:
+  briefing:
+    runs-on: ubuntu-latest
+    # PHASE 4 TODO: uncomment and complete this job block
+    # steps:
+    #   - uses: actions/checkout@v4
+    #     with:
+    #       token: ${{ secrets.GITHUB_TOKEN }}
+    #
+    #   - name: Set up Node.js
+    #     uses: actions/setup-node@v4
+    #     with:
+    #       node-version: '20'
+    #
+    #   - name: Run briefing
+    #     env:
+    #       ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+    #       SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+    #       NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+    #       NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
+    #     run: node scripts/brief-api.js   # Phase 4 will create this file
+    #
+    #   - name: Commit updated memory
+    #     run: |
+    #       git config user.name "freight-brief-bot"
+    #       git config user.email "bot@github.com"
+    #       git add memory/seen.json
+    #       git commit -m "chore: update seen stories [$(date +%Y-%m-%d)]" || echo "No changes"
+    #       git push
+
+    steps:
+      - name: Not yet enabled
+        run: echo "This workflow is stubbed. Run ./run-brief.sh locally until Phase 4."

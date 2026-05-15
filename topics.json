@@ -1,0 +1,117 @@
+[
+  {
+    "id": "spot_rates",
+    "name": "Spot Rates & Capacity",
+    "search_type": "explicit",
+    "sources": [
+      "FreightWaves SONAR",
+      "DAT Freight & Analytics",
+      "Cass Freight Index",
+      "Journal of Commerce (JOC)"
+    ],
+    "search_hints": [
+      "spot rate trends freight",
+      "truckload capacity market",
+      "DAT load-to-truck ratio",
+      "Cass freight index",
+      "SONAR freight market"
+    ]
+  },
+  {
+    "id": "competitor_intel",
+    "name": "Competitor Intelligence",
+    "search_type": "open",
+    "sources": [],
+    "search_hints": [
+      "Flexport news",
+      "Echo Global Logistics news",
+      "XPO Logistics news",
+      "C.H. Robinson news",
+      "Transfix news",
+      "digital freight broker news"
+    ]
+  },
+  {
+    "id": "shipper_sentiment",
+    "name": "Shipper Sentiment & Enterprise Freight",
+    "search_type": "open",
+    "sources": [],
+    "search_hints": [
+      "supply chain disruption news",
+      "inventory trends retail freight",
+      "import export volume US freight",
+      "shipper freight demand outlook"
+    ]
+  },
+  {
+    "id": "carrier_capacity",
+    "name": "Carrier & Capacity News",
+    "search_type": "explicit",
+    "sources": [
+      "American Trucking Associations (trucking.org)",
+      "FreightWaves",
+      "Transport Topics"
+    ],
+    "search_hints": [
+      "trucker bankruptcy fleet news",
+      "ELD HOS regulation news",
+      "carrier capacity trucking",
+      "ATA trucking industry news",
+      "fleet size changes freight"
+    ]
+  },
+  {
+    "id": "freight_tech",
+    "name": "Freight Tech & AI",
+    "search_type": "open",
+    "sources": [],
+    "search_hints": [
+      "Aurora autonomous trucking news",
+      "Waymo Via freight news",
+      "AI freight brokerage news",
+      "digital freight matching technology",
+      "autonomous truck news"
+    ]
+  },
+  {
+    "id": "regulatory",
+    "name": "Regulatory & Policy",
+    "search_type": "explicit",
+    "sources": [
+      "FMCSA (fmcsa.dot.gov)",
+      "trucking.org",
+      "FreightWaves regulatory"
+    ],
+    "search_hints": [
+      "FMCSA rule change news",
+      "trucking regulation policy news",
+      "infrastructure bill freight impact",
+      "clean trucking emissions regulation",
+      "ELD mandate news"
+    ]
+  },
+  {
+    "id": "uber_freight",
+    "name": "Uber & Uber Freight",
+    "search_type": "open",
+    "sources": [],
+    "search_hints": [
+      "Uber Freight news",
+      "Uber Freight announcement",
+      "Uber Freight analyst coverage",
+      "Uber logistics news"
+    ]
+  },
+  {
+    "id": "ma_funding",
+    "name": "M&A, Funding & Industry Structure",
+    "search_type": "open",
+    "sources": [],
+    "search_hints": [
+      "freight logistics acquisition news",
+      "trucking company funding round",
+      "freight startup investment news",
+      "logistics industry consolidation"
+    ]
+  }
+]
