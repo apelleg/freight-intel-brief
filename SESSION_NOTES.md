@@ -1,95 +1,99 @@
-# Session Notes — 2026-05-15
+# Session Notes — 2026-05-15 (Session 2)
 
 ## What Was Completed This Session
 
-### Phase 0 — Fork & Validate Baseline ✅
-- Installed `gh` CLI via Homebrew; authenticated as `apelleg`
-- Forked `hoangsonww/AI-News-Briefing` → `apelleg/freight-intel-brief`
-- Cloned to `/Users/user/Downloads/freight-intel-brief/`
-- Fixed `scripts/dry-run.sh`: replaced hardcoded `~/.local/bin/claude` with `command -v claude`; removed `--max-budget-usd` flag (subscription-based, not API-based)
-- Confirmed nested Claude invocations work (unset CLAUDECODE pattern)
-- Baseline dry-run passed: web search hit, briefing output, no external writes
-
-### Phase 1+2 — Freight Topics, CPO Format, Memory Layer ✅
-All files created, tested, committed, and pushed to `main`.
+### Phase 3 — Memory Loop End-to-End Validation ✅
+- Ran `update-memory.js` unit test: URL dedup, hash dedup, and day-entry merging all pass
+- Committed populated `seen.json` from first full brief run (24 URLs, 17 hashes, 20 stories)
+- Ran full dedup-validation dry-run across all 8 topics:
+  - **22 URLs correctly skipped** (already in seen_urls)
+  - **17 hashes correctly skipped** (already in seen_story_hashes)
+  - **6 genuinely new stories surfaced** despite same-day re-run
+  - Memory block delimiters parsed correctly; `update-memory.js` merged and wrote atomically
+- `seen.json` now at 36 URLs, 24 hashes, 1 day entry (7 story summaries)
+- Committed and pushed
 
 ## Current State of Each File
 
 | File | Status | Notes |
 |------|--------|-------|
-| `topics.json` | ✅ Complete | 8 freight topics, easy to edit |
-| `prompt.md` | ✅ Complete | Full rewrite: freight topics, CPO format, memory steps |
-| `run-brief.sh` | ✅ Complete | Claude Code CLI entry point |
-| `memory/seen.json` | ✅ Complete | Empty skeleton, correct schema |
-| `scripts/update-memory.js` | ✅ Complete | Parses memory block, 30-day rolling retention |
-| `scripts/dry-run.sh` | ✅ Fixed | Binary path + removed --max-budget-usd |
-| `.github/workflows/daily-brief.yml` | ✅ Stubbed | Full job commented out, Phase 4 will complete |
+| `topics.json` | ✅ Complete | 8 freight topics, edit to add/remove |
+| `prompt.md` | ✅ Complete | Freight topics, CPO format, memory Step 0 + Step 5 |
+| `run-brief.sh` | ✅ Complete | `--dry-run` and `--model` flags work |
+| `memory/seen.json` | ✅ Live | 36 URLs, 24 hashes, 1 day entry |
+| `scripts/update-memory.js` | ✅ Validated | Dedup, merge, atomic write all confirmed |
+| `scripts/dry-run.sh` | ✅ Fixed | BSD sed issue worked around via prompt prefix |
+| `.github/workflows/daily-brief.yml` | ✅ Stubbed | Phase 5 will complete |
 
-Everything else in the base repo (notify-slack.sh, Notion MCP setup, log management, Makefile, tests) is untouched and still present.
+## What Was Tested and the Results
 
-## What Was Tested
-
-1. **Baseline dry-run** (original AI topics): Passed. Claude invoked correctly, web search returned results, output produced.
-2. **Freight dry-run** (new prompt, Topic 1 only): Passed.
-   - Step 0: Read memory/seen.json correctly (empty, no dedup needed)
-   - Step 1: Hit FreightWaves and DAT, found spot rate data ($2.89/mile NTI), load-to-truck ratio, Manzanillo port strike (May 15 event)
-   - Step 2: Market Pulse section formatted correctly (CPO format)
-   - Step 5: Memory block output with correct `<<<MEMORY_UPDATE_START>>>` / `<<<MEMORY_UPDATE_END>>>` delimiters
+| Test | Result |
+|------|--------|
+| `update-memory.js` unit test (URL dedup) | ✅ Pass |
+| `update-memory.js` unit test (hash dedup) | ✅ Pass |
+| `update-memory.js` unit test (day-entry merge) | ✅ Pass |
+| Full dedup dry-run (all 8 topics) | ✅ Pass — 22 URLs + 17 hashes correctly skipped |
+| Memory block parse + write to seen.json | ✅ Pass — atomic write, no corruption |
+| New stories surface despite dedup | ✅ Pass — 6 new stories found same day |
 
 ## What's Next
 
-### Phase 3 — Wire and Test Memory Loop
-- Run a full brief (all 8 topics) with `./run-brief.sh --dry-run`
-- Confirm `scripts/update-memory.js` correctly parses the memory block and writes `memory/seen.json`
-- Run a second brief the next day and confirm deduplication works (seen URLs/hashes skipped)
-- Commit updated `memory/seen.json` after first real run
+### Phase 4 — Slack Delivery (Ready Now)
+This is the only remaining step before the brief is fully operational for daily use.
 
-### Phase 4 — Slack Delivery Config
-- Set `SLACK_WEBHOOK` environment variable (or export in `.env`)
-- Run `./run-brief.sh` (without `--dry-run`) to test live Slack delivery
-- Create a `#freight-intel` Slack channel or use personal Slack
+1. Get a Slack webhook URL for a channel (e.g., `#freight-intel` in your personal or work Slack)
+   - Go to api.slack.com/apps → Create App → Incoming Webhooks → Add New Webhook
+   - Or use an existing webhook if you have one
+2. Run: `SLACK_WEBHOOK=https://hooks.slack.com/... ./run-brief.sh`
+3. Verify the brief arrives in Slack formatted correctly
+4. Optionally `export SLACK_WEBHOOK=...` in your shell profile so you don't need to prefix it each time
 
-### Phase 5 — GitHub Actions (when ready to automate)
-- Complete `.github/workflows/daily-brief.yml` (uncomment job block, create `scripts/brief-api.js`)
-- Add secrets: `ANTHROPIC_API_KEY`, `SLACK_WEBHOOK`, `NOTION_TOKEN`, `NOTION_DATABASE_ID`
-- Test with `workflow_dispatch` (manual trigger)
+### Phase 5 — GitHub Actions (when ready to automate / untether from laptop)
+- Complete `.github/workflows/daily-brief.yml` (uncomment job block)
+- Create `scripts/brief-api.js` that calls Anthropic API with same `prompt.md`
+- Add repo secrets: `ANTHROPIC_API_KEY`, `SLACK_WEBHOOK`
+- Test with `workflow_dispatch`
 
 ### Phase 6 — On-Demand Deep Dive (Week 2)
-- Adapt `prompt-custom-brief.md` for freight
+- Adapt `prompt-custom-brief.md` for freight deep dives
 - Wire to Slack slash command
 
 ## Open Questions / Gotchas
 
-1. **`scripts/dry-run.sh` sed incompatibility**: The original BSD sed multi-line sed command fails on macOS. We bypassed this by prepending a DRY RUN instruction directly to the prompt. If the original dry-run.sh is needed, rewrite the sed block using Python or perl.
+1. **topics.json and prompt.md are manually in sync**: If you edit `topics.json`, you must also update the corresponding section in `prompt.md`. A future improvement would have `run-brief.sh` inject topics.json content into the prompt at runtime.
 
-2. **Memory block parsing in run-brief.sh**: The sed command in `run-brief.sh` for extracting the memory block is straightforward but assumes Claude outputs `<<<MEMORY_UPDATE_START>>>` on its own line. If Claude wraps it in a code block, the parser will fail silently (with a warning). Monitor first few runs.
+2. **Logs are gitignored**: The base repo's `.gitignore` excludes `logs/`. Dry-run outputs are not committed. This is fine for local use; if you want log history, either add `logs/` to `.gitignore` exceptions or write logs to a different directory.
 
-3. **topics.json not yet injected into prompt.md dynamically**: Currently `topics.json` and `prompt.md` are separate files but prompt.md has the topic content hardcoded (written from the JSON structure). Future improvement: have `run-brief.sh` read `topics.json` and inject it into the prompt at runtime so they stay in sync automatically.
+3. **Slack payload format**: `prompt.md` Step 3 instructs Claude to format a Slack payload with `blocks` and POST via `WebFetch`. If the Slack webhook rejects the format, the fallback is stdout. The first live run should be monitored.
 
-4. **Notion MCP not configured**: Step 4 (Notion archive) will silently skip unless `NOTION_TOKEN` and `NOTION_DATABASE_ID` are set. The base repo's Notion setup (database ID `856794cc-d871-4a95-be2d-2a1600920a19`) is for AI briefings — a new Freight Intel database should be created in Notion for this project.
+4. **Paywalled sources**: FreightWaves SONAR full data is paywalled. Claude accesses headlines and article previews. This is acceptable for v1.
 
-5. **Paywalled sources**: FreightWaves SONAR data is paywalled. Claude can access headlines and some articles but not full SONAR dashboard data. DAT free tier has limited data. This is acceptable for v1 — the brief correctly notes when specific metrics aren't available.
+5. **Same-day date**: All May 15 stories are in one `last_30_days` entry. On Day 2 (May 16), Claude will see the full May 15 story list in context and correctly avoid those angles even if some URLs are new.
 
 ## Verbatim Resume Prompt
 
-Paste this into a new Claude Code session from `/Users/user/Downloads/freight-intel-brief` or after cloning `https://github.com/apelleg/freight-intel-brief`:
+Paste this into a new Claude Code session in `/Users/user/Downloads/freight-intel-brief`:
 
 ---
 
 ```
-Read SESSION_NOTES.md first. We're building an automated daily freight intelligence brief for the CPO of Uber Freight (Amir Pelleg, starting June 1 2026).
+Read SESSION_NOTES.md first. We're building an automated daily freight intelligence brief for the CPO of Uber Freight (Amir Pelleg, starts June 1 2026).
 
-Repo: https://github.com/apelleg/freight-intel-brief (already cloned; work from /Users/user/Downloads/freight-intel-brief)
+Repo: https://github.com/apelleg/freight-intel-brief (local: /Users/user/Downloads/freight-intel-brief)
 
-Phases 0, 1, and 2 are complete. The repo has: topics.json (8 freight topics), prompt.md (full CPO-format brief instructions with memory steps), run-brief.sh (Claude Code CLI entry point), memory/seen.json (empty skeleton), scripts/update-memory.js (memory parser), and a stubbed .github/workflows/daily-brief.yml.
+Phases 0, 1, 2, and 3 are complete and verified:
+- topics.json: 8 freight topics (edit to add/remove)
+- prompt.md: full CPO-format brief with memory dedup (Steps 0–5)
+- run-brief.sh: Claude Code CLI entry point (--dry-run, --model flags)
+- memory/seen.json: 36 URLs, 24 hashes, 1 day entry — dedup validated
+- scripts/update-memory.js: memory parser, validated with unit tests and live run
 
-A freight dry-run was validated — Step 0 (memory read), Step 1 (web search on FreightWaves/DAT), Step 2 (Market Pulse CPO format), and Step 5 (memory block output) all work correctly.
+Next task: Phase 4 — Slack delivery.
+To complete Phase 4: set SLACK_WEBHOOK env var and run ./run-brief.sh (without --dry-run).
+Then verify the brief arrives in Slack with correct formatting.
 
-Next task: Phase 3 — run a full dry-run across all 8 topics with ./run-brief.sh --dry-run and verify the memory update loop works end-to-end. Then Phase 4: configure Slack delivery by setting SLACK_WEBHOOK and running a live brief.
-
-Key decisions already made:
-- Runs via Claude Code CLI (subscription, not API key). GitHub Actions migration comes later.
-- topics.json is the single source of truth for topic configuration.
-- memory/seen.json persists via git commits (no database needed).
-- Do not add --max-budget-usd to any claude invocations.
+Key constraints:
+- Do NOT add --max-budget-usd to any claude invocations (subscription-based)
+- topics.json and prompt.md are manually kept in sync (gotcha: edit both when changing topics)
+- GitHub Actions migration (Phase 5) comes after Slack is working
 ```
