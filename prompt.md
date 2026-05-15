@@ -218,6 +218,7 @@ Send the brief as an HTML email via the SendGrid API.
    - `---` dividers → `<hr style="border:none;border-top:1px solid #e5e7eb;margin:20px 0">`
    - Sources list → wrap in `<div class="sources">...</div>`
    - Blank lines between sections → `<br>`
+   - **Inline citations** — every `(Date — Publication)` attribution within bullet text must be a clickable link to the source article: `(<a href="[article URL]">Date — Publication</a>)`. Use the actual article URL, not the publication homepage.
 
 3. POST to the Resend API using `WebFetch`:
    - URL: `https://api.resend.com/emails`
