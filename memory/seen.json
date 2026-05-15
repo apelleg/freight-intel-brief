@@ -1,5 +1,74 @@
 {
-  "seen_urls": [],
-  "seen_story_hashes": [],
-  "last_30_days": []
+  "seen_urls": [
+    "https://www.dat.com/trendlines",
+    "https://www.thetrucker.com/trucking-news/business/dat-truckload-capacity-tightens-further-spot-rates-inch-up-across-the-board",
+    "https://www.chrobinson.com/en-us/resources/insights-and-advisories/north-america-freight-insights/may-2026-freight-market-update/",
+    "https://www.bisontransport.com/why-bison/may-2026-freight-market-update-a-supply-driven-shift-takes-shape",
+    "https://www.fleetowner.com/news/rates/news/55377460/spot-truckload-rates-hit-multiyear-highs-dat-ftr-report",
+    "https://www.flexport.com/global-logistics-update/may-7-2026-cbp-prepares-to-issue-first-ieepa/",
+    "https://www.truckingdive.com/news/trucking-spot-contract-rates-us-bank-dat-2026-spread/816351/",
+    "https://www.freightwaves.com/news/robinson-unwraps-truckload-appointment-scheduling-software",
+    "https://www.thomabravo.com/press-releases/thoma-bravo-to-acquire-wwex-group-and-combine-with-auctane-to-form-global-logistics-leader",
+    "https://www.freightwaves.com/news/thoma-bravo-to-acquire-wwex-group-combine-with-auctane",
+    "https://techcrunch.com/2026/05/06/aurora-lands-mclane-deal-to-run-driverless-truck-routes-in-texas/",
+    "https://www.cnbc.com/2026/05/06/berkshire-hathaway-mclane-autonomous-freight-trucking-aurora.html",
+    "https://ir.aurora.tech/news-events/press-releases/detail/136/leading-carrier-selects-aurora-to-scale-autonomous-fleet-to-500-trucks",
+    "https://www.freightwaves.com/news/bot-auto-first-humanless-commercial-truckload",
+    "https://www.axios.com/2026/05/06/autonomous-trucks-av-freight",
+    "https://cdllife.com/2026/fmcsa-urges-trucking-industry-to-prep-for-motus-registration-system-rollout-by-may-14-deadline/",
+    "https://www.freightwaves.com/news/fmcsa-pumps-the-brakes-on-new-trucking-regulations",
+    "https://investor.uber.com/news-events/news/press-release-details/2026/Uber-Announces-Results-for-First-Quarter-2026/default.aspx",
+    "https://www.uberfreight.com/en-US/blog/freight-market-update",
+    "https://www.freightwaves.com/news/small-fleets-brokers-drive-new-wave-of-trucking-bankruptcies",
+    "https://simplywall.st/stocks/us/software/nasdaq-aur/aurora-innovation/news/aurora-innovation-aur-is-up-155-after-driverless-dallashoust",
+    "https://ir.aurora.tech/news-events/press-releases/detail/129/detmar-selects-aurora-to-deploy-expanded-fleet-of-autonomous-trucks-for-major-energy-producer",
+    "https://www.tipranks.com/news/company-announcements/c-h-robinson-shareholders-approve-proposals-at-2026-meeting",
+    "https://www.prnewswire.com/news-releases/thoma-bravo-to-acquire-wwex-group-and-combine-with-auctane-to-form-global-logistics-leader-302702040.html"
+  ],
+  "seen_story_hashes": [
+    "dat dry van load-to-truck ratio hits 9.0 week of may 3-9 2026 up from 8.3dat freight",
+    "spot truckload rates dry van 2.01/mile +26% yoy flatbed near all-time high 2.70/miledat",
+    "cvsa roadcheck week mother's day produce season convergence tightest freight week of 2026ch robinson",
+    "flexport launches buy your refund claims ieepa duty refund product 2-week payoutflexport",
+    "rxo ceo optimism freight market recovery q1 2026 resultstrucking dive",
+    "c.h. robinson unveils truckload appointment scheduling softwarefreightwaves",
+    "thoma bravo acquires wwex group combines with auctane 5b logistics platformthoma bravo",
+    "aurora innovation mclane driverless dallas-houston fully commercial 280000 milestechcrunch",
+    "aurora hirschbach 500-truck autonomous fleet deal delivery 2027aurora ir",
+    "bot auto first fully driverless commercial load houston-dallas 1.89/mile ryan transportationfreightwaves",
+    "fmcsa motus registration system launched may 14 2026cdllife",
+    "fmcsa removed safe eld mylogs eld from registered eld list may 1 2026fmcsa",
+    "fmcsa broker transparency nprm second proposed rule may 2026freightwaves",
+    "uber freight q1 2026 gross bookings 1.33b +6% yoy first return to growth two yearsuber ir",
+    "uber freight fraud incidents down 20% tightened carrier onboardinguber freight",
+    "small fleet trucking bankruptcies wave april-may 2026 small carriers exitingfreightwaves",
+    "goldman sachs av trucks cost parity human drivers expected 2028axios"
+  ],
+  "last_30_days": [
+    {
+      "date": "2026-05-15",
+      "stories": [
+        "DAT dry van load-to-truck ratio hit 9.0 week of May 3-9 2026, up from 8.3 prior week; reefer 16.4; flatbed 64.4",
+        "Spot truckload rates at multiyear highs: dry van $2.01/mile +26% YoY, reefer $2.36/mile, flatbed $2.70/mile near all-time high, week of May 8-14 2026",
+        "CVSA Roadcheck Week, Mother's Day floral surge, and SE produce season created tightest capacity week of 2026",
+        "Flexport launched Buy Your Refund Claims product offering IEEPA duty refunds in 2 weeks, May 7 2026",
+        "RXO CEO expressed freight market recovery optimism at Q1 2026 results, May 7 2026",
+        "C.H. Robinson unveiled truckload appointment scheduling software, May 2026",
+        "Thoma Bravo acquiring WWEX Group and combining with Auctane in ~$5B deal expected to close Q2 2026",
+        "Aurora and McLane launched fully driverless Dallas-Houston freight service after 280k-mile pilot, May 6 2026",
+        "Aurora announced Hirschbach Motor Lines deal for 500 Aurora-powered trucks beginning delivery 2027",
+        "Aurora Volvo Autonomous Solutions launched Fort Worth-Phoenix 1000-mile driverless route; 200+ driverless trucks by year-end 2026",
+        "Bot Auto completed first fully driverless commercial revenue load Houston-Dallas at $1.89/mile for Ryan Transportation, May 2026",
+        "Goldman Sachs expects AV trucks to undercut human-driven cost per mile by 2028",
+        "FMCSA Motus carrier registration system went live May 14 2026",
+        "FMCSA removed Safe ELD and MYLOGS ELD from registered device list May 1 2026",
+        "FMCSA second broker transparency NPRM and ADS inspection standards rulemaking targeted May 2026",
+        "Uber Freight Q1 2026 gross bookings $1.33B +6% YoY, first return to growth in nearly two years",
+        "Uber Freight fraud incidents fell 20% via tightened carrier onboarding",
+        "Industry first-tender acceptance at 85% in 2026, down from 92% last year",
+        "Wave of small fleet trucking bankruptcies continued April-May 2026, tightening supply",
+        "US import volumes at major container ports expected significant YoY decline H1 2026 as tariff pull-forward fades"
+      ]
+    }
+  ]
 }
