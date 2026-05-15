@@ -6,7 +6,7 @@
 #
 # To enable: set these repo secrets in GitHub → Settings → Secrets & Variables → Actions:
 #   ANTHROPIC_API_KEY  — Anthropic API key (get from console.anthropic.com)
-#   SENDGRID_API_KEY   — SendGrid API key for email delivery
+#   RESEND_API_KEY     — Resend API key for email delivery (resend.com)
 #   TO_EMAIL           — Recipient email address
 #   FROM_EMAIL         — Verified sender address (must be verified in SendGrid)
 #   NOTION_TOKEN       — (optional) Notion integration token
@@ -36,7 +36,7 @@ jobs:
     #   - name: Run briefing
     #     env:
     #       ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-    #       SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
+    #       RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
     #       TO_EMAIL: ${{ secrets.TO_EMAIL }}
     #       FROM_EMAIL: ${{ secrets.FROM_EMAIL }}
     #       NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}

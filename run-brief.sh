@@ -34,7 +34,7 @@ Options:
   --help           Show this help
 
 Environment variables:
-  SENDGRID_API_KEY    Required for email delivery (get from sendgrid.com)
+  RESEND_API_KEY      Required for email delivery (get from resend.com)
   TO_EMAIL            Recipient address (default: pelleg@gmail.com)
   FROM_EMAIL          Verified sender address (default: pelleg@gmail.com)
   NOTION_TOKEN        Optional — Notion API token for archiving

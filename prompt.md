@@ -175,7 +175,7 @@ Sources: [linked list of all sources used, format: [Publication](URL)]
 Send the brief as an HTML email via the SendGrid API.
 
 1. Read these environment variables:
-   - `SENDGRID_API_KEY` — required. If not set, print the brief to stdout and skip sending.
+   - `RESEND_API_KEY` — required. If not set, print the brief to stdout and skip sending.
    - `TO_EMAIL` — recipient address. Default to `pelleg@gmail.com` if not set.
    - `FROM_EMAIL` — verified sender address. Default to `pelleg@gmail.com` if not set.
 
@@ -219,24 +219,22 @@ Send the brief as an HTML email via the SendGrid API.
    - Sources list → wrap in `<div class="sources">...</div>`
    - Blank lines between sections → `<br>`
 
-3. POST to the SendGrid API using `WebFetch`:
-   - URL: `https://api.sendgrid.com/v3/mail/send`
+3. POST to the Resend API using `WebFetch`:
+   - URL: `https://api.resend.com/emails`
    - Method: POST
-   - Headers: `Authorization: Bearer [SENDGRID_API_KEY]`, `Content-Type: application/json`
+   - Headers: `Authorization: Bearer [RESEND_API_KEY]`, `Content-Type: application/json`
    - Body:
 ```json
 {
-  "personalizations": [{"to": [{"email": "[TO_EMAIL]"}]}],
-  "from": {"email": "[FROM_EMAIL]", "name": "Freight Intel Brief"},
+  "from": "Freight Intel Brief <[FROM_EMAIL]>",
+  "to": ["[TO_EMAIL]"],
   "subject": "🚛 Freight Intel Brief — [DATE]",
-  "content": [
-    {"type": "text/html", "value": "[HTML_EMAIL_CONTENT]"},
-    {"type": "text/plain", "value": "[FULL_BRIEF_MARKDOWN]"}
-  ]
+  "html": "[HTML_EMAIL_CONTENT]",
+  "text": "[FULL_BRIEF_MARKDOWN]"
 }
 ```
 
-4. If the POST returns non-202 or fails, print the brief markdown to stdout as fallback. Do not retry.
+4. If the POST returns non-200 or fails, print the brief markdown to stdout as fallback. Do not retry.
 
 ---
 
