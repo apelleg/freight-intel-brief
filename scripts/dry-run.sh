@@ -7,9 +7,8 @@ set -euo pipefail
 # Usage: ./scripts/dry-run.sh [--model haiku|sonnet|opus] [--budget 1.00]
 
 SCRIPT_DIR="$(cd "$(dirname "$0")/.." && pwd)"
-CLAUDE="${HOME}/.local/bin/claude"
+CLAUDE="$(command -v claude)"
 MODEL="sonnet"
-BUDGET="1.00"
 DATE=$(date +%Y-%m-%d)
 TIME=$(date +%H:%M:%S)
 LOG_DIR="$SCRIPT_DIR/logs"
@@ -19,14 +18,13 @@ LOG_FILE="$LOG_DIR/$DATE-dry-run.log"
 while [[ $# -gt 0 ]]; do
     case $1 in
         --model) MODEL="$2"; shift 2 ;;
-        --budget) BUDGET="$2"; shift 2 ;;
         *) echo "Unknown option: $1"; exit 1 ;;
     esac
 done
 
 mkdir -p "$LOG_DIR"
 
-echo "[$DATE $TIME] Starting DRY RUN (model=$MODEL, budget=$BUDGET)..." | tee -a "$LOG_FILE"
+echo "[$DATE $TIME] Starting DRY RUN (model=$MODEL)..." | tee -a "$LOG_FILE"
 echo "  This will search the web and compile a briefing but NOT write to Notion." | tee -a "$LOG_FILE"
 echo "" | tee -a "$LOG_FILE"
 
@@ -45,7 +43,6 @@ unset CLAUDECODE 2>/dev/null || true
 "$CLAUDE" -p \
     --model "$MODEL" \
     --dangerously-skip-permissions \
-    --max-budget-usd "$BUDGET" \
     "$DRY_PROMPT" 2>&1 | tee -a "$LOG_FILE"
 
 EXIT_CODE=${PIPESTATUS[0]}
