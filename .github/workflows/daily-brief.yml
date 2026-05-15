@@ -6,7 +6,9 @@
 #
 # To enable: set these repo secrets in GitHub → Settings → Secrets & Variables → Actions:
 #   ANTHROPIC_API_KEY  — Anthropic API key (get from console.anthropic.com)
-#   SLACK_WEBHOOK      — Slack incoming webhook URL
+#   SENDGRID_API_KEY   — SendGrid API key for email delivery
+#   TO_EMAIL           — Recipient email address
+#   FROM_EMAIL         — Verified sender address (must be verified in SendGrid)
 #   NOTION_TOKEN       — (optional) Notion integration token
 #   NOTION_DATABASE_ID — (optional) Notion database ID for archiving
 
@@ -34,7 +36,9 @@ jobs:
     #   - name: Run briefing
     #     env:
     #       ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-    #       SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+    #       SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
+    #       TO_EMAIL: ${{ secrets.TO_EMAIL }}
+    #       FROM_EMAIL: ${{ secrets.FROM_EMAIL }}
     #       NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
     #       NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
     #     run: node scripts/brief-api.js   # Phase 4 will create this file

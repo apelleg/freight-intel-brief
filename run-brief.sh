@@ -6,7 +6,7 @@
 #
 # Usage:
 #   ./run-brief.sh              # run today's brief
-#   ./run-brief.sh --dry-run    # search + compile but skip Slack delivery
+#   ./run-brief.sh --dry-run    # search + compile but skip email delivery
 #   ./run-brief.sh --model sonnet  # override model (default: sonnet)
 
 set -euo pipefail
@@ -29,14 +29,16 @@ while [[ $# -gt 0 ]]; do
 Usage: ./run-brief.sh [OPTIONS]
 
 Options:
-  --dry-run        Search and compile brief but skip Slack delivery
+  --dry-run        Search and compile brief but skip email delivery
   --model MODEL    Claude model to use (default: sonnet)
   --help           Show this help
 
-Environment variables (optional):
-  SLACK_WEBHOOK    Slack incoming webhook URL for delivery
-  NOTION_TOKEN     Notion API token for archiving
-  NOTION_DATABASE_ID  Notion database to archive briefs into
+Environment variables:
+  SENDGRID_API_KEY    Required for email delivery (get from sendgrid.com)
+  TO_EMAIL            Recipient address (default: pelleg@gmail.com)
+  FROM_EMAIL          Verified sender address (default: pelleg@gmail.com)
+  NOTION_TOKEN        Optional — Notion API token for archiving
+  NOTION_DATABASE_ID  Optional — Notion database ID for archiving
 USAGE
       exit 0 ;;
     *) echo "Unknown option: $1" >&2; exit 1 ;;
@@ -53,7 +55,7 @@ PROMPT=$(cat "$SCRIPT_DIR/prompt.md")
 
 if $DRY_RUN; then
   PROMPT="DRY RUN MODE: Complete Steps 0, 1, and 2 normally (load memory, search, compile brief).
-For Step 3 (Slack delivery): skip the POST — print the brief to stdout instead.
+For Step 3 (email delivery): skip the SendGrid POST — print the brief markdown to stdout instead.
 For Step 4 (Notion): skip entirely.
 Still output the Step 5 memory block at the end.
 

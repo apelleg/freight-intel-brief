@@ -161,7 +161,7 @@ Sources: [linked list of all sources used, format: [Publication](URL)]
 ---
 
 ### Formatting Rules
-- Use the emoji headers exactly as shown — they aid scannability in Slack
+- Use the emoji headers exactly as shown — they render in email clients
 - Bold competitor names, metric labels, and CPO Lens topic headers
 - Keep "Regulatory Watch" section out entirely if nothing material changed today
 - Every bullet needs a date attribution: `(May 15, 2026 — FreightWaves)`
@@ -170,28 +170,73 @@ Sources: [linked list of all sources used, format: [Publication](URL)]
 
 ---
 
-## Step 3: Deliver to Slack
+## Step 3: Deliver via Email (SendGrid)
 
-Use the `WebFetch` tool to POST the brief to the Slack webhook.
+Send the brief as an HTML email via the SendGrid API.
 
-1. Read the `SLACK_WEBHOOK` environment variable. If it is not set or empty, print the brief to stdout and skip the POST — do not error out.
-2. Format the Slack payload as:
+1. Read these environment variables:
+   - `SENDGRID_API_KEY` — required. If not set, print the brief to stdout and skip sending.
+   - `TO_EMAIL` — recipient address. Default to `pelleg@gmail.com` if not set.
+   - `FROM_EMAIL` — verified sender address. Default to `pelleg@gmail.com` if not set.
+
+2. Convert the brief to HTML. Use this template — fill in `[DATE]` and `[BRIEF_BODY_HTML]`:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 680px; margin: 0 auto; padding: 24px; color: #1a1a1a; background: #ffffff; }
+  h2 { font-size: 22px; font-weight: 700; margin-bottom: 4px; }
+  .subtitle { color: #666; font-size: 13px; margin-bottom: 24px; }
+  h3 { font-size: 16px; font-weight: 600; margin-top: 28px; margin-bottom: 8px; border-bottom: 1px solid #e5e7eb; padding-bottom: 6px; }
+  ul { padding-left: 20px; margin: 8px 0; }
+  li { margin-bottom: 6px; line-height: 1.5; }
+  ol { padding-left: 20px; margin: 8px 0; }
+  a { color: #2563eb; }
+  .sources { font-size: 12px; color: #666; border-top: 1px solid #e5e7eb; margin-top: 28px; padding-top: 12px; }
+  strong { font-weight: 600; }
+  em { font-style: italic; color: #555; }
+</style>
+</head>
+<body>
+  <h2>🚛 Uber Freight Intel Brief — [DATE]</h2>
+  <p class="subtitle">Read time: ~4 minutes</p>
+  [BRIEF_BODY_HTML]
+</body>
+</html>
+```
+
+   Convert Markdown to HTML following these rules:
+   - `### Heading` → `<h3>Heading</h3>`
+   - `**bold**` → `<strong>bold</strong>`
+   - `*italic*` → `<em>italic</em>`
+   - `- bullet` → `<ul><li>bullet</li></ul>` (group consecutive bullets into one `<ul>`)
+   - `1. item` → `<ol><li>item</li></ol>`
+   - `[text](url)` → `<a href="url">text</a>`
+   - `---` dividers → `<hr style="border:none;border-top:1px solid #e5e7eb;margin:20px 0">`
+   - Sources list → wrap in `<div class="sources">...</div>`
+   - Blank lines between sections → `<br>`
+
+3. POST to the SendGrid API using `WebFetch`:
+   - URL: `https://api.sendgrid.com/v3/mail/send`
+   - Method: POST
+   - Headers: `Authorization: Bearer [SENDGRID_API_KEY]`, `Content-Type: application/json`
+   - Body:
 ```json
 {
-  "text": "🚛 *Uber Freight Intel Brief — [DATE]*",
-  "blocks": [
-    {
-      "type": "section",
-      "text": {
-        "type": "mrkdwn",
-        "text": "[FULL BRIEF TEXT HERE]"
-      }
-    }
+  "personalizations": [{"to": [{"email": "[TO_EMAIL]"}]}],
+  "from": {"email": "[FROM_EMAIL]", "name": "Freight Intel Brief"},
+  "subject": "🚛 Freight Intel Brief — [DATE]",
+  "content": [
+    {"type": "text/html", "value": "[HTML_EMAIL_CONTENT]"},
+    {"type": "text/plain", "value": "[FULL_BRIEF_MARKDOWN]"}
   ]
 }
 ```
-3. POST to the webhook URL with Content-Type: application/json.
-4. If the POST fails (non-200 response or network error), print the brief to stdout as fallback. Do not retry more than once.
+
+4. If the POST returns non-202 or fails, print the brief markdown to stdout as fallback. Do not retry.
 
 ---
 
