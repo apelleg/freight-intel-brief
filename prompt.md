@@ -149,23 +149,19 @@ Send the brief as an HTML email via the SendGrid API.
    - Blank lines between sections → `<br>`
    - **Inline citations** — every `(Date — Publication)` attribution within bullet text must be a clickable link to the source article: `(<a href="[article URL]">Date — Publication</a>)`. Use the actual article URL, not the publication homepage.
 
-3. Send the email using the included script (do NOT use WebFetch or raw curl — use this script only):
+3. Save the brief to the repo so GitHub Actions can deliver it via email:
 
-   - Write the full HTML email to `/tmp/brief.html` using the Write tool
-   - Write the full Markdown brief to `/tmp/brief.txt` using the Write tool
-   - Then run via Bash:
+   - Write the full HTML email to `briefs/[DATE].html` using the Write tool
+   - Write the full Markdown brief to `briefs/[DATE].md` using the Write tool
+   - Then commit and push both files:
    ```bash
-   python scripts/send_email.py \
-     --api-key "[RESEND_API_KEY]" \
-     --to "[TO_EMAIL]" \
-     --from "Freight Intel Brief <[FROM_EMAIL]>" \
-     --subject "🚛 Freight Intel Brief — [DATE]" \
-     --html-file /tmp/brief.html \
-     --text-file /tmp/brief.txt
+   git add briefs/[DATE].html briefs/[DATE].md
+   git commit -m "brief: add freight intel brief [DATE]"
+   git push
    ```
-   - If the script exits non-zero, print the brief markdown to stdout as fallback. Do not retry.
+   GitHub Actions will detect the new HTML file and send the email automatically.
 
-4. If email delivery fails, print the brief markdown to stdout as fallback. Do not retry.
+4. (Notion archive — skip if NOTION_TOKEN not set)
 
 ---
 

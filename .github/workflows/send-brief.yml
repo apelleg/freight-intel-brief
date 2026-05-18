@@ -1,0 +1,36 @@
+name: Send Freight Intel Brief
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'briefs/**.html'
+
+jobs:
+  send-email:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Find latest brief
+        id: brief
+        run: |
+          BRIEF_FILE=$(ls -t briefs/*.html | head -1)
+          DATE=$(basename "$BRIEF_FILE" .html)
+          echo "html_file=$BRIEF_FILE" >> $GITHUB_OUTPUT
+          echo "text_file=briefs/${DATE}.md" >> $GITHUB_OUTPUT
+          echo "date=$DATE" >> $GITHUB_OUTPUT
+          echo "Found brief: $BRIEF_FILE (date: $DATE)"
+
+      - name: Send email via Resend
+        run: |
+          python scripts/send_email.py \
+            --api-key "${{ secrets.RESEND_API_KEY }}" \
+            --to "pelleg@gmail.com" \
+            --from "Freight Intel Brief <onboarding@resend.dev>" \
+            --subject "🚛 Freight Intel Brief — ${{ steps.brief.outputs.date }}" \
+            --html-file "${{ steps.brief.outputs.html_file }}" \
+            --text-file "${{ steps.brief.outputs.text_file }}"
+
+      - name: Confirm
+        run: echo "Brief for ${{ steps.brief.outputs.date }} sent successfully."
