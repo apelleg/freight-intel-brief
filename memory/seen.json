@@ -131,7 +131,22 @@
     "https://www.thetrucker.com/trucking-news/truckload-authority/government-affairs/tca-capitol-recap-doj-independent-contractor-rule-fmcsas-motus-system-and-marijuana-reclassification",
     "https://www.chrobinson.com/en-us/about-us/newsroom/press-releases/2026/ch-robinson-statement-on-freight-safety-and-misleading-media-coverage/",
     "https://theloadstar.com/ch-robinson-statement-on-freight-safety-and-misleading-media-coverage/",
-    "https://finance.yahoo.com/economy/policy/articles/cbs-report-c-h-robinson-173918340.html"
+    "https://finance.yahoo.com/economy/policy/articles/cbs-report-c-h-robinson-173918340.html",
+    "https://www.freightwaves.com/news/truckload-volumes-and-spot-rates-hit-multi-year-highs",
+    "https://www.freightwaves.com/news/contract-premium-shrinks-as-truckload-market-reprices-higher",
+    "https://www.freightwaves.com/news/the-perfect-storm-why-freight-brokerages-face-a-wave-of-failures-in-2026",
+    "https://www.freightwaves.com/news/stifel-resumes-coverage-of-3pls",
+    "https://www.freightwaves.com/news/sonar-launches-carrier-safety-dashboard-right-on-time-for-international-roadcheck-week",
+    "https://www.freightwaves.com/news/sonar-sitrep-fleet-maintenance-behind-the-curb-post-freight-recession",
+    "https://www.freightwaves.com/news/mexico-freight-may-be-us-trucking-markets-biggest-stabilizer-in-2026-experts-say",
+    "https://www.prnewswire.com/news-releases/echo-global-logistics-announces-echoxborder-expanded-cross-border-solutions-for-us-and-mexico-302650215.html",
+    "https://ir.aurora.tech/news-events/press-releases/detail/130/mcleod-software-completes-integration-of-aurora-driver-ahead-of-schedule-unlocking-autonomous-capacity-for-carriers-nationwide",
+    "https://www.truckingdive.com/news/dol-independent-contractor-rule-2026/813221/",
+    "https://www.fleetowner.com/news/rates/news/55375793/spot-freight-market-strengthens-as-dry-van-reefer-and-flatbed-rates-post-sustained-gains-across-us-truckload-demand-trends",
+    "https://www.cleantrucking.com/survey-report/article/15824061/2026-sustainable-fleets-report-ai-fuels-and-policy-shift",
+    "https://finance.yahoo.com/news/perfect-storm-why-freight-brokerages-142408168.html",
+    "https://sourcealliance.net/contract-premium-shrinks-as-truckload-market-reprices-higher-2/",
+    "https://ir.aurora.tech/news-events/press-releases/detail/125/aurora-and-mcleod-software-deliver-industrys-first-transportation-management-system-for-self-driving-trucks"
   ],
   "seen_story_hashes": [
     "dat dry van load-to-truck ratio hits 9.0 week of may 3-9 2026 up from 8.3dat freight",
@@ -197,7 +212,19 @@
     "dueling approaches to ai in autonomous truckingfreightwaves",
     "us to lower china tariffs as part of trade war truce 90-day may 14 2026 30% china tariffsupply chain dive",
     "tca capitol recap doj independent contractor rule fmcsas motus system and marijuana reclassificationthe trucker",
-    "c.h. robinson statement on freight safety and misleading media coverage super ego chameleon carrierch robinson"
+    "c.h. robinson statement on freight safety and misleading media coverage super ego chameleon carrierch robinson",
+    "nti.usa hits new cycle high $2.89/mile dry van post-roadcheck week otri 13.4% midwest above 18% highestfreightwaves",
+    "contract premium shrinks as truckload spot market reprices higher $0.11/mile from $0.39 year ago shippefreightwaves",
+    "the perfect storm freight brokerages face wave of failures 2026 fmcsa $75k bond enforcement 8-10x leverfreightwaves",
+    "stifel resumes 3pl coverage bullish chr xpo echo landstar ulh secular structural capacity tightness assefreightwaves",
+    "sonar launches carrier safety dashboard may 12 2026 fmcsa csa crash inspection oos data roadcheck weekfreightwaves",
+    "sonar sitrep fleet maintenance behind the curb post-freight recession deferred maintenance backlog surfa freightwaves",
+    "mexico freight us trucking markets biggest stabilizer 2026 mexican exports to us up 15% 15.5% us importsfreightwaves",
+    "echo global announces echoxborder us-mexico cross-border customs brokerage drayage inventory jan 2026prnewswire",
+    "mcleod software completes aurora driver tms integration ahead of schedule 1200 carriers nationwide 2026aurora ir",
+    "dol moves to loosen independent contractor regulations owner-operators ic classification rule 2026 rescintrucking dive",
+    "fedex freight fdxf when-issued shares trading may 29 nyse debut june 1 $4.1b cash dividend 80.1% stakeholbusinesswire",
+    "48% fleet managers using ai route planning dispatch predictive maintenance 2026 sustainable fleets reportclean trucking"
   ],
   "last_30_days": [
     {
@@ -251,6 +278,23 @@
         "FreightWaves compared Aurora highway-stacking AV model vs Waabi door-to-door facility-to-facility approach including surface streets, with different implications for load types and commercial scaling",
         "US-China 90-day tariff truce starting May 14 2026 lowered tariffs to approximately 30%, triggering new retailer import front-loading rush before the window expires around August 12",
         "TCA Capitol recap flagged DOJ independent contractor rule finalization and federal marijuana reclassification as two near-term regulatory catalysts affecting owner-operator classification and CDL holder eligibility within 60-90 days"
+      ]
+    },
+    {
+      "date": "2026-05-18",
+      "stories": [
+        "SONAR NTI.USA hit $2.89/mile new cycle high (highest since 2022) post-Roadcheck week; OTRI reached 13.4% nationally with Midwest above 18%, strongest carrier leverage since early 2022",
+        "FreightWaves: contract-spot spread compressed to $0.11/mile from $0.39/mile a year ago as truckload spot market reprices higher, making shipper contract repricing inevitable in Q2-Q3 2026",
+        "FreightWaves The Perfect Storm analysis: mid-market freight brokers leveraged 8-10x with gross-margin covenant triggers face forced liquidation as spot rates outrun contract rates; FMCSA $75K bond floor (Jan 16, 2026) eliminating undercapitalized players",
+        "Stifel resumed 3PL coverage with bullish ratings on CHR, XPO, Echo, Landstar, ULH; calls capacity tightness secular and structural, projecting sustained broker pricing power into 2027",
+        "FreightWaves SONAR launched Carrier Safety Dashboard on May 12 2026 centralizing FMCSA and CSA crash, inspection, and OOS violation data as first post-SCOTUS systematic broker carrier vetting tool at scale",
+        "FreightWaves SONAR Sitrep: massive deferred maintenance backlog from 2022-2026 freight recession surfacing as carrier utilization rises, creating pockets of capacity disruption as market recovers",
+        "FreightWaves: Mexico's growing US import share (15.5%, up from 14.5%) and 15% export growth driven by nearshoring makes Mexico corridor a major and underserved freight market in 2026",
+        "Echo Global Logistics launched EchoXBorder in January 2026 for US-Mexico cross-border logistics with integrated customs brokerage, drayage, and inventory management capabilities",
+        "McLeod Software completed Aurora Driver TMS integration ahead of schedule in January 2026, rolling out to 1,200+ carriers in 2026 making AV truck dispatch as easy as human driver dispatch",
+        "DOL proposed new IC classification rule on Feb 27 2026 to loosen independent contractor standards (rescinding Biden 2024 6-factor test); if finalized Q3 2026 preserves owner-operator pool for freight carriers",
+        "FedEx Freight FDXF when-issued shares begin trading May 29 under FDXF WI ticker; NYSE debut June 1; shareholders of record May 15 receive 1 FDXF per 2 FDX shares; $4.1B cash dividend to FedEx parent",
+        "2026 State of Sustainable Fleets report: 48% of fleet managers now using AI for route planning, dispatch, and predictive maintenance; carrier-side AI closing tech gap with 3PL platforms"
       ]
     }
   ]
