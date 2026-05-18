@@ -118,7 +118,20 @@
     "https://www.freightwaves.com/news/spot-to-contract-rate-spread-contraction-tests-3pls",
     "https://www.uberfreight.com/en-US/newsroom/uber-freight-appoints-rebecca-tinucci-as-chief-executive-officer",
     "https://www.dcvelocity.com/supply-chain/non-asset-3pl/freight-brokers/uber-freight-picks-former-uber-and-tesla-exec-as-new-ceo",
-    "https://www.truckinginfo.com/10252264/beyond-the-spot-rate-spike-what-freight-capacity-and-2026-look-like-for-trucking"
+    "https://www.truckinginfo.com/10252264/beyond-the-spot-rate-spike-what-freight-capacity-and-2026-look-like-for-trucking",
+    "https://www.dat.com/company/news-events/news-releases/dat-higher-fuel-costs-lifted-april-truckload-rates-freight-volumes-eased",
+    "https://www.globenewswire.com/news-release/2026/05/18/3296773/0/en/DAT-Higher-fuel-costs-lifted-April-truckload-rates-freight-volumes-eased.html",
+    "https://www.freightwaves.com/news/after-cbs-report-c-h-robinson-seeks-to-deflect-safety-responsibility-to-fmcsa",
+    "https://www.overdriveonline.com/regulations/article/15824551/ch-robinson-gave-thousands-of-loads-to-doublebrokering-chameleon-carrier-court-docs",
+    "https://www.overdriveonline.com/regulations/article/15823215/tia-steps-into-chameleon-carrier-firestorm-around-super-ego-ch-robinson",
+    "https://www.overdriveonline.com/regulations/article/15822699/ch-robinson-super-ego-chalk-up-chameleon-carrier-outrage-to-a-big-misunderstanding",
+    "https://www.freightwaves.com/news/nobody-is-asking-the-hard-questions-about-what-happens-when-an-autonomous-truck-breaks-down-on-the-highway-at-2-am-let-us-start",
+    "https://www.freightwaves.com/news/dueling-approaches-to-ai-in-autonomous-trucking",
+    "https://www.supplychaindive.com/news/us-china-trade-truce-donald-trump-xi-jinping-apec/804233/",
+    "https://www.thetrucker.com/trucking-news/truckload-authority/government-affairs/tca-capitol-recap-doj-independent-contractor-rule-fmcsas-motus-system-and-marijuana-reclassification",
+    "https://www.chrobinson.com/en-us/about-us/newsroom/press-releases/2026/ch-robinson-statement-on-freight-safety-and-misleading-media-coverage/",
+    "https://theloadstar.com/ch-robinson-statement-on-freight-safety-and-misleading-media-coverage/",
+    "https://finance.yahoo.com/economy/policy/articles/cbs-report-c-h-robinson-173918340.html"
   ],
   "seen_story_hashes": [
     "dat dry van load-to-truck ratio hits 9.0 week of may 3-9 2026 up from 8.3dat freight",
@@ -175,7 +188,16 @@
     "stg acquires carrier logistics inc april 2026 ai-native ltl platform agentic dispatch routing terminal optimizationtrucking dive",
     "intermodal spot rates $1.39/mile 50% below trucking $2.80/mile j.b. hunt projects high single digit double digit contract increasesfreightwaves",
     "aurora 1000-mile fort worth phoenix driverless route 15 hours half legal hos window 30 trucks 10 fully driverless 200 vehicles year-end 2026techspot",
-    "section 301 tariff cliff july 24 2026 replace section 122 10% chinese goods import front-loading 5-week surge window into tight marketdimerco"
+    "section 301 tariff cliff july 24 2026 replace section 122 10% chinese goods import front-loading 5-week surge window into tight marketdimerco",
+    "dat higher fuel costs lifted april truckload rates freight volumes eased van 2.67/mile reefer 3.11/mile diesel 5.40dat",
+    "after cbs report c.h. robinson seeks to deflect safety responsibility to fmcsa super ego chameleon carriersfreightwaves",
+    "c.h. robinson gave thousands of loads to double-brokering chameleon carrier court docs blf truck transportation thoni huembesoverdrive",
+    "tia steps into chameleon carrier firestorm around super ego c.h. robinsonoverdrive",
+    "nobody is asking the hard questions about what happens when an autonomous truck breaks down on the highway at 2 am let us startfreightwaves",
+    "dueling approaches to ai in autonomous truckingfreightwaves",
+    "us to lower china tariffs as part of trade war truce 90-day may 14 2026 30% china tariffsupply chain dive",
+    "tca capitol recap doj independent contractor rule fmcsas motus system and marijuana reclassificationthe trucker",
+    "c.h. robinson statement on freight safety and misleading media coverage super ego chameleon carrierch robinson"
   ],
   "last_30_days": [
     {
@@ -220,7 +242,15 @@
         "STG PE firm acquired Carrier Logistics Inc. in April 2026 to build AI-native LTL platform with agentic dispatch, real-time routing, and terminal optimization",
         "Domestic intermodal spot rates at $1.39/mile vs trucking $2.80/mile represent a closing 50% arbitrage window as J.B. Hunt projects imminent intermodal contract rate increases and volumes grow 12% YoY",
         "Aurora completed 1,000-mile Fort Worth-Phoenix driverless freight run in approximately 15 hours, half the time legally allowed under HOS rules, with fleet targeting 200+ trucks by year-end 2026",
-        "Section 301 tariff cliff on July 24 2026 replacing Section 122 10% Chinese goods tariffs creates 5-week import front-loading surge window driving elevated drayage and truckload demand into an already-tight market"
+        "Section 301 tariff cliff on July 24 2026 replacing Section 122 10% Chinese goods tariffs creates 5-week import front-loading surge window driving elevated drayage and truckload demand into an already-tight market",
+        "DAT published April 2026 monthly report on May 18 showing van rates $2.67/mile and reefer $3.11/mile, with gains almost entirely fuel-driven (diesel $5.40/gal highest since July 2022) as actual load volumes fell across all equipment types",
+        "CBS 60 Minutes investigation revealed C.H. Robinson gave thousands of loads to Super Ego chameleon carrier network with 15,000 safety violations and 500 crashes, with court docs showing CHR may have instructed a shut-down carrier to re-register",
+        "C.H. Robinson deflected carrier safety accountability to FMCSA post-CBS investigation, arguing federal carrier licensing absolves brokers of responsibility following Supreme Court broker liability ruling",
+        "TIA issued statement defending brokers in the Super Ego chameleon carrier controversy while court documents deepened evidence of CHR systematic relationship with unsafe carriers",
+        "FreightWaves analysis highlighted unresolved AV operations gap: no company has publicly answered what happens when autonomous trucks break down at 2am on highways, creating unresolved liability and roadside response issues",
+        "FreightWaves compared Aurora highway-stacking AV model vs Waabi door-to-door facility-to-facility approach including surface streets, with different implications for load types and commercial scaling",
+        "US-China 90-day tariff truce starting May 14 2026 lowered tariffs to approximately 30%, triggering new retailer import front-loading rush before the window expires around August 12",
+        "TCA Capitol recap flagged DOJ independent contractor rule finalization and federal marijuana reclassification as two near-term regulatory catalysts affecting owner-operator classification and CDL holder eligibility within 60-90 days"
       ]
     }
   ]
