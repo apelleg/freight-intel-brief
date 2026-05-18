@@ -80,7 +80,24 @@
     "https://www.ccjdigital.com/business/article/15821698/fedex-freight-details-spinoff-strategy",
     "https://ir.fedexfreight.com/news-events/press-releases/detail/180/fedex-freight-hosts-inaugural-investor-day-ahead-of-planned-spinoff-from-fedex",
     "https://www.freightwaves.com/news/rxo-launches-middle-mile-solutions",
-    "https://rxo.com/news/rxo-launches-comprehensive-middle-mile-solutions-streamlining-logistics-from-dock-to-door/"
+    "https://rxo.com/news/rxo-launches-comprehensive-middle-mile-solutions-streamlining-logistics-from-dock-to-door/",
+    "https://www.thetrucker.com/trucking-news/business/ftr-truckstop-total-spot-rates-hit-all-time-high-in-latest-week",
+    "https://www.overdriveonline.com/business/article/15824963/roadcheck-rates-are-in-with-spot-market-on-record-run",
+    "https://www.freightwaves.com/news/more-than-5100-freight-related-layoffs-hit-us-supply-chain-sector",
+    "https://www.freightwaves.com/news/as-the-market-turns-broker-stress-tests-are-already-underway",
+    "https://www.freightwaves.com/news/beyond-the-highway-waabis-bet-on-door-to-door-autonomy",
+    "https://fr8technologies.com/press-release/freight-technologies-formalizes-agentic-ai-across-the-organization-to-scale-software-first-transformation/",
+    "https://www.fmcsa.dot.gov/newsroom/press-releases",
+    "https://innovativelogisticsgroup.io/business-fundamentals/fmcsa-second-broker-transparency-rulemaking-lands-in-may-2026-with-48-hour-records-mandate-how-small-carriers-use-the-new-49-cfr-371-power-to-recover-margin/",
+    "https://www.prnewswire.com/news-releases/freshrealm-inc-reaches-agreement-with-key-customer-and-initiates-chapter-11-process-to-support-ongoing-operations-and-evaluate-strategic-alternatives-302754844.html",
+    "https://finance.yahoo.com/economy/articles/more-5-100-freight-related-110000455.html",
+    "https://investor.werner.com/news-and-events/press-releases/news-details/2026/Werner-Acquires-FirstFleet-Inc--Expanding-Dedicated-Market-Leadership/default.aspx",
+    "https://www.truckingdive.com/news/werner-enterprises-mergers-acquisitions-firstfleet/810701/",
+    "https://ir.aurora.tech/news-events/press-releases/detail/132/aurora-triples-driverless-network-to-10-routes-and-prepares-to-expand-across-u-s-sun-belt",
+    "https://perishablenews.com/retailfoodservice/freshrealm-inc-initiates-chapter-11-process/",
+    "https://www.thestreet.com/employment/major-fresh-meal-kit-supplier-files-bankruptcy-plans-800-plus-job-cuts",
+    "https://spot.ftrintel.com/current",
+    "https://www.overdriveonline.com/business/article/15824444/spot-rates-hit-alltime-high-as-diesel-cost-surges-again"
   ],
   "seen_story_hashes": [
     "dat dry van load-to-truck ratio hits 9.0 week of may 3-9 2026 up from 8.3dat freight",
@@ -122,7 +139,15 @@
     "gxo logistics q1 2026 raises 2026 outlook north america pipeline 35% sequential growth 20000 robots humanoid pilots californiafreightwaves",
     "fedex freight board approves spinoff may 12 2026 fdxf nyse june 1 9b revenue 12% operating marginbusinesswire",
     "dat dry van 2.37/mile flatbed 3.05/mile reefer load-to-truck 16.4 truck posts down 5% cvsa roadcheck week may 2026dat",
-    "83% freight logistics leaders operate in reactive mode system fragmentation manual validation industry studytalking logistics"
+    "83% freight logistics leaders operate in reactive mode system fragmentation manual validation industry studytalking logistics",
+    "ftr truckstop total spot rates all-time high reefer largest wow spike ever dry van near-record roadcheck week may 15 2026thetrucker.com",
+    "roadcheck rates in with spot market on record run market demand index 5-year high load volume 21% wow overdrive",
+    "more than 5100 freight-related layoffs hit us supply chain sector freshrealm geodis ryder dsv may 18 2026freightwaves",
+    "as the market turns broker stress tests already underway working capital strain carrier rates firming may 2026freightwaves",
+    "beyond the highway waabi's bet on door-to-door autonomy facility-to-facility surface streets volvo 1b 2026freightwaves",
+    "freight technologies formalizes agentic ai transformation framework 15x domestic 5x cross-border productivity gainsfr8tech",
+    "fmcsa second broker transparency rulemaking may 2026 48-hour records mandate rate confirmations waiver clausesinnovativelogisticsgroup",
+    "freshrealm chapter 11 bankruptcy april 27 2026 tracy ca plant closing june 27 blue apron meal kit supplierprnewswire"
   ],
   "last_30_days": [
     {
@@ -154,7 +179,13 @@
         "GXO Logistics raised its 2026 outlook after strong Q1, citing 35% sequential North America pipeline growth, 20,000+ robots deployed globally, and humanoid robot pilots underway in California",
         "FedEx Freight board approved spinoff on May 12 2026; $9B LTL carrier becomes independent FDXF on NYSE June 1 with 4-6% revenue growth target and 12% operating margin",
         "DAT spot rates: dry van $2.37/mile up ~26% YoY, flatbed $3.05/mile near multi-year high; reefer load-to-truck 16.4 (up from 14.5); CH Robinson raised dry van cost/mile forecast to +23% YoY",
-        "Industry study found 83% of freight and logistics leaders operate in reactive mode due to system fragmentation despite widespread AI tool adoption"
+        "Industry study found 83% of freight and logistics leaders operate in reactive mode due to system fragmentation despite widespread AI tool adoption",
+        "Post-Roadcheck week ending May 15 saw reefer spot rates post their largest week-over-week spike ever recorded and dry van near-record, with total load activity +21% WoW and Market Demand Index at 5-year high",
+        "5,100+ freight-related layoffs hit US supply chain on May 18 as FreshRealm filed Chapter 11, GEODIS, Ryder, and DSV each shed workers in multiple states after losing customer contracts",
+        "FreightWaves found mid-market 3PL brokers under working capital strain as carrier rates firm faster than shipper contracts, creating shakeout of static-pricing brokers amid peak market tightness",
+        "Waabi differentiating from Aurora with door-to-door facility-to-facility AV capability via surface street navigation, targeting driver-out 2026 with $1B raised January 2026 and Volvo manufacturing partner",
+        "Fr8Technologies formalized agentic AI transformation framework reporting 15x domestic and 5x cross-border productivity gains, signaling AI-native platforms eliminating manual freight broker work at scale",
+        "FMCSA published second broker transparency NPRM with 48-hour electronic records delivery mandate covering rate confirmations and shipper invoices, invalidating pre-signed waiver clauses in broker-carrier agreements"
       ]
     }
   ]
