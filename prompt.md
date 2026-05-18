@@ -149,22 +149,23 @@ Send the brief as an HTML email via the SendGrid API.
    - Blank lines between sections → `<br>`
    - **Inline citations** — every `(Date — Publication)` attribution within bullet text must be a clickable link to the source article: `(<a href="[article URL]">Date — Publication</a>)`. Use the actual article URL, not the publication homepage.
 
-3. POST to the Resend API using `WebFetch`:
-   - URL: `https://api.resend.com/emails`
-   - Method: POST
-   - Headers: `Authorization: Bearer [RESEND_API_KEY]`, `Content-Type: application/json`
-   - Body:
-```json
-{
-  "from": "Freight Intel Brief <[FROM_EMAIL]>",
-  "to": ["[TO_EMAIL]"],
-  "subject": "🚛 Freight Intel Brief — [DATE]",
-  "html": "[HTML_EMAIL_CONTENT]",
-  "text": "[FULL_BRIEF_MARKDOWN]"
-}
-```
+3. Send the email using the included script (do NOT use WebFetch or raw curl — use this script only):
 
-4. If the POST returns non-200 or fails, print the brief markdown to stdout as fallback. Do not retry.
+   - Write the full HTML email to `/tmp/brief.html` using the Write tool
+   - Write the full Markdown brief to `/tmp/brief.txt` using the Write tool
+   - Then run via Bash:
+   ```bash
+   python scripts/send_email.py \
+     --api-key "[RESEND_API_KEY]" \
+     --to "[TO_EMAIL]" \
+     --from "Freight Intel Brief <[FROM_EMAIL]>" \
+     --subject "🚛 Freight Intel Brief — [DATE]" \
+     --html-file /tmp/brief.html \
+     --text-file /tmp/brief.txt
+   ```
+   - If the script exits non-zero, print the brief markdown to stdout as fallback. Do not retry.
+
+4. If email delivery fails, print the brief markdown to stdout as fallback. Do not retry.
 
 ---
 
