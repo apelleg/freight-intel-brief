@@ -52,7 +52,35 @@
     "https://www.dsv.com/en/about-dsv/press/news/com/2026/05/volvo-autonomous-solutions-and-dsv-announce-autonomous-freight-operations-in-texas-usa",
     "https://www.act-news.com/news/autonomous-trucking-leaders-say-virtual-drivers-are-ready-for-scale/",
     "https://www.fleetequipmentmag.com/q2-2026-freight-market-update/",
-    "https://www.thetrucker.com/trucking-news/business/dat-truckload-capacity-pulls-back-driving-spot-rates-higher"
+    "https://www.thetrucker.com/trucking-news/business/dat-truckload-capacity-pulls-back-driving-spot-rates-higher",
+    "https://www.scotusblog.com/2026/05/court-rules-freight-brokers-can-face-negligent-hiring-suits-under-state-law/",
+    "https://www.freightwaves.com/news/the-supreme-court-just-told-every-freight-broker-that-they-can-be-sued",
+    "https://techcrunch.com/2026/05/04/amazon-opens-up-its-global-logistics-network-to-all-businesses/",
+    "https://cdllife.com/2026/amazon-supply-chain-services-launches-giving-all-businesses-access-to-massive-logistics-network/",
+    "https://roboticsandautomationnews.com/2026/05/09/kodiak-and-roehl-transport-begin-autonomous-freight-operations-between-dallas-and-houston/101340/",
+    "https://kodiak.ai/news/roehl-transport-autonomous-freight",
+    "https://newsroom.fedex.com/newsroom/global-english/fedex-freight-hosts-inaugural-investor-day-ahead-of-planned-spinoff-from-fedex",
+    "https://www.businesswire.com/news/home/20260512056825/en/FedEx-Board-of-Directors-Approves-Spin-off-of-FedEx-Freight",
+    "https://finance.yahoo.com/economy/policy/articles/phantom-capacity-tightens-us-mexico-110000150.html",
+    "https://www.freightwaves.com/news/uber-freight-enters-last-mile-through-better-trucks-partnership",
+    "https://www.supplychaindive.com/news/uber-freight-better-trucks-investment-stake-partnership/805331/",
+    "https://www.freightwaves.com/news/gxo-sees-demand-tailwinds-across-north-america-as-automation-drive-intensifies",
+    "https://www.freightwaves.com/news/gxo-raises-2026-outlook-dismisses-amazon-logistics-threat",
+    "https://talkinglogistics.com/2026/05/15/above-the-fold-supply-chain-logistics-news-may-15-2026/",
+    "https://www.ccjdigital.com/regulations/safety-compliance/article/15825179/high-court-holds-brokers-accountable-for-hiring-unsafe-carriers",
+    "https://landline.media/supreme-court-just-raised-the-stakes-for-freight-brokers-hiring-unsafe-carriers/",
+    "https://www.freightwaves.com/news/white-paper-state-of-the-industry-may-2026",
+    "https://www.chrobinson.com/en-us/resources/insights-and-advisories/north-america-freight-insights/may-2026-freight-market-update/na-truckload/",
+    "https://www.thetrucker.com/trucking-news/business/dat-spot-capacity-tightens-further-in-latest-week",
+    "https://summar.com/freight-market-update-may-2026/",
+    "https://investors.gxo.com/news-releases/news-release-details/gxo-reports-first-quarter-2026-results/",
+    "https://www.logisticsmgmt.com/article/gxo_ceo_kelleher_points_to_ai_automation_and_organic_growth_as_key_drivers_for_strong_q1_results",
+    "https://www.cottinghambutler.com/post/the-supreme-court-s-montgomery-decision-what-brokers-carriers-and-shippers-should-know",
+    "https://www.mcfarlanelaw.com/supreme-court-broker-liability-montgomery-2026/",
+    "https://www.ccjdigital.com/business/article/15821698/fedex-freight-details-spinoff-strategy",
+    "https://ir.fedexfreight.com/news-events/press-releases/detail/180/fedex-freight-hosts-inaugural-investor-day-ahead-of-planned-spinoff-from-fedex",
+    "https://www.freightwaves.com/news/rxo-launches-middle-mile-solutions",
+    "https://rxo.com/news/rxo-launches-comprehensive-middle-mile-solutions-streamlining-logistics-from-dock-to-door/"
   ],
   "seen_story_hashes": [
     "dat dry van load-to-truck ratio hits 9.0 week of may 3-9 2026 up from 8.3dat freight",
@@ -87,7 +115,14 @@
     "california lifts ban on heavy-duty autonomous vehicles av truck regulationsplanetizen",
     "fmcsa motus carrier registration portal launched may 14 2026fmcsa",
     "load board busy shippers panicking tariff front-loading not organic freight recoveryfreightwaves",
-    "volvo dsv aurora commercial autonomous freight dallas-houston may 13 2026 safety driver driverless h2aurora"
+    "volvo dsv aurora commercial autonomous freight dallas-houston may 13 2026 safety driver driverless h2aurora",
+    "scotus 9-0 montgomery v caribe transport ii freight brokers liable negligent carrier hiring state law may 14 2026scotusblog",
+    "amazon supply chain services launches multimodal freight warehousing last-mile all businesses p&g 3m lands end may 4 2026techcrunch",
+    "kodiak ai roehl transport autonomous freight dallas-houston four times roundtrip per week driver-out end 2026robotics automation news",
+    "gxo logistics q1 2026 raises 2026 outlook north america pipeline 35% sequential growth 20000 robots humanoid pilots californiafreightwaves",
+    "fedex freight board approves spinoff may 12 2026 fdxf nyse june 1 9b revenue 12% operating marginbusinesswire",
+    "dat dry van 2.37/mile flatbed 3.05/mile reefer load-to-truck 16.4 truck posts down 5% cvsa roadcheck week may 2026dat",
+    "83% freight logistics leaders operate in reactive mode system fragmentation manual validation industry studytalking logistics"
   ],
   "last_30_days": [
     {
@@ -108,6 +143,18 @@
         "FTR Trucking Conditions Index hit 4-year high in February 2026; diesel at $5.64/gal +54% YoY creating carrier cost headwind in May 2026",
         "FreightWaves analysis confirmed May 2026 load board surge is tariff front-loading by shippers pulling inventory forward, not structural demand recovery",
         "FMCSA Motus carrier registration portal launched May 14 2026 replacing legacy system with improved fraud prevention and streamlined onboarding"
+      ]
+    },
+    {
+      "date": "2026-05-18",
+      "stories": [
+        "Supreme Court ruled 9-0 in Montgomery v. Caribe Transport II on May 14 2026 that freight brokers can be sued under state law for negligent carrier hiring, stripping federal preemption shield brokers relied on for decades",
+        "Amazon launched Supply Chain Services (ASCS) on May 4 2026, opening its multimodal freight, warehousing, and last-mile network to all businesses including P&G, 3M, Lands' End, and American Eagle Outfitters",
+        "Kodiak AI began autonomous freight hauling with Roehl Transport on Dallas-Houston corridor (4x roundtrip/week) in May 2026, targeting driver-out by end of 2026 and commercial scale 2027",
+        "GXO Logistics raised its 2026 outlook after strong Q1, citing 35% sequential North America pipeline growth, 20,000+ robots deployed globally, and humanoid robot pilots underway in California",
+        "FedEx Freight board approved spinoff on May 12 2026; $9B LTL carrier becomes independent FDXF on NYSE June 1 with 4-6% revenue growth target and 12% operating margin",
+        "DAT spot rates: dry van $2.37/mile up ~26% YoY, flatbed $3.05/mile near multi-year high; reefer load-to-truck 16.4 (up from 14.5); CH Robinson raised dry van cost/mile forecast to +23% YoY",
+        "Industry study found 83% of freight and logistics leaders operate in reactive mode due to system fragmentation despite widespread AI tool adoption"
       ]
     }
   ]
