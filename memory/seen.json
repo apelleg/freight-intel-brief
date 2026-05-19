@@ -146,7 +146,38 @@
     "https://www.cleantrucking.com/survey-report/article/15824061/2026-sustainable-fleets-report-ai-fuels-and-policy-shift",
     "https://finance.yahoo.com/news/perfect-storm-why-freight-brokerages-142408168.html",
     "https://sourcealliance.net/contract-premium-shrinks-as-truckload-market-reprices-higher-2/",
-    "https://ir.aurora.tech/news-events/press-releases/detail/125/aurora-and-mcleod-software-deliver-industrys-first-transportation-management-system-for-self-driving-trucks"
+    "https://ir.aurora.tech/news-events/press-releases/detail/125/aurora-and-mcleod-software-deliver-industrys-first-transportation-management-system-for-self-driving-trucks",
+    "https://www.cnbc.com/2026/05/19/waabi-cnbc-disruptor-50-ranking.html",
+    "https://www.cnbc.com/2026/05/19/2026-cnbc-disruptor-50-rankings-full-list-companies.html",
+    "https://www.cnbc.com/2026/05/19/2026-cnbc-disruptor-50-list-how-we-chose-this-years-companies.html",
+    "https://www.businesswire.com/news/home/20260504771246/en/Loop-Launches-the-Logistics-Data-Platform-Powered-by-New-AI-Capabilities",
+    "https://www.freightwaves.com/news/loop-logistics-data-platform",
+    "https://forum.freightwaves.com/t/loop-launches-new-platform-as-intelligence-layer-for-entire-supply-chain/9606",
+    "https://lasvegassun.com/news/2026/may/04/loop-launches-the-logistics-data-platform-powered-/",
+    "https://tech.yahoo.com/ai/meta-ai/articles/loop-launches-platform-intelligence-layer-151345716.html",
+    "https://www.loop.com/",
+    "https://www.morningstar.com/news/business-wire/20260504771246/loop-launches-the-logistics-data-platform-powered-by-new-ai-capabilities",
+    "https://www.indexbox.io/blog/ltl-rates-surge-as-truckload-market-tightens-in-early-2026/",
+    "https://www.freightwaves.com/news/less-than-truckload-rates-have-sharp-response-to-broader-market-turn",
+    "https://www.truckingdive.com/news/data-center-construction-flatbed-spot-rates-dat-2026/814431/",
+    "https://www.dat.com/blog/flatbed-report-data-center-boom-fuels-flatbed-truckload-demand",
+    "https://rxo.com/news/",
+    "https://www.freightwaves.com/news/ltls-hold-pricing-line-old-dominion-announces-4-9-gri",
+    "https://ir.odfl.com/press-releases/detail/147/old-dominion-freight-line-announces-general-rate-increase",
+    "https://www.odfl.com/us/en/about/ODFL-news/ODFL-press-releases/2026-General-Rate-Increase.html",
+    "https://www.truckingdive.com/news/ltl-mid-quarter-2026-q1-update-arcbest-old-dominion-saia-xpo/814193/",
+    "https://www.jbhunt.com/our-company/newsroom/2026/04/q1-2026-earnings",
+    "https://www.ccjdigital.com/business/article/15822975/jb-hunt-q1-2026-record-intermodal-volume-earnings-growth",
+    "https://freightflowadvisor.substack.com/p/jb-hunt-q1-2026-the-freight-cycle",
+    "https://gosonar.com/pricing-power-index/freight-market-begins-to-normalize-as-capacity-returns",
+    "https://www.constructionowners.com/news/data-center-boom-pushes-u-s-construction-backlog-higher-as-large-contractors-pull-ahead",
+    "https://www.cnbc.com/2026/01/28/autonomous-startup-waabi-raises-750-million-to-expand-into-robotaxis.html",
+    "https://techcrunch.com/2026/01/28/waabi-raises-1b-and-expands-into-robotaxis-with-uber/",
+    "https://www.freightwaves.com/news/uber-freight-sees-u-s-mexico-trade-driving-freight-rebound-into-2026",
+    "https://www.freightwaves.com/news/uber-freight-outlook-flags-rising-spot-rates-cross-border-disruptions",
+    "https://finance.yahoo.com/news/ltls-hold-pricing-line-old-165842916.html",
+    "https://www.globaltrademag.com/ltl-rates-surge-as-truckload-market-tightens-in-early-2026/",
+    "https://www.logisticsmgmt.com/article/fedex_and_advent_group_agrees_to_acquire_inpost_in_9.2_billion_deal"
   ],
   "seen_story_hashes": [
     "dat dry van load-to-truck ratio hits 9.0 week of may 3-9 2026 up from 8.3dat freight",
@@ -224,7 +255,14 @@
     "mcleod software completes aurora driver tms integration ahead of schedule 1200 carriers nationwide 2026aurora ir",
     "dol moves to loosen independent contractor regulations owner-operators ic classification rule 2026 rescintrucking dive",
     "fedex freight fdxf when-issued shares trading may 29 nyse debut june 1 $4.1b cash dividend 80.1% stakeholbusinesswire",
-    "48% fleet managers using ai route planning dispatch predictive maintenance 2026 sustainable fleets reportclean trucking"
+    "48% fleet managers using ai route planning dispatch predictive maintenance 2026 sustainable fleets reportclean trucking",
+    "waabi named #27 cnbc 2026 disruptor 50 uber $250m 25000 autonomous vehicles texas commercial routescnbc",
+    "loop launches logistics data platform ldp $95m series c valor equity founders fund ai-native may 4 2026businesswire",
+    "ltl rates new bids 12.5% higher yoy 29% above may 2021 strongest upward pressure since 2023 carrier exitindexbox/sonar",
+    "old dominion announces 4.9% gri ltl general rate increase 2026freightwaves",
+    "rxo q1 2026 results analyst upgrades goldman sachs $18 truist $26 ubs $22 freight recovery positioningrxo",
+    "data center construction $41b/year +200% since chatgpt flatbed spot $3.09/mile march 2026 sun belt av overlapdat",
+    "jb hunt q1 2026 intermodal record volume 55% operating income $3.06b revenue contract rate low single digit h2jbhunt"
   ],
   "last_30_days": [
     {
@@ -295,6 +333,19 @@
         "DOL proposed new IC classification rule on Feb 27 2026 to loosen independent contractor standards (rescinding Biden 2024 6-factor test); if finalized Q3 2026 preserves owner-operator pool for freight carriers",
         "FedEx Freight FDXF when-issued shares begin trading May 29 under FDXF WI ticker; NYSE debut June 1; shareholders of record May 15 receive 1 FDXF per 2 FDX shares; $4.1B cash dividend to FedEx parent",
         "2026 State of Sustainable Fleets report: 48% of fleet managers now using AI for route planning, dispatch, and predictive maintenance; carrier-side AI closing tech gap with 3PL platforms"
+      ]
+    },
+    {
+      "date": "2026-05-19",
+      "stories": [
+        "Waabi ranked #27 on CNBC 2026 Disruptor 50 (May 19); Uber committed $250M for 25,000 AV vehicle deployment while Waabi's trucks serve Uber Freight commercially in Texas with driver-out Southwest target by year-end 2026",
+        "Loop launched AI-native Logistics Data Platform May 4 with $95M Series C from Valor Equity, Founders Fund, J.P. Morgan; positions as autonomous supply chain OS for enterprise shippers competing with Uber Freight's intelligence layer",
+        "LTL rates hit 12.5% YoY above prior year and 29% above May 2021 — strongest upward pressure since 2023 national carrier exit — as shipment weights rise 11% YTD from truckload market overflow",
+        "Old Dominion announced 4.9% GRI reinforcing LTL pricing power cycle alongside ABF 5.9% and Saia 5.9% GRIs as multi-mode rate inflation converges across TL, LTL, and intermodal",
+        "RXO analyst upgrades post-Q1 2026: Goldman Sachs raised target to $18, Truist to $26, UBS to $22 — asset-light scale brokers receiving public market credit in tightening freight cycle",
+        "Data center construction at $41B/year pace (+200% since ChatGPT) driving flatbed spot to $3.09/mile in March 2026, demand concentrated in Sun Belt AV corridors shared by Aurora, Waabi, and Kodiak",
+        "J.B. Hunt Q1 2026 record intermodal volume drove 55% of company operating income; intermodal contract rate increases expected in low single digits H2 2026 as trucking-intermodal arbitrage closes",
+        "FedEx Freight FDXF when-issued trading begins May 29, NYSE debut June 1 as independent $9B LTL carrier focused on pricing power in tightening multi-mode rate environment"
       ]
     }
   ]
