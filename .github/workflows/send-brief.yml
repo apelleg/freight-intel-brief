@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - 'briefs/**.html'
+  workflow_dispatch:
 
 jobs:
   send-email:
