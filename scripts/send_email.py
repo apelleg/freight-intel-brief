@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""Send the freight intel brief via Resend API.
+"""Send the freight intel brief via Resend SMTP.
+
+Uses SMTP (port 465) instead of the Resend HTTP API to avoid Cloudflare WAF
+blocks that affect GitHub Actions runner IP ranges.
 
 Usage:
     python scripts/send_email.py \
@@ -11,10 +14,10 @@ Usage:
         --text-file /tmp/brief.txt
 """
 import argparse
-import json
+import smtplib
 import sys
-import urllib.error
-import urllib.request
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
 
 
 def main():
@@ -32,30 +35,20 @@ def main():
     with open(args.text_file, "r", encoding="utf-8") as f:
         text = f.read()
 
-    payload = {
-        "from": args.from_addr,
-        "to": [args.to],
-        "subject": args.subject,
-        "html": html,
-        "text": text,
-    }
-
-    data = json.dumps(payload).encode("utf-8")
-    req = urllib.request.Request(
-        "https://api.resend.com/emails",
-        data=data,
-        headers={
-            "Authorization": f"Bearer {args.api_key}",
-            "Content-Type": "application/json",
-        },
-    )
+    msg = MIMEMultipart("alternative")
+    msg["Subject"] = args.subject
+    msg["From"] = args.from_addr
+    msg["To"] = args.to
+    msg.attach(MIMEText(text, "plain", "utf-8"))
+    msg.attach(MIMEText(html, "html", "utf-8"))
 
     try:
-        resp = urllib.request.urlopen(req)
-        print(f"Email sent OK: {resp.status} {resp.read().decode()}")
-    except urllib.error.HTTPError as e:
-        body = e.read().decode()
-        print(f"Email failed: {e.code} {body}", file=sys.stderr)
+        with smtplib.SMTP_SSL("smtp.resend.com", 465) as smtp:
+            smtp.login("resend", args.api_key)
+            smtp.sendmail(args.from_addr, [args.to], msg.as_string())
+        print("Email sent OK via SMTP")
+    except Exception as e:
+        print(f"Email failed: {e}", file=sys.stderr)
         sys.exit(1)
 
 
