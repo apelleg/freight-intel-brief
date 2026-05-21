@@ -16,7 +16,7 @@ jobs:
       - name: Find latest brief
         id: brief
         run: |
-          BRIEF_FILE=$(ls -t briefs/*.html | head -1)
+          BRIEF_FILE=$(ls briefs/*.html | sort | tail -1)
           DATE=$(basename "$BRIEF_FILE" .html)
           echo "html_file=$BRIEF_FILE" >> $GITHUB_OUTPUT
           echo "text_file=briefs/${DATE}.md" >> $GITHUB_OUTPUT
