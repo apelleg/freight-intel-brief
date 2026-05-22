@@ -231,7 +231,24 @@
     "https://www.freightos.com/freight-industry-updates/weekly-freight-updates/early-start-to-peak-season-for-asia-europe-ocean-may-19-2026-update/",
     "https://carrieratlas.com/news/fedex-freight-spinoff-closes-june-1-what-the-split-means-for-ltl-rates",
     "https://www.overdriveonline.com/business/article/15825576/roadcheck-spurs-spot-rates-to-new-highs",
-    "https://www.marketscreener.com/quote/stock/XPO-INC-11890333/news/Top-Flexport-and-XPO-Executives-Join-Digital-Freight-Brokerage-Fura-to-Drive-Next-Gen-Logistics-Inno-50271547/"
+    "https://www.marketscreener.com/quote/stock/XPO-INC-11890333/news/Top-Flexport-and-XPO-Executives-Join-Digital-Freight-Brokerage-Fura-to-Drive-Next-Gen-Logistics-Inno-50271547/",
+    "https://www.freightwaves.com/news/whats-next-after-montgomery-likely-a-boost-to-the-bigger-3pls",
+    "https://www.freightwaves.com/news/the-freight-broker-insurance-gap-is-now-real",
+    "https://www.freightwaves.com/news/post-montgomery-focus-grows-on-fate-of-3pl-insurance-premiums",
+    "https://www.freightwaves.com/news/rxo-vs-c-h-robinson-the-growing-financial-divide-widens-some-more",
+    "https://www.globenewswire.com/news-release/2026/05/21/3299608/0/en/ITS-Logistics-May-Supply-Chain-Report-Broker-Liability-Ruling-and-Inventory-Replenishment-Collide-with-Most-Expensive-Freight-Market-in-Years.html",
+    "https://www.atsinc.com/blog/2026-memorial-day-oversize-freight-travel-restrictions-guide",
+    "https://www.ttnews.com/articles/maverick-raises-pay-flatbed",
+    "https://www.ccjdigital.com/regulations/article/15825000/maverick-transportation-gives-otr-drivers-a-raise",
+    "https://www.fau.edu/newsdesk/articles/lmi-index-may-high-prices-tight-capacity",
+    "https://beinsure.com/news/freight-brokers-face-new-insurance-gap-after-court-ruling/",
+    "https://www.freightwaves.com/news/flexports-latest-tech-rollout-comes-amid-and-alongside-global-freight-chaos",
+    "https://www.dcvelocity.com/technology/artificial-intelligence/tech-startup-pallet-raises-27-million-for-workflow-ai",
+    "https://www.drewry.co.uk/supply-chain-advisors/supply-chain-expertise/world-container-index-assessed-by-drewry",
+    "https://www.jmrodgers.com/freight-market-update-may-2026/",
+    "https://rxo.com/resources/research/us-truckload-market-guide/",
+    "https://www.freightwaves.com/news/rxos-tech-turnaround-why-investors-are-watching",
+    "https://www.freightwaves.com/news/new-territory-rxo-debt-rating-from-moodys-now-below-investment-grade-cutoff"
   ],
   "seen_story_hashes": [
     "dat dry van load-to-truck ratio hits 9.0 week of may 3-9 2026 up from 8.3dat freight",
@@ -334,7 +351,17 @@
     "rxo raises may truckload gross profit per load outlook flat vs april spot market wins stock +10.6% $21.13insider monkey",
     "post-roadcheck freight market normalizing dry van $2.47/mile otri declining 13.4% container imports +28-47% yoy tariff front-loadingsonar",
     "c.h. robinson 30 agentic ai tools 100% rate quote response 32 seconds historical 60-65% 17-20 min $965m-$1.04b oi 2026freightwaves",
-    "fura ten8.ai world's first ai-powered roll-up broker voice agents rate negotiations fraud detection may 7 2026 $100m revenue 5 acquisitionseinpresswire"
+    "fura ten8.ai world's first ai-powered roll-up broker voice agents rate negotiations fraud detection may 7 2026 $100m revenue 5 acquisitionseinpresswire",
+    "what's next after montgomery? likely a boost to the bigger 3pls as insurance costs rise 3-5x smaller brokers face existential threatfreightwaves",
+    "the freight broker insurance gap is now real contingent auto liability professional liability premiums 3-5x post-montgomeryfreightwaves",
+    "post-montgomery focus grows on fate of 3pl insurance premiums contingent auto liability renewals +300% deep pocket riskfreightwaves",
+    "rxo vs c.h. robinson growing financial divide widens moody's downgrade below investment grade chr stock +46.2% rxo -49.5% 52 weeksfreightwaves",
+    "its logistics may 2026 supply chain report broker liability inventory replenishment most expensive freight market in years may 21globenewswire",
+    "memorial day 2026 oversize overweight freight restrictions begin may 22 noon through may 26 ny mo wa most states flatbed os/owats inc",
+    "maverick transportation flatbed otr +4 cents/mile effective may 31 starting pay 59 cents/mile $73k-$80k first year wage inflationttnews",
+    "lmi transportation prices 95.0 near-record high capacity down 40% since january 2026 strait hormuz diesel fuel shocklmi fau",
+    "pallet raises $27m workflow ai freight brokers 3pls carriers shippers agentic scheduling document coordination 2026dc velocity",
+    "flexport latest tech rollout amid global freight chaos tariff compliance tools shipper visibility ipo positioning 30% revenue growthfreightwaves"
   ],
   "last_30_days": [
     {
@@ -446,6 +473,21 @@
         "Post-Roadcheck freight market normalization underway with dry van settling ~$2.47/mile from $2.84 peak; OTRI declining from 13.4% while container imports +28-47% YoY from US-China tariff truce front-loading creating new domestic freight demand wave",
         "C.H. Robinson quantified 30 deployed agentic AI tools achieving 100% rate quote response in 32 seconds vs historical 60-65% in 17-20 min and raised 2026 operating income target to $965M-$1.04B with stock closing at $180.64 +4.4% on May 20",
         "Fura deployed ten8.ai voice AI agents for inbound/outbound calls, rate negotiations, and fraud detection on May 7 2026, calling itself industry's first AI-powered roll-up broker at ~$100M revenue across 5 acquisitions"
+      ]
+    },
+    {
+      "date": "2026-05-22",
+      "stories": [
+        "FreightWaves analysis found Montgomery SCOTUS ruling will be a boost to bigger 3PLs as broker insurance costs rise 3-5x (some renewals quoted at +300%), creating an existential threat for smaller brokers and accelerating consolidation",
+        "FreightWaves confirmed the freight broker insurance gap is now real — contingent auto liability and professional liability premiums expected to increase 3-5x post-Montgomery ruling, turning insurance from 1-3% of revenue to a potential existential cost line",
+        "Moody's downgraded RXO to below investment-grade; stock down 49.5% in 52 weeks vs CHR up 46.2%; FreightWaves analysis shows growing financial divide between the two 3PLs despite RXO's spot market outperformance",
+        "ITS Logistics May 21 2026 supply chain report framed current market as most expensive freight market in years as broker liability ruling and inventory replenishment simultaneously collide with tight capacity",
+        "Memorial Day oversize/overweight freight restrictions began at noon May 22 through May 26 in most states, halting all flatbed OS/OW moves during peak flatbed season (flatbed spot up 27% YoY)",
+        "Maverick Transportation announced +4 cents/mile for all flatbed OTR drivers effective May 31, pushing starting pay to 59 cents/mile ($73K-$80K/year) — signal of accelerating carrier wage inflation ahead of summer",
+        "LMI Transportation Prices hit 95.0 in May 2026 (near-record high) while Transportation Capacity fell 40% since January, driven by Strait of Hormuz fuel disruption and carrier exit from the market",
+        "Pallet raised $27M for workflow AI targeting freight brokers, 3PLs, carriers, and shippers with agentic tools for scheduling, document processing, and shipment coordination below TMS level",
+        "Flexport launched latest tech rollout amid global freight chaos, continuing tariff compliance tool push and IPO positioning with 30% revenue growth target for 2026",
+        "Drewry WCI May 21: Shanghai-LA at $3,385/FEU (+1% WoW); ONE announced $2,000 PSS effective June 1 as transpacific carriers push for rate increases ahead of peak season"
       ]
     }
   ]
