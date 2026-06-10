@@ -624,7 +624,25 @@
     "https://theconservativetreehouse.com/blog/2026/05/30/u-s-and-mexico-conclude-first-bilateral-round-of-usmca-review/",
     "https://mexicobusiness.news/trade-and-investment/news/mexico-urges-canada-join-usmca-talks",
     "https://www.shipwithshaker.com/insights/2026-freight-market-update/",
-    "https://www.atcdriveaway.com/blog/freight-markets-heating-up-june/"
+    "https://www.atcdriveaway.com/blog/freight-markets-heating-up-june/",
+    "https://finance.yahoo.com/markets/stocks/articles/stock-market-today-june-9-213921086.html",
+    "https://coincentral.com/aurora-aur-stock-sharply-falls-7-as-uber-offloads-67m-shares-and-growth-concerns-rise/",
+    "https://www.fool.com/coverage/stock-market-today/2026/06/09/stock-market-today-june-9-aurora-innovation-falls-after-uber-block-sale-weighs-on-autonomous-trucking-stocks/",
+    "https://www.theglobeandmail.com/investing/markets/stocks/TSLA/pressreleases/2388353/stock-market-today-june-9-aurora-innovation-falls-after-uber-block-sale-weighs-on-autonomous-trucking-stocks/",
+    "https://www.thetrucker.com/trucking-news/business/dat-spot-truckload-rates-continue-to-strengthen",
+    "https://news.sap.com/2026/06/autonomous-supply-chain-why-agentic-ai-is-rewriting-the-operating-model/",
+    "https://www.indexbox.io/blog/drewry-container-index-rises-6-as-early-peak-season-drives-freight-rate-gains/",
+    "https://container-news.com/drewry-wci-jumps-23-as-early-peak-season-drives-freight-rate-higher/",
+    "https://www.dorsey.com/newsresources/publications/client-alerts/2026/6/new-section-301-tariffs",
+    "https://www.rmwcommerce.com/podcast-episodes/june-8-2026-amazon-prime-day-fedex-freight-anthropic-files-and-shipstation-global",
+    "https://www.gurufocus.com/news/8902430/insider-sell-alert-technologies-uber-sells-67500000-shares-of-aurora-innovation-inc-aur",
+    "https://www.clarkhill.com/news-events/news/ustr-section-301-forced-labor-tariffs-2026/",
+    "https://www.aljazeera.com/economy/2026/4/10/shipping-in-strait-of-hormuz-at-a-trickle-despite-us-iran-ceasefire",
+    "https://www.seatrade-maritime.com/containers/container-peak-season-arrives-early-as-freight-rates-skyrocket",
+    "https://wwd.com/sourcing-journal/logistics/freight-rates-early-peak-shipping-season-june-container-shipping-msc-drewry-1238997327/",
+    "https://scaledon.com/amazon-prime-day-june-2026-confirmed-what-the-calendar-shift-means-for-sellers/",
+    "https://www.freightwaves.com/news/what-the-ieepa-scotus-ruling-means-for-american-freight",
+    "https://finance.yahoo.com/news/ieepa-scotus-ruling-means-american-133323269.html"
   ],
   "seen_story_hashes": [
     "dat dry van load-to-truck ratio hits 9.0 week of may 3-9 2026 up from 8.3dat freight",
@@ -848,7 +866,11 @@
     "dat june 8 2026 dry van linehaul $2.47/mile +23% yoy flatbed linehaul $2.89/mile +53% yoy near all-time high load-to-truck van 13-14x reefer 19-20x flatbed 76-80xdat trendlines overdrive",
     "diesel $5.35/gal june 1 -17 cents from $5.64 peak partial relief from iran deal hopes truckload average length of haul -21% since june 2024 607 to 500 milesftr intel overdrive freightwaves",
     "usmca second bilateral round june 16-17 washington dc agriculture level playing field canada excluded july 1 deadline expected missed third round july mexico cityustr june 2026",
-    "section 301 forced labor tariffs 10-12.5% proposed 60+ economies june 2 public comment closes july 6 hearing july 7 replace section 122 by july 24 mid-july import front-loading surge expectedustr june 2 2026"
+    "section 301 forced labor tariffs 10-12.5% proposed 60+ economies june 2 public comment closes july 6 hearing july 7 replace section 122 by july 24 mid-july import front-loading surge expectedustr june 2 2026",
+    "aurora aur stock $6.16 june 9 2026 -7% day -25% since may 14 peak 13% below uber $7.10 block sale price gen-2 ramp capital risk commercial partner uber freightyahoo finance/coincentral",
+    "sap transportation management agentic ai agents autonomous plan execute optimize shipments without human input gartner supply chain ai $2b to $53b 2030sap news center june 2026",
+    "flexport 2026 profitability target ipo readiness $2.1b revenue 30% yoy growth 6 country launches h2 ipo competitive threat digital freight enterprise shipperstattimes/sacra",
+    "dat spot truckload rates continue strengthen week ending june 9 2026 dry van flatbed reefer all firming prime day demand build load-to-truck elevated above june 3 baselinethetrucker june 9 2026"
   ],
   "last_30_days": [
     {
@@ -1144,6 +1166,21 @@
         "Diesel fell to $5.35/gal week of June 1 (-17 cents from $5.64 peak) on Iran deal talks; truckload average length of haul declined 21% since June 2024 (from 607 to 500 miles) as regional freight grows",
         "USMCA second US-Mexico bilateral round scheduled June 16-17 in Washington DC covering agriculture and level playing field; Canada remains excluded; July 1 deadline expected to be missed",
         "USTR Section 301 forced-labor tariffs (10-12.5%) proposed on 60+ economies on June 2; public hearing July 7; expected implementation replacing Section 122 around July 24, creating mid-July import front-loading surge"
+      ]
+    },
+    {
+      "date": "2026-06-10",
+      "stories": [
+        "Aurora AUR stock closed at $6.16 on June 9, now 13% below Uber's $7.10 block sale price (67.5M shares, $479M sold June 2) and down 25% since May 14, raising capital risk for Gen-2 hardware ramp and Uber Freight's AV lane commitments",
+        "SAP shipped agentic AI agents natively into Transportation Management platform for autonomous shipment plan-execute-optimize without human input, directly competing with AI-native freight broker value proposition",
+        "Flexport confirmed on track for 2026 profitability at $2.1B revenue (+30% YoY) with IPO readiness in H2, expanding to 6 new countries — competitive threat to Uber Freight's enterprise digital forwarding play",
+        "DAT reported spot truckload rates continuing to strengthen week ending June 9, with dry van, flatbed, and reefer all firming ahead of Amazon Prime Day June 23-26 demand surge",
+        "USMCA Round 2 opens June 16-17 in Washington DC (agriculture and level playing field); July 1 joint review deadline widely expected to be missed, risking annual review cycle through 2036 with persistent cross-border uncertainty",
+        "Section 301 tariff July 7 public hearing set (implementation target July 24): 10% on Mexico/Canada/EU, 12.5% on 54 other economies — above-IEEPA implementation triggers new import front-loading wave into tight spot market",
+        "Amazon Prime Day confirmed June 23-26 — earliest in 11-year history, 3 weeks early — forcing third-party brokers into 13-day window to capture overflow from Amazon's captive 80K-trailer fleet",
+        "SELF DRIVE Act (H.R. 7390) passed full House Energy and Commerce Committee, heading to floor vote — allows AV commercial freight during testing, preempts state restrictions, NHTSA standards due September 2027",
+        "Sparhawk Trucking (178 trucks, Wisconsin) is one of 8+ carrier failures in early June as trucking employment hits decade-low; Chapter 11 WARN filed May 28, company seeking buyer",
+        "Drewry WCI surged 23% to $3,433/FEU (June 4); Shanghai-LA $4,565 (+31% WoW), Shanghai-NY $5,505 (+20% WoW) — Section 301 front-loading and early Prime Day peak season simultaneously driving ocean rate surge"
       ]
     }
   ]
