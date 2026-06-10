@@ -103,6 +103,26 @@
     ]
   },
   {
+    "id": "tms_4pl",
+    "name": "TMS & 4PL / Managed Transportation",
+    "search_type": "explicit",
+    "sources": [
+      "FreightWaves",
+      "Gartner Logistics",
+      "Supply Chain Dive",
+      "DC Velocity",
+      "Journal of Commerce (JOC)"
+    ],
+    "search_hints": [
+      "transportation management system TMS news",
+      "4PL managed transportation news",
+      "Transplace platform news",
+      "TMS software shipper adoption",
+      "managed transportation outsourcing enterprise",
+      "TMS vendor competitive news Oracle SAP Blue Yonder"
+    ]
+  },
+  {
     "id": "ma_funding",
     "name": "M&A, Funding & Industry Structure",
     "search_type": "open",

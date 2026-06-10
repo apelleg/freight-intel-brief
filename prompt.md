@@ -70,13 +70,18 @@ Format the output as follows. Target ~4 minute read. Every data point must inclu
 
 ---
 
+### 🗂️ TMS & Managed Transportation
+[2–3 bullets on developments in the TMS / 4PL space relevant to Uber Freight's Transplace-based managed transportation business. Cover: TMS vendor moves (Oracle, SAP, Blue Yonder, MercuryGate), enterprise shipper outsourcing trends, 4PL competitive dynamics, or platform capability announcements. Only include if something material happened today; omit section if nothing new — do not write "nothing to report."]
+
+---
+
 ### 📋 Regulatory Watch
 [Only include if something materially changed today. If nothing new, omit this section entirely — do not write "nothing to report."]
 
 ---
 
 ### 💡 CPO Lens: 3 Things Worth Discussing with Your Team
-[Frame as agenda items or questions to bring to the product/engineering team. Context: Amir just joined as CPO of Uber Freight on June 1, 2026, previously Head of Product & Engineering at Dandy, and senior leader at Amazon and Convoy. He wants things framed as "what should we build / change / watch."]
+[Frame as agenda items or questions to bring to the product/engineering team. Context: Amir just joined as CPO of Uber Freight on June 1, 2026, previously Head of Product & Engineering at Dandy, and senior leader at Amazon and Convoy. Uber Freight operates both a freight brokerage and a 4PL managed transportation business built on the Transplace TMS platform. He wants things framed as "what should we build / change / watch" — and lens items should draw from both the brokerage and the 4PL/TMS sides of the business.]
 
 1. **[Topic]:** [Question or agenda item — 2 sentences max]
 2. **[Topic]:** [Question or agenda item — 2 sentences max]
