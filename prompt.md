@@ -99,6 +99,21 @@ Sources: [linked list of all sources used, format: [Publication](URL)]
 
 ---
 
+## Step 2.5: Deduplication Review
+
+Before saving or sending, review the compiled brief for cross-section repetition:
+
+1. Read through every section and flag any story, statistic, company name, or theme that appears more than once.
+2. For each duplicate: keep the instance in the most relevant section; remove it from all others. Only add a cross-reference (e.g. "see Competitor Moves") if critical context would otherwise be lost.
+3. Condense any two bullets that make the same underlying point, even if worded differently.
+4. Check "Today's Top Signal" — if it merely repeats a bullet from another section verbatim, rewrite it as a genuine synthesis rather than a copy.
+5. Check "CPO Lens" items — each must raise a distinct question not already answered by another Lens item or reducible to a section you just wrote.
+6. After pruning, confirm the brief reads as one cohesive document with no redundant leads, no repeated statistics, and no re-introduced companies or events.
+
+Only proceed to Step 3 once this review is complete.
+
+---
+
 ## Step 3: Deliver via Email (SendGrid)
 
 Send the brief as an HTML email via the SendGrid API.
