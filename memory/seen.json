@@ -702,7 +702,16 @@
     "https://siliconangle.com/2026/06/11/supply-chain-operations-blueyonder/",
     "https://sapinsider.org/sap-pushes-agentic-ai-to-center-of-supply-chain-resilience-strategy/",
     "https://www.cnn.com/2026/07/13/economy/trump-hormuz-fee",
-    "https://en.yenisafak.com/world/brazilian-president-slams-trump-hormuz-shipping-fee-as-piracy-3720817"
+    "https://en.yenisafak.com/world/brazilian-president-slams-trump-hormuz-shipping-fee-as-piracy-3720817",
+    "https://www.globenewswire.com/news-release/2026/07/14/3326916/0/en/project44-Creates-Two-Businesses-and-Launches-LSP44-the-AI-Agent-and-API-Infrastructure-That-9-of-the-Worlds-10-Largest-Logistics-Providers-Already-Run.html",
+    "https://www.axios.com/pro/supply-chain-deals/2026/07/14/project44-splits-enterprise-shipper-logistics-business-units",
+    "https://www.logisticsmgmt.com/article/project44_splits_into_two_businesses_launches_ai_focused_lsp44_for_logistics_providers",
+    "https://www.businesswire.com/news/home/20260708287511/en/Aurora-to-Host-Second-Quarter-2026-Business-Review-Conference-Call-on-July-29-2026",
+    "https://ir.aurora.tech/news-events/press-releases/detail/139/aurora-announces-first-quarter-2026-results",
+    "https://www.ttnews.com/articles/ltl-outlook-july-2026",
+    "https://www.pbs.org/newshour/world/iran-and-u-s-reach-an-initial-deal-to-extend-the-ceasefire-and-open-the-strait-of-hormuz-but-challenges-remain",
+    "https://www.joc.com/article/compliance-uncertainty-will-freeze-q3-freight-volumes-as-new-tariffs-near-6242429",
+    "https://www.dcvelocity.com/technology/transportation-it/shipping-software/project44-splits-shipment-visibility-tech-into-two-businesses"
   ],
   "seen_story_hashes": [
     "dat dry van load-to-truck ratio hits 9.0 week of may 3-9 2026 up from 8.3dat freight",
@@ -952,7 +961,20 @@
     "rxo q2 2026 ebitda guided $27-37m vs q1 adjusted ebitda loss; agentic ai processed 500k+ carrier cal",
     "freightwaves supply chain ai symposium july 15 2026 chicago old post office augment project44 genlog",
     "blue yonder named gartner tms magic quadrant leader 19th consecutive time warehouse logistics invent",
-    "sap accelerating joule agents across tms procurement supply chain autonomous execution embedded erp "
+    "sap accelerating joule agents across tms procurement supply chain autonomous execution embedded erp ",
+    "project44 splits into two businesses launches lsp44 ai agent api infrastructure 9 of worlds 10 large",
+    "saia ltl freight 7.1% gri effective july 6 2026 120bps above abf 5.9% three months early tl capacit",
+    "aurora innovation q2 2026 business review conference call scheduled july 29 gen-2 observerless hardwa",
+    "lsp44 embedded freight infrastructure ai agent api logistics providers embedded tech stacks share one",
+    "aurora gen-2 hardware international lt series observerless no partner safety observer required 1m mil",
+    "section 301 tariffs july 24 2026 t-8 days 10-12.5% 60+ countries 99.4% us imports zero grandfatherin",
+    "usmca round 3 week july 20 mexico city ebrard open issues dropped 54 to 14 automotive rules of origi",
+    "us-iran ceasefire collapsed july 8 iran struck commercial vessels strait hormuz centcom reinstated nav",
+    "dat dry van $2.97/mi flatbed $3.69/mi all-time record reefer $3.45/mi spot van crossed above contract",
+    "post-july 4 rebound load postings +24.7% wow truck postings -2.6% market demand index +37.1 points f",
+    "lsp44 transplace integration question platform architecture 4pl carrier api agent spine major logistic",
+    "ltl gri wave reshaping 4pl mode economics saia +7.1% abf +5.9% old dominion +4.9% tl overflow fills ",
+    "division 2 truck co odm truck chapter 11 filings july 16 2026 continuing july bankruptcy wavefreightw"
   ],
   "last_30_days": [
     {
@@ -975,6 +997,24 @@
         "FMCSA finalized three deregulatory rules effective July 22: removes CDL self-reporting, rescinds physical ELD manual, revises inspection corrected-report procedures",
         "Nine transportation and logistics companies filed for bankruptcy in early July 2026 with ~250 jobs eliminated; structural carrier exits outpacing new-authority formation",
         "Craig-Hallum initiated Aurora Innovation at Buy ($18 target) calling it physical AI with $100B+ potential; Gen-2 observerless hardware launching Q3 2026 targeting 200 trucks year-end with Uber Freight as named customer"
+      ]
+    },
+    {
+      "date": "2026-07-16",
+      "stories": [
+        "project44 split into two standalone businesses July 14: project44 (Decision Intelligence for enterprise shippers) and LSP44 (AI-native agent/API infrastructure for 3PLs and brokers), already powering 9 of the world's 10 largest LSPs",
+        "LSP44 positions as embedded freight infrastructure layer sharing one AI-native carrier network and data graph with project44 - described as AWS equivalent for freight intermediaries",
+        "Saia LTL Freight 7.1% GRI effective July 6 - 120bps above ABF's June 22 +5.9% and 3 months ahead of typical industry cadence, driven by TL overflow freight filling LTL networks",
+        "Aurora Innovation Q2 2026 Business Review call scheduled July 29; expected to confirm Gen-2 observerless hardware fleet status and progress toward 200+ driverless trucks year-end",
+        "Aurora Gen-2 hardware (International LT Series) confirmed in observerless mode: 1M-mile hardware lifespan, 1,000m FirstLight lidar range, 50% cost-per-truck reduction vs Gen-1",
+        "US-Iran ceasefire collapsed July 8 after Iran struck commercial vessels in Strait of Hormuz; CENTCOM reinstated US naval blockade July 14 sending Brent crude +9.59% to $83.30/bbl; re-talks emerging July 15-16",
+        "DAT July 9: dry van $2.97/mi, flatbed $3.69/mi all-time record, reefer $3.45/mi - all 40-50% above YoY; spot van crossed above contract rates for first time since February 2022",
+        "Post-July 4 load rebound: postings +24.7% WoW, truck postings -2.6%, Market Demand Index +37.1 points; flatbed L-T-T 53.3 from 42.2",
+        "Section 301 tariffs T-8 days to July 24: 10-12.5% on 60+ countries (99.4% of US imports by value), zero grandfathering, no extension announced; JOC warns compliance uncertainty freezing Q3 freight decisions",
+        "USMCA Round 3 begins week of July 20 in Mexico City; open issues dropped from 54 to 14 with automotive rules of origin, agriculture, and economic security remaining; Canada excluded",
+        "Two Chapter 11 carrier filings recorded July 16 (Division 2 Truck Co., ODM Truck) as part of continuing July bankruptcy wave",
+        "LSP44 raises platform architecture question for Transplace-based 4PL: whether to integrate with LSP44 carrier API/agent spine or maintain independent infrastructure",
+        "LTL GRI wave (Saia +7.1%, ABF +5.9%, ODFL +4.9%) reshaping 4PL mode economics as TL overflow fills LTL networks; optimal mode selection shifting weekly"
       ]
     }
   ]
