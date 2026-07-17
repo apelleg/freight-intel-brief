@@ -711,7 +711,28 @@
     "https://www.ttnews.com/articles/ltl-outlook-july-2026",
     "https://www.pbs.org/newshour/world/iran-and-u-s-reach-an-initial-deal-to-extend-the-ceasefire-and-open-the-strait-of-hormuz-but-challenges-remain",
     "https://www.joc.com/article/compliance-uncertainty-will-freeze-q3-freight-volumes-as-new-tariffs-near-6242429",
-    "https://www.dcvelocity.com/technology/transportation-it/shipping-software/project44-splits-shipment-visibility-tech-into-two-businesses"
+    "https://www.dcvelocity.com/technology/transportation-it/shipping-software/project44-splits-shipment-visibility-tech-into-two-businesses",
+    "https://ntgfreight.com/resources/weekly-freight-trends-july-13-17-2026/",
+    "https://www.businesswire.com/news/home/20260716079905/en/ArcBest-Simplifies-Brand-Structure-and-Streamlines-Operations-to-Drive-Long-Term-Growth-and-Efficiency",
+    "https://www.sec.gov/Archives/edgar/data/894405/000110465926084248/arcb-20260716x8k.htm",
+    "https://www.freightwaves.com/news/envoy-ai-unveils-autonomous-digital-workforce-for-logistics-teams",
+    "https://www.prweb.com/releases/envoy-ai-launches-ellie-workforce-the-operating-system-for-autonomous-freight-execution-302826101.html",
+    "https://investor.uber.com/news-events/news/press-release-details/2026/Uber-Announces-Acquisition-Offer-for-Delivery-Hero/default.aspx",
+    "https://www.bloomberg.com/news/articles/2026-07-16/uber-agrees-to-buy-delivery-hero-as-food-sector-consolidates",
+    "https://www.globenewswire.com/news-release/2026/07/15/3327846/0/en/Fr8Tech-Advances-AI-Native-Transformation-Reduces-Workforce-and-Raises-Additional-Capital.html",
+    "https://fortune.com/2026/07/14/c-h-robinson-ai-success-secrets-dave-bozeman/",
+    "https://www.investing.com/news/analyst-ratings/citizens-initiates-ch-robinson-stock-with-outperform-rating-93CH-4792512",
+    "https://www.chrobinson.com/en-us/about-us/newsroom/press-releases/2026/ch-robinson-acquires-despir-logistics/",
+    "https://atlas.doe.gov/RateRoute/FuelSurcharge/2026CurrentFSCMatrix.pdf",
+    "https://www.whitecase.com/insight-alert/usmca-2026-joint-review-united-states-declines-extend-agreement-triggering-annual",
+    "https://www.ttnews.com/articles/uber-buy-delivery-hero",
+    "https://www.nwaonline.com/news/2026/jul/16/arcbest-says-it-will-cut-about-280-jobs-2-of/",
+    "https://www.stocktitan.net/news/ARCB/arc-best-simplifies-brand-structure-and-streamlines-operations-to-zj6be9f16n6g.html",
+    "https://english.news.cn/northamerica/20260717/e9d023e4791342c79c6b33f5ce890519/c.html",
+    "https://www.haynesboone.com/news/alerts/update-on-the-usmca-negotiations",
+    "https://www.freightwaves.com/news/after-a-five-year-wait-c-h-robinson-makes-an-acquisition",
+    "https://debales.ai/blog/ch-robinson-92-percent-agentic-brokerage",
+    "https://www.overdriveonline.com/business/article/15830009/diesel-surges-as-rates-cool-off-postjuly-4"
   ],
   "seen_story_hashes": [
     "dat dry van load-to-truck ratio hits 9.0 week of may 3-9 2026 up from 8.3dat freight",
@@ -974,7 +995,16 @@
     "post-july 4 rebound load postings +24.7% wow truck postings -2.6% market demand index +37.1 points f",
     "lsp44 transplace integration question platform architecture 4pl carrier api agent spine major logistic",
     "ltl gri wave reshaping 4pl mode economics saia +7.1% abf +5.9% old dominion +4.9% tl overflow fills ",
-    "division 2 truck co odm truck chapter 11 filings july 16 2026 continuing july bankruptcy wavefreightw"
+    "division 2 truck co odm truck chapter 11 filings july 16 2026 continuing july bankruptcy wavefreightw",
+    "arcbest simplifies brand 280 jobs 10 ltl terminals molo panther august 1 $40m savings $76.5m q2 impairmentsbusinesswire/sec",
+    "uber technologies acquires delivery hero $14.8b €14b debt 99 markets 50 markets july 16 2026 food delivery global mobilityuber ir/bloomberg",
+    "envoy ai launches ellie workforce autonomous freight execution os carrier sourcing rate negotiation compliance browser july 14freightwaves",
+    "fr8tech advances ai-native transformation fleet rocket agentic usmca corridor headcount reduction additional capital july 15globenewswire",
+    "diesel $4.796/gal +21.8 cents wow week july 13 2026 california $6.126 hormuz fighting renewed fuel surcharge trucking freight impacteia",
+    "ntg freight weekly july 13-17 2026 traditional lull modest pullback +55% yoy ltl midwest embargoes carriers existing customers firstntg freight",
+    "section 301 tariffs t-7 days july 24 2026 no extension q3 booking freeze record august imports front-loading compliance freeze jocustr/joc",
+    "usmca round 3 july 20 mexico city open issues 54 to 14 annual review canada excluded cross-border uncertainty through 2027ustr/white & case",
+    "citizens bank initiates c.h. robinson outperform $235 july 15 ch robinson acquires despir logistics $75m june 22 five year acquisitioninvesting.com"
   ],
   "last_30_days": [
     {
@@ -1015,6 +1045,20 @@
         "Two Chapter 11 carrier filings recorded July 16 (Division 2 Truck Co., ODM Truck) as part of continuing July bankruptcy wave",
         "LSP44 raises platform architecture question for Transplace-based 4PL: whether to integrate with LSP44 carrier API/agent spine or maintain independent infrastructure",
         "LTL GRI wave (Saia +7.1%, ABF +5.9%, ODFL +4.9%) reshaping 4PL mode economics as TL overflow fills LTL networks; optimal mode selection shifting weekly"
+      ]
+    },
+    {
+      "date": "2026-07-17",
+      "stories": [
+        "Uber Technologies announced $14.8B acquisition of Delivery Hero July 16 requiring ~€14B new debt, extending platform to 99 markets raising capital allocation question for Uber Freight",
+        "ArcBest announced July 16: ~280 job cuts, 10 LTL service center closures, brand consolidation of MoLo/Panther/ArcBest Technologies under ArcBest effective Aug 1; $40M annualized savings",
+        "Envoy AI launched Ellie Workforce July 14: browser-native autonomous freight execution OS for brokers covering carrier sourcing, rate negotiation, compliance, shipment monitoring",
+        "Fr8Tech completed transformation from online freight broker to pure-play AI software company with Fleet Rocket agentic platform for USMCA corridor July 15",
+        "Diesel surged 21.8 cents/gal WoW to $4.796/gal nationally for week of July 13 due to renewed Hormuz fighting; LTL Midwest embargoes appearing from June volume backlogs",
+        "DAT week of July 14: dry van $3.05/mile (-1¢ WoW, +55% YoY, above contract rates since Feb 2022); flatbed $3.67/mile; reefer $3.43/mile; load posts +22% WoW to 3.34M",
+        "Citizens Bank initiated C.H. Robinson at Outperform $235 July 15; CHR's June 22 DeSpir Logistics acquisition ($75M) ended 5-year M&A drought; CEO says AI will drive consolidation",
+        "Section 301 tariffs T-7 days to July 24 implementation: no extension announced; JOC reports Q3 booking freeze; August imports forecast at record levels",
+        "USMCA Round 3 begins July 20 in Mexico City; open issues down from 54 to 14; Canada excluded; US chose annual review over 16-year renewal locking in cross-border uncertainty"
       ]
     }
   ]
