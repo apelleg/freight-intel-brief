@@ -760,7 +760,30 @@
     "https://www.sheppard.com/insights/blogs/section-301ing-the-world-or-99-4-of-it",
     "https://seekingalpha.com/news/4588949-rxo-expects-27m-37m-q2-adjusted-ebitda-as-contract-rates-trend-to-high-single-digit-gains",
     "https://www.gain.consulting/post/retailers-rush-to-beat-tariffs-july-set-for-record-import-volumes-at-u-s-ports",
-    "https://www.ustransportnews.com/post/record-july-imports-collide-with-a-tariff-cliff-as-ocean-rates-surge"
+    "https://www.ustransportnews.com/post/record-july-imports-collide-with-a-tariff-cliff-as-ocean-rates-surge",
+    "https://www.ajot.com/news/freight-trends-from-dat-one-and-dat-iq-spot-market-data-for-july-1218-2026",
+    "https://www.usnews.com/news/world/articles/2026-07-21/us-mexico-resume-usmca-trade-talks-as-trump-hits-canada-with-new-tariffs",
+    "https://www.whitehouse.gov/fact-sheets/2026/07/fact-sheet-president-donald-j-trump-imposes-additional-tariffs-on-canada/",
+    "https://www.aljazeera.com/news/2026/7/21/trump-imposes-50-us-tariffs-on-some-canadian-goods-citing-discrimination",
+    "https://www.supplychaindive.com/news/us-slaps-50-tariffs-on-many-canada-imports/825726/",
+    "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/july/ambassador-greer-issues-statement-president-trump-imposing-section-338-tariffs-canada",
+    "https://www.movargo.com/post/post-after-july-24-section-301-tariff-2026",
+    "https://edition.cnn.com/2026/07/20/business/canada-tariffs-50-percent-trump",
+    "https://time.com/article/2026/07/21/trump-tariffs-canada-alcohol-motor-vehicles-dairy/",
+    "https://www.axios.com/2026/07/20/trump-tariffs-canada-trade-war",
+    "https://theconservativetreehouse.com/blog/2026/07/20/trump-administration-announces-section-338-tariffs-at-rate-of-50-across-wide-range-of-canadian-goods-and-imports/",
+    "https://www.assemblymag.com/articles/100233-trump-announces-50-tariffs-on-canadian-goods-impacting-automotive-industry",
+    "https://www.newsweek.com/trump-tariffs-canada-list-products-imports-explainer-12220703",
+    "https://abcnews.com/Politics/trump-slaps-additional-50-tariff-canadian-goods/story?id=134929955",
+    "https://www.cnbc.com/2026/07/20/trump-tariffs-canada-trade.html",
+    "https://forum.freightwaves.com/t/trump-hits-canadian-imports-with-new-50-tariffs-escalating-trade-fight/10759",
+    "https://www.pbs.org/newshour/politics/trump-imposes-50-tariffs-on-canadian-goods-citing-disputes-over-autos-alcohol-and-cheese",
+    "https://www.freshplaza.com/north-america/article/9858776/u-s-and-mexico-begin-third-usmca-review-talks/",
+    "https://www.ggnorth.com/2026/07/us-mexico-talks-resume-in-mexico-city-whats-on-the-table/",
+    "https://www.riotimesonline.com/us-mexico-usmca-third-round-autos-china-2026/",
+    "https://ielfreight.com/freight-market-update-spot-rates-climb-as-capacity-remains-tight-heading-into-july/",
+    "https://finimize.com/content/aur-asset-snapshot",
+    "https://www.kavout.com/market-lens/is-rxo-inc-poised-for-a-q2-profit-surge-amidst-a-tightening-freight-market"
   ],
   "seen_story_hashes": [
     "dat dry van load-to-truck ratio hits 9.0 week of may 3-9 2026 up from 8.3dat freight",
@@ -1046,7 +1069,16 @@
     "arcbest brand consolidation august 1 2026 molo solutions panther fold into arcbest 280 jobs 10 ltl service centers $40m annualized savingsbusinesswire",
     "echo global logistics full intra-mexico transportation services echoxborder customs brokerage integration june 17 2026logistics management",
     "blue yonder sap agentic tms execution layers gartner tms magic quadrant 19th consecutive year joule agents erp embedded 2026businesswire/sap",
-    "logistics viewpoints future tms buyer not buying software alone bundled technology execution market access analytics convergencelogistics viewpoints"
+    "logistics viewpoints future tms buyer not buying software alone bundled technology execution market access analytics convergencelogistics viewpoints",
+    "trump section 338 50% tariffs canadian goods autos dairy alcohol wood products paper machinery textiles effective august 16 2026 usmca qualifying goods not exemptwhite house",
+    "dat week july 12-18 2026 dry van $2.99/mile +55% yoy reefer $3.43/mile flatbed $3.62/mile load-to-truck van 12.1x reefer 23.6x flatbed 53.3xdat/ajot",
+    "section 301 tariffs implement july 24 2026 10-12.5% 99.4% us imports 60 countries no time limit no rate cap replaces ieepa section 122 q3 booking freeze jocustr/joc",
+    "usmca round 3 begins july 21 mexico city us demands 82% automotive rvc 50% us content china components open issues 54 to 14 canada excluded trump simultaneously hits canada 50% tariffsustr",
+    "aurora innovation q2 2026 business review july 29 gen-2 observerless hardware deployment confirmation 200 trucks year-end uber freight named customer aur $6.09 july 20aurora innovation ir",
+    "rxo q2 2026 earnings august 6 $27-37m adjusted ebitda guided managed transportation $100m+ new awards pipeline $200m+ 500k carrier calls agentic ai q1rxo",
+    "c.h. robinson q2 earnings july 29 consensus $1.49 eps +15.5% yoy 30 ai agents 100% rate quotes 32 seconds ceo bozeman ai drives broker consolidationc.h. robinson",
+    "flexport resurrects convoy platform trucking capacity marketplace small carriers owner-operators re-entering digital brokerage ipo readiness $2.1b revenue +30% yoyflexport",
+    "carrier bankruptcy wave continues mid-july 2026 daniel trucking lynda transportation tj trucking jackson son hauling victory freight chapter 7 chapter 11 fusion transport 79 layoffs ryder integrated logistics 76 indiana layoffsindexbox/freightwaves"
   ],
   "last_30_days": [
     {
@@ -1120,6 +1152,20 @@
         "Echo Global Logistics launched full intra-Mexico transportation services integrated with EchoXBorder customs brokerage, expanding cross-border capabilities.",
         "Blue Yonder (Gartner TMS MQ Leader, 19th year) and SAP both deploying persistent agentic AI execution layers targeting enterprise TMS buyers on top of existing stacks.",
         "Logistics Viewpoints analysis: future TMS buyer purchasing bundled technology + execution capacity + market access + analytics, not software alone."
+      ]
+    },
+    {
+      "date": "2026-07-21",
+      "stories": [
+        "Trump signed three Section 338 proclamations July 21 imposing 50% additional tariffs on Canadian goods (autos, dairy, alcohol, wood products, paper, machinery, textiles) effective August 16 2026; USMCA-qualifying goods explicitly NOT exempt; covers ~$20B in Canadian imports; Canada PM Carney called it a direct USMCA violation",
+        "DAT week July 12-18 2026: dry van $2.99/mile (+55% YoY), reefer $3.43/mile (+45% YoY), flatbed $3.62/mile; load-to-truck ratios: van 12.1x, reefer 23.6x, flatbed 53.3x",
+        "Section 301 tariffs implementing July 24 (3 days): 10-12.5% on 99.4% of US imports from 60 countries, no time limit, no rate cap, no grandfathering; JOC warns Q3 booking freeze as shippers await compliance clarity",
+        "USMCA Round 3 underway July 21 in Mexico City: US demands 82% automotive RVC + 50% US-specific content + Chinese component restrictions; Canada simultaneously hit with 50% Section 338 tariffs making USMCA renewal more distant",
+        "Aurora Innovation Q2 2026 Business Review scheduled July 29: will confirm Gen-2 observerless hardware deployment (1M-mile lifespan 50%+ cost reduction), progress toward 200+ driverless trucks year-end; AUR stock $6.09 July 20; Uber Freight is named customer",
+        "RXO Q2 2026 earnings August 6: guided $27-37M adjusted EBITDA vs near-zero Q1; Managed Transportation won $100M+ new freight awards with pipeline up $200M; agentic AI processed 500K+ carrier calls Q1",
+        "C.H. Robinson Q2 earnings July 29: consensus $1.49 EPS (+15.5% YoY); 30 AI agents processing 100% of rate quotes in 32 seconds; CEO Bozeman says AI will drive brokerage consolidation and positions CHR as the winner",
+        "Flexport resurrected Convoy digital platform as Convoy Platform targeting small carriers and owner-operators, re-entering digital brokerage from tech/forwarding side alongside IPO readiness at $2.1B revenue +30% YoY",
+        "Carrier bankruptcy wave continues mid-July 2026: Daniel Trucking International (IL), Lynda Transportation (IL), TJ Trucking Enterprises (OH), Jackson and Son Hauling (VA), Victory Freight Corp (CA) all filed Chapter 7/11; Fusion Transport LLC (NJ) ending 79 workers; Ryder Integrated Logistics 76 permanent layoffs Indiana July 31"
       ]
     }
   ]
