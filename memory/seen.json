@@ -807,7 +807,18 @@
     "https://agentic.ai/news",
     "https://www.fleetowner.com/news/regulations/news/55390583/trucking-regulations-2026-inside-the-dot-fmcsa-agenda",
     "https://fleetworthy.com/resources/blog/compliance-news-july-2026/",
-    "https://www.integrityhaullogistics.com/blog/july-2026-freight-market-update"
+    "https://www.integrityhaullogistics.com/blog/july-2026-freight-market-update",
+    "https://www.trucking.org/news-insights/ata-truck-tonnage-index-rose-01-june",
+    "https://www.freightos.com/freight-resources/ocean-rates-ease-on-early-peak-season-cooling-and-capacity-additions-july-22-2026-update/",
+    "https://www.freightwaves.com/news/freightmate-ai-seeks-dismissal-of-flexport-copyright-lawsuit",
+    "https://theloadstar.com/flexport-freightmate-case-tests-ownership-of-ai-freight-data-and-workflows/",
+    "https://www.globenewswire.com/news-release/2026/06/29/3319279/0/en/XPO-Schedules-Second-Quarter-2026-Earnings-Conference-Call-for-Thursday-July-30-2026",
+    "https://www.axios.com/pro/supply-chain-deals/2026/07/07/trimble-transportation-division-goldman-sachs-sale",
+    "https://www.ccjdigital.com/business/mergers-acquisitions/article/15829584/trimble-may-sell-transportation-logistics-unit-reports-say",
+    "https://stockstotrade.com/news/aurora-innovation-inc-aur-news-2026_07_22/",
+    "https://ir.aurora.tech/news-events/press-releases/detail/143/aurora-to-host-second-quarter-2026-business-review-conference-call-on-july-29-2026",
+    "https://www.freightwaves.com/news/sonar-launches-seamless-freight-market-intelligence-within-blue-yonder-tms",
+    "https://news.trimble.com/Trimble-Unveils-Next-Gen-Shipper-TMS-to-Redefine-Supply-Chain-Flexibility"
   ],
   "seen_story_hashes": [
     "dat dry van load-to-truck ratio hits 9.0 week of may 3-9 2026 up from 8.3dat freight",
@@ -1110,7 +1121,16 @@
     "usmca round 3 july 21-23 mexico city us 82% rvc 50% us content china restrictions canada excluded 14 open issues annual review clockustr",
     "dot fmcsa nhtsa 2026 av regulatory agenda july 9 nprm ads testing deployment supplemental aeb safety fitness determinations av enablerssidley",
     "ch robinson q2 2026 earnings july 29 consensus $1.49 eps +15.5% yoy fy2026 $6.08 +19.5% 30 ai agents 100% rate quotes ai monetizationyahoo finance",
-    "flexport 2026 profitability target $2.1b revenue +30% yoy ipo ambitions no s-1 filed convoy platform resurrected small carrier marketplacestattimes"
+    "flexport 2026 profitability target $2.1b revenue +30% yoy ipo ambitions no s-1 filed convoy platform resurrected small carrier marketplacestattimes",
+    "ata for-hire truck tonnage index rose 0.1% june 2026 after -3.2% may supply-driven rate cycle not demand-drivenata",
+    "ocean rates easing week july 22 2026 shanghai-la fell 3% to $6272/40ft early peak-season demand cools extra loaders capacity additionsfreightos",
+    "flexport v. freightmate ai federal lawsuit escalated chatgpt logs google cloud records prompt workflows not preserved freightmate seeks dismissalfreightwaves/loadstar",
+    "xpo q2 2026 earnings call scheduled july 30 ltl tonnage/day +0.5% yoy may adjusted or 83.9% q1 up 200 bps pricing discipline not volume growthglobenewswire",
+    "trimble working goldman sachs explore sale $550m/year transportation logistics division tmw tms transporeon mapping pe acquisition expected no buyer namedaxios/ccj",
+    "aurora innovation third-party safety audit backed driverless system july 22 fmcsa warning-device compliance waiver july 10 alternative highway safety q2 review july 29stockstotrade/aurora ir",
+    "freightwaves sonar launched real-time spot rates contract benchmarks lane intelligence embedded blue yonder tms execution workflow market data at point of bookingfreightwaves",
+    "trimble unveiled cloud-native tms for shippers north america july 7 planning execution visibility dock yard freight audit routing pcmiler appian integrations same day goldman sale reporttrimble",
+    "fmcsa three deregulatory rules effective july 22 cdl self-reporting motor vehicle convictions eliminated eld manual in-cab dropped inspection report return narrowedmcfarlane law/trucksafe"
   ],
   "last_30_days": [
     {
@@ -1212,6 +1232,20 @@
         "C.H. Robinson Q2 2026 earnings scheduled July 29: consensus $1.49 EPS (+15.5% YoY); FY2026 forecast $6.08 EPS (+19.5%); market watching AI strategy (30 agents, 100% rate quotes) for margin monetization signal",
         "Flexport targeting 2026 profitability at $2.1B revenue (+30% YoY) with IPO ambitions but no S-1 filed; Convoy platform resurrected as small-carrier digital marketplace alongside forwarding business",
         "Section 301 tariff implementation creates 4PL managed transportation replanning moment for Transplace-based shippers: origin-shifting, bonded warehouse routing, and mode allocation re-optimization needed immediately post-July 24"
+      ]
+    },
+    {
+      "date": "2026-07-23",
+      "stories": [
+        "ATA For-Hire Truck Tonnage Index rose +0.1% in June 2026 after -3.2% in May; confirms rate cycle is supply-driven not demand-driven; post-tariff-cliff August trough will be first real demand test of cycle",
+        "Ocean rates easing week of July 22: Shanghai-LA fell 3% to $6,272/40ft as early peak-season demand cools and extra loaders add capacity; load posts down ~9% WoW as tariff-compliance freeze reduces bookings",
+        "Flexport v. Freightmate AI federal lawsuit escalated July 22: Flexport argues former employees failed to preserve ChatGPT usage logs, Google Cloud resource records, and development prompt workflows; Freightmate seeks dismissal calling case 'flimsy'; freight industry's first judicial test of AI workflow IP",
+        "XPO Q2 2026 earnings call set July 30; LTL tonnage/day +0.5% YoY May; adjusted OR 83.9% Q1 up 200 bps YoY; LTL margin recovery through pricing discipline not volume growth; benchmark for rational LTL market behavior",
+        "Trimble working with Goldman Sachs to explore sale of $550M/year T&L division (TMW TMS thousands of carriers, Transporeon visibility/carrier management, mapping products); 21% of annual recurring revenue; PE acquisition most likely; no buyer named; competitive opening for Transplace-based managed transportation",
+        "Aurora Innovation third-party safety audit backed driverless system July 22 ahead of Q2 business review July 29; FMCSA issued warning-device compliance waiver July 10 for alternative highway safety compliance; 200+ truck deployment progress spotlighted",
+        "FreightWaves SONAR launched real-time spot rates, weekly contract benchmarks, and lane intelligence embedded directly within Blue Yonder TMS execution workflow \u2014 market data at point of freight booking not separate dashboard",
+        "Trimble unveiled cloud-native TMS for Shippers in North America July 7: transportation planning, execution, visibility, dock/yard management, freight audit, routing (PC*Miler, Appian integrations); launched same day as Goldman sale report creating market confusion",
+        "FMCSA three deregulatory rules effective July 22 12:01am: (1) eliminates CDL holder self-reporting of motor vehicle convictions to state licensing agencies; (2) removes physical ELD operator manual requirement in cab; (3) narrows carriers' obligation to return signed roadside inspection reports to state agencies only when requested"
       ]
     }
   ]
