@@ -818,7 +818,22 @@
     "https://stockstotrade.com/news/aurora-innovation-inc-aur-news-2026_07_22/",
     "https://ir.aurora.tech/news-events/press-releases/detail/143/aurora-to-host-second-quarter-2026-business-review-conference-call-on-july-29-2026",
     "https://www.freightwaves.com/news/sonar-launches-seamless-freight-market-intelligence-within-blue-yonder-tms",
-    "https://news.trimble.com/Trimble-Unveils-Next-Gen-Shipper-TMS-to-Redefine-Supply-Chain-Flexibility"
+    "https://news.trimble.com/Trimble-Unveils-Next-Gen-Shipper-TMS-to-Redefine-Supply-Chain-Flexibility",
+    "https://www.supplychaindive.com/news/us-imposes-tariffs-over-forced-labor-before-global-duty-ends/825951/",
+    "https://www.ttnews.com/articles/us-shifts-section-301-tariffs",
+    "https://www.globenewswire.com/news-release/2026/07/23/3332193/0/en/DAT-s-Convoy-Platform-integrates-with-Tai-TMS-to-automate-carrier-matching-to-freight-brokers.html",
+    "https://www.freightwaves.com/news/sonar-sitrep-freight-market-pushes-shippers-toward-network-flexibility",
+    "https://www.nasdaq.com/press-release/ch-robinson-second-quarter-2026-earnings-release-and-conference-call-scheduled",
+    "https://www.freightwaves.com/news/arcbest-announces-layoffs-closing-10-ltl-terminals",
+    "https://www.arrivelogistics.com/insights/july-2026-freight-market-update/",
+    "https://ntgfreight.com/resources/weekly-freight-trends-july-20-24-2026/",
+    "https://transportationinsight.com/resources/transportation-industry-trends-july-20-24-2026/",
+    "https://www.dat.com/company/news-events/news-releases/dat-dry-van-spot-rates-top-contract-for-first-time-since-february-2022-flatbed-rates-hit-record-high",
+    "https://www.dat.com/company/news-events/news-releases/dats-convoy-platform-integrates-with-tai-tms-to-automate-carrier-matching-to-freight-brokers",
+    "https://www.usnews.com/news/world/articles/2026-07-21/us-mexico-resume-usmca-trade-talks-as-trump-hits-canada-with-new-tariffs",
+    "https://www.businesswire.com/news/home/20260721411779/en/Overroute-Launches-with-J.B.-Hunt-To-Streamline-Freight-Execution-for-Enterprise-Carriers",
+    "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/june/ustr-makes-findings-and-proposes-action-60-section-301-investigations-relating-failures-take-action",
+    "https://www.chrobinson.com/en-us/about-us/newsroom/press-releases/2026/ch-robinson-acquires-despir-logistics/"
   ],
   "seen_story_hashes": [
     "dat dry van load-to-truck ratio hits 9.0 week of may 3-9 2026 up from 8.3dat freight",
@@ -1130,7 +1145,15 @@
     "aurora innovation third-party safety audit backed driverless system july 22 fmcsa warning-device compliance waiver july 10 alternative highway safety q2 review july 29stockstotrade/aurora ir",
     "freightwaves sonar launched real-time spot rates contract benchmarks lane intelligence embedded blue yonder tms execution workflow market data at point of bookingfreightwaves",
     "trimble unveiled cloud-native tms for shippers north america july 7 planning execution visibility dock yard freight audit routing pcmiler appian integrations same day goldman sale reporttrimble",
-    "fmcsa three deregulatory rules effective july 22 cdl self-reporting motor vehicle convictions eliminated eld manual in-cab dropped inspection report return narrowedmcfarlane law/trucksafe"
+    "fmcsa three deregulatory rules effective july 22 cdl self-reporting motor vehicle convictions eliminated eld manual in-cab dropped inspection report return narrowedmcfarlane law/trucksafe",
+    "section 301 forced labor tariffs live july 24 2026 replacing section 122 10-12.5% 60 trading partners no expiry usmca exemptsupply chain dive",
+    "dat convoy platform integrates tai tms automated carrier matching july 23 2026 brokers no additional costglobenewswire",
+    "spot rates week july 21 2026 dry van $2.99/mile reefer $3.41 flatbed $3.62 post-july 4th pullback all 55%+ yoydat freight analytics",
+    "sonar sitrep freight market pushes shippers toward network flexibility post-holiday routing guide rebuildfreightwaves",
+    "ch robinson q2 2026 earnings july 29 consensus $1.51 eps $4.37b revenue nast +5.1% yoy 4 straight beats despir acquisitionnasdaq",
+    "arcbest brand sunset august 1 molo panther arcbest technologies unified arcbest brand 10 ltl terminals 280 jobs $40m savingsfreightwaves",
+    "usmca round 3 ongoing july 21-24 mexico city us mexico bilateral canada excluded 50% section 338 tariffsusnews",
+    "overroute jb hunt agentic ai freight execution company millions loads carrier-native ai disintermediation signalbusinesswire"
   ],
   "last_30_days": [
     {
@@ -1246,6 +1269,19 @@
         "FreightWaves SONAR launched real-time spot rates, weekly contract benchmarks, and lane intelligence embedded directly within Blue Yonder TMS execution workflow \u2014 market data at point of freight booking not separate dashboard",
         "Trimble unveiled cloud-native TMS for Shippers in North America July 7: transportation planning, execution, visibility, dock/yard management, freight audit, routing (PC*Miler, Appian integrations); launched same day as Goldman sale report creating market confusion",
         "FMCSA three deregulatory rules effective July 22 12:01am: (1) eliminates CDL holder self-reporting of motor vehicle convictions to state licensing agencies; (2) removes physical ELD operator manual requirement in cab; (3) narrows carriers' obligation to return signed roadside inspection reports to state agencies only when requested"
+      ]
+    },
+    {
+      "date": "2026-07-24",
+      "stories": [
+        "Section 301 forced-labor tariffs went live July 24 replacing Section 122; 10-12.5% on 60 trading partners with no expiry date; USMCA-compliant goods exempted making US-Mexico corridor structurally more valuable",
+        "DAT Convoy Platform embedded in Tai TMS July 23, enabling automated carrier matching inside broker TMS workflow without separate login — second TMS-embedding announcement in two days after SONAR+Blue Yonder",
+        "Dry van spot rates $2.99/mile (↓8¢ WoW), reefer $3.41/mile (↓4¢), flatbed $3.62/mile (↓7¢) week of July 21; all 55%+ above YoY levels; post-July 4th pullback in progress",
+        "C.H. Robinson Q2 2026 earnings scheduled July 29: consensus $1.51 EPS on $4.37B revenue with NAST projected +5.1% YoY; CHR beat estimates 4 consecutive quarters; DeSpir Logistics acquisition $75M closed June 22",
+        "ArcBest brand consolidation completes August 1: MoLo Solutions, Panther Premium Logistics, ArcBest Technologies sunset under unified ArcBest brand; 10 ABF terminals closed; $40M annualized savings; MoLo exit signals retreat from digital spot brokerage",
+        "USMCA Round 3 US-Mexico bilateral negotiations ongoing this week in Mexico City; Canada excluded while facing 50% Section 338 tariffs; US demands 82% automotive RVC + 50% US content + Chinese component restrictions",
+        "SONAR Sitrep shows post-July 4th rate pullback prompting shippers to shift from reactive spot exposure back toward routing-guide structures — Q4 TMS/managed transportation contract window opening",
+        "Overroute (JB Hunt AI freight execution spinout) operating on millions of JB Hunt loads — carrier-native AI layer sharpening long-term brokerage intermediation question"
       ]
     }
   ]
