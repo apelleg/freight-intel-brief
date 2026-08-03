@@ -945,7 +945,19 @@
     "https://www.truckingdive.com/news/bankruptcies-financial-challenges-involve-multiple-trucking-companies/825360/",
     "https://finance.yahoo.com/markets/stocks/articles/aurora-announces-second-quarter-2026-201500830.html",
     "https://www.thetrucker.com/trucking-news/business/uber-freight-appoints-new-chief-product-officer",
-    "https://finance.yahoo.com/technology/ai/articles/uber-freight-elevates-ai-ambitions-142427668.html"
+    "https://finance.yahoo.com/technology/ai/articles/uber-freight-elevates-ai-ambitions-142427668.html",
+    "https://www.stocktitan.net/news/ARCB/arc-best-simplifies-brand-structure-and-streamlines-operations-to-zj6be9f16n6g.html",
+    "https://finance.yahoo.com/markets/stocks/articles/arcb-q2-deep-dive-restructuring-105157208.html",
+    "https://www.axios.com/pro/supply-chain-deals/2026/07/07/trimble-transportation-division-goldman-sachs-sale",
+    "https://www.craneww.com/knowledge-center/trade-advisory-notices/trade-advisory-new-section-338-tariffs-add-50-duties-on-certain-canadian-imports-effective-august-19-2026/",
+    "https://www.freightwaves.com/news/mexicos-new-customs-rules-could-expose-bad-supply-chain-data-crimsonlogic-warns",
+    "https://finance.yahoo.com/markets/stocks/articles/rxo-schedules-second-quarter-2026-123000386.html",
+    "https://www.freightwaves.com/news/2026-ai-excellence-in-supply-chain-awards-winners",
+    "https://ir.aurora.tech/news-events/press-releases",
+    "https://www.fleetowner.com/news/regulations/news/55390583/trucking-regulations-2026-inside-the-dot-fmcsa-agenda",
+    "https://www.dat.com/company/news-events/news-releases",
+    "https://www.freightwaves.com/news/freight-distress-report-carrier-logistics-closures-erase-over-245-jobs",
+    "https://joffroy.com/blog/manifestacion-de-valor-electronica-mandatory"
   ],
   "seen_story_hashes": [
     "dat dry van load-to-truck ratio hits 9.0 week of may 3-9 2026 up from 8.3dat freight",
@@ -1312,7 +1324,12 @@
     "june 2026 class 8 truck orders 30500 units +241% yoy second-highest june on record fleets race 2026 build slots capacity relief mid-2027freightwaves/act research",
     "dat flatbed report july 30 2026 industrial demand softening pulling flatbed rates from july highs data center construction sustaining decoupled seasonal patternsdat",
     "cbp dot joint enforcement crackdown mexican drivers hauling domestic us freight cabotage hundreds thousands blocked border july 2026 usmca corridor capacityfleetworthy",
-    "trimble tms goldman sachs sale no confirmed buyer q4 tms contract cycle opening now mid-market tmw shippers replanning window transplace managed transportationaxios"
+    "trimble tms goldman sachs sale no confirmed buyer q4 tms contract cycle opening now mid-market tmw shippers replanning window transplace managed transportationaxios",
+    "arcbest q2 2026 adjusted eps $2.38 beat revenue $1.2b +16% yoy stock fell 8.85% molo solutions panther vaux platform discontinued august 1 brand consolidationarcbest / stocktitan",
+    "mexico mve electronic customs value declaration mandatory august 1 2026 freight cost insurance royalties incoterms crimsonlogic data quality compliance riskfreightwaves / mexico sat",
+    "humano llc warn notice 586 freight handlers indiana operations closing august 17 2026 freight distress carrier exitfreightwaves",
+    "fmcsa ads nprm expected august 2026 first federal proposed rule automated driving systems commercial deployment standards aurora plusai waabi tailwindfleetowner / fmcsa",
+    "dat dry van linehaul $2.38/mile -6 cents wow +40% yoy sonar all-in $3.53/mile contract rates +18% yoy tender rejections 15.44% highest since early 2022dat / sonar august 2026"
   ],
   "last_30_days": [
     {
@@ -1521,6 +1538,21 @@
         "DAT flatbed report July 30: industrial demand softening pulling rates from July highs; data center/hyperscaler buildout sustaining decoupled seasonal patterns",
         "CBP/DOT joint enforcement crackdown on Mexican drivers hauling freight between US domestic points (cabotage): hundreds to thousands of drivers blocked at border in July 2026",
         "Trimble TMS Goldman Sachs sale: no buyer confirmed; mid-market TMW shippers entering Q4 contract cycles with platform uncertainty — competitive window for Transplace"
+      ]
+    },
+    {
+      "date": "2026-08-03",
+      "stories": [
+        "ArcBest retired MoLo Solutions and Panther brands August 1 under unified ArcBest brand with $76.5M goodwill impairment and $40M annualized savings, discontinuing Vaux digital brokerage platform; mid-market shipper base now relationship-adrift",
+        "Canada Section 338 50% tariffs effective August 19 (T-16 days) with no USMCA carve-out; covered goods include wood, paper, dairy, alcohol, machinery, furniture, textiles affecting ~$20B in annual Canadian imports",
+        "Mexico MVE electronic customs value declaration became mandatory August 1, requiring freight cost/insurance/royalty documentation per INCOTERMS; CrimsonLogic warns data quality — not filing — is primary compliance risk",
+        "RXO Q2 2026 earnings scheduled August 6 with $27-37M EBITDA guidance, $100M+ managed transportation new awards, $200M late-stage pipeline, and spot mix expanded to 33% of volume",
+        "Trimble TMS Goldman Sachs sale process ongoing with no confirmed buyer as Q4 contract cycles begin; TMW customers entering annual planning with no platform visibility",
+        "Uber Freight DocAI won FreightWaves 2026 AI Excellence Award for Operational AI Integration (20K+ documents/week, 99%+ accuracy, 50% reduction in invoice disputes)",
+        "Aurora Innovation Q2 2026: $2M revenue, 440K driverless commercial miles, 100% on-time delivery, zero collisions; new Charger Logistics cold-chain partnership Dallas-Laredo; Gen-2 trucks at 50% lower build cost vs Gen-1",
+        "FMCSA ADS NPRM expected August 2026 — first formal federal proposed rule for automated driving systems commercial deployment standards; regulatory tailwind for AV ecosystem",
+        "NRF projects record 2.47M TEU July container imports driven by Canada Section 338 tariff frontloading; ocean spot rates $7,000-7,200/FEU West Coast and $10,000-10,200/FEU East Coast",
+        "Humano LLC filing WARN notice for 586 freight handlers in Indiana, closing operations August 17 as freight distress continues"
       ]
     }
   ]
