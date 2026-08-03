@@ -7,7 +7,8 @@
 const fs = require('fs');
 const path = require('path');
 
-const RETENTION_DAYS = 30;
+const RETENTION_DAYS = 30;        // seen_urls freshness window
+const THREAD_RETENTION_DAYS = 60; // threads move slower than daily news — keep longer
 
 function main() {
   const [, , memoryFilePath, memoryBlockJson] = process.argv;
@@ -27,7 +28,7 @@ function main() {
   }
 
   // Load existing seen.json, or start fresh
-  let seen = { seen_urls: [], seen_story_hashes: [], last_30_days: [] };
+  let seen = { seen_urls: [], seen_story_hashes: [], threads: [] };
   if (fs.existsSync(memoryFilePath)) {
     try {
       seen = JSON.parse(fs.readFileSync(memoryFilePath, 'utf8'));
@@ -47,30 +48,25 @@ function main() {
     hashSet.add(hash);
   }
 
-  // Add today's entry to last_30_days
-  const todayEntry = {
-    date: update.date,
-    stories: update.story_summaries || []
-  };
-
-  const last30 = seen.last_30_days || [];
-  // Remove any existing entry for today (idempotent re-runs)
-  const filtered = last30.filter(e => e.date !== update.date);
-  filtered.push(todayEntry);
-
-  // Prune entries older than 30 days
-  const cutoff = new Date();
-  cutoff.setDate(cutoff.getDate() - RETENTION_DAYS);
-  const pruned = filtered.filter(e => new Date(e.date) >= cutoff);
-
-  // Prune seen_urls to only keep URLs from last 30 days
-  // Build set of all URLs from retained days to identify what to keep
-  const recentUrlSet = new Set();
-  for (const entry of pruned) {
-    // We don't track per-url dates, so keep all URLs that arrived in the last 30 days
-    // by keeping the full URL set but capping at a reasonable size (3000 entries)
-    // This is v1 — Phase 3 will add smarter pruning
+  // Upsert thread updates (keyed by id), preserving first_covered_date
+  const threadMap = new Map((seen.threads || []).map(t => [t.id, t]));
+  for (const t of update.thread_updates || []) {
+    if (!t.id || !t.status) continue;
+    const existing = threadMap.get(t.id);
+    threadMap.set(t.id, {
+      id: t.id,
+      label: t.label || (existing && existing.label) || t.id,
+      status: t.status,
+      last_covered_date: update.date,
+      first_covered_date: existing ? existing.first_covered_date : update.date
+    });
   }
+
+  // Prune threads that haven't been touched within THREAD_RETENTION_DAYS
+  const threadCutoff = new Date();
+  threadCutoff.setDate(threadCutoff.getDate() - THREAD_RETENTION_DAYS);
+  const prunedThreads = Array.from(threadMap.values())
+    .filter(t => new Date(t.last_covered_date) >= threadCutoff);
 
   // Cap URL set at 3000 entries (FIFO — drop oldest if over limit)
   const urlArray = Array.from(urlSet);
@@ -79,7 +75,7 @@ function main() {
   const result = {
     seen_urls: cappedUrls,
     seen_story_hashes: Array.from(hashSet),
-    last_30_days: pruned
+    threads: prunedThreads
   };
 
   // Write atomically via temp file
@@ -87,7 +83,7 @@ function main() {
   fs.writeFileSync(tmpPath, JSON.stringify(result, null, 2) + '\n', 'utf8');
   fs.renameSync(tmpPath, memoryFilePath);
 
-  console.log(`Memory updated: ${cappedUrls.length} URLs, ${hashSet.size} hashes, ${pruned.length} day entries`);
+  console.log(`Memory updated: ${cappedUrls.length} URLs, ${hashSet.size} hashes, ${prunedThreads.length} threads`);
 }
 
 main();

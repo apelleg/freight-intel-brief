@@ -4,17 +4,40 @@ TODAY'S DATE: Use the actual current date. Format as YYYY-MM-DD throughout.
 
 ---
 
-## Step 0: Load Memory — Seen Stories
+## Step 0: Load Memory — Seen Stories & Ongoing Threads
 
-Before searching for anything, load the deduplication list to avoid repeating stories.
+Before searching for anything, load the deduplication memory.
 
 1. Use the `Read` tool to read `memory/seen.json`.
 2. If the file exists, extract:
-   - `seen_urls`: list of URLs already covered — skip any story whose URL appears here
-   - `seen_story_hashes`: list of hashes — skip any story whose hash (first 100 chars of headline + source name, lowercased) matches
-   - `last_30_days`: recent story summaries for context (do not repeat these angles)
-3. If the file does NOT exist or is empty, treat all three lists as empty — proceed normally.
-4. Keep this dedup list in mind throughout Steps 1 and 2. When in doubt, prefer a fresher angle over skipping a developing story entirely.
+   - `seen_urls`: list of URLs already covered — skip any story whose URL appears here.
+   - `seen_story_hashes`: list of hashes — skip any story whose hash (first 100 chars of headline + source name, lowercased) matches.
+   - `threads`: an array of ongoing storylines already covered in a prior brief, each `{id, label, status, last_covered_date, first_covered_date}`. This is your primary tool for cross-day dedup — read every thread's `label` and `status` before searching, so you recognize a continuation even when it arrives via a brand-new URL and headline.
+3. If the file does NOT exist or is empty, treat all as empty — proceed normally.
+
+### Matching a story to a thread
+
+For every candidate story found in Step 1, check whether it's about the same underlying entity/storyline as an existing thread — same bill, same company initiative, same litigation, same M&A process, same AV rollout, same executive's stated position — not just the same topic category. A new article restating the identical fact, or a different outlet covering the same event, counts as the same thread even though the URL/headline are new. This is the case `seen_urls`/`seen_story_hashes` cannot catch.
+
+- **No matching thread** → this is fresh. Cover it normally. If it's the kind of story likely to keep developing (bills, litigation, M&A processes, AV rollouts, sustained executive/competitive positioning), you'll create a thread entry for it in Step 5. One-off items unlikely to recur (a single bankruptcy filing, a single stat callout) don't need one.
+- **Matching thread found** → this is a continuation. Apply the materiality bar below before deciding whether to include it at all.
+
+### The materiality bar for continuations
+
+Only include a continuation if something concretely, newsworthily changed since the thread's `status` — not "another outlet also covered it" or "still in progress."
+
+| Topic type | Clears the bar | Does NOT clear the bar |
+|---|---|---|
+| Bills / regulation / litigation | A vote happened, a rule went final/effective, a ruling issued, a deadline passed or was missed, a hearing produced an outcome | "Still advancing," restating provisions/timeline already known, a preview of an upcoming vote with no new detail |
+| M&A / funding / corporate moves | Deal announced, signed, closed, terminated, price/terms changed | A follow-up article re-describing an already-announced deal |
+| Competitor / tech announcements | A new concrete milestone (funding closed, product live, partnership signed, new commitment made) | Restating a stat or quote already given in a prior brief |
+| Market Pulse (rates, load-to-truck) | **Exempt from this bar** — a new weekly/daily print is inherently new information | Restating an unchanged number as if it were new when no fresher print exists |
+
+If a continuation clears the bar: include **only the delta** in one tight line — what's new since last covered. Do not re-explain background context (regulatory mechanics, company history, prior stats) already established in a prior brief; a short pointer suffices (e.g., "advances to a House floor vote" rather than re-describing what the bill does).
+
+If it does not clear the bar: omit it entirely. Do not include a placeholder or "no update" line.
+
+Keep this in mind throughout Steps 1 and 2. When in doubt, prefer a fresher angle over skipping a genuinely developing story entirely — but never at the cost of re-explaining settled background.
 
 ---
 
@@ -114,6 +137,7 @@ Before saving or sending, review the compiled brief for cross-section repetition
 4. Check "Today's Top Signal" — if it merely repeats a bullet from another section verbatim, rewrite it as a genuine synthesis rather than a copy.
 5. Check "CPO Lens" items — each must raise a distinct question not already answered by another Lens item or reducible to a section you just wrote.
 6. After pruning, confirm the brief reads as one cohesive document with no redundant leads, no repeated statistics, and no re-introduced companies or events.
+7. Cross-day check: for every remaining story that matched a thread in Step 0, confirm it (a) cleared the materiality bar and (b) is written as a delta only — no re-explained background. If either is not true, cut it now.
 
 Only proceed to Step 3 once this review is complete.
 
@@ -177,7 +201,7 @@ Send the brief as an HTML email via the SendGrid API.
    ```bash
    git add briefs/[DATE].html briefs/[DATE].md
    git commit -m "brief: add freight intel brief [DATE]"
-   git push
+   git push origin HEAD:main
    ```
    GitHub Actions will detect the new HTML file and send the email automatically.
 
@@ -216,10 +240,12 @@ Format exactly as shown — the parser looks for these delimiters:
     "abc123def456",
     "789xyz012abc"
   ],
-  "story_summaries": [
-    "Flexport raises $200M Series F at $3B valuation",
-    "DAT load-to-truck ratio hits 3.2, highest since Q1 2024",
-    "Aurora launches commercial driverless freight service Dallas-Houston"
+  "thread_updates": [
+    {
+      "id": "self_drive_act",
+      "label": "SELF DRIVE Act / federal AV framework",
+      "status": "Passed full House Energy & Commerce Committee 12-11; heading to House floor vote or reauthorization bill inclusion. NHTSA standards due Sept 2027."
+    }
   ]
 }
 <<<MEMORY_UPDATE_END>>>
@@ -228,8 +254,11 @@ Format exactly as shown — the parser looks for these delimiters:
 Rules for the memory block:
 - `new_urls`: every URL you fetched a story from today (even if you ended up not using it)
 - `new_hashes`: MD5-style hash of `(first 100 chars of headline + source name).toLowerCase()` for each story included in the brief
-- `story_summaries`: one short sentence per story, plain text, no markdown — these become the `last_30_days` context for future runs
-- Include ALL stories, not just the top ones
+- `thread_updates`: one entry for every thread that is brand-new today or whose status changed today (per Step 0/2.5). Omit threads you looked at but found no update for.
+  - `id`: short, stable snake_case slug. Reuse the exact id from memory if this continues an existing thread; invent a new one only for a genuinely new storyline.
+  - `label`: short human-readable name for the storyline (2-6 words).
+  - `status`: one sentence capturing the current state — write it so it stands alone, since it fully replaces the prior status and future runs will only see this text, not the history behind it.
+  - Don't create a thread for one-off items unlikely to recur (a single bankruptcy filing, a single stat callout) — see Step 0.
 - If you skipped a URL because it was in `seen_urls`, do NOT add it again
 
 ---
