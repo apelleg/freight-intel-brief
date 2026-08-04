@@ -957,7 +957,17 @@
     "https://www.fleetowner.com/news/regulations/news/55390583/trucking-regulations-2026-inside-the-dot-fmcsa-agenda",
     "https://www.dat.com/company/news-events/news-releases",
     "https://www.freightwaves.com/news/freight-distress-report-carrier-logistics-closures-erase-over-245-jobs",
-    "https://joffroy.com/blog/manifestacion-de-valor-electronica-mandatory"
+    "https://joffroy.com/blog/manifestacion-de-valor-electronica-mandatory",
+    "https://www.marketbeat.com/earnings/reports/2026-8-6-rxo-inc-stock/",
+    "https://www.stocktitan.net/news/RXO/rxo-schedules-second-quarter-2026-earnings-and-investor-conference-3fykz3ku9ip8.html",
+    "https://finviz.com/news/129290/rxo-rxo-q2-earnings-report-preview-what-to-look-for",
+    "https://www.logisticsmgmt.com/article/tms_2026_9_trends_that_define_the_next_phase_of_transportation_tech",
+    "https://www.supplychain247.com/article/echo-global-logistics-acquires-its-logistics-2026",
+    "https://www.businesswire.com/news/home/20260527635565/en/ArcBest-Launches-ArcBest-View-a-Unified-Platform-for-Shipment-Execution-and-Insights",
+    "https://investors.arcb.com/news-events/news/News-Details/2026/ArcBest-Launches-ArcBest-View-a-Unified-Platform-for-Shipment-Execution-and-Insights/",
+    "https://www.freightwaves.com/news/arcbest-launches-shipment-execution-platform",
+    "https://www.uberfreight.com/en-US/blog/moving-from-hype-to-roi-uber-freight-cto-val-marchevsky-on-real-world-ai-in-logistics-freightwaves",
+    "https://finance.yahoo.com/technology/ai/articles/freightwaves-announces-2026-ai-excellence-165648529.html"
   ],
   "seen_story_hashes": [
     "dat dry van load-to-truck ratio hits 9.0 week of may 3-9 2026 up from 8.3dat freight",
@@ -1329,7 +1339,28 @@
     "mexico mve electronic customs value declaration mandatory august 1 2026 freight cost insurance royalties incoterms crimsonlogic data quality compliance riskfreightwaves / mexico sat",
     "humano llc warn notice 586 freight handlers indiana operations closing august 17 2026 freight distress carrier exitfreightwaves",
     "fmcsa ads nprm expected august 2026 first federal proposed rule automated driving systems commercial deployment standards aurora plusai waabi tailwindfleetowner / fmcsa",
-    "dat dry van linehaul $2.38/mile -6 cents wow +40% yoy sonar all-in $3.53/mile contract rates +18% yoy tender rejections 15.44% highest since early 2022dat / sonar august 2026"
+    "dat dry van linehaul $2.38/mile -6 cents wow +40% yoy sonar all-in $3.53/mile contract rates +18% yoy tender rejections 15.44% highest since early 2022dat / sonar august 2026",
+    "a5a70e374338d6943fa1f9c1d91a9c83",
+    "6d16571610d1310b04a9d7cb3c54abcd",
+    "c5d2e77099885f5ac2e99eb6cbb1bd85",
+    "7eda137d54dd4463633d71830ba63688",
+    "533b9fd51800cd7cf63c1538bcc9bab0",
+    "76cbd65c30ef699543d7082dd8499698"
   ],
-  "threads": []
+  "threads": [
+    {
+      "id": "nhtsa_ads_framework",
+      "label": "NHTSA ADS Interim Framework",
+      "status": "Published in Federal Register July 31, 2026. Two comment tracks open: 31-day interim guidance (closes Aug 31) covering near-term commercial operations, plus year-long track through July 31, 2027 for expanded ADS deployment standards. Industry comment period active.",
+      "last_covered_date": "2026-08-04",
+      "first_covered_date": "2026-08-04"
+    },
+    {
+      "id": "usmca_round_negotiations",
+      "label": "USMCA Bilateral Negotiations",
+      "status": "Round 3 concluded July 21-24, 2026 in Mexico City. Open issues reduced from 54 to 14. Canada excluded from bilateral talks. Round 4 scheduled early September 2026 in Washington D.C. Annual review clock running; full 16-year renewal unlikely.",
+      "last_covered_date": "2026-08-04",
+      "first_covered_date": "2026-08-04"
+    }
+  ]
 }
