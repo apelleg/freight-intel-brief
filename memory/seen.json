@@ -967,7 +967,23 @@
     "https://investors.arcb.com/news-events/news/News-Details/2026/ArcBest-Launches-ArcBest-View-a-Unified-Platform-for-Shipment-Execution-and-Insights/",
     "https://www.freightwaves.com/news/arcbest-launches-shipment-execution-platform",
     "https://www.uberfreight.com/en-US/blog/moving-from-hype-to-roi-uber-freight-cto-val-marchevsky-on-real-world-ai-in-logistics-freightwaves",
-    "https://finance.yahoo.com/technology/ai/articles/freightwaves-announces-2026-ai-excellence-165648529.html"
+    "https://finance.yahoo.com/technology/ai/articles/freightwaves-announces-2026-ai-excellence-165648529.html",
+    "https://www.dat.com/blog/dry-van-report-spot-rates-ease-as-summer-freight-demand-softens",
+    "https://mybluegrace.com/indexes/bluegrace-logistics-freight-market-update-august-2026/",
+    "https://www.fleetowner.com/news/news/55394444/truckload-spot-rates-continue-drop-according-to-ftr-transportation-intelligence-and-dat-freight-analytics",
+    "https://www.trucking.org/news-insights/ata-truck-tonnage-index-rose-03-july",
+    "https://www.logisticsmgmt.com/article/july_truck_tonnage_sees_marginal_gains_reports_ata",
+    "https://markets.financialcontent.com/stocks/article/stockstory-2026-8-5-earnings-to-watch-rxo-rxo-reports-q2-results-tomorrow",
+    "https://www.ttnews.com/articles/saia-earnings-q2-2026",
+    "https://straits.live/",
+    "https://debales.ai/blog/ai-agents-for-freight-brokers-complete-2026-guide",
+    "https://www.minichart.com.sg/2026/07/30/saia-inc-reports-record-q2-2026-earnings-with-17-revenue-growth-and-strong-operating-performance/",
+    "https://www.gurufocus.com/news/8993039/saia-inc-saia-q2-2026-earnings-call-highlights-record-revenue-and-improved-operating-ratio-amid-cost-pressures",
+    "https://www.stocktitan.net/news/SAIA/saia-reports-second-quarter-xubuqrq3xl1i.html",
+    "https://www.ccjdigital.com/economic-trends/freight-demand/article/15831280/saia-reports-record-q2-2026-revenue-driven-by-rate-hikes-and-pricing-power",
+    "https://www.bulktransporter.com/fleet-management/news/55392671/us-trucking-activity-inches-upward",
+    "https://finance.yahoo.com/markets/stocks/articles/fedex-freight-q4-2026-earnings-130156361.html",
+    "https://ir.aurora.tech/news-events/press-releases/detail/144/aurora-launches-second-generation-driverless-trucks-in-u-s-to-meet-customer-demand"
   ],
   "seen_story_hashes": [
     "dat dry van load-to-truck ratio hits 9.0 week of may 3-9 2026 up from 8.3dat freight",
@@ -1345,7 +1361,13 @@
     "c5d2e77099885f5ac2e99eb6cbb1bd85",
     "7eda137d54dd4463633d71830ba63688",
     "533b9fd51800cd7cf63c1538bcc9bab0",
-    "76cbd65c30ef699543d7082dd8499698"
+    "76cbd65c30ef699543d7082dd8499698",
+    "ata for-hire truck tonnage index rose 0.3% july 2026 index 113.7 second near-flat reading confirms supply-led rate cycleata/logistics management",
+    "dat dry van linehaul $2.32/mile -2.4% wow +42% yoy reefer $2.65/mile flatbed $2.87/mile load-to-truck 10.7x week august 3 2026dat freight & analytics",
+    "national diesel $5.31/gal july 27 2026 up $0.64 +14% four weeks strait hormuz day 157 10 transits vs 88 baselineeia/straits.live",
+    "rxo q2 2026 earnings preview august 6 $0.03 eps $27-37m ebitda guided revenue +15.8% yoy stock -17% ai brokerage benchmarkfinancialcontent/stockstory",
+    "saia inc q2 2026 record revenue $956.5m +17.1% yoy or 86.9% ltl tonnage +8.4%/workday claims 0.3% sub-80 or target july 30 2026transport topics",
+    "ai brokerage automation mainstream 80%+ carrier emails 47-min to 5-min quote response 60-120 day payback bcg half lsps deploying parade happyrobot augment debales 2026debales ai / bcg"
   ],
   "threads": [
     {
@@ -1361,6 +1383,13 @@
       "status": "Round 3 concluded July 21-24, 2026 in Mexico City. Open issues reduced from 54 to 14. Canada excluded from bilateral talks. Round 4 scheduled early September 2026 in Washington D.C. Annual review clock running; full 16-year renewal unlikely.",
       "last_covered_date": "2026-08-04",
       "first_covered_date": "2026-08-04"
+    },
+    {
+      "id": "aurora_commercial_deployment",
+      "label": "Aurora Gen-2 Commercial Ramp",
+      "status": "Gen-2 International LT Series driverless trucks in commercial service; 440K+ commercial driverless miles logged; Charger Logistics pharmaceutical cold-chain Dallas-Laredo route active; 200-truck year-end target; Roush building to 1,000 units/year production capacity; Uber Freight named network partner.",
+      "last_covered_date": "2026-08-05",
+      "first_covered_date": "2026-08-05"
     }
   ]
 }
