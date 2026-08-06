@@ -983,7 +983,17 @@
     "https://www.ccjdigital.com/economic-trends/freight-demand/article/15831280/saia-reports-record-q2-2026-revenue-driven-by-rate-hikes-and-pricing-power",
     "https://www.bulktransporter.com/fleet-management/news/55392671/us-trucking-activity-inches-upward",
     "https://finance.yahoo.com/markets/stocks/articles/fedex-freight-q4-2026-earnings-130156361.html",
-    "https://ir.aurora.tech/news-events/press-releases/detail/144/aurora-launches-second-generation-driverless-trucks-in-u-s-to-meet-customer-demand"
+    "https://ir.aurora.tech/news-events/press-releases/detail/144/aurora-launches-second-generation-driverless-trucks-in-u-s-to-meet-customer-demand",
+    "https://markets.financialcontent.com/stocks/article/stockstory-2026-8-6-rxo-nyserxo-delivers-strong-q2-cy2026-numbers-stock-soars",
+    "https://seekingalpha.com/pr/20192557",
+    "https://gosonar.com/pricing-power-index/rejection-and-spot-rates-remain-elevated",
+    "https://www.lloydslistintelligence.com/resources/blog/strait-of-hormuz-brief-5-august-2026",
+    "https://www.businesswire.com/news/home/20260804294712/en/Arrow-McLaren-Adds-Autonomous-Trucking-Pioneer-Aurora-as-Official-Partner",
+    "https://www.fmcsa.dot.gov/newsroom/safe-integration-automated-driving-systems-equipped-commercial-motor-vehicles",
+    "https://www.manilatimes.net/2026/08/06/tmt-newswire/pr-newswire/scaling-autonomous-freight-inside-ponyais-robotruck-business/2399790",
+    "https://www.stocktitan.net/news/PONY/scaling-autonomous-freight-inside-pony-ai-s-robotruck-hb2q9y7hkkbv.html",
+    "https://www.whitehouse.gov/fact-sheets/2026/07/fact-sheet-president-donald-j-trump-imposes-additional-tariffs-on-canada/",
+    "https://ntgfreight.com/resources/weekly-freight-trends-august-3-7-2026/"
   ],
   "seen_story_hashes": [
     "dat dry van load-to-truck ratio hits 9.0 week of may 3-9 2026 up from 8.3dat freight",
@@ -1367,7 +1377,14 @@
     "national diesel $5.31/gal july 27 2026 up $0.64 +14% four weeks strait hormuz day 157 10 transits vs 88 baselineeia/straits.live",
     "rxo q2 2026 earnings preview august 6 $0.03 eps $27-37m ebitda guided revenue +15.8% yoy stock -17% ai brokerage benchmarkfinancialcontent/stockstory",
     "saia inc q2 2026 record revenue $956.5m +17.1% yoy or 86.9% ltl tonnage +8.4%/workday claims 0.3% sub-80 or target july 30 2026transport topics",
-    "ai brokerage automation mainstream 80%+ carrier emails 47-min to 5-min quote response 60-120 day payback bcg half lsps deploying parade happyrobot augment debales 2026debales ai / bcg"
+    "ai brokerage automation mainstream 80%+ carrier emails 47-min to 5-min quote response 60-120 day payback bcg half lsps deploying parade happyrobot augment debales 2026debales ai / bcg",
+    "rxo q2 2026 revenue $1.77b +25% yoy adj ebitda $40m beats guidance top own range q3 guided $40m stockrxo/stockstory",
+    "aurora innovation arrow mclaren indycar official partner branding portland august 4 2026 av brand signalbusinesswire",
+    "fmcsa ads nprm rin 2126-ac17 projected august 2026 first federal framework driverless trucks driver quafmcsa/fleetowner",
+    "pony.ai robotruck q1 2026 revenue $10.2m +31% yoy 500-1000 gen-4 trucks china 2-3 years l4 catl 40% copr newswire",
+    "strait of hormuz 2 transits august 2 vs 73/day normal iran rejects trump dialogue qatar mediating diesellloyd's list intelligence",
+    "canada section 338 50% tariffs august 19 2026 countdown 13 days $20b goods no usmca carve-out front-loawhite house/crane worldwide",
+    "dat week july 26-aug 1 2026 dry van linehaul $2.32/mile -2.4% wow +42% yoy van ltr 10.9 reefer 19.4 eqdat freight analytics"
   ],
   "threads": [
     {
@@ -1387,9 +1404,23 @@
     {
       "id": "aurora_commercial_deployment",
       "label": "Aurora Gen-2 Commercial Ramp",
-      "status": "Gen-2 International LT Series driverless trucks in commercial service; 440K+ commercial driverless miles logged; Charger Logistics pharmaceutical cold-chain Dallas-Laredo route active; 200-truck year-end target; Roush building to 1,000 units/year production capacity; Uber Freight named network partner.",
-      "last_covered_date": "2026-08-05",
+      "status": "Gen-2 International LT Series driverless trucks in commercial service; 440K+ commercial driverless miles logged; Charger Logistics pharmaceutical cold-chain Dallas-Laredo route active; 200-truck year-end target; Roush building to 1,000 units/year production capacity; Uber Freight named network partner; Arrow McLaren IndyCar branding partnership signed August 4 (brand-building, no new freight customer announced).",
+      "last_covered_date": "2026-08-06",
       "first_covered_date": "2026-08-05"
+    },
+    {
+      "id": "fmcsa_ads_nprm",
+      "label": "FMCSA ADS NPRM (RIN 2126-AC17)",
+      "status": "NPRM projected for August 2026 — first comprehensive federal proposed rule for ADS-equipped commercial motor vehicles. Would address driver qualification equivalencies, drug/alcohol testing, CDL requirements, pre-trip inspection, and roadside inspection standards for driverless trucks. Not yet formally published as of August 6, 2026.",
+      "last_covered_date": "2026-08-06",
+      "first_covered_date": "2026-08-06"
+    },
+    {
+      "id": "canada_section_338_aug19",
+      "label": "Canada Section 338 Tariffs Aug 19",
+      "status": "50% additional duties on ~$20B in Canadian-origin goods (autos, dairy, lumber, machinery, electronics, cement, plywood) take effect at 12:01am EDT August 19, 2026. No USMCA carve-out — even USMCA-qualifying goods subject. FTZ goods admitted on/after August 19 must enter under privileged foreign status. Front-loading demand surge active on Canada-US lanes week of August 6.",
+      "last_covered_date": "2026-08-06",
+      "first_covered_date": "2026-08-06"
     }
   ]
 }
