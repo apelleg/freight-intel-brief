@@ -993,7 +993,24 @@
     "https://www.manilatimes.net/2026/08/06/tmt-newswire/pr-newswire/scaling-autonomous-freight-inside-ponyais-robotruck-business/2399790",
     "https://www.stocktitan.net/news/PONY/scaling-autonomous-freight-inside-pony-ai-s-robotruck-hb2q9y7hkkbv.html",
     "https://www.whitehouse.gov/fact-sheets/2026/07/fact-sheet-president-donald-j-trump-imposes-additional-tariffs-on-canada/",
-    "https://ntgfreight.com/resources/weekly-freight-trends-august-3-7-2026/"
+    "https://ntgfreight.com/resources/weekly-freight-trends-august-3-7-2026/",
+    "https://www.bloomberg.com/news/articles/2026-08-05/iran-says-agreement-on-hormuz-shipping-route-reached-with-oman",
+    "https://www.aljazeera.com/news/2026/8/6/hormuz-deal-close-whats-the-latest-on-each-sides-positions",
+    "https://www.kucoin.com/news/flash/uber-q2-2026-earnings-report-14-2b-revenue-10b-free-cash-flow-milestone",
+    "https://www.ccjdigital.com/economic-trends/freight-demand/article/15831434/heartland-express-bounces-back-to-profitability-in-second-quarter-2026",
+    "https://www.freightwaves.com/news/gains-from-equipment-sales-save-heartlands-q2",
+    "https://earningscall.biz/e/nyse/s/rxo/y/2026/q/q2",
+    "https://www.marketscreener.com/news/rxo-s-q2-adjusted-earnings-revenue-rise-ce7f50dddd80ff24",
+    "https://www.quiverquant.com/news/Heartland+Express+Reports+Second+Quarter+2026+Financial+Results+and+Continued+Operating+Ratio+Improvement",
+    "https://www.stocktitan.net/news/HTLD/heartland-express-inc-reports-net-income-and-financial-results-for-3hp0bk0dd0xu.html",
+    "https://markets.financialcontent.com/stocks/article/stockstory-2026-8-5-ubers-nyseuber-q2-cy2026-earnings-results-revenue-in-line-with-expectations-q3-guidance-slightly-below-expectations",
+    "https://www.investing.com/news/company-news/uber-q2-2026-slides-bookings-surge-22-stock-falls-on-revenue-miss-93CH-4837741",
+    "https://www.stocktitan.net/sec-filings/UBER/8-k-uber-technologies-inc-reports-material-event-53d1afaac00c.html",
+    "https://www.ccjdigital.com/economic-trends/freight-demand/article/15831394/why-freight-spot-rates-are-rising-in-2026",
+    "https://goglt.com/freight-market-update-august-2026-usa-mexico-and-canada/",
+    "https://www.freightright.com/news/august-ocean-rate-increase-begins-to-unravel-as-importers-hold-back-tfx-update-wk-august-3-2026",
+    "https://www.intelligentaudit.com/blog/ia-insights-august-3-2026",
+    "https://transportationinsight.com/resources/transportation-industry-trends-august-3-7-2026/"
   ],
   "seen_story_hashes": [
     "dat dry van load-to-truck ratio hits 9.0 week of may 3-9 2026 up from 8.3dat freight",
@@ -1384,7 +1401,11 @@
     "pony.ai robotruck q1 2026 revenue $10.2m +31% yoy 500-1000 gen-4 trucks china 2-3 years l4 catl 40% copr newswire",
     "strait of hormuz 2 transits august 2 vs 73/day normal iran rejects trump dialogue qatar mediating diesellloyd's list intelligence",
     "canada section 338 50% tariffs august 19 2026 countdown 13 days $20b goods no usmca carve-out front-loawhite house/crane worldwide",
-    "dat week july 26-aug 1 2026 dry van linehaul $2.32/mile -2.4% wow +42% yoy van ltr 10.9 reefer 19.4 eqdat freight analytics"
+    "dat week july 26-aug 1 2026 dry van linehaul $2.32/mile -2.4% wow +42% yoy van ltr 10.9 reefer 19.4 eqdat freight analytics",
+    "iran oman hormuz framework agreement august 5-6 2026 shipping routes brent $75-82 deal not yet implemented us israeli vessel access restrictedbloomberg",
+    "heartland express q2 2026 net income $10.6m vs loss operating ratio 91.0% from 105.9% tighter capacity improved pricing tractor age 2.3 yearsccj",
+    "uber freight q2 2026 revenue $1.583b +25% yoy operating loss -$24m vs -$26m managed transport $100m new freight under managementuber/kucoin",
+    "agentic ai freight brokerage table stakes q2 2026 rxo 500k carrier calls chr 30+ agents 32sec uber freight docai 20k docs 99% accuracy chr 92% autonomous 4pl orchestrationq2 earnings"
   ],
   "threads": [
     {
@@ -1418,9 +1439,16 @@
     {
       "id": "canada_section_338_aug19",
       "label": "Canada Section 338 Tariffs Aug 19",
-      "status": "50% additional duties on ~$20B in Canadian-origin goods (autos, dairy, lumber, machinery, electronics, cement, plywood) take effect at 12:01am EDT August 19, 2026. No USMCA carve-out — even USMCA-qualifying goods subject. FTZ goods admitted on/after August 19 must enter under privileged foreign status. Front-loading demand surge active on Canada-US lanes week of August 6.",
-      "last_covered_date": "2026-08-06",
+      "status": "Deadline now 12 days away (August 19, 2026). Front-loading at peak urgency on Canada-US lanes; importers targeting August 14 entry. No change to tariff scope or rate — 50% on ~$20B Canadian goods (autos, dairy, lumber, machinery, electronics, cement, plywood), no USMCA carve-out. FTZ goods admitted on/after August 19 must enter under privileged foreign status.",
+      "last_covered_date": "2026-08-07",
       "first_covered_date": "2026-08-06"
+    },
+    {
+      "id": "iran_hormuz_shipping_deal",
+      "label": "Iran-Oman Hormuz Shipping Deal",
+      "status": "Iran-Oman framework agreement reached August 5-6, 2026 establishing new Strait of Hormuz shipping routes; Brent fell to $75-82/bbl on announcement; deal not yet implemented — Iranian draft conditions restrict U.S. and Israeli vessel access; national diesel at $5.13/gal; passage remains at ~2 transits/day vs. 73/day pre-crisis baseline.",
+      "last_covered_date": "2026-08-07",
+      "first_covered_date": "2026-08-07"
     }
   ]
 }
