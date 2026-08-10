@@ -1010,7 +1010,16 @@
     "https://goglt.com/freight-market-update-august-2026-usa-mexico-and-canada/",
     "https://www.freightright.com/news/august-ocean-rate-increase-begins-to-unravel-as-importers-hold-back-tfx-update-wk-august-3-2026",
     "https://www.intelligentaudit.com/blog/ia-insights-august-3-2026",
-    "https://transportationinsight.com/resources/transportation-industry-trends-august-3-7-2026/"
+    "https://transportationinsight.com/resources/transportation-industry-trends-august-3-7-2026/",
+    "https://www.chrobinson.com/en-us/resources/insights-and-advisories/north-america-freight-insights/aug-2026-freight-market-update/",
+    "https://rxo.com/news/market-share-gains-and-improved-profitability-drive-strong-second-quarter-results-for-rxo/",
+    "https://www.freightos.com/freight-resources/freightos-global-freight-outlook-august-2026/",
+    "https://english.globalarabnetwork.com/2026/08/08/iran-awaits-supreme-security-council-approval-for-hormuz-agreement/",
+    "https://www.investing.com/news/company-news/rxo-q2-2026-presentation-shows-early-recovery-amid-tight-capacity-93CH-4842864",
+    "https://finance.yahoo.com/markets/stocks/articles/rxo-inc-rxo-q2-2026-190102897.html",
+    "https://fortune.com/2026/08/07/iran-agreement-oman-strait-of-hormuz-shipping/",
+    "https://www.compliancesafetymanager.com/brake-safety-week-2026-preparing-your-fleet/",
+    "https://ielfreight.com/preparing-for-august-what-to-expect-in-the-freight-market/"
   ],
   "seen_story_hashes": [
     "dat dry van load-to-truck ratio hits 9.0 week of may 3-9 2026 up from 8.3dat freight",
@@ -1405,7 +1414,21 @@
     "iran oman hormuz framework agreement august 5-6 2026 shipping routes brent $75-82 deal not yet implemented us israeli vessel access restrictedbloomberg",
     "heartland express q2 2026 net income $10.6m vs loss operating ratio 91.0% from 105.9% tighter capacity improved pricing tractor age 2.3 yearsccj",
     "uber freight q2 2026 revenue $1.583b +25% yoy operating loss -$24m vs -$26m managed transport $100m new freight under managementuber/kucoin",
-    "agentic ai freight brokerage table stakes q2 2026 rxo 500k carrier calls chr 30+ agents 32sec uber freight docai 20k docs 99% accuracy chr 92% autonomous 4pl orchestrationq2 earnings"
+    "agentic ai freight brokerage table stakes q2 2026 rxo 500k carrier calls chr 30+ agents 32sec uber freight docai 20k docs 99% accuracy chr 92% autonomous 4pl orchestrationq2 earnings",
+    "052bae1e43eb8c891019c95fb572d00a",
+    "4ca51a546f746bda17cfbcbe21e140b8",
+    "2bdcfbc655e1d1d25c6951d847ca82dc",
+    "34d295601ee0bfc6c34e325a08c9a422",
+    "5010734bbb7bf854a6ff9cf496ab7005",
+    "0eea40b5748be57b4e6cfc8319e57d6c",
+    "7d3ad99313202869976da85ab3598484",
+    "6e4ef906e6397bd07f604970b42b7db7",
+    "efc94487a9cf6e71448f4ab9d5f28393",
+    "0db214b7c7f0905c60a02761300aec0c",
+    "19660a7384b0dc02925f08442ae8e9a9",
+    "028f8a8fb80b77d5cfd5ede8c1ebc1a6",
+    "f063b72147afec1cf38536afb4b82c7b",
+    "5a5c0a5b4e63c1149c0fec6f791c5a8a"
   ],
   "threads": [
     {
@@ -1432,23 +1455,30 @@
     {
       "id": "fmcsa_ads_nprm",
       "label": "FMCSA ADS NPRM (RIN 2126-AC17)",
-      "status": "NPRM projected for August 2026 — first comprehensive federal proposed rule for ADS-equipped commercial motor vehicles. Would address driver qualification equivalencies, drug/alcohol testing, CDL requirements, pre-trip inspection, and roadside inspection standards for driverless trucks. Not yet formally published as of August 6, 2026.",
+      "status": "NPRM projected for August 2026 \u2014 first comprehensive federal proposed rule for ADS-equipped commercial motor vehicles. Would address driver qualification equivalencies, drug/alcohol testing, CDL requirements, pre-trip inspection, and roadside inspection standards for driverless trucks. Not yet formally published as of August 6, 2026.",
       "last_covered_date": "2026-08-06",
       "first_covered_date": "2026-08-06"
     },
     {
       "id": "canada_section_338_aug19",
       "label": "Canada Section 338 Tariffs Aug 19",
-      "status": "Deadline now 12 days away (August 19, 2026). Front-loading at peak urgency on Canada-US lanes; importers targeting August 14 entry. No change to tariff scope or rate — 50% on ~$20B Canadian goods (autos, dairy, lumber, machinery, electronics, cement, plywood), no USMCA carve-out. FTZ goods admitted on/after August 19 must enter under privileged foreign status.",
-      "last_covered_date": "2026-08-07",
+      "status": "T-9 days (August 19, 2026). Final front-loading sprint colliding with CVSA Brake Safety Week Aug 23-29 compressing late-August capacity. No scope changes, no legal stay. Canada-US lanes carrying affected goods face volume cliff after Aug 19.",
+      "last_covered_date": "2026-08-10",
       "first_covered_date": "2026-08-06"
     },
     {
       "id": "iran_hormuz_shipping_deal",
       "label": "Iran-Oman Hormuz Shipping Deal",
-      "status": "Iran-Oman framework agreement reached August 5-6, 2026 establishing new Strait of Hormuz shipping routes; Brent fell to $75-82/bbl on announcement; deal not yet implemented — Iranian draft conditions restrict U.S. and Israeli vessel access; national diesel at $5.13/gal; passage remains at ~2 transits/day vs. 73/day pre-crisis baseline.",
+      "status": "Iran-Oman framework agreement reached August 5-6, 2026 establishing new Strait of Hormuz shipping routes; Brent fell to $75-82/bbl on announcement; deal not yet implemented \u2014 Iranian draft conditions restrict U.S. and Israeli vessel access; national diesel at $5.13/gal; passage remains at ~2 transits/day vs. 73/day pre-crisis baseline.",
       "last_covered_date": "2026-08-07",
       "first_covered_date": "2026-08-07"
+    }
+  ],
+  "last_30_days": [
+    {
+      "date": "2026-08-10",
+      "stories_count": 14,
+      "top_signal": "Canada Section 338 tariffs T-9 days (Aug 19) colliding with CVSA Brake Safety Week Aug 23-29"
     }
   ]
 }
