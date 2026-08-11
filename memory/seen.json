@@ -1019,7 +1019,19 @@
     "https://finance.yahoo.com/markets/stocks/articles/rxo-inc-rxo-q2-2026-190102897.html",
     "https://fortune.com/2026/08/07/iran-agreement-oman-strait-of-hormuz-shipping/",
     "https://www.compliancesafetymanager.com/brake-safety-week-2026-preparing-your-fleet/",
-    "https://ielfreight.com/preparing-for-august-what-to-expect-in-the-freight-market/"
+    "https://ielfreight.com/preparing-for-august-what-to-expect-in-the-freight-market/",
+    "https://www.freightwaves.com/news/mexico-plans-major-expansion-of-busiest-cross-border-truck-crossing",
+    "https://www.indexbox.io/blog/tamaulipas-to-expand-world-trade-bridge-in-nuevo-laredo-by-end-of-2026/",
+    "https://cvsa.org/news/2026-bsw-dates/",
+    "https://www.ccjdigital.com/business/insurance/article/15831229/ch-robinson-appeals-texas-verdict-warns-freight-market",
+    "https://www.freightwaves.com/news/c-h-robinson-nuclear-verdicts-existential-threat-to-brokers",
+    "https://www.overdriveonline.com/channel-19/article/15831393/brokers-new-carrierselection-strategy-after-604m-ch-robinson-verdict",
+    "https://www.supplychaindive.com/news/amazon-taps-fulfillment-model-for-dedicated-branded-delivery-trucks/826726/",
+    "https://press.aboutamazon.com/2026/7/amazon-business-reaches-60-billion-in-annualized-gross-sales-serving-over-11-million-organizations-worldwide",
+    "https://www.ttnews.com/articles/rxo-earnings-q2-2026",
+    "https://finance.yahoo.com/markets/stocks/articles/sonar-upgrades-batch-rate-intelligence-120000941.html",
+    "https://www.intelligentaudit.com/blog/ia-insights-august-10-2026",
+    "https://www.freightwaves.com/news/automated-cargo-corridor-project-aims-to-modernize-us-mexico-trade"
   ],
   "seen_story_hashes": [
     "dat dry van load-to-truck ratio hits 9.0 week of may 3-9 2026 up from 8.3dat freight",
@@ -1428,7 +1440,25 @@
     "19660a7384b0dc02925f08442ae8e9a9",
     "028f8a8fb80b77d5cfd5ede8c1ebc1a6",
     "f063b72147afec1cf38536afb4b82c7b",
-    "5a5c0a5b4e63c1149c0fec6f791c5a8a"
+    "5a5c0a5b4e63c1149c0fec6f791c5a8a",
+    "mexico tamaulipas world trade bridge nuevo laredo expand 8 to 18 dedicated commercial lanes construction h2 2026freightwaves",
+    "dry van linehaul eased 6 cents/mile 2.26/mile week ending aug 8 second consecutive week softening +43-46% yoyfleetowner",
+    "cvsa brake safety week aug 23-29 brake drum rotor compliance 14.3% out of service historically rate bumpcvsa",
+    "ch robinson formally filed appeal 604m texas nuclear verdict largest ever ceo bozeman public market warningccj",
+    "amazon deployed dedicated cng-powered commercial delivery trucks 13 states palletized dock-capable b2b deliveriessupply chain dive",
+    "rxo ceo drew wilkerson aug 6 positioned rxo enterprise-safe broker post-montgomery carrier vetting financial stabilitytransport topics",
+    "freightwaves sonar batch rate intelligence expanded complete rfp pricing workflow forward-looking rate seasonality signalsfreightwaves/sonar",
+    "analysis projects us data center expansion 24 gw to 110 gw 2026 2030 generate 8.6 million truckloads flatbed specializedIA insights",
+    "us-mexico pilot project ai-enhanced pre-inspection manifest pre-clearance laredo crossings reduced dray wait timesfreightwaves",
+    "a182b11e9b66b50c320fa61d505c9d21",
+    "f1eb4a18d9a07941e9d28aa96d51b903",
+    "36c1cf216e1f4d01c59dfa723dbc11ff",
+    "73038152c478adf775e4322e5fb51d64",
+    "f46c41d635cce5f48994a3e15213e7e5",
+    "fb75c2fd66d127bbf6b22cfd0aa3cf81",
+    "598c90f61f24bbca582bd2b37b41947e",
+    "f274ddac3ad092493c58667eca557972",
+    "99d25981828ff9c7b55dde62b2dbc02d"
   ],
   "threads": [
     {
@@ -1472,6 +1502,20 @@
       "status": "Iran-Oman framework agreement reached August 5-6, 2026 establishing new Strait of Hormuz shipping routes; Brent fell to $75-82/bbl on announcement; deal not yet implemented \u2014 Iranian draft conditions restrict U.S. and Israeli vessel access; national diesel at $5.13/gal; passage remains at ~2 transits/day vs. 73/day pre-crisis baseline.",
       "last_covered_date": "2026-08-07",
       "first_covered_date": "2026-08-07"
+    },
+    {
+      "id": "mexico_wtb_expansion",
+      "label": "Mexico World Trade Bridge Expansion",
+      "status": "Tamaulipas state announced expansion from 8 to 18 dedicated commercial lanes at World Trade Bridge Nuevo Laredo; construction set to begin H2 2026. USMCA Round 4 early September 2026 will determine rules-of-origin treatment affecting which goods flow through new capacity.",
+      "last_covered_date": "2026-08-11",
+      "first_covered_date": "2026-08-11"
+    },
+    {
+      "id": "chr_nuclear_verdict_appeal",
+      "label": "CHR Nuclear Verdict Appeal",
+      "status": "C.H. Robinson formally appealed the 604M Texas nuclear verdict (largest ever against a transportation company). CEO Bozeman issued public market warning Aug 2026. Industry-wide carrier-vetting documentation overhaul underway. RXO running active compliance-based sales campaign targeting same enterprise shippers.",
+      "last_covered_date": "2026-08-11",
+      "first_covered_date": "2026-08-11"
     }
   ],
   "last_30_days": [
@@ -1479,6 +1523,11 @@
       "date": "2026-08-10",
       "stories_count": 14,
       "top_signal": "Canada Section 338 tariffs T-9 days (Aug 19) colliding with CVSA Brake Safety Week Aug 23-29"
+    },
+    {
+      "date": "2026-08-11",
+      "stories_count": 9,
+      "top_signal": "Mexico Tamaulipas World Trade Bridge expansion 8 to 18 lanes H2 2026; CHR 604M verdict appeal + Bozeman market warning; Amazon B2B commercial trucks 13 states; SONAR full RFP engine; data center 8.6M truckload wave"
     }
   ]
 }
