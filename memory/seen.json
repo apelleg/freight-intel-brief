@@ -1509,7 +1509,13 @@
     "46833c18cd868618bd4823b96f2c7d16",
     "b9d2a73b6d3d53deb55beb1b54efabc9",
     "3a2a85a02f58c849906c61ac70206ff0",
-    "e86d8db40028172c8459754e22e9f09c"
+    "e86d8db40028172c8459754e22e9f09c",
+    "uber freight data breach helix extortion group unc6671 1 million files stolen dispatch documents accounts receivabletechcrunch",
+    "c.h. robinson august 2026 freight market update intermodal shipper cost lever ai 4pl 30 autonomous agents 92 percentc.h. robinson",
+    "trimble tms sale goldman sachs no buyer confirmed q4 contract renewal window open tmw customers platform uncertaintyfreightwaves",
+    "strait of hormuz weekly transits 78 week august 3-9 2026 down from 95 iran-oman deal stalled 1.5 2b marine insurancelloyd's list",
+    "blue yonder gartner tms magic quadrant leader 19th year autonomous orchestration re-routing exception-free execution 2026blue yonder",
+    "dry van spot rate 2.32 mile contract van 2.39 record july gain 13 cents spot contract parity first time february 2022dat freight analytics"
   ],
   "threads": [
     {
@@ -1543,15 +1549,15 @@
     {
       "id": "canada_section_338_aug19",
       "label": "Canada Section 338 Tariffs Aug 19",
-      "status": "T-9 days (August 19, 2026). Final front-loading sprint colliding with CVSA Brake Safety Week Aug 23-29 compressing late-August capacity. No scope changes, no legal stay. Canada-US lanes carrying affected goods face volume cliff after Aug 19.",
-      "last_covered_date": "2026-08-10",
+      "status": "T-6 days to August 19 effective date. 50% duties on $20B+ Canadian goods (autos, dairy, alcohol, lumber, paper, cement, plywood, furniture); no USMCA exemption; in-transit rule: goods must clear US customs before Aug 19. CVSA Brake Safety Week Aug 23-29 creates sequential capacity compression on same corridors. Last covered August 13, 2026.",
+      "last_covered_date": "2026-08-13",
       "first_covered_date": "2026-08-06"
     },
     {
       "id": "iran_hormuz_shipping_deal",
       "label": "Iran-Oman Hormuz Shipping Deal",
-      "status": "Iran-Oman framework agreement reached August 5-6, 2026 establishing new Strait of Hormuz shipping routes; Brent fell to $75-82/bbl on announcement; deal not yet implemented \u2014 Iranian draft conditions restrict U.S. and Israeli vessel access; national diesel at $5.13/gal; passage remains at ~2 transits/day vs. 73/day pre-crisis baseline.",
-      "last_covered_date": "2026-08-07",
+      "status": "Hormuz weekly transits regressed to 78 (week of Aug 3-9) from 95 the prior week \u2014 deal stalled as Iran demands extensive US concessions; marine insurance claims top $1.5B-$2B; diesel elevated. Framework not yet implemented as of August 13, 2026.",
+      "last_covered_date": "2026-08-13",
       "first_covered_date": "2026-08-07"
     },
     {
@@ -1571,8 +1577,8 @@
     {
       "id": "trimble_tms_sale",
       "label": "Trimble TMS/TMW Sale Process",
-      "status": "Goldman Sachs advising on potential sale of Trimble's transportation and logistics unit (TMW TMS + maps). No buyer confirmed as of August 12, 2026. Process in Q4 TMS contract cycle timing — mid-market shippers on TMW evaluating renewals under platform uncertainty.",
-      "last_covered_date": "2026-08-12",
+      "status": "Goldman Sachs advising on Trimble T&L sale (TMW TMS + maps); no buyer confirmed as of August 13, 2026. Q4 TMS contract renewal cycle now open — mid-market TMW customers in active evaluation mode with platform ownership unresolved; represents active Transplace displacement window.",
+      "last_covered_date": "2026-08-13",
       "first_covered_date": "2026-08-12"
     },
     {
@@ -1581,6 +1587,13 @@
       "status": "Supervisory board approved largest-ever Daimler greenfield US truck manufacturing plant. Construction starts late 2026, production target 2029, supporting vocational and on-highway trucks including electric and autonomous-ready configurations. Near-term rate cycle through 2028 remains structurally tight.",
       "last_covered_date": "2026-08-12",
       "first_covered_date": "2026-08-12"
+    },
+    {
+      "id": "helix_breach_uber_freight",
+      "label": "Uber Freight Helix Data Breach",
+      "status": "Helix extortion group (Google Mandiant UNC6671) claims ~1M files exfiltrated from Uber Freight including dispatch docs, AR/AP data, mailbox archives, OneDrive files. UF confirmed incident 'identified, contained, remediated' with federal law enforcement engaged August 12, 2026. Has not disclosed whether shipper pricing or carrier contract data exposed. Investigation ongoing.",
+      "last_covered_date": "2026-08-13",
+      "first_covered_date": "2026-08-13"
     }
   ],
   "last_30_days": [
@@ -1598,6 +1611,11 @@
       "date": "2026-08-12",
       "stories_count": 7,
       "top_signal": "DAT record June-July contract rate gains (van +13¢ to $2.39/mi, spot at contract parity since Feb 2022); Daimler Truck largest-ever US greenfield plant approved, production 2029; Landstar post-Montgomery winner narrative; Trimble TMS sale Goldman Sachs process, no buyer; CVSA Brake Safety Week Aug 23-29 + Canada Section 338 T-7 sequential capacity compressions"
+    },
+    {
+      "date": "2026-08-13",
+      "stories_count": 6,
+      "top_signal": "Uber Freight Helix cybersecurity breach (1M files claimed — dispatch docs, AR/AP, mailbox); Hormuz transits 78/week (↓ from 95, deal stalled); Canada Section 338 T-6 days + CVSA Brake Safety Week sequential; Trimble TMW Q4 displacement window; CHR AI 4PL positioning; Blue Yonder Gartner TMS leader 19th year / autonomous orchestration"
     }
   ]
 }
