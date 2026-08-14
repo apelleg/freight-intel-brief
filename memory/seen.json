@@ -1066,7 +1066,34 @@
     "https://www.tariffstool.com/guides/canada-tariff-50-percent-section-338-august-2026",
     "https://finance.yahoo.com/markets/stocks/articles/uber-freight-still-unprofitable-big-205131742.html",
     "https://www.freightwaves.com/news/uber-freight-still-unprofitable-after-big-revenue-jump",
-    "https://summar.com/freight-market-update-august-2026/"
+    "https://summar.com/freight-market-update-august-2026/",
+    "https://ntgfreight.com/resources/weekly-freight-trends-august-10-14-2026/",
+    "https://kescologistics.com/news/weekly-freight-report-august-14-2026/",
+    "https://www.dat.com/company/news-events/news-releases/dat-truckload-volumes-spot-rates-dipped-in-august",
+    "https://www.trucknews.com/transportation/c-h-robinson-expects-600m-nuclear-verdict-to-be-overturned/1003219515/",
+    "https://www.ttnews.com/articles/ch-robinson-earnings-q2-2026",
+    "https://www.ccjdigital.com/business/mergers-acquisitions/article/15832326/trimble-weighs-sale-of-transportation-unit-following-buyer-interest",
+    "https://ir.aurora.tech/news-events/press-releases/detail/149/aurora-to-host-a-retail-investor-town-hall-on-august-20-2026",
+    "https://gcaptain.com/panama-canal-to-tighten-draft-limits-again-as-water-levels-continue-to-fall/",
+    "https://cvsa.org/programs/operation-airbrake/focus-area/",
+    "https://www.ghy.com/trade-compliance/section-338-tariffs-how-canadian-exporters-should-prepare-before-august-19",
+    "https://www.als-int.com/insights/posts/intermodal-demand-surge-truckload-rate-rises-2026/",
+    "https://wwd.com/sourcing-journal/logistics/union-pacific-norfolk-southern-second-merger-filing-intermodal-railroads-rail-market-share-data-earnings-1238944051/",
+    "https://www.fleetowner.com/news/news/55395898/truckload-spot-rates-fall-as-dat-and-ftr-track-dry-van-reefer-and-flatbed-trends",
+    "https://ir.usbank.com/news-events/news/news-details/2026/U-S--Bank-and-DAT-Truck-freight-rates-show-modest-uptick-in-early-2026/default.aspx",
+    "https://www.uberfreight.com/en-US/newsroom",
+    "https://www.theregister.com/security/2026/08/12/uber-freight-keeps-on-trucking-after-extortion-crew-breaks-in/5286782",
+    "https://techcrunch.com/2026/08/12/uber-freight-reportedly-investigating-after-hacking-group-claims-data-breach/",
+    "https://finance.yahoo.com/markets/stocks/articles/uber-uber-telling-investors-freight-211502370.html",
+    "https://www.act-news.com/news/auroras-second-generation-driverless-trucks-enter-commercial-service-on-10-u-s-routes/",
+    "https://www.freightcenter.com/panama-canal-drought-shipping-congestion/",
+    "https://www.nautilusshipping.com/news-and-insights/panama-canal-draft-restrictions-2026-what-shipowners-need-to-know",
+    "https://freightslogistics.com/august-2026-ocean-freight-rates-are-falling/",
+    "https://www.als-int.com/insights/posts/us-rail-freight-surge-august-2026-intermodal-recovery/",
+    "https://en.wikipedia.org/wiki/Proposed_merger_between_Union_Pacific_and_Norfolk_Southern",
+    "https://www.stb.gov/resources/major-railroad-mergers/",
+    "https://finance.yahoo.com/technology/articles/trimble-big-move-unpacking-transportation-033909518.html",
+    "https://www.overdriveonline.com/regulations/article/15831870/ch-robinson-goes-into-damage-control-after-604-million-verdict"
   ],
   "seen_story_hashes": [
     "dat dry van load-to-truck ratio hits 9.0 week of may 3-9 2026 up from 8.3dat freight",
@@ -1515,7 +1542,16 @@
     "trimble tms sale goldman sachs no buyer confirmed q4 contract renewal window open tmw customers platform uncertaintyfreightwaves",
     "strait of hormuz weekly transits 78 week august 3-9 2026 down from 95 iran-oman deal stalled 1.5 2b marine insurancelloyd's list",
     "blue yonder gartner tms magic quadrant leader 19th year autonomous orchestration re-routing exception-free execution 2026blue yonder",
-    "dry van spot rate 2.32 mile contract van 2.39 record july gain 13 cents spot contract parity first time february 2022dat freight analytics"
+    "dry van spot rate 2.32 mile contract van 2.39 record july gain 13 cents spot contract parity first time february 2022dat freight analytics",
+    "july 2026 jobs report -23000 nonfarm payrolls first negative two years bls august 7ntg freight",
+    "panama canal el nino draft restrictions 48.5ft august 15 2026 west coast surge la long beach peak seasongcaptain",
+    "c.h. robinson ceo bozeman expects prevail appeal 604m nuclear verdict 2027 insurance preliminary discussionstrucknews",
+    "rxo q2 2026 revenue 1.77b +25% yoy ebitda 40m beat guidance enterprise-safe broker post-montgomery carrier vettingrxo",
+    "union pacific norfolk southern merger 7 state attorneys general oppose stb committed gateway pricing 0.9% us rail trafficwwd",
+    "aurora retail investor town hall august 20 2026 urmson maday 440k driverless miles 200 truck year-endaurora ir",
+    "fmcsa ads nprm rin 2126-ac17 august 2026 action date not yet published federal register driverless trucking frameworkfmcsa",
+    "trimble tms sale formally confirmed q2 2026 earnings rob painter goldman sachs no buyer q4 contract cycle openccj",
+    "intermodal +3.8% yoy week ending august 1 modal shift 550-1500 mile csx 7-year low train speeds als"
   ],
   "threads": [
     {
@@ -1535,8 +1571,8 @@
     {
       "id": "aurora_commercial_deployment",
       "label": "Aurora Gen-2 Commercial Ramp",
-      "status": "Gen-2 International LT Series driverless trucks in commercial service; 440K+ commercial driverless miles logged; Charger Logistics pharmaceutical cold-chain Dallas-Laredo route active; 200-truck year-end target; Roush building to 1,000 units/year production capacity; Uber Freight named network partner; Arrow McLaren IndyCar branding partnership signed August 4 (brand-building, no new freight customer announced).",
-      "last_covered_date": "2026-08-06",
+      "status": "Gen-2 International LT Series driverless trucks in commercial service on 10 Sun Belt routes; 440K+ commercial driverless miles logged; Charger Logistics pharmaceutical cold-chain Dallas-Laredo route active; 200-truck year-end target; Roush building to 1,000 units/year production capacity; Uber Freight named network partner. Retail Investor Town Hall scheduled August 20, 2026 (CEO Urmson + CFO Maday, 12pm ET).",
+      "last_covered_date": "2026-08-14",
       "first_covered_date": "2026-08-05"
     },
     {
@@ -1549,8 +1585,8 @@
     {
       "id": "canada_section_338_aug19",
       "label": "Canada Section 338 Tariffs Aug 19",
-      "status": "T-6 days to August 19 effective date. 50% duties on $20B+ Canadian goods (autos, dairy, alcohol, lumber, paper, cement, plywood, furniture); no USMCA exemption; in-transit rule: goods must clear US customs before Aug 19. CVSA Brake Safety Week Aug 23-29 creates sequential capacity compression on same corridors. Last covered August 13, 2026.",
-      "last_covered_date": "2026-08-13",
+      "status": "T-5 days to August 19 effective date. 50% duties on $20B+ Canadian goods (autos, dairy, alcohol, lumber, paper, cement, plywood, furniture); no USMCA exemption; in-transit rule: goods must clear US customs before Aug 19. CVSA Brake Safety Week Aug 23-29 creates sequential capacity compression on same corridors. Last covered August 14, 2026.",
+      "last_covered_date": "2026-08-14",
       "first_covered_date": "2026-08-06"
     },
     {
@@ -1570,15 +1606,15 @@
     {
       "id": "chr_nuclear_verdict_appeal",
       "label": "CHR Nuclear Verdict Appeal",
-      "status": "C.H. Robinson formally appealed the 604M Texas nuclear verdict (largest ever against a transportation company). CEO Bozeman issued public market warning Aug 2026. Industry-wide carrier-vetting documentation overhaul underway. RXO running active compliance-based sales campaign targeting same enterprise shippers.",
-      "last_covered_date": "2026-08-11",
+      "status": "C.H. Robinson appealing $604M Texas nuclear verdict. CEO Bozeman publicly stated he 'expects to prevail on appeal' (Aug 13). Preliminary 2027 insurance renewal discussions started; covered through 2026. Appeal process 'could take years.' Stock down ~20% since verdict. RXO running active enterprise sales campaign targeting same accounts. Industry carrier-vetting documentation overhaul underway.",
+      "last_covered_date": "2026-08-14",
       "first_covered_date": "2026-08-11"
     },
     {
       "id": "trimble_tms_sale",
       "label": "Trimble TMS/TMW Sale Process",
-      "status": "Goldman Sachs advising on Trimble T&L sale (TMW TMS + maps); no buyer confirmed as of August 13, 2026. Q4 TMS contract renewal cycle now open — mid-market TMW customers in active evaluation mode with platform ownership unresolved; represents active Transplace displacement window.",
-      "last_covered_date": "2026-08-13",
+      "status": "CEO Rob Painter formally confirmed at Q2 2026 earnings call that Trimble is evaluating sale of T&L unit (TMW TMS, Transporeon, PCMiler); Goldman Sachs advising; multiple unsolicited buyer inquiries received; no buyer named as of August 14. Q4 TMS contract renewal cycle now open — active Transplace displacement window.",
+      "last_covered_date": "2026-08-14",
       "first_covered_date": "2026-08-12"
     },
     {
@@ -1616,6 +1652,11 @@
       "date": "2026-08-13",
       "stories_count": 6,
       "top_signal": "Uber Freight Helix cybersecurity breach (1M files claimed — dispatch docs, AR/AP, mailbox); Hormuz transits 78/week (↓ from 95, deal stalled); Canada Section 338 T-6 days + CVSA Brake Safety Week sequential; Trimble TMW Q4 displacement window; CHR AI 4PL positioning; Blue Yonder Gartner TMS leader 19th year / autonomous orchestration"
+    },
+    {
+      "date": "2026-08-14",
+      "stories_count": 9,
+      "top_signal": "July jobs -23K nonfarm (first negative in 2+ years) + spot rates -17% from July 4 peak signals tariff-driven recovery not demand; Panama Canal El Niño draft tightens Aug 15; Canada 338 T-5; Trimble TMS CEO formally confirmed sale at Q2 earnings; CHR CEO expects to prevail on $604M verdict appeal; UP/NS merger 7 state AGs oppose; Aurora Town Hall Aug 20; FMCSA ADS NPRM imminent"
     }
   ]
 }
