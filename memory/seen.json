@@ -1093,7 +1093,11 @@
     "https://en.wikipedia.org/wiki/Proposed_merger_between_Union_Pacific_and_Norfolk_Southern",
     "https://www.stb.gov/resources/major-railroad-mergers/",
     "https://finance.yahoo.com/technology/articles/trimble-big-move-unpacking-transportation-033909518.html",
-    "https://www.overdriveonline.com/regulations/article/15831870/ch-robinson-goes-into-damage-control-after-604-million-verdict"
+    "https://www.overdriveonline.com/regulations/article/15831870/ch-robinson-goes-into-damage-control-after-604-million-verdict",
+    "https://www.fleetowner.com/trucking-industry-regulations/article/55261720/dat-spot-market-shows-largest-dry-van-spot-rate-drop-since-2008",
+    "https://craneww.com/knowledge-hub/canada-section-338-tariff-implementation/",
+    "https://investor.chrobinson.com/",
+    "https://fortune.com/2026/08/15/iran-oman-hormuz-shipping-deal-progress/"
   ],
   "seen_story_hashes": [
     "dat dry van load-to-truck ratio hits 9.0 week of may 3-9 2026 up from 8.3dat freight",
@@ -1551,7 +1555,13 @@
     "aurora retail investor town hall august 20 2026 urmson maday 440k driverless miles 200 truck year-endaurora ir",
     "fmcsa ads nprm rin 2126-ac17 august 2026 action date not yet published federal register driverless trucking frameworkfmcsa",
     "trimble tms sale formally confirmed q2 2026 earnings rob painter goldman sachs no buyer q4 contract cycle openccj",
-    "intermodal +3.8% yoy week ending august 1 modal shift 550-1500 mile csx 7-year low train speeds als"
+    "intermodal +3.8% yoy week ending august 1 modal shift 550-1500 mile csx 7-year low train speeds als",
+    "dat dry van $2.28/mile week aug 10-16 largest single-week drop since 2008 -$0.06 wow still +42% yoyfleetowner/dat",
+    "canada section 338 tariffs effective august 19 50% duties $20b canadian goods autos lumber dairy no usmca exemption clearance date controlscrane worldwide",
+    "c.h. robinson deutsche bank industrials summit august 11 30+ proprietary ai agents live production carrier sourcing load matchingchr investor relations",
+    "intermodal volumes +4.8% yoy week ending august 1 shippers alternatives elevated tl spot csx 7-year low train speedsals international freightwaves",
+    "spot-contract dry van rate parity first time february 2022 van contracts +13 cents mile reefer +9 cents dynamic pricing signaldat freightwaves",
+    "iran oman hormuz navigation route map finalizing attacks mounting 65 incidents brent crude +6% fading resolution hopes diesel cost watchfortune bloomberg"
   ],
   "threads": [
     {
@@ -1585,15 +1595,15 @@
     {
       "id": "canada_section_338_aug19",
       "label": "Canada Section 338 Tariffs Aug 19",
-      "status": "T-5 days to August 19 effective date. 50% duties on $20B+ Canadian goods (autos, dairy, alcohol, lumber, paper, cement, plywood, furniture); no USMCA exemption; in-transit rule: goods must clear US customs before Aug 19. CVSA Brake Safety Week Aug 23-29 creates sequential capacity compression on same corridors. Last covered August 14, 2026.",
-      "last_covered_date": "2026-08-14",
+      "status": "Effective August 19, 2026 — T-2 days. 50% duties on $20B+ Canadian goods (autos, dairy, alcohol, lumber, paper, cement, plywood, furniture); no USMCA exemption; US customs clearance date controls, not ship date. FTZ entries after Aug 19 must use privileged foreign status. CVSA Brake Safety Week Aug 23–29 creates sequential capacity compression on same corridors.",
+      "last_covered_date": "2026-08-17",
       "first_covered_date": "2026-08-06"
     },
     {
       "id": "iran_hormuz_shipping_deal",
       "label": "Iran-Oman Hormuz Shipping Deal",
-      "status": "Hormuz weekly transits regressed to 78 (week of Aug 3-9) from 95 the prior week \u2014 deal stalled as Iran demands extensive US concessions; marine insurance claims top $1.5B-$2B; diesel elevated. Framework not yet implemented as of August 13, 2026.",
-      "last_covered_date": "2026-08-13",
+      "status": "Iran and Oman finalizing a navigation route map as foundational deal element, but attacks continue mounting (65 incidents, 17 seafarers dead, ADNOC vessels hit). Brent crude rose ~6% week of Aug 11\u201317 on fading quick-resolution hopes. Marine insurance claims top $1.5B\u2013$2B; diesel elevated. Another negotiating phase still needed before implementation.",
+      "last_covered_date": "2026-08-17",
       "first_covered_date": "2026-08-07"
     },
     {
@@ -1657,6 +1667,11 @@
       "date": "2026-08-14",
       "stories_count": 9,
       "top_signal": "July jobs -23K nonfarm (first negative in 2+ years) + spot rates -17% from July 4 peak signals tariff-driven recovery not demand; Panama Canal El Niño draft tightens Aug 15; Canada 338 T-5; Trimble TMS CEO formally confirmed sale at Q2 earnings; CHR CEO expects to prevail on $604M verdict appeal; UP/NS merger 7 state AGs oppose; Aurora Town Hall Aug 20; FMCSA ADS NPRM imminent"
+    },
+    {
+      "date": "2026-08-17",
+      "stories_count": 6,
+      "top_signal": "Dry van spot rates largest single-week drop since 2008 (-$0.06 to $2.28/mi, week Aug 10-16, still +42% YoY); Canada Section 338 tariffs (50% on $20B Canadian goods, no USMCA) effective Aug 19 T-2; CVSA Brake Safety Week Aug 23-29 sequential; Iran-Oman Hormuz finalizing nav-route map, attacks mounting, Brent +6%, diesel cost watch"
     }
   ]
 }
