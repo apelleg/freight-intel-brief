@@ -1097,7 +1097,19 @@
     "https://www.fleetowner.com/trucking-industry-regulations/article/55261720/dat-spot-market-shows-largest-dry-van-spot-rate-drop-since-2008",
     "https://craneww.com/knowledge-hub/canada-section-338-tariff-implementation/",
     "https://investor.chrobinson.com/",
-    "https://fortune.com/2026/08/15/iran-oman-hormuz-shipping-deal-progress/"
+    "https://fortune.com/2026/08/15/iran-oman-hormuz-shipping-deal-progress/",
+    "https://www.thenationalnews.com/world/us-news/2026/08/18/us-iran-hormuz-mou-expires/",
+    "https://www.cnbc.com/2026/08/18/iran-us-hormuz-mou-expires.html",
+    "https://www.dat.com/freight-market/spot-rate-trends",
+    "https://www.dat.com/freight-market/load-to-truck-ratio",
+    "https://www.ghy.com/blog/canada-section-338-tariff-effective-date",
+    "https://www.craneww.com/blog/section-338-ftz-guidance",
+    "https://www.ccjdigital.com/business/article/15705556/schneider-national-q2-2026-results",
+    "https://trans.info/en/gxo-sells-uk-grocery-sites-dp-world-cma-wincanton",
+    "https://ir.aurora.tech/",
+    "https://www.fmcsa.dot.gov/regulations/rulemaking",
+    "https://www.als-international.com/freight-news/intermodal-2026",
+    "https://www.cvsa.org/programs-projects/brake-safety-week/"
   ],
   "seen_story_hashes": [
     "dat dry van load-to-truck ratio hits 9.0 week of may 3-9 2026 up from 8.3dat freight",
@@ -1561,7 +1573,16 @@
     "c.h. robinson deutsche bank industrials summit august 11 30+ proprietary ai agents live production carrier sourcing load matchingchr investor relations",
     "intermodal volumes +4.8% yoy week ending august 1 shippers alternatives elevated tl spot csx 7-year low train speedsals international freightwaves",
     "spot-contract dry van rate parity first time february 2022 van contracts +13 cents mile reefer +9 cents dynamic pricing signaldat freightwaves",
-    "iran oman hormuz navigation route map finalizing attacks mounting 65 incidents brent crude +6% fading resolution hopes diesel cost watchfortune bloomberg"
+    "iran oman hormuz navigation route map finalizing attacks mounting 65 incidents brent crude +6% fading resolution hopes diesel cost watchfortune bloomberg",
+    "us-iran 60-day maritime mou expired midnight august 17 iran fm ruled out any extension vessel crossithe national news",
+    "dat spot rates august 18 2026 dry van $2.93/mile all-in flatbed $3.54/mile reefer $3.38/mile load-tdat freight & analytics",
+    "schneider national q2 2026 revenue $1.57b adj eps $0.29 vs $0.23 estimate full-year guidance raised ccj",
+    "gxo logistics selling six uk grocery logistics sites to dp world cma requirement from wincanton acqutrans.info",
+    "c.h. robinson august 2026 enterprise briefing 30+ ai agents embedded freight brokerage intermodal crc.h. robinson",
+    "aurora investor town hall august 20 2026 ceo urmson cfo maday 12-12:30pm et uber freight named commeaurora investor relations",
+    "canada section 338 50% tariffs effective august 19 2026 $20b canadian goods no usmca exemption cbp ughy international",
+    "fmcsa ads nprm rin 2126-ac17 still pending projected august 2026 driverless cmv operational requiremfmcsa",
+    "north american intermodal volumes +3.8% yoy through week 30 2026 csx 7-year low train speeds shippeals international"
   ],
   "threads": [
     {
@@ -1581,8 +1602,8 @@
     {
       "id": "aurora_commercial_deployment",
       "label": "Aurora Gen-2 Commercial Ramp",
-      "status": "Gen-2 International LT Series driverless trucks in commercial service on 10 Sun Belt routes; 440K+ commercial driverless miles logged; Charger Logistics pharmaceutical cold-chain Dallas-Laredo route active; 200-truck year-end target; Roush building to 1,000 units/year production capacity; Uber Freight named network partner. Retail Investor Town Hall scheduled August 20, 2026 (CEO Urmson + CFO Maday, 12pm ET).",
-      "last_covered_date": "2026-08-14",
+      "status": "Gen-2 International LT Series driverless trucks in commercial service on 10 Sun Belt routes; 440K+ commercial driverless miles logged; Charger Logistics pharmaceutical cold-chain Dallas-Laredo route active; 200-truck year-end target; Roush building to 1,000 units/year production capacity; Uber Freight named network partner. Retail Investor Town Hall August 20, 2026 — CEO Urmson + CFO Maday, 12–12:30pm ET; question submissions closed 11am ET Aug 20.",
+      "last_covered_date": "2026-08-18",
       "first_covered_date": "2026-08-05"
     },
     {
@@ -1595,15 +1616,15 @@
     {
       "id": "canada_section_338_aug19",
       "label": "Canada Section 338 Tariffs Aug 19",
-      "status": "Effective August 19, 2026 — T-2 days. 50% duties on $20B+ Canadian goods (autos, dairy, alcohol, lumber, paper, cement, plywood, furniture); no USMCA exemption; US customs clearance date controls, not ship date. FTZ entries after Aug 19 must use privileged foreign status. CVSA Brake Safety Week Aug 23–29 creates sequential capacity compression on same corridors.",
-      "last_covered_date": "2026-08-17",
+      "status": "Live as of August 19, 2026. 50% ad valorem duties on $20B+ Canadian goods (autos, dairy, alcohol, lumber, paper, cement, plywood, furniture); no USMCA exemption applies. CBP uses arrival/entry date — not ship date — as the determining event; in-transit freight arriving after Aug 19 midnight is subject to full duty. FTZ entries after Aug 19 must elect privileged foreign status at admission. CVSA Brake Safety Week Aug 23–29 creates sequential capacity compression on the same corridors.",
+      "last_covered_date": "2026-08-18",
       "first_covered_date": "2026-08-06"
     },
     {
       "id": "iran_hormuz_shipping_deal",
       "label": "Iran-Oman Hormuz Shipping Deal",
-      "status": "Iran and Oman finalizing a navigation route map as foundational deal element, but attacks continue mounting (65 incidents, 17 seafarers dead, ADNOC vessels hit). Brent crude rose ~6% week of Aug 11\u201317 on fading quick-resolution hopes. Marine insurance claims top $1.5B\u2013$2B; diesel elevated. Another negotiating phase still needed before implementation.",
-      "last_covered_date": "2026-08-17",
+      "status": "US-Iran 60-day maritime MoU expired midnight August 17. Iran's Foreign Minister explicitly ruled out extension talks. Vessel crossings fell to zero on Sunday August 17 (vs. 31 the prior weekend and a 73/day baseline). Brent crude ~$91/bbl, WTI ~$85, diesel $5.38/gal with upside trajectory. Full escalation window reopened \u2014 no deal framework in place.",
+      "last_covered_date": "2026-08-18",
       "first_covered_date": "2026-08-07"
     },
     {
@@ -1672,6 +1693,11 @@
       "date": "2026-08-17",
       "stories_count": 6,
       "top_signal": "Dry van spot rates largest single-week drop since 2008 (-$0.06 to $2.28/mi, week Aug 10-16, still +42% YoY); Canada Section 338 tariffs (50% on $20B Canadian goods, no USMCA) effective Aug 19 T-2; CVSA Brake Safety Week Aug 23-29 sequential; Iran-Oman Hormuz finalizing nav-route map, attacks mounting, Brent +6%, diesel cost watch"
+    },
+    {
+      "date": "2026-08-18",
+      "stories_count": 9,
+      "top_signal": "US-Iran 60-day MoU expired midnight Aug 17; Iran FM ruled out extension; Hormuz crossings zero Sunday vs. 31 prior weekend; Brent ~$91, WTI ~$85, diesel $5.38/gal rising — collides with Canada Section 338 live Aug 19 (50% duties, no USMCA); Schneider Q2 beat + guidance raised 18%; GXO UK asset sale; Aurora Town Hall Aug 20"
     }
   ]
 }
