@@ -1109,7 +1109,21 @@
     "https://ir.aurora.tech/",
     "https://www.fmcsa.dot.gov/regulations/rulemaking",
     "https://www.als-international.com/freight-news/intermodal-2026",
-    "https://www.cvsa.org/programs-projects/brake-safety-week/"
+    "https://www.cvsa.org/programs-projects/brake-safety-week/",
+    "https://wallstreettimes.com/50-u-s-tariffs-on-20-billion-in-canadian-imports-take-effect-august-19-under-first-ever-section-338-action/",
+    "https://shopappy.com/trade/tariffs-customs/canada-section-338-tariffs-august-19",
+    "https://www.freightfigures.com/articles/section-338-canada-product-list-august-19-2026",
+    "https://www.thenationalnews.com/business/energy/2026/08/17/hormuz-traffic-falls-to-single-digits-as-60-day-deadline-for-us-iran-mou-expires/",
+    "https://www.forbes.com/sites/siladityaray/2026/08/18/iran-says-hormuz-will-stay-shut-until-us-lifts-sanctions-and-blockade-as-deadline-passes-for-peace-deal/",
+    "https://zagdaily.com/connected/pony-ai-resets-robotruck-ambitions-with-scaled-back-deployment-target/",
+    "https://www.investing.com/news/stock-market-news/ch-robinson-stock-tumbles-amid-freight-sector-ai-disruption-fears-4503508",
+    "https://www.autoconnectedcar.com/2026/08/autonomous-self-driving-vehicle-news-weride-aurora-tier-iv-torc-wayve-uber-moove-pony-ai-tesla-waymo/",
+    "https://www.jmrodgers.com/tariff-watch-section-338-jones-act-waiver-acas-enforcement/",
+    "https://www.usnews.com/news/world/articles/2026-08-18/hormuz-traffic-slows-as-uncertainty-over-waterway-persists",
+    "https://www.nbcnews.com/data-graphics/strait-of-hormuz-ports-traffic-trump-us-iran-war-rcna331507",
+    "https://carraglobe.com/section-338-tariffs-canada-2026/",
+    "https://www.claimsjournal.com/news/national/2026/08/03/339231.htm",
+    "https://www.overdriveonline.com/business/article/15817753/ai-freight-brokerage-fears-hit-landstar-ch-robinson-rxo-stocks"
   ],
   "seen_story_hashes": [
     "dat dry van load-to-truck ratio hits 9.0 week of may 3-9 2026 up from 8.3dat freight",
@@ -1582,7 +1596,18 @@
     "aurora investor town hall august 20 2026 ceo urmson cfo maday 12-12:30pm et uber freight named commeaurora investor relations",
     "canada section 338 50% tariffs effective august 19 2026 $20b canadian goods no usmca exemption cbp ughy international",
     "fmcsa ads nprm rin 2126-ac17 still pending projected august 2026 driverless cmv operational requiremfmcsa",
-    "north american intermodal volumes +3.8% yoy through week 30 2026 csx 7-year low train speeds shippeals international"
+    "north american intermodal volumes +3.8% yoy through week 30 2026 csx 7-year low train speeds shippeals international",
+    "canada section 338 tariffs 50% effective august 19 2026 cbp entry-date trigger usmca voided no sunset clausewall street times",
+    "iran foreign minister rules out extension hormuz mou expired midnight august 17 zero vessel crossings diesel $5.38forbes",
+    "iran hormuz 60-day mou expired vessel crossings zero august 17 2026 brent wti $85 diesel $5.38 upward trajectorythe national news",
+    "aurora retail investor town hall august 20 2026 urmson maday 12pm et 200-truck year-end charger logistics cold-chainauto connected car",
+    "pony.ai resets us robotruck deployment ambitions pivoting china gen-4 platform scaled-back us targetszag daily",
+    "c.h. robinson section 338 robinson fresh cross-border cold-chain south texas hubs 50% duties two-front crisisinvesting.com",
+    "rxo q2 2026 enterprise-safe broker post-montgomery $1.77b revenue +25% yoy ebitda $40m beat wilkersonoverdrive online",
+    "section 338 tariff emergency managed transportation demand transplace 4pl network reoptimization cbp entry-datewall street times",
+    "trimble tmw q4 displacement window goldman sachs process no buyer mid-august renewal season openccj digital",
+    "fmcsa ads nprm rin 2126-ac17 still pending publication nhtsa comment period closes august 31fmcsa",
+    "section 338 cbp enforcement in-transit goods entry-date ftz privileged foreign status cvsa brake safety week aug 23-29jm rodgers"
   ],
   "threads": [
     {
@@ -1602,8 +1627,8 @@
     {
       "id": "aurora_commercial_deployment",
       "label": "Aurora Gen-2 Commercial Ramp",
-      "status": "Gen-2 International LT Series driverless trucks in commercial service on 10 Sun Belt routes; 440K+ commercial driverless miles logged; Charger Logistics pharmaceutical cold-chain Dallas-Laredo route active; 200-truck year-end target; Roush building to 1,000 units/year production capacity; Uber Freight named network partner. Retail Investor Town Hall August 20, 2026 — CEO Urmson + CFO Maday, 12–12:30pm ET; question submissions closed 11am ET Aug 20.",
-      "last_covered_date": "2026-08-18",
+      "status": "Gen-2 International LT Series driverless trucks in commercial service on 10 Sun Belt routes; 440K+ commercial driverless miles logged; Charger Logistics pharmaceutical cold-chain Dallas-Laredo route active; 200-truck year-end target; Roush building to 1,000 units/year production capacity; Uber Freight named network partner. Retail Investor Town Hall August 20, 2026 — CEO Urmson + CFO Maday, 12–12:30pm ET. Pony.ai US retreat (Aug 2026) reinforces Aurora first-mover position.",
+      "last_covered_date": "2026-08-19",
       "first_covered_date": "2026-08-05"
     },
     {
@@ -1616,15 +1641,15 @@
     {
       "id": "canada_section_338_aug19",
       "label": "Canada Section 338 Tariffs Aug 19",
-      "status": "Live as of August 19, 2026. 50% ad valorem duties on $20B+ Canadian goods (autos, dairy, alcohol, lumber, paper, cement, plywood, furniture); no USMCA exemption applies. CBP uses arrival/entry date — not ship date — as the determining event; in-transit freight arriving after Aug 19 midnight is subject to full duty. FTZ entries after Aug 19 must elect privileged foreign status at admission. CVSA Brake Safety Week Aug 23–29 creates sequential capacity compression on the same corridors.",
-      "last_covered_date": "2026-08-18",
+      "status": "LIVE as of 12:01am ET August 19, 2026. CBP enforcing 50% duties on ~$20B in Canadian goods (autos, dairy, alcohol, lumber, cement, plywood, furniture, textiles, machinery); no USMCA exemption. Entry-date trigger operative — in-transit freight pays full 50% at clearance. FTZ privileged-foreign-status the one legal relief valve for goods declared before effective date. No sunset clause. CVSA Brake Safety Week Aug 23–29 creates sequential capacity compression on same US-Canada corridors.",
+      "last_covered_date": "2026-08-19",
       "first_covered_date": "2026-08-06"
     },
     {
       "id": "iran_hormuz_shipping_deal",
       "label": "Iran-Oman Hormuz Shipping Deal",
-      "status": "US-Iran 60-day maritime MoU expired midnight August 17. Iran's Foreign Minister explicitly ruled out extension talks. Vessel crossings fell to zero on Sunday August 17 (vs. 31 the prior weekend and a 73/day baseline). Brent crude ~$91/bbl, WTI ~$85, diesel $5.38/gal with upside trajectory. Full escalation window reopened \u2014 no deal framework in place.",
-      "last_covered_date": "2026-08-18",
+      "status": "US-Iran 60-day maritime MoU expired midnight August 17. Iran's Foreign Minister explicitly ruled out any extension talks. Vessel crossings fell to zero Sunday August 17 (vs. 31 prior weekend, 73/day baseline). Brent crude ~$91/bbl, WTI ~$85, diesel $5.38/gal with upside trajectory. No deal framework in place \u2014 full escalation window open. Covered Aug 19 brief as compound risk with Canada Section 338 effective same day.",
+      "last_covered_date": "2026-08-19",
       "first_covered_date": "2026-08-07"
     },
     {
@@ -1698,6 +1723,11 @@
       "date": "2026-08-18",
       "stories_count": 9,
       "top_signal": "US-Iran 60-day MoU expired midnight Aug 17; Iran FM ruled out extension; Hormuz crossings zero Sunday vs. 31 prior weekend; Brent ~$91, WTI ~$85, diesel $5.38/gal rising — collides with Canada Section 338 live Aug 19 (50% duties, no USMCA); Schneider Q2 beat + guidance raised 18%; GXO UK asset sale; Aurora Town Hall Aug 20"
+    },
+    {
+      "date": "2026-08-19",
+      "stories_count": 9,
+      "top_signal": "Canada Section 338 tariffs LIVE 12:01am ET — 50% duties on $20B Canadian goods, CBP entry-date trigger, USMCA voided, no sunset; Hormuz zero crossings Aug 17 Iran FM rules out extension diesel $5.38/gal; Aurora Town Hall Aug 20; Pony.ai US robotruck retreat; CHR two-front crisis (338 + $604M verdict); RXO enterprise-safe pivot; Trimble TMW Q4 displacement window; FMCSA ADS NPRM comment Aug 31"
     }
   ]
 }
