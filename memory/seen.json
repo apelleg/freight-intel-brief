@@ -1126,7 +1126,31 @@
     "https://www.thetrucker.com/trucking-news/business/daimler-to-build-new-manufacturing-facility-location-of-plant-still-unknown",
     "https://motorclaw.news/article/daimler-truck-north-america-plans-new-us-manufacturing-plant-with-2029-production-start",
     "https://www.truckingdive.com/news/daimler-truck-to-build-new-us-manufacturing-facility/827467/",
-    "https://www.freightwaves.com/news/uber-freight-confirms-cyber-incident-after-hackers-claim-nearly-1-million-files"
+    "https://www.freightwaves.com/news/uber-freight-confirms-cyber-incident-after-hackers-claim-nearly-1-million-files",
+    "https://ts2.tech/en/aurora-stock-falls-11-8-as-1-6-billion-value-loss-raises-town-hall-stakes/",
+    "https://www.freightwaves.com/news/aurora-q2-earnings-driverless-truck-rates",
+    "https://finance.yahoo.com/technology/articles/aurora-reports-q2-results-details-120000973.html",
+    "https://finance.yahoo.com/technology/ai/articles/aurora-innovation-inc-aur-q2-050027767.html",
+    "https://www.fool.com/earnings/call-transcripts/2026/08/07/aurora-aur-q2-2026-earnings-call-transcript/",
+    "https://www.theglobeandmail.com/investing/markets/stocks/AUR/pressreleases/3730222/aurora-aur-q2-2026-earnings-call-transcript/",
+    "https://kescologistics.com/news/weekly-freight-report-august-21-2026/",
+    "https://www.quiverquant.com/news/Updates+on+the+Strait+of+Hormuz,+August+20th,+2026",
+    "https://theloadstar.com/if-ai-starts-making-the-decisions-what-happens-to-the-tms/",
+    "https://www.cnn.com/2026/08/18/economy/canada-tariffs-trump",
+    "https://www.npr.org/2026/08/19/g-s1-139156/trump-canada-tariffs",
+    "https://www.cbsnews.com/news/trump-pauses-tariffs-canada/",
+    "https://www.nbcnews.com/business/economy/trump-pauses-canada-tariffs-rcna593176",
+    "https://www.marinelink.com/news/ships-trickle-strait-hormuz-542325",
+    "https://thehill.com/policy/international/6022634-strait-of-hormuz-conflict-traffic-drops/",
+    "https://businesswire.com/news/home/20250919508670/en/DAT-Truckload-volumes-spot-rates-dipped-in-august",
+    "https://finance.yahoo.com/markets/stocks/articles/einride-leading-digital-electric-autonomous-101600086.html",
+    "https://finance.yahoo.com/markets/stocks/articles/play-einride-stock-autonomous-trucking-175156052.html",
+    "https://www.chrobinson.com/en-us/resources/insights-and-advisories/client-advisories/2026q3/7-21-26-new-338-duties-on-select-canadian-products/",
+    "https://www.freightwaves.com/news/unified-agenda-at-fmcsa-spells-out-ambitious-plans-for-coming-year",
+    "https://www.federalregister.gov/documents/2026/07/31/2026-15483/av-framework-updates-and-request-for-comments-on-interim-guidance",
+    "https://www.act-news.com/news/aurora-expands-driverless-operations/",
+    "https://www.butzel.com/alert-new-section-338-actions-against-canada-and-section-301-tariffs-on-60-trading-partners-and-brazil-key-considerations-for-us-importers",
+    "https://www.autoserviceworld.com/canada-u-s-hit-pause-on-tariffs/"
   ],
   "seen_story_hashes": [
     "section 301 tariffs t-7 days july 24 2026 no extension q3 booking freeze record august imports front-loading compliance freeze jocustr/joc",
@@ -1617,7 +1641,19 @@
     "7f103c37c2f44f5ab1c2b0e7e6884bdf",
     "8d64df8e981107b94727d9a2c3f6481c",
     "cafeb0553f6cd884a7426e8a280211f8",
-    "9089dd56e636cbb96a5680a2b29c5f79"
+    "9089dd56e636cbb96a5680a2b29c5f79",
+    "257783a593fe84d2ccbb56ca4a5cc2f6",
+    "25f8bca01a11bfaafcfee7d8a6de7cfa",
+    "66bed5ca1952909e107dbd24ed64cdd9",
+    "7ca69bbd775bacd8ee417016427ee325",
+    "8af01412bd00ad6313619d6b9adf7c2e",
+    "7965357eaeeb2c9dd26390b9df093784",
+    "e481edf2dd332cbc12639b368562d9be",
+    "5e17d5e86fecc333d247d53ce291e039",
+    "6c061c94432fc9e0b53d3ee767532312",
+    "abc90eb8b88669b509c2e0bac33b69ab",
+    "dee1fe7e91e94e713c89dd9ae10e35d1",
+    "04a1c78f49b73d9d10ee468d279e1f0d"
   ],
   "threads": [
     {
@@ -1637,8 +1673,8 @@
     {
       "id": "aurora_commercial_deployment",
       "label": "Aurora Gen-2 Commercial Ramp",
-      "status": "Gen-2 International LT Series driverless trucks in commercial service on 10 Sun Belt routes; 440K+ commercial driverless miles logged; Charger Logistics pharmaceutical cold-chain Dallas-Laredo route active; 200-truck year-end target; Roush building to 1,000 units/year production capacity; Uber Freight named network partner. Retail Investor Town Hall August 20, 2026 \u2014 CEO Urmson + CFO Maday, 12\u201312:30pm ET. Pony.ai US retreat (Aug 2026) reinforces Aurora first-mover position.",
-      "last_covered_date": "2026-08-19",
+      "status": "Per-mile pricing disclosed at Aug 20 retail investor town hall: $2+/mile TaaS (Aurora owns truck, insurance, DOT authority) and $0.85+/mile DaaS (customer owns truck, Aurora software license). Q2 revenue $2M, net loss $270M, FY2026 guidance $14-16M (midpoint ~400% YoY). 200-truck year-end target = ~$80M annualized TaaS run rate. 440K+ driverless miles through June. Uber Freight named commercial network partner. DaaS channel conflict question now live for freight brokers.",
+      "last_covered_date": "2026-08-21",
       "first_covered_date": "2026-08-05"
     },
     {
@@ -1651,15 +1687,15 @@
     {
       "id": "canada_section_338_aug19",
       "label": "Canada Section 338 Tariffs Aug 19",
-      "status": "Paused midnight Aug 19 \u2014 3-day window through Aug 21 EOD to finalize deal. Trump calls framework 'very good for both countries.' Deal terms: US lowers tariffs on Canadian autos/steel/aluminum/forest products; Canada concedes on alcohol/dairy/procurement. If no deal by EOD Aug 21, 50% duties resume automatically.",
-      "last_covered_date": "2026-08-19",
+      "status": "EOD August 21 deal deadline: deal terms under negotiation include US auto tariffs dropping 25%\u219215%, Canadian concessions on alcohol/dairy, removal of retaliatory tariffs. If no deal by midnight, 50% duties resume automatically on $20B Canadian goods (autos, lumber, dairy, electronics, steel) with no USMCA carve-out. CBP entry-date trigger rules in effect.",
+      "last_covered_date": "2026-08-21",
       "first_covered_date": "2026-08-06"
     },
     {
       "id": "iran_hormuz_shipping_deal",
       "label": "Iran-Oman Hormuz Shipping Deal",
-      "status": "13 identified vessel crossings Aug 19-20 (vs. effectively zero prior weekend). US Navy has gained operational control; CNN reports Iran has 'lost significant control' of strait. AIS/GPS jamming ongoing \u2014 actual traffic may be higher. Brent crude ~$91. Recovery underway but far below pre-crisis 73 ships/day normal.",
-      "last_covered_date": "2026-08-19",
+      "status": "Iran resumed drone attacks on UAE tankers; only 7 ships transited Hormuz Thursday Aug 21 (half Tuesday's count, far below 73/day normal). Diesel surged to $5.454/gallon (+19.7c week, summer's largest single-week move). US Navy operational control claim contested by fresh attacks. AIS/GPS jamming ongoing. Recovery stalled \u2014 situation deteriorating from prior week's 13 crossings.",
+      "last_covered_date": "2026-08-21",
       "first_covered_date": "2026-08-07"
     },
     {
@@ -1743,6 +1779,11 @@
       "date": "2026-08-20",
       "stories_count": 7,
       "top_signal": "Canada Section 338 tariffs paused through Aug 21 EOD as US-Canada deal nears (went live midnight Aug 19, paused hours later); Iran Hormuz 13 vessel crossings Aug 19-20 vs. zero prior weekend \u2014 US Navy gaining control; freight distress 7,000+ jobs cut Aug wave; DAT dry van $2.25/mi cooling from summer peak; Aurora investor town hall Aug 20; USMCA Mexico round 4 September in Washington."
+    },
+    {
+      "date": "2026-08-21",
+      "stories_count": 9,
+      "top_signal": "Canada Section 338 tariff deal EOD deadline today (deal or 50% duties auto-resume on $20B Canadian goods); diesel $5.454/gal +19.7c summer's largest spike; Hormuz only 7 ships Thursday (Iran resumes UAE tanker attacks); Aurora per-mile pricing disclosed Aug 20 town hall ($2+ TaaS, $0.85+ DaaS); August freight distress wave 7,000+ jobs (Tyson, Essendant, FedEx); Panama Canal surcharges stacking CMA CGM $500/TEU; CVSA Brake Safety Week starts Saturday Aug 23; AI vs TMS displacement signal; DAT spot rates -2.6% but 38%+ YoY."
     }
   ]
 }
