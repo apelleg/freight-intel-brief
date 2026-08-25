@@ -1150,7 +1150,17 @@
     "https://www.federalregister.gov/documents/2026/07/31/2026-15483/av-framework-updates-and-request-for-comments-on-interim-guidance",
     "https://www.act-news.com/news/aurora-expands-driverless-operations/",
     "https://www.butzel.com/alert-new-section-338-actions-against-canada-and-section-301-tariffs-on-60-trading-partners-and-brazil-key-considerations-for-us-importers",
-    "https://www.autoserviceworld.com/canada-u-s-hit-pause-on-tariffs/"
+    "https://www.autoserviceworld.com/canada-u-s-hit-pause-on-tariffs/",
+    "https://www.intelligentaudit.com/blog/ia-insights-august-24-2026",
+    "https://www.chrobinson.com/en-us/resources/insights-and-advisories/client-advisories/2026q3/08-22-26-client-advisory-new-50-percent-section-338-duties-on-select-canadian-products/",
+    "https://www.prnewswire.com/news-releases/rtb-holdings-launches-with-alabama-motor-express-platform-and-jit-ex-acquisition-positioning-for-national-transportation-expansion-302854696.html",
+    "https://www.ccjdigital.com/regulations/industry/article/15833083/ata-president-and-ceo-chris-spear-departs-trade-group",
+    "https://www.marketscale.com/industries/transportation/the-ai-build-out-is-reshaping-freight-warehouse-construction-up-18-airfreight-displaced-by-server-racks",
+    "https://landline.media/running-empty-fmcsa-to-issue-proposal-for-driverless-trucks/",
+    "https://www.axios.com/2026/08/24/bessent-dday-iran-secondary-sanctions",
+    "https://www.cnn.com/2026/08/23/world/live-news/iran-war-trump",
+    "https://www.cnbc.com/2026/08/24/us-iran-war-trump-hormuz-bessent-economic-sanctions-.",
+    "https://www.washingtonpost.com/business/2026/08/24/bessent-unveil-economic-d-day-sanctions-against-iran/"
   ],
   "seen_story_hashes": [
     "section 301 tariffs t-7 days july 24 2026 no extension q3 booking freeze record august imports front-loading compliance freeze jocustr/joc",
@@ -1653,14 +1663,28 @@
     "6c061c94432fc9e0b53d3ee767532312",
     "abc90eb8b88669b509c2e0bac33b69ab",
     "dee1fe7e91e94e713c89dd9ae10e35d1",
-    "04a1c78f49b73d9d10ee468d279e1f0d"
+    "04a1c78f49b73d9d10ee468d279e1f0d",
+    "5d5eaa0503bc0de2fac2df941a57df84",
+    "f5aa6432bd13309c058275492cb94fc9",
+    "676cf692d4e3449219a7d39ce715120a",
+    "f90e52c7884c799f8d26a8a822df6086",
+    "56b9b1dcd1b694cec66859a7838116c1",
+    "b631ed815c6ffbfd63e85c012078f4ee",
+    "69ab86b8fbb19a72179bf6efeb7b34a4",
+    "50eaf6e9759e8a1670a97df1397a7597",
+    "f3a64d324ad3e35503fc344e41f2eb71",
+    "7b1fd77b25b370eb71384275638606e2",
+    "8b57c7af9e638034565e6b5ada41cf3d",
+    "6e00f3f0c2bcad254ceed835ac5efb2e",
+    "885e50147ce0647f20a4384ef7af76a0",
+    "a4b4b007639c5ffd9eab694a86e14838"
   ],
   "threads": [
     {
       "id": "nhtsa_ads_framework",
       "label": "NHTSA ADS Interim Framework",
-      "status": "Published in Federal Register July 31, 2026. Two comment tracks open: 31-day interim guidance (closes Aug 31) covering near-term commercial operations, plus year-long track through July 31, 2027 for expanded ADS deployment standards. Industry comment period active.",
-      "last_covered_date": "2026-08-04",
+      "status": "Published in Federal Register July 31, 2026. Two comment tracks open: 31-day interim guidance closes August 31, 2026 (6 days remaining) covering near-term commercial operations, plus year-long track through July 31, 2027 for expanded ADS deployment standards. FMCSA ADS NPRM (RIN 2126-AC17) still projected August/September 2026.",
+      "last_covered_date": "2026-08-25",
       "first_covered_date": "2026-08-04"
     },
     {
@@ -1687,15 +1711,15 @@
     {
       "id": "canada_section_338_aug19",
       "label": "Canada Section 338 Tariffs Aug 19",
-      "status": "EOD August 21 deal deadline: deal terms under negotiation include US auto tariffs dropping 25%\u219215%, Canadian concessions on alcohol/dairy, removal of retaliatory tariffs. If no deal by midnight, 50% duties resume automatically on $20B Canadian goods (autos, lumber, dairy, electronics, steel) with no USMCA carve-out. CBP entry-date trigger rules in effect.",
-      "last_covered_date": "2026-08-21",
+      "status": "Section 338 tariffs LIVE since August 22, 2026 \u2014 deal negotiations broke down at midnight August 21. 50% duties on ~$20B Canadian goods (autos, dairy, alcohol, lumber, cement, electronics) with no USMCA exemption and no sunset clause. CBP entry-date trigger applies. USMCA bilateral Round 4 still planned for September in Washington.",
+      "last_covered_date": "2026-08-25",
       "first_covered_date": "2026-08-06"
     },
     {
       "id": "iran_hormuz_shipping_deal",
       "label": "Iran-Oman Hormuz Shipping Deal",
-      "status": "Iran resumed drone attacks on UAE tankers; only 7 ships transited Hormuz Thursday Aug 21 (half Tuesday's count, far below 73/day normal). Diesel surged to $5.454/gallon (+19.7c week, summer's largest single-week move). US Navy operational control claim contested by fresh attacks. AIS/GPS jamming ongoing. Recovery stalled \u2014 situation deteriorating from prior week's 13 crossings.",
-      "last_covered_date": "2026-08-21",
+      "status": "Treasury Secretary Bessent launched 'Operation Economic Outcast' August 24 \u2014 secondary sanctions on 60+ entities globally facilitating Iranian oil, shipping, crypto, and aviation trade, targeting shipbrokers and tankers in Singapore, China, and Hong Kong. Iran FM threatened 'seismic response' and vessel seizures in Hormuz. Hormuz transits remain near zero. Diesel at $5.45+/gal.",
+      "last_covered_date": "2026-08-25",
       "first_covered_date": "2026-08-07"
     },
     {
@@ -1732,6 +1756,20 @@
       "status": "Helix extortion group (Google Mandiant UNC6671) claims ~1M files exfiltrated from Uber Freight including dispatch docs, AR/AP data, mailbox archives, OneDrive files. UF confirmed incident 'identified, contained, remediated' with federal law enforcement engaged August 12, 2026. Has not disclosed whether shipper pricing or carrier contract data exposed. Investigation ongoing.",
       "last_covered_date": "2026-08-13",
       "first_covered_date": "2026-08-13"
+    },
+    {
+      "id": "ata_leadership_transition",
+      "label": "ATA CEO Transition",
+      "status": "CEO Chris Spear abruptly stepped down August 21, 2026 after 10 years leading ATA. Search committee forming. Transition creates advocacy vacuum at a critical moment for tort reform (post-Montgomery), AV regulatory frameworks (FMCSA ADS NPRM), and Section 338 tariff opposition.",
+      "last_covered_date": "2026-08-25",
+      "first_covered_date": "2026-08-25"
+    },
+    {
+      "id": "panama_canal_el_nino_2026",
+      "label": "Panama Canal El Ni\u00f1o Draft Cuts",
+      "status": "New Neopanamax draft cuts begin August 26 (to 47.5 ft), with booking slot reductions starting September 3. El Ni\u00f1o driving watershed rainfall 34% below historical average. Port of LA preparing for 5% cargo increase as shippers divert to West Coast routing.",
+      "last_covered_date": "2026-08-25",
+      "first_covered_date": "2026-08-25"
     }
   ],
   "last_30_days": [
@@ -1784,6 +1822,11 @@
       "date": "2026-08-21",
       "stories_count": 9,
       "top_signal": "Canada Section 338 tariff deal EOD deadline today (deal or 50% duties auto-resume on $20B Canadian goods); diesel $5.454/gal +19.7c summer's largest spike; Hormuz only 7 ships Thursday (Iran resumes UAE tanker attacks); Aurora per-mile pricing disclosed Aug 20 town hall ($2+ TaaS, $0.85+ DaaS); August freight distress wave 7,000+ jobs (Tyson, Essendant, FedEx); Panama Canal surcharges stacking CMA CGM $500/TEU; CVSA Brake Safety Week starts Saturday Aug 23; AI vs TMS displacement signal; DAT spot rates -2.6% but 38%+ YoY."
+    },
+    {
+      "date": "2026-08-25",
+      "stories_count": 11,
+      "top_signal": "Bessent 'Operation Economic Outcast' secondary sanctions on 60+ entities (Aug 24) + Canada Section 338 tariffs LIVE (Aug 22, no deal) + ATA CEO Spear departure \u2014 dual trade shock and advocacy vacuum; diesel $5.45+/gal; CVSA Brake Safety Week Day 3; Panama Canal Neopanamax draft cuts Aug 26"
     }
   ]
 }
