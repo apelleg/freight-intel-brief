@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Uber Freight Intel Brief — 2026-08-27</title>
+<style>
+  /* ── Reset & base ── */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  /* ── Design tokens: light (default) ── */
+  :root {
+    --bg:           #F8F7F4;
+    --surface:      #FFFFFF;
+    --border:       #DDE2EA;
+    --navy:         #0C1F3F;
+    --navy-mid:     #1E3A6E;
+    --amber:        #C4780A;
+    --amber-bg:     #FEF6E4;
+    --amber-border: #EDB84A;
+    --signal-bg:    #FFF8F0;
+    --signal-border:#D46B0A;
+    --teal:         #1A7A6A;
+    --teal-bg:      #EDF8F5;
+    --text:         #14243E;
+    --text-mid:     #3D5475;
+    --text-muted:   #6B7F99;
+    --text-inv:     #F0EBE0;
+    --tag-bg:       #E8EEF5;
+    --tag-text:     #2C4A72;
+    --conf-h:       #155F35;
+    --conf-h-bg:    #EDFBF3;
+    --conf-m:       #7A5800;
+    --conf-m-bg:    #FFF8E0;
+  }
+
+  /* ── Dark theme (system) ── */
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg:           #0B1523;
+      --surface:      #111D30;
+      --border:       #1F3050;
+      --navy:         #C8D8EE;
+      --navy-mid:     #8AABD0;
+      --amber:        #F0A838;
+      --amber-bg:     #1E1500;
+      --amber-border: #7A5500;
+      --signal-bg:    #1A1000;
+      --signal-border:#C07028;
+      --teal:         #3DC4A8;
+      --teal-bg:      #041812;
+      --text:         #DDE5F0;
+      --text-mid:     #97ADC8;
+      --text-muted:   #5A7090;
+      --text-inv:     #E8F0FA;
+      --tag-bg:       #162035;
+      --tag-text:     #80A8D5;
+      --conf-h:       #5DD99A;
+      --conf-h-bg:    #021A0E;
+      --conf-m:       #E0B840;
+      --conf-m-bg:    #1A1200;
+    }
+  }
+  /* ── Dark theme (explicit toggle) ── */
+  :root[data-theme="dark"] {
+    --bg:           #0B1523;
+    --surface:      #111D30;
+    --border:       #1F3050;
+    --navy:         #C8D8EE;
+    --navy-mid:     #8AABD0;
+    --amber:        #F0A838;
+    --amber-bg:     #1E1500;
+    --amber-border: #7A5500;
+    --signal-bg:    #1A1000;
+    --signal-border:#C07028;
+    --teal:         #3DC4A8;
+    --teal-bg:      #041812;
+    --text:         #DDE5F0;
+    --text-mid:     #97ADC8;
+    --text-muted:   #5A7090;
+    --text-inv:     #E8F0FA;
+    --tag-bg:       #162035;
+    --tag-text:     #80A8D5;
+    --conf-h:       #5DD99A;
+    --conf-h-bg:    #021A0E;
+    --conf-m:       #E0B840;
+    --conf-m-bg:    #1A1200;
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    font-size: 15px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── Outer wrapper ── */
+  .wrapper {
+    max-width: 660px;
+    margin: 0 auto;
+    padding: 0 16px 48px;
+  }
+
+  /* ── Header bar ── */
+  .header {
+    background: #0C1F3F;
+    padding: 22px 28px 20px;
+    margin-bottom: 24px;
+    border-radius: 0 0 4px 4px;
+  }
+  .header-label {
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #6B8DB5;
+    margin-bottom: 6px;
+  }
+  .header-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #F0EBE0;
+    line-height: 1.2;
+  }
+  .header-meta {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+  }
+  .header-date {
+    font-size: 12px;
+    color: #8AABD0;
+    font-variant-numeric: tabular-nums;
+  }
+  .header-readtime {
+    font-size: 11px;
+    color: #6B8DB5;
+    padding: 2px 8px;
+    border: 1px solid #1E3A6E;
+    border-radius: 20px;
+  }
+
+  /* ── Top Signal ── */
+  .signal-box {
+    background: var(--signal-bg);
+    border-left: 3px solid var(--signal-border);
+    border-radius: 4px;
+    padding: 18px 20px;
+    margin-bottom: 24px;
+  }
+  .signal-eyebrow {
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--signal-border);
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .signal-body {
+    color: var(--text);
+    font-size: 14.5px;
+    line-height: 1.65;
+  }
+
+  /* ── Section heading ── */
+  .section-head {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 16px;
+    margin-top: 28px;
+  }
+
+  /* ── Market Pulse grid ── */
+  .pulse-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-bottom: 4px;
+  }
+  .pulse-row {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 12px 14px;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+  }
+  .pulse-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    min-width: 110px;
+    flex-shrink: 0;
+    padding-top: 1px;
+  }
+  .pulse-value {
+    font-size: 13.5px;
+    color: var(--text);
+    line-height: 1.5;
+  }
+  .pulse-value a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 12px;
+  }
+
+  /* ── Stat chips ── */
+  .stat-row {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin: 12px 0 6px;
+  }
+  .stat-chip {
+    background: var(--tag-bg);
+    color: var(--tag-text);
+    border-radius: 4px;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-variant-numeric: tabular-nums;
+    font-weight: 600;
+  }
+  .stat-chip span {
+    font-weight: 400;
+    color: var(--text-muted);
+    font-size: 11px;
+    margin-left: 3px;
+  }
+
+  /* ── Competitor cards ── */
+  .comp-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 14px 16px;
+    margin-bottom: 12px;
+  }
+  .comp-card:last-child { margin-bottom: 0; }
+  .comp-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+  }
+  .comp-name {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text);
+  }
+  .conf-badge {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    padding: 2px 7px;
+    border-radius: 3px;
+  }
+  .conf-h {
+    background: var(--conf-h-bg);
+    color: var(--conf-h);
+  }
+  .conf-m {
+    background: var(--conf-m-bg);
+    color: var(--conf-m);
+  }
+  .comp-event {
+    font-size: 13.5px;
+    color: var(--text);
+    line-height: 1.55;
+    margin-bottom: 8px;
+  }
+  .comp-implication {
+    font-size: 12.5px;
+    color: var(--text-mid);
+    line-height: 1.5;
+    padding: 8px 10px;
+    background: var(--teal-bg);
+    border-left: 2px solid var(--teal);
+    border-radius: 2px;
+  }
+  .comp-source {
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-top: 8px;
+  }
+
+  /* ── Tech & AI bullets ── */
+  .tech-item {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .tech-item:last-child { border-bottom: none; }
+  .tech-title {
+    font-weight: 700;
+    font-size: 13.5px;
+    color: var(--text);
+    margin-bottom: 4px;
+  }
+  .tech-body {
+    font-size: 13px;
+    color: var(--text-mid);
+    line-height: 1.55;
+  }
+  .tech-source {
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-top: 5px;
+  }
+
+  /* ── CPO Lens ── */
+  .lens-box {
+    background: var(--amber-bg);
+    border: 1px solid var(--amber-border);
+    border-radius: 4px;
+    padding: 18px 20px;
+    margin-top: 28px;
+  }
+  .lens-eyebrow {
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--amber);
+    font-weight: 700;
+    margin-bottom: 14px;
+  }
+  .lens-items {
+    display: grid;
+    gap: 14px;
+  }
+  .lens-item {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+  }
+  .lens-num {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--amber);
+    min-width: 20px;
+    padding-top: 1px;
+    font-variant-numeric: tabular-nums;
+  }
+  .lens-content {}
+  .lens-topic {
+    font-size: 13.5px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 3px;
+  }
+  .lens-question {
+    font-size: 13px;
+    color: var(--text-mid);
+    line-height: 1.55;
+  }
+
+  /* ── Divider ── */
+  hr {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 20px 0;
+  }
+
+  /* ── Sources footer ── */
+  .sources {
+    margin-top: 32px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    font-size: 11px;
+    color: var(--text-muted);
+    line-height: 1.8;
+  }
+  .sources strong {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+  }
+  .sources a {
+    color: var(--text-muted);
+    text-decoration: none;
+  }
+  .sources a:hover { text-decoration: underline; }
+
+  a { color: var(--amber); }
+
+  /* ── Responsive ── */
+  @media (max-width: 480px) {
+    .header { padding: 18px 16px 16px; }
+    .header-title { font-size: 17px; }
+    .pulse-label { min-width: 80px; font-size: 10px; }
+    .stat-row { gap: 6px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrapper">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="header-label">🚛 Uber Freight</div>
+    <div class="header-title">Intel Brief &mdash; August 27, 2026</div>
+    <div class="header-meta">
+      <span class="header-date">Thursday, August 27 &middot; CPO Edition</span>
+      <span class="header-readtime">~4 min read</span>
+    </div>
+  </div>
+
+  <!-- Top Signal -->
+  <div class="signal-box">
+    <div class="signal-eyebrow">⚡ Today's Top Signal</div>
+    <div class="signal-body">
+      Oil posted a fourth consecutive session of declines toward $80–81/barrel as Iran and Oman reached a maritime water-sharing agreement on the Strait of Hormuz, and President Trump reported 10 million barrels transited on Tuesday &mdash; the clearest signal yet that 6 months of Hormuz disruption may be easing. For Uber Freight, this is the critical inflection: diesel at a 2026 high of $5.45/gallon has been a structural prop under elevated truckload rates; if crude retreats meaningfully through September, fuel surcharge revenues compress and carrier cost expectations reset &mdash; precisely as Q4 contract negotiations begin. <strong>The window to model post-Hormuz contract repricing scenarios for key shipper accounts is now, not after the straits formally reopen.</strong>
+    </div>
+  </div>
+
+  <!-- Market Pulse -->
+  <div class="section-head">📊 Market Pulse</div>
+
+  <div class="pulse-grid">
+    <div class="pulse-row">
+      <div class="pulse-label">Spot rates</div>
+      <div class="pulse-value">
+        Dry van down 7 consecutive weeks to ~$2.25–2.28/mi &mdash; still <strong>+38% YoY</strong>. DAT 35-day forecast: stable ~$0.60 above year-ago levels through mid-September.
+        <br><a href="https://www.dat.com/blog/dry-van-report-rates-ease-slightly-as-capacity-exits-not-demand-drive-the-tightening">(Aug 27, 2026 &mdash; DAT)</a>
+      </div>
+    </div>
+    <div class="pulse-row">
+      <div class="pulse-label">Load-to-truck</div>
+      <div class="pulse-value">
+        <div class="stat-row">
+          <span class="stat-chip">9.61<span>van</span></span>
+          <span class="stat-chip">9.88<span>reefer</span></span>
+          <span class="stat-chip">33.18<span>flatbed</span></span>
+        </div>
+        Vs. July averages: van 10.47 &middot; flatbed 42.49. Seasonal cooling, all still well above YoY.
+        <br><a href="https://www.truckingdive.com/news/latest-load-to-truck-ratio-dry-van-reefer-flatbed/734858/">(Aug 2026 &mdash; DAT/Trucking Dive)</a>
+      </div>
+    </div>
+    <div class="pulse-row">
+      <div class="pulse-label">Capacity events</div>
+      <div class="pulse-value">
+        <strong>Panama Canal:</strong> Neopanamax 48ft draft restriction live (effective Aug 26); daily Neopanamax slots cut to 9 starting Sept 3. &nbsp;
+        <strong>CVSA Brake Safety Week</strong> Day 5 of 7 (ends Aug 29). &nbsp;
+        <strong>Canada Sec. 338</strong> 50% tariffs &mdash; week 1 in force on $20B Canadian goods.
+        <br><a href="https://britanniapandi.com/en_gb/guidance/panama-canal-draft-restriction-update-august-2026/">(Aug 26, 2026 &mdash; Britannia P&amp;I / CVSA / Troutman)</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Competitor Moves -->
+  <div class="section-head">🏢 Competitor Moves</div>
+
+  <div class="comp-card">
+    <div class="comp-header">
+      <span class="comp-name">RXO</span>
+      <span class="conf-badge conf-h">HIGH CONFIDENCE</span>
+    </div>
+    <div class="comp-event">
+      Q2 adjusted EBITDA surged to <strong>$40M</strong> (from $6M in Q1), beating consensus; Q3 guidance also $40M midpoint. Spot freight comprised 50% of brokerage volume in July, enabling higher per-load margins. Management used the earnings call to signal active enterprise account recruitment targeting CHR clients amid the verdict overhang.
+    </div>
+    <div class="comp-implication">
+      <strong>Implication for UF:</strong> RXO is now profitable and actively hunting CHR enterprise accounts. UF's 4PL/Transplace pitch must be sharp and differentiated for the same conversations &mdash; lead with managed transportation outcomes, not brokerage price.
+    </div>
+    <div class="comp-source"><a href="https://www.ttnews.com/articles/rxo-earnings-q2-2026">Aug 6, 2026 &mdash; RXO Q2 Earnings / Transport Topics</a></div>
+  </div>
+
+  <div class="comp-card">
+    <div class="comp-header">
+      <span class="comp-name">C.H. Robinson</span>
+      <span class="conf-badge conf-h">HIGH CONFIDENCE</span>
+    </div>
+    <div class="comp-event">
+      Published August freight market update. CEO Bozeman reiterated confidence the $604M Texas nuclear verdict "will be overturned on appeal," while acknowledging the process could take years. Enterprise customer uncertainty for CHR remains elevated amid the legal overhang.
+    </div>
+    <div class="comp-implication">
+      <strong>Implication for UF:</strong> CHR account displacement is long-duration &mdash; UF's enterprise sales motion must sustain presence across a multi-year timeline, not count on a near-term cliff.
+    </div>
+    <div class="comp-source"><a href="https://www.chrobinson.com/en-us/resources/insights-and-advisories/north-america-freight-insights/aug-2026-freight-market-update/">Aug 2026 &mdash; CHR Newsroom</a></div>
+  </div>
+
+  <div class="comp-card">
+    <div class="comp-header">
+      <span class="comp-name">project44 &rarr; project44 + LSP44</span>
+      <span class="conf-badge conf-m">MEDIUM CONFIDENCE</span>
+    </div>
+    <div class="comp-event">
+      project44 restructured into two businesses: <strong>project44</strong> (enterprise shipper decision intelligence, TMS, visibility) and <strong>LSP44</strong> (AI-native infrastructure for 3PLs, 4PLs, and freight forwarders). LSP44 reached positive operating cash flow and 48% Q4 ARR growth before the split.
+    </div>
+    <div class="comp-implication">
+      <strong>Implication for UF:</strong> LSP44's AI backend layer explicitly targeting logistics operators is a potential substitution threat to Transplace's tech layer &mdash; could commoditize capabilities UF relies on for differentiation. Details in Freight Tech section.
+    </div>
+    <div class="comp-source"><a href="https://www.freightwaves.com/news/project44-forms-two-new-businesses-launches-ai-native-lsp44">2026 &mdash; FreightWaves / project44</a></div>
+  </div>
+
+  <!-- Freight Tech & AI -->
+  <div class="section-head">🔧 Freight Tech &amp; AI</div>
+
+  <div class="tech-item">
+    <div class="tech-title">project44 AI Freight Procurement Agent</div>
+    <div class="tech-body">Automates carrier selection, rate benchmarking, and multi-modal negotiations across the full sourcing cycle. Verified customer results: <strong>4.1% freight cost reduction</strong>, <strong>75% faster sourcing cycles</strong>, 70% less manual coordination. This is the first agentic freight tool with attested enterprise outcomes at scale &mdash; it directly threatens broker-mediated procurement in managed transportation environments like Transplace.</div>
+    <div class="tech-source"><a href="https://www.freightwaves.com/news/project44-launches-ai-agent-to-automate-freight-procurement-cut-costs">Aug 2026 &mdash; FreightWaves / project44</a></div>
+  </div>
+
+  <div class="tech-item">
+    <div class="tech-title">NHTSA ADS 31-day comment window closes Aug 31 &mdash; 4 days remaining</div>
+    <div class="tech-body">The Federal Register interim guidance covers near-term commercial ADS deployment standards &mdash; the same regulatory framework governing Aurora's driverless fleet where Uber Freight is the named commercial network partner. The comment record filed now will shape operating requirements for the brokerage's autonomous capacity channel. Missing this window means ceding the regulatory record to competitors.</div>
+    <div class="tech-source"><a href="https://www.federalregister.gov/documents/2026/07/31/2026-15483/av-framework-updates-and-request-for-comments-on-interim-guidance">Jul 31, 2026 &mdash; Federal Register</a></div>
+  </div>
+
+  <hr>
+
+  <!-- CPO Lens -->
+  <div class="lens-box">
+    <div class="lens-eyebrow">💡 CPO Lens: 3 Things Worth Discussing with Your Team</div>
+    <div class="lens-items">
+
+      <div class="lens-item">
+        <div class="lens-num">1.</div>
+        <div class="lens-content">
+          <div class="lens-topic">Hormuz de-escalation and contract repricing</div>
+          <div class="lens-question">If diesel retreats from $5.45/gal toward $4.50 by October as Hormuz access improves, what happens to Uber Freight's fuel surcharge revenue model and Q4 contract rate guidance &mdash; and are we proactively modeling those scenarios for key shipper accounts before they do?</div>
+        </div>
+      </div>
+
+      <div class="lens-item">
+        <div class="lens-num">2.</div>
+        <div class="lens-content">
+          <div class="lens-topic">LSP44 as a platform threat to Transplace</div>
+          <div class="lens-question">project44's LSP44 is explicitly targeting 4PLs and managed transportation operators with AI infrastructure &mdash; are there capabilities that could commoditize what Transplace does, and should we be building data integrations or shipper workflow lock-in before this becomes a live competitive conversation?</div>
+        </div>
+      </div>
+
+      <div class="lens-item">
+        <div class="lens-num">3.</div>
+        <div class="lens-content">
+          <div class="lens-topic">NHTSA ADS comment deadline Aug 31</div>
+          <div class="lens-question">Uber Freight is Aurora's named commercial network partner &mdash; the interim ADS guidance being finalized will shape how driverless freight operates commercially. Does Uber Freight have comments or a position on record, and who should be responding in the next 4 days?</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Sources -->
+  <div class="sources">
+    <strong>Sources</strong>
+    <a href="https://www.dat.com/blog/dry-van-report-rates-ease-slightly-as-capacity-exits-not-demand-drive-the-tightening">DAT &ndash; Dry Van Spot Report</a> &middot;
+    <a href="https://www.truckingdive.com/news/latest-load-to-truck-ratio-dry-van-reefer-flatbed/734858/">Trucking Dive &ndash; Load-to-Truck Ratio</a> &middot;
+    <a href="https://www.ccjdigital.com/economic-trends/freight-demand/article/15832749/truckload-spot-rates-drop-in-midaugust-after-historic-run">CCJ &ndash; Spot Rate Drop Mid-August</a> &middot;
+    <a href="https://www.cnbc.com/2026/08/21/oil-prices-us-iran.html">CNBC &ndash; Iran Oil Prices Aug 2026</a> &middot;
+    <a href="https://britanniapandi.com/en_gb/guidance/panama-canal-draft-restriction-update-august-2026/">Britannia P&amp;I &ndash; Panama Canal Draft</a> &middot;
+    <a href="https://www.supplychaindive.com/news/panama-canal-to-trim-daily-shipping-slots-due-to-el-nino/828505/">Supply Chain Dive &ndash; Panama Slots</a> &middot;
+    <a href="https://cvsa.org/news/2026-bsw-dates/">CVSA &ndash; Brake Safety Week</a> &middot;
+    <a href="https://www.troutman.com/insights/three-day-suspension-of-section-338-additional-duties-on-canadian-imports/">Troutman &ndash; Section 338</a> &middot;
+    <a href="https://www.chrobinson.com/en-us/resources/insights-and-advisories/north-america-freight-insights/aug-2026-freight-market-update/">C.H. Robinson &ndash; Aug Market Update</a> &middot;
+    <a href="https://www.ttnews.com/articles/rxo-earnings-q2-2026">Transport Topics &ndash; RXO Q2 2026</a> &middot;
+    <a href="https://www.freightwaves.com/news/project44-launches-ai-agent-to-automate-freight-procurement-cut-costs">FreightWaves &ndash; project44 AI Agent</a> &middot;
+    <a href="https://www.freightwaves.com/news/project44-forms-two-new-businesses-launches-ai-native-lsp44">FreightWaves &ndash; LSP44 Launch</a> &middot;
+    <a href="https://www.federalregister.gov/documents/2026/07/31/2026-15483/av-framework-updates-and-request-for-comments-on-interim-guidance">Federal Register &ndash; NHTSA ADS Interim Guidance</a>
+  </div>
+
+</div>
+</body>
+</html>
