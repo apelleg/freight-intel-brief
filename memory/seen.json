@@ -1237,7 +1237,22 @@
     "https://container-news.com/canada-imposes-counter-tariffs-on-several-us-goods/",
     "https://www.truckingdive.com/news/aurora-innovation-commercial-scaling-phase-underway/826650/",
     "https://newsroompanama.com/2026/08/20/because-of-el-nino-and-a-rainfall-deficit-the-panama-canal-reduces-daily-transit-slots-to-34/",
-    "https://www.riotimesonline.com/panama-canal-transits-capped-el-nino-2026/"
+    "https://www.riotimesonline.com/panama-canal-transits-capped-el-nino-2026/",
+    "https://www.federalregister.gov/documents/2026/08/31/2026-17741/",
+    "https://www.federalregister.gov/documents/2026/08/31/2026-17742/",
+    "https://www.forbes.com/sites/edgarsten/2026/08/25/gatik-scores-new-200-million-investment-for-its-driverless-truck-tech/",
+    "https://www.fleetowner.com/technology/news/55401124/gatik-lands-200m-to-expand-driverless-middle-mile-truck-rollout",
+    "https://stockstotrade.com/news/aurora-innovation-inc-aur-news-2026_08_25/",
+    "https://investors.rxo.com/news/news-details/2026/RXO-Releases-the-Latest-Curve-Freight-Market-Forecast/default.aspx",
+    "https://www.freightwaves.com/news/panama-canal-new-capacity-cuts-put-us-ports-on-notice",
+    "https://finance.yahoo.com/technology/ai/articles/gatik-raises-200-million-series-130000023.html",
+    "https://theaiinsider.tech/2026/08/26/gatik-raises-200m-in-series-d-funding-led-by-qia-and-kdt-to-expand-its-driverless-commercial-freight-operations/",
+    "https://www.aljazeera.com/news/2026/8/27/how-a-95-percent-drop-in-hormuz-traffic-changed-global-shipping",
+    "https://pulse2.com/stb-restarts-union-pacific-norfolk-southern-merger-review-and-sets-november-18-comment-deadline/",
+    "https://www.chrobinson.com/en-gb/resources/insights-and-advisories/client-advisories/2026q3/08-28-26-client-advisory-update-government-canada-response-united-states-section-338-tariffs/",
+    "https://www.freightfigures.com/articles/canada-retaliation-tariffs-september-8-2026",
+    "https://environmentalhealthsafetybrief.sidley.com/2026/08/04/nhtsa-announces-a-host-of-actions-on-autonomous-vehicles/",
+    "https://natlawreview.com/article/nhtsa-takes-major-steps-establishing-autonomous-vehicle-framework"
   ],
   "seen_story_hashes": [
     "section 301 tariffs t-7 days july 24 2026 no extension q3 booking freeze record august imports front-loading compliance freeze jocustr/joc",
@@ -1787,14 +1802,20 @@
     "d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9",
     "e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0",
     "f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1",
-    "a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2"
+    "a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2",
+    "nhtsa extends av framework interim guidance and fmvss exemption ifr comment periods to september 30 2026 at alliance for automotive innovatifederal register",
+    "aurora innovation adds value truck dallas-laredo charger logistics fort worth-phoenix commercial carrier partners stock +3.1% august 25 2026stockstotrade / aurora ir",
+    "gatik closes 200m series d led by qatar investment authority kdt kia august 25-26 500m raised 600m contracted revenue 85000 driverless orders middle-mile walmart kroger pepsicoporbes",
+    "rxo releases curve freight market forecast q3 2026 ebitda guidance 40m vs 6m q1 active c.h. robinson enterprise account displacement august 28rxo ir",
+    "dat dry van linehaul 2.21/mi 8th consecutive weekly decline july 4 peak still +38% yoy reefer 2.63 flatbed 2.72 load-to-truck van 9.6 week august 27dat freight & analytics",
+    "panama canal caps transits 34 per day september 4 32 per day september 15 el nino 2026 watershed 44% below average rerouting via east coast savannah charlestonfreightwaves"
   ],
   "threads": [
     {
       "id": "nhtsa_ads_framework",
       "label": "NHTSA ADS Interim Framework",
-      "status": "Published in Federal Register July 31, 2026. Two comment tracks open: 31-day interim guidance closes August 31, 2026 (6 days remaining) covering near-term commercial operations, plus year-long track through July 31, 2027 for expanded ADS deployment standards. FMCSA ADS NPRM (RIN 2126-AC17) still projected August/September 2026.",
-      "last_covered_date": "2026-08-25",
+      "status": "NHTSA published Federal Register 2026-17741 and 2026-17742 on August 31, 2026 extending both the AV Framework interim guidance comment period and the FMVSS Exemption IFR from August 31 to September 30, 2026 at Alliance for Automotive Innovation request. FMCSA ADS NPRM (RIN 2126-AC17) functionally delayed to September/October. UF has standing to comment as Aurora's named commercial partner through September 30.",
+      "last_covered_date": "2026-08-31",
       "first_covered_date": "2026-08-04"
     },
     {
@@ -1807,8 +1828,8 @@
     {
       "id": "aurora_commercial_deployment",
       "label": "Aurora Gen-2 Commercial Ramp",
-      "status": "Per-mile pricing disclosed at Aug 20 retail investor town hall: $2+/mile TaaS (Aurora owns truck, insurance, DOT authority) and $0.85+/mile DaaS (customer owns truck, Aurora software license). Q2 revenue $2M, net loss $270M, FY2026 guidance $14-16M (midpoint ~400% YoY). 200-truck year-end target = ~$80M annualized TaaS run rate. 440K+ driverless miles through June. Uber Freight named commercial network partner. DaaS channel conflict question now live for freight brokers. Aurora presenting at Goldman Sachs Communacopia + Technology Conference September 10, 2026.",
-      "last_covered_date": "2026-08-28",
+      "status": "Added Value Truck (Dallas–Laredo) and Charger Logistics (FW–Phoenix) as commercial carrier partners August 25, 2026; stock +3.1%. Per-mile pricing: $2+/mile TaaS, $0.85+/mile DaaS. Q2 revenue $2M, FY2026 guide $14–16M. 440K+ driverless miles. 200-truck year-end target. Uber Freight named commercial network partner. Goldman Sachs Communacopia September 10, 2026 — first investor appearance since pricing and NHTSA extension.",
+      "last_covered_date": "2026-08-31",
       "first_covered_date": "2026-08-05"
     },
     {
@@ -1887,6 +1908,13 @@
       "status": "Launched Aug 19 by M&T Capital Partners around Alabama Motor Express (500+ tractors, 2K trailers); acquired JIT-Ex (Memphis-based TL); Oxford Financial backing; pursuing further TL, brokerage, dedicated, and warehousing acquisitions for national multi-modal platform.",
       "first_covered_date": "2026-08-26",
       "last_covered_date": "2026-08-26"
+    },
+    {
+      "id": "gatik_series_d",
+      "label": "Gatik $200M Series D Autonomous Middle-Mile",
+      "status": "$200M Series D led by Qatar Investment Authority and KDT (Kia CVC) closed August 25–26, 2026; total raised ~$500M. $600M+ contracted revenue, 85K+ cumulative driverless orders. DC-to-store middle-mile for Walmart, Kroger, PepsiCo in DFW, Phoenix, NW Arkansas, Toronto. Targeting 100+ driverless trucks by year-end 2026. Not affiliated with Uber Freight's commercial AV network.",
+      "first_covered_date": "2026-08-31",
+      "last_covered_date": "2026-08-31"
     },
     {
       "id": "up_ns_merger",
@@ -1991,6 +2019,19 @@
         "Aurora Goldman Sachs Communacopia conference September 10 \u2014 first investor appearance post per-mile pricing",
         "Panama Canal: Neopanamax 9/day slots Sept 3; Panamax cut to 23/day Sept 15",
         "CVSA Brake Safety Week ends today (Aug 23-29); results to be compiled post-event"
+      ]
+    },
+    {
+      "date": "2026-08-31",
+      "stories_covered": [
+        "NHTSA extends ADS Framework + FMVSS Exemption IFR comment periods to Sept 30 (Fed Register 2026-17741/17742) — governs Aurora/UF commercial partnership; FMCSA NPRM sequenced behind",
+        "Aurora Innovation: Value Truck (Dallas–Laredo) + Charger Logistics (FW–Phoenix) new carrier partners Aug 25; Goldman Sachs Sept 10 investor appearance",
+        "Gatik $200M Series D (QIA + KDT) closed Aug 25–26; $600M+ contracted revenue; 85K driverless orders; DC-to-store middle-mile Walmart/Kroger/PepsiCo; 100+ trucks year-end",
+        "RXO Curve forecast: Q3 EBITDA guided $40M (vs $6M Q1); active CHR enterprise displacement campaign",
+        "DAT dry van $2.21/mi (8 weekly declines from July 4 peak, +38% YoY); van L/T ~9.6; post-CVSA capacity returning",
+        "Panama Canal: 34/day cap Sept 4, 32/day Sept 15; El Niño watershed 44% below avg; East Coast port pressure Q4",
+        "Canada counter-tariffs Sept 8 T-8 days; CHR cross-border advisory Aug 28; steel/dairy/appliances/electronics",
+        "STB UP-NS merger review: Nov 18 public comment deadline"
       ]
     }
   ]
