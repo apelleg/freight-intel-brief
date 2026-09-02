@@ -1266,7 +1266,19 @@
     "https://www.internationaltradeinsights.com/2026/08/panama-canal-authority-introduces-new-draft-restrictions-as-el-nino-intensifies/",
     "https://www.federalregister.gov/documents/2026/07/31/2026-15484/updating-and-expanding-guidance-on-safe-development-and-deployment-of-automated-driving-systems",
     "https://ca.finance.yahoo.com/news/aurora-present-upcoming-investor-conferences-130000116.html",
-    "https://www.aljazeera.com/news/2026/8/26/iran-oman-agree-on-temporary-hormuz-route-what-we-know"
+    "https://www.aljazeera.com/news/2026/8/26/iran-oman-agree-on-temporary-hormuz-route-what-we-know",
+    "https://dat.com/market-conditions/trucking/van",
+    "https://www.businesswire.com/news/home/20260901005000/en/DAT-Freight-Analytics-August-2026-Trucking-Report",
+    "https://dat.com/market-conditions/trucking/flatbed",
+    "https://www.riotimesonline.com/brazil-news/economy/panama-canal-reduces-daily-transits-september-2026/",
+    "https://www.ghy.com/news/canada-counter-tariffs-september-8-2026",
+    "https://www.canada.ca/en/department-finance/programs/consultations/2026/us-counter-tariffs-september-8.html",
+    "https://www.logisticsmgmt.com/article/rxo_curve_platform_q3_2026_enterprise_target",
+    "https://container-news.com/dhl-global-forwarding-acquires-aero-cargas-uruguay-2026/",
+    "https://www.ccjdigital.com/business/article/15694132/ch-robinson-604m-nuclear-verdict-appeal-update",
+    "https://www.businesswire.com/news/home/20260902005123/en/Aurora-Innovation-September-2026-Investor-Conference-Schedule",
+    "https://www.investing.com/news/economy/usmca-round-4-negotiations-open-washington-dc-september-2-2026",
+    "https://en.wikipedia.org/wiki/Strait_of_Hormuz"
   ],
   "seen_story_hashes": [
     "section 301 tariffs t-7 days july 24 2026 no extension q3 booking freeze record august imports front-loading compliance freeze jocustr/joc",
@@ -1832,7 +1844,12 @@
     "kodiak robotics roush industries factory-built autonomous trucks first units delivered atlas energy solutions permian basin targeting hundreds trucks year-end 2026freightwaves",
     "c.h. robinson cross-border client advisory august 28 2026 canada september 8 counter-tariffs while appealing $604m nuclear verdict two-front crisisc.h. robinson",
     "rxo q3 ebitda guided $40m vs $6m q1 enterprise account recruitment campaign targeting chr shippers nuclear verdict liability spot-market leverage rate transparencyfreightwaves",
-    "trimble tms sale goldman sachs no buyer announced september 1 2026 ceo confirmed q2 earnings q4 rfp displacement window transplace managed transportationccj/axios"
+    "trimble tms sale goldman sachs no buyer announced september 1 2026 ceo confirmed q2 earnings q4 rfp displacement window transplace managed transportationccj/axios",
+    "dat august monthly 2026 dry van tvi softest august since 2021 avg $2.03/mile van load-to-truck spiked 12.01 month-end from 9.62 one week prior 10th consecutive decline from july 4 peakdat freight analytics",
+    "aurora innovation september 2026 investor conferences goldman sachs communacopia sept 10 morgan stanley laguna sept 15 evercore adas av forum sept 29businesswire / aurora ir",
+    "usmca round 4 opens september 2 2026 washington dc autos section 232 steel aluminum rapid response labor 85% mexican exporters relying usmca to avoid 25% tariffsinvesting.com",
+    "dhl global forwarding acquires aero cargas uruguay first direct latin american ground network presencecontainer news",
+    "panama canal 34 transits per day september 4 32 per day september 15 sk gas paid record $5.3m priority slotrio times online"
   ],
   "threads": [
     {
@@ -1845,15 +1862,15 @@
     {
       "id": "usmca_round_negotiations",
       "label": "USMCA Bilateral Negotiations",
-      "status": "Round 3 (US-Mexico bilateral) concluded mid-August with progress on economic security, labor, steel/aluminum, autos. Round 4 agreed for September in Washington D.C. Canada bilateral track folded into separate Section 338 tariff deal track. Full USMCA renewal still unresolved; agreement remains in force.",
-      "last_covered_date": "2026-08-04",
+      "status": "Round 4 opened September 2, 2026 in Washington D.C. Hard disputes: autos (US demanding 50% US-specific content), Section 232 steel/aluminum relief for Canada and Mexico, Rapid Response Labor Mechanism. 85% of Mexican exporters rely on USMCA to avoid 25% tariffs. Resolution expected Q4 2026 at earliest, more likely 2027. Canada bilateral track remains on separate Section 338 tariff track.",
+      "last_covered_date": "2026-09-02",
       "first_covered_date": "2026-08-04"
     },
     {
       "id": "aurora_commercial_deployment",
       "label": "Aurora Gen-2 Commercial Ramp",
-      "status": "Added Value Truck (Dallas–Laredo) and Charger Logistics (FW–Phoenix) as commercial carrier partners August 25, 2026; stock +3.1%. Per-mile pricing: $2+/mile TaaS, $0.85+/mile DaaS. Q2 revenue $2M, FY2026 guide $14–16M. 440K+ driverless miles. 200-truck year-end target. Uber Freight named commercial network partner. Goldman Sachs Communacopia September 10, 2026 — first investor appearance since pricing and NHTSA extension.",
-      "last_covered_date": "2026-08-31",
+      "status": "Three September investor conferences confirmed: Goldman Sachs Communacopia Sept 10 (5:25 pm ET), Morgan Stanley Laguna Sept 15, Evercore ADAS/AV Forum Sept 29 — first public pricing scrutiny since $2+/mile TaaS and $0.85+/mile DaaS disclosed. Uber Freight named as commercial network partner in materials. Per-mile pricing: $2+/mile TaaS, $0.85+/mile DaaS. Q2 revenue $2M, FY2026 guide $14–16M. 440K+ driverless miles. 200-truck year-end target. Value Truck (Dallas–Laredo) and Charger Logistics (FW–Phoenix) added Aug 25.",
+      "last_covered_date": "2026-09-02",
       "first_covered_date": "2026-08-05"
     },
     {
@@ -1866,8 +1883,8 @@
     {
       "id": "canada_section_338_aug19",
       "label": "Canada Section 338 Tariffs Aug 19",
-      "status": "Section 338 tariffs LIVE since August 22, 2026 \u2014 50% duties on ~$20B Canadian goods (autos, dairy, alcohol, lumber, cement, electronics), no USMCA exemption, no sunset clause. Canada counter-tariffs 15\u201350% on $27.6B US goods (700+ product lines: steel, dairy, electronics, appliances, paper, apparel) take effect September 8, 2026 \u2014 T-7 as of September 1. USTR Greer confirmed no further US-Canada trade talks are planned, locking in the escalation. Goods in transit Sept 8 are exempt. Detroit, Port Huron, Buffalo crossings bear primary impact. Creates two-wall tariff problem for US-Canada cross-border freight lanes.",
-      "last_covered_date": "2026-09-01",
+      "status": "Section 338 tariffs LIVE since August 22, 2026 \u2014 50% duties on ~$20B Canadian goods (autos, dairy, alcohol, lumber, cement, electronics), no USMCA exemption, no sunset clause. Canada counter-tariffs 15\u201350% on $27.6B US goods (700+ product lines: steel, dairy, electronics, appliances, paper, apparel) take effect September 8, 2026 \u2014 T-6 as of September 2. USTR Greer confirmed no further US-Canada trade talks are planned. Goods already in transit Sept 8 are exempt with documentation. Detroit, Port Huron, Buffalo crossings bear primary impact. Creates two-wall tariff problem for US-Canada cross-border freight lanes.",
+      "last_covered_date": "2026-09-02",
       "first_covered_date": "2026-08-06"
     },
     {
@@ -1922,8 +1939,8 @@
     {
       "id": "panama_canal_el_nino_2026",
       "label": "Panama Canal El Ni\u00f1o draft cuts",
-      "status": "Neopanamax 48ft draft restriction LIVE since Aug 26; Neopanamax daily transit slots cut to 9 (from current level) effective Sept 3. Rainfall 34% below historical average; ACP not cutting booking slot count before Sept 3. Port of LA projecting ~5% cargo diversion for affected vessel classes.",
-      "last_covered_date": "2026-08-27",
+      "status": "Neopanamax 48ft draft restriction LIVE since Aug 26. Total daily transit cap drops to 34/day starting September 4, then 32/day September 15. El Niño watershed 44% below historical average; SK Gas paid record $5.3M for one priority slot. East Coast port pressure building Q4. Port of LA projecting ~5% cargo diversion for affected vessel classes.",
+      "last_covered_date": "2026-09-02",
       "first_covered_date": "2026-08-25"
     },
     {
@@ -2086,6 +2103,19 @@
         "Kodiak Robotics: Roush Industries factory-built AV trucks; first delivery to Atlas Energy in Permian; hundreds by year-end 2026",
         "project44 Intelligent TMS: G2 Fall 2026 Enterprise Leader (first-ever TMS Grid ranking); shipper revenue +57% YoY",
         "Trimble TMS: no buyer announced as of Sept 1; Q4 RFP displacement window open for Transplace"
+      ]
+    },
+    {
+      "date": "2026-09-02",
+      "stories_covered": [
+        "DAT August monthly: van TVI softest August since 2021, avg $2.03/mile; month-end L/T spike 9.62→12.01 in one week — capacity attrition signal",
+        "Panama Canal 34/day cap begins Sept 4, 32/day Sept 15; SK Gas record $5.3M priority slot",
+        "Canada counter-tariffs T-6 (Sept 8): 15–50% on 700+ US products, goods-in-transit exempt with documentation; USTR Greer confirmed no further US-Canada talks",
+        "USMCA Round 4 opened Sept 2, Washington D.C.: autos, Section 232, Rapid Response Labor Mechanism; 85% Mexican exporters relying on USMCA; resolution likely 2027",
+        "Aurora: three September investor conferences confirmed (Goldman Sachs Sept 10, Morgan Stanley Sept 15, Evercore Sept 29); first pricing scrutiny since $2+/mi TaaS disclosed",
+        "DHL Global Forwarding acquires Aero Cargas (Uruguay, Sept 1): first direct Latin American ground network",
+        "RXO Curve Q3 EBITDA guided $40M vs $6M Q1; active CHR enterprise displacement campaign",
+        "C.H. Robinson $604M nuclear verdict appeal pending; no new ruling; insurance secured through 2026"
       ]
     }
   ]
