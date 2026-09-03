@@ -1278,7 +1278,28 @@
     "https://www.ccjdigital.com/business/article/15694132/ch-robinson-604m-nuclear-verdict-appeal-update",
     "https://www.businesswire.com/news/home/20260902005123/en/Aurora-Innovation-September-2026-Investor-Conference-Schedule",
     "https://www.investing.com/news/economy/usmca-round-4-negotiations-open-washington-dc-september-2-2026",
-    "https://en.wikipedia.org/wiki/Strait_of_Hormuz"
+    "https://en.wikipedia.org/wiki/Strait_of_Hormuz",
+    "https://ntgfreight.com/resources/weekly-freight-trends-august-31-september-4-2026/",
+    "https://www.globalsecurity.org/military/ops/iran-war-oprep.htm",
+    "https://www.cnbc.com/2026/09/01/us-strikes-iran-after-new-hormuz-strait-shipping-attacks-centcom.html",
+    "https://gulfnews.com/world/mena/us-strikes-multiple-iranian-naval-vessels-mine-laying-ships-used-to-harass-shipping-in-strait-of-hormuz-1.500470395",
+    "https://www.riotimesonline.com/panama-canal-transit-cuts-september-2026/",
+    "https://www.prnewswire.com/news-releases/manufacturing-pmi-at-54-6-august-2026-ism-manufacturing-pmi-report-302865127.html",
+    "https://www.freightwaves.com/news/c-h-robinson-rolls-out-us-mexico-freight-consolidation-service",
+    "https://www.federalregister.gov/documents/2026/08/10/2026-16288/english-language-proficiency-out-of-service-criteria",
+    "https://www.freightwaves.com/news/after-sidelining-26000-truck-drivers-fmcsa-seeks-to-lock-in-english-rules",
+    "https://www.barchart.com/story/news/35740470/aurora-expands-driverless-trucking-service-from-fort-worth-to-el-paso",
+    "https://www.willsonintl.com/news/canadian-counter-tariffs-on-u-s-products-effective-september-8-2026/",
+    "https://www.buckland.com/news/canada-announces-new-counter-tariffs-on-u-s-goods-effective-september-8-2026/",
+    "https://www.freightfigures.com/articles/canada-retaliation-tariffs-september-8-2026",
+    "https://www.freightos.com/freight-resources/freightos-global-freight-outlook-september-2026/",
+    "https://summar.com/freight-market-update-september-2026/",
+    "https://www.fibre2fashion.com/news/textile-news/us-mexico-set-fourth-usmca-review-talks-for-september-2026-312034-newsdetails.htm",
+    "https://www.dat.com/blog/reefer-report-spot-rates-slip-but-hold-near-the-top-of-the-range",
+    "https://www.ccjdigital.com/regulations/safety-compliance/article/15831944/fmcsa-proposes-outofservice-rule-for-trucker-english-proficiency",
+    "https://ufreight.com/whats-happening-in-freight-and-logistics-at-the-start-of-september/",
+    "https://www.unitedagainstnucleariran.com/analysis/iran-shipping-update-september-1-2026",
+    "https://www.rferl.org/a/iran-live-blog-trump-middle-east/33803414.html"
   ],
   "seen_story_hashes": [
     "section 301 tariffs t-7 days july 24 2026 no extension q3 booking freeze record august imports front-loading compliance freeze jocustr/joc",
@@ -1849,7 +1870,15 @@
     "aurora innovation september 2026 investor conferences goldman sachs communacopia sept 10 morgan stanley laguna sept 15 evercore adas av forum sept 29businesswire / aurora ir",
     "usmca round 4 opens september 2 2026 washington dc autos section 232 steel aluminum rapid response labor 85% mexican exporters relying usmca to avoid 25% tariffsinvesting.com",
     "dhl global forwarding acquires aero cargas uruguay first direct latin american ground network presencecontainer news",
-    "panama canal 34 transits per day september 4 32 per day september 15 sk gas paid record $5.3m priority slotrio times online"
+    "panama canal 34 transits per day september 4 32 per day september 15 sk gas paid record $5.3m priority slotrio times online",
+    "hormuz day 188 sept 3 2026 6 ships/day vs 85 normal 465 vessels anchored us sept 1 strikes 100 irgc targets iranian tankers first iran 25 ballistic missiles gulf basesglobalsecurity/cnbc/gulfnews",
+    "ism manufacturing pmi 54.6% august 2026 8th consecutive expansion month new orders 53.7 production 58.3 released sept 1ism",
+    "canada counter-tariffs sept 8 2026 t-5 15-50% $27.6b us goods 700 product lines carriers avoiding northbound loads goods-in-transit exemptbuckland/willson/freightfigures",
+    "c.h. robinson us-mexico freight consolidation service up 40% cost savings 48-hour earlier visibility customs brokerage bonded warehousing ai-driven routingfreightwaves",
+    "fmcsa english language proficiency elp nprm federal register 2026-16288 26000+ drivers oos comment period october 9 2026 proposed oos codificationfreightwaves/fmcsa",
+    "aurora fort worth el paso driverless route expansion 11 routes sun belt roush 1000-truck year production target goldman sachs sept 10 pricing scrutinybarchart/aurora ir",
+    "parcel carriers ups usps ontrac q4 peak surcharges locked in usps 6% temporary uis demand surcharges first synchronized stack major carriersntg freight/summar",
+    "labor day freight market transition tl 15-week seasonal low expected reversal this week ntg weekly aug 31 sept 4 diesel 5.599/galntg freight"
   ],
   "threads": [
     {
@@ -1869,8 +1898,8 @@
     {
       "id": "aurora_commercial_deployment",
       "label": "Aurora Gen-2 Commercial Ramp",
-      "status": "Three September investor conferences confirmed: Goldman Sachs Communacopia Sept 10 (5:25 pm ET), Morgan Stanley Laguna Sept 15, Evercore ADAS/AV Forum Sept 29 — first public pricing scrutiny since $2+/mile TaaS and $0.85+/mile DaaS disclosed. Uber Freight named as commercial network partner in materials. Per-mile pricing: $2+/mile TaaS, $0.85+/mile DaaS. Q2 revenue $2M, FY2026 guide $14–16M. 440K+ driverless miles. 200-truck year-end target. Value Truck (Dallas–Laredo) and Charger Logistics (FW–Phoenix) added Aug 25.",
-      "last_covered_date": "2026-09-02",
+      "status": "Fort Worth–El Paso route launched Sept 3 (11th Sun Belt lane); manufacturing partner Roush targeting 1,000-truck/year production run-rate by year-end 2026. Goldman Sachs Communacopia Sept 10 will be first major investor scrutiny of $2+/mi TaaS and $0.85+/mi DaaS pricing since Aug 20 town hall — potential valuation reset for AV sector. Uber Freight remains named commercial partner. Three investor appearances: Goldman Sachs Sept 10, Morgan Stanley Sept 15, Evercore Sept 29.",
+      "last_covered_date": "2026-09-03",
       "first_covered_date": "2026-08-05"
     },
     {
@@ -1883,15 +1912,15 @@
     {
       "id": "canada_section_338_aug19",
       "label": "Canada Section 338 Tariffs Aug 19",
-      "status": "Section 338 tariffs LIVE since August 22, 2026 \u2014 50% duties on ~$20B Canadian goods (autos, dairy, alcohol, lumber, cement, electronics), no USMCA exemption, no sunset clause. Canada counter-tariffs 15\u201350% on $27.6B US goods (700+ product lines: steel, dairy, electronics, appliances, paper, apparel) take effect September 8, 2026 \u2014 T-6 as of September 2. USTR Greer confirmed no further US-Canada trade talks are planned. Goods already in transit Sept 8 are exempt with documentation. Detroit, Port Huron, Buffalo crossings bear primary impact. Creates two-wall tariff problem for US-Canada cross-border freight lanes.",
-      "last_covered_date": "2026-09-02",
+      "status": "Section 338 tariffs LIVE since August 22 (50% duties on ~$20B Canadian goods). Canada counter-tariffs 15\u201350% on $27.6B US goods (700+ product lines) take effect September 8 \u2014 T-5 as of Sept 3. Carriers are now actively avoiding northbound cross-border loads in anticipation. Goods already in transit Sept 8 exempt with documentation. USTR Greer confirmed no further US-Canada trade talks planned. Detroit, Port Huron, Buffalo crossings bear primary impact.",
+      "last_covered_date": "2026-09-03",
       "first_covered_date": "2026-08-06"
     },
     {
       "id": "iran_hormuz_shipping_deal",
       "label": "Iran-Hormuz shipping crisis",
-      "status": "Oil fell to $80-81/barrel for 4th consecutive session (Aug 27) as Iran-Oman reached maritime water-sharing agreement on Hormuz; Trump reported 10M barrels transited Tuesday. Sanctions from 'Operation Economic Outcast' (Aug 24) proving less aggressive than feared. Diesel at $5.45/gal 2026 high but easing expected if diplomatic progress holds. ~3-10+ ship transits/day trending up.",
-      "last_covered_date": "2026-08-27",
+      "status": "Full re-escalation as of Sept 1-3 (Day 188): US launched largest strike wave (~100 IRGC targets, first-ever strikes on Iranian tankers). Iran retaliated with ~25 ballistic missiles against Gulf bases (Bahrain, Kuwait, Erbil). Only 6 ships/day transiting (vs. 85/day normal); 465 vessels holding at anchor. Diesel $5.599/gal as of Aug 31 (+$1.865 YoY), rising trajectory. Prior Iran-Oman de-escalation signal (Aug 27) fully reversed.",
+      "last_covered_date": "2026-09-03",
       "first_covered_date": "2026-08-07"
     },
     {
@@ -2116,6 +2145,20 @@
         "DHL Global Forwarding acquires Aero Cargas (Uruguay, Sept 1): first direct Latin American ground network",
         "RXO Curve Q3 EBITDA guided $40M vs $6M Q1; active CHR enterprise displacement campaign",
         "C.H. Robinson $604M nuclear verdict appeal pending; no new ruling; insurance secured through 2026"
+      ]
+    },
+    {
+      "date": "2026-09-03",
+      "stories_covered": [
+        "Hormuz Day 188: 6 ships/day (vs 85 normal), 465 vessels anchored — aftermath of US Sept 1 ~100 IRGC target strikes (first Iranian tankers) + Iran ballistic missile retaliation; triple shock convergence with Canada T-5 and Panama Canal starting tomorrow",
+        "ISM Manufacturing PMI 54.6% August (8th consecutive expansion, released Sept 1); new orders 53.7%, production 58.3%",
+        "Canada counter-tariffs T-5 (Sept 8): carriers actively avoiding northbound cross-border loads; goods-in-transit exempt with documentation",
+        "Panama Canal drops to 34 transits/day starting Sept 4 (32/day Sept 15); El Niño watershed 44% below avg; East/Gulf Coast port queues building Q4",
+        "C.H. Robinson launches US-Mexico freight consolidation service: up to 40% cost savings, 48-hour earlier visibility, customs brokerage + AI routing bundled",
+        "FMCSA ELP NPRM (Federal Register 2026-16288): proposes codifying English proficiency as OOS criterion; 26K+ drivers already sidelined; comment period Oct 9",
+        "Aurora expands to Fort Worth–El Paso route (11th Sun Belt lane); Goldman Sachs Communacopia Sept 10 first institutional pricing scrutiny of $2+/mi TaaS",
+        "Parcel carriers (UPS, USPS, OnTrac) all lock in Q4 peak surcharges — first synchronized multi-carrier peak stack in years; USPS pursuing 6% temporary rate increase",
+        "Diesel $5.599/gal as of Aug 31 (+$1.865 YoY); TL rates at 15-week seasonal low at Labor Day; seasonal reversal expected this week"
       ]
     }
   ]
