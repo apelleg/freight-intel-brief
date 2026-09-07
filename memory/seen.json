@@ -1325,7 +1325,27 @@
     "https://www.ghy.com/trade-compliance/canada-counter-tariffs-us-goods-september-2026/",
     "https://www.ccjdigital.com/business/insurance/article/15831229/ch-robinson-appeals-texas-verdict-warns-freight-market",
     "https://www.ccjdigital.com/business/mergers-acquisitions/article/15832326/trimble-weighs-sale-of-transportation-unit-following-buyer-interest",
-    "https://www.axios.com/pro/supply-chain-deals/2026/07/07/trimble-transportation-division-goldman-sachs-sale"
+    "https://www.axios.com/pro/supply-chain-deals/2026/07/07/trimble-transportation-division-goldman-sachs-sale",
+    "https://www.dat.com/blog/dry-van-report-rates-ease-slightly-as-capacity-exits-not-demand-drive-the-tightening",
+    "https://www.canada.ca/en/department-finance/news/2026/08/list-of-products-from-the-united-states-subject-to-counter-tariffs-effective-september-8-2026.html",
+    "https://www.buckland.com/news/update-september-8-canadian-counter-tariff-guidance-not-expected-before-september-7/",
+    "https://wwd.com/sourcing-journal/logistics/canada-us-tariffs-trade-war-cross-border-freight-forwarders-trucking-1239196809/",
+    "https://ntgfreight.com/resources/weekly-freight-trends-august-31-september-4-2026/",
+    "https://transportationinsight.com/resources/transportation-industry-trends-august-31-september-4-2026/",
+    "https://www.transportation.gov/sites/dot.gov/files/2026-09/AV%20National%20Strategy_508_3Sep2026.pdf",
+    "https://www.hklaw.com/en/insights/publications/2026/09/the-road-ahead-for-driverless-vehicles-dot-unveils-av-5",
+    "https://ir.aurora.tech/news-events/press-releases/detail/150/aurora-to-present-at-upcoming-investor-conferences",
+    "https://www.project44.com/press-releases/project44-delivers-34-new-arr-growth-fueled-by-ai-agent-momentum-and-intelligent-tms-expansion/",
+    "https://www.aljazeera.com/news/2026/9/3/how-much-oil-is-going-through-hormuz-how-data-doesnt-match-us-claims",
+    "https://www.riotimesonline.com/panama-canal-transit-cuts-september-2026/",
+    "https://mexicobusiness.news/trade-and-investment/news/mexico-us-set-fourth-round-usmca-review-talks-september",
+    "https://pulse2.com/stb-restarts-union-pacific-norfolk-southern-merger-review-and-sets-november-18-comment-deadline/amp/",
+    "https://www.globenewswire.com/news-release/2026/09/02/3355407/0/en/project44-recognized-as-a-major-player-in-2026-idc-marketscape.html",
+    "https://www.project44.com/press-releases/project44-recognized-as-a-major-player-in-2026-idc-marketscape/",
+    "https://www.unitedagainstnucleariran.com/analysis/iran-shipping-update-september-3-2026",
+    "https://www.buckland.com/news/canada-announces-new-counter-tariffs-on-u-s-goods-effective-september-8-2026/",
+    "https://logisticsviewpoints.com/2026/09/01/this-week-in-logistics-ai-moves-from-software-into-physical-execution/",
+    "https://secure.businesswire.com/news/home/20260820746594/en/Aurora-to-Present-at-Upcoming-Investor-Conferences"
   ],
   "seen_story_hashes": [
     "section 301 tariffs t-7 days july 24 2026 no extension q3 booking freeze record august imports front-loading compliance freeze jocustr/joc",
@@ -1914,7 +1934,12 @@
     "project44 intelligent tms idc marketscape major player sept 2 2026 first-ever tms category recognition 57% yoy shipper revenue q4 rfpglobenewswire",
     "fmcsa english language proficiency nprm federal register 2026-16288 out-of-service criterion 26000 drivers comment oct 9 cross-border capacityfmcsa",
     "dutch ports rotterdam amsterdam zeeland 8-hour strike sept 4 2026 german port disruptions first synchronized european multi-gateway 2026klg europe",
-    "dat dry van linehaul $2.28/mi week sept 1 minus 4 cents wow +38% yoy van ltr 10.4 labor day 15-week low reversal expecteddat freight & analytics"
+    "dat dry van linehaul $2.28/mi week sept 1 minus 4 cents wow +38% yoy van ltr 10.4 labor day 15-week low reversal expecteddat freight & analytics",
+    "canada counter-tariffs live september 8 2026 15-50% $27.6b us goods steel dairy appliances electronics no transit exemption two-wall tariff cross-borderghy/canada.ca/buckland",
+    "dat dry van $2.21/mi sept 1 -$0.04 wow +35% yoy van l/t 9.88 firming truck posts -28.4% yoy capacity exit seasonal reversal labor day expecteddat",
+    "dot america leads av national strategy 2026-2030 sept 3 15 nhtsa fmcsa rulemakings first ads behavioral competency standards comment sept 30dot/holland & knight",
+    "aurora ceo urmson goldman sachs communacopia sept 10 2026 525pm et first institutional pricing scrutiny $2+/mi taas analyst investor day sept 23 dallasaurora ir",
+    "project44 intelligent tms 34% arr growth sept 2026 idc marketscape major player 4.1% freight cost reduction 75% sourcing cycle q4 rfp enterprise oracle blue yonder transplaceproject44"
   ],
   "threads": [
     {
@@ -1934,8 +1959,8 @@
     {
       "id": "aurora_commercial_deployment",
       "label": "Aurora Gen-2 Commercial Ramp",
-      "status": "Fort Worth–El Paso route launched Sept 3 (11th Sun Belt lane); Roush targeting 1,000-truck/year production run-rate by year-end 2026. Analyst & Investor Day confirmed Sept 23 at Pittsburgh HQ — first major institutional showcase since $2+/mi TaaS / $0.85+/mi DaaS pricing disclosed Aug 20. Goldman Sachs Communacopia Sept 10 will be first public investor pricing scrutiny. Three investor appearances: Goldman Sachs Sept 10, Morgan Stanley Sept 15, Evercore Sept 29. Uber Freight remains named commercial partner.",
-      "last_covered_date": "2026-09-04",
+      "status": "Goldman Sachs Communacopia Sept 10 (5:25 p.m. ET) is first institutional pricing scrutiny since $2+/mi TaaS / $0.85+/mi DaaS disclosed Aug 20. Analyst & Investor Day Sept 23 Pittsburgh HQ. 11 Sun Belt routes, 440K+ driverless miles, 200 trucks year-end target. Three investor conferences: GS Sept 10, Morgan Stanley Sept 15, Evercore Sept 29. Uber Freight named commercial partner.",
+      "last_covered_date": "2026-09-07",
       "first_covered_date": "2026-08-05"
     },
     {
@@ -1948,8 +1973,8 @@
     {
       "id": "canada_section_338_aug19",
       "label": "Canada Section 338 Tariffs Aug 19",
-      "status": "Section 338 tariffs LIVE since August 22 (50% duties on ~$20B Canadian goods). Canada counter-tariffs 15\u201350% on $27.6B US goods (700+ product lines) take effect September 8 \u2014 T-4 as of Sept 4. Canadian Trucking Alliance warns of 'nuclear winter' for Canada-US cross-border freight; USTR Greer confirmed no further US-Canada trade talks planned. Carriers actively avoiding northbound loads; goods already in transit Sept 8 exempt with documentation. Detroit, Port Huron, Buffalo crossings bear primary impact.",
-      "last_covered_date": "2026-09-04",
+      "status": "Two-wall tariff live as of September 8: US Section 338 on $20B Canadian goods (50% since Aug 22) + Canada counter-tariffs on $27.6B US goods (15\u201350%, effective midnight Sept 8). CBSA implementation guidance incomplete as of Sept 7. Carriers actively avoiding northbound U.S.\u2013Canada loads creating equipment imbalance. Goods in transit exempt with documentation. Detroit, Port Huron, Buffalo crossings bear primary impact. USTR Greer confirmed no further US-Canada talks.",
+      "last_covered_date": "2026-09-07",
       "first_covered_date": "2026-08-06"
     },
     {
@@ -2032,9 +2057,9 @@
     {
       "id": "project44_intelligent_tms",
       "label": "project44 Intelligent TMS G2 Rise",
-      "status": "project44 named IDC MarketScape Major Player for TMS (Sept 2) — first-ever TMS category recognition by IDC, following G2 Fall 2026 Leader status. Shipper revenue +57% YoY; customers report 4% freight cost reduction, 60% fewer check calls, 17% on-time improvement. Now credentialed to compete against Oracle, Blue Yonder, Transplace in Q4 enterprise RFPs.",
+      "status": "34% new ARR growth fueled by AI agent momentum; IDC MarketScape Major Player (Sept 2); 4.1% freight cost reduction, 75% sourcing cycle reduction via AI procurement agent. Q4 enterprise RFP campaign active competing directly with Transplace, Oracle, Blue Yonder. Direct competitive threat to UF managed transport platform in Q4 renewal window.",
       "first_covered_date": "2026-09-01",
-      "last_covered_date": "2026-09-04"
+      "last_covered_date": "2026-09-07"
     },
     {
       "id": "kodiak_factory_av",
@@ -2056,6 +2081,13 @@
       "status": "FMCSA NPRM (Federal Register 2026-16288) proposes codifying English language proficiency as an out-of-service (OOS) criterion for commercial drivers. An estimated 26,000+ drivers already sidelined under current enforcement; formal comment period closes October 9, 2026. Rule would most acutely tighten carrier capacity in US-Mexico cross-border lanes.",
       "first_covered_date": "2026-09-04",
       "last_covered_date": "2026-09-04"
+    },
+    {
+      "id": "dot_av_national_strategy",
+      "label": "DOT AV National Strategy 2026-2030",
+      "status": "DOT released 'America Leads: National Strategy for Automated Vehicles, FY2026-2030' on September 3. 15 NHTSA/FMCSA AV rulemakings on 2026 agenda; first-ever federal ADS behavioral competency standards framework. Reaffirms NHTSA as federal vehicle safety regulator (not states). NHTSA ADS framework + FMVSS exemption IFR comment periods extended to September 30. Provides regulatory scaffold for Aurora Gen-2 commercial operations and UF TaaS partnership.",
+      "first_covered_date": "2026-09-07",
+      "last_covered_date": "2026-09-07"
     }
   ],
   "last_30_days": [
@@ -2224,6 +2256,19 @@
         "Trimble TMS: no buyer as of Sept 4, Goldman Sachs process ongoing since July; Q4 RFP season open — clearest Transplace displacement opportunity in years for enterprise TMW/TM4 accounts",
         "project44 Intelligent TMS: IDC MarketScape Major Player (Sept 2, first-ever TMS category recognition by IDC); G2 Fall 2026 Leader; 57% YoY shipper revenue growth; now competing in Q4 enterprise RFPs vs. Oracle, Blue Yonder, Transplace",
         "FMCSA ELP NPRM (Federal Register 2026-16288): English proficiency proposed as OOS criterion for commercial drivers; 26K+ already sidelined; comment period Oct 9; most acute impact on US-Mexico cross-border capacity"
+      ]
+    },
+    {
+      "date": "2026-09-07",
+      "stories_covered": [
+        "Canada counter-tariffs live September 8 (15-50% on $27.6B US goods): two-wall tariff with US Section 338; carriers pulling from northbound loads; CBSA implementation guidance incomplete as of Sept 7",
+        "DAT dry van $2.21/mi (week ending Sept 1, -$0.04 WoW, +35% YoY); van L/T 9.88 firming; truck posts -28.4% YoY; Labor Day seasonal reversal expected this week; diesel $5.599/gal",
+        "Triple capacity constraint: Canada counter-tariffs tonight + Panama Canal 34/day (drops 32/day Sept 15) + Hormuz averaging ~13 vessels/day vs 85 normal (4 AIS-off vessels Sept 6)",
+        "DOT 'America Leads' AV National Strategy 2026-2030 (Sept 3): 15 NHTSA/FMCSA rulemakings, first-ever federal ADS behavioral competency standards; NHTSA as sole federal regulator; comment period Sept 30",
+        "Aurora CEO Urmson Goldman Sachs Communacopia Sept 10 5:25pm ET — first institutional pricing scrutiny since $2+/mi TaaS disclosed Aug 20; Analyst & Investor Day Sept 23 Dallas",
+        "project44 Intelligent TMS: 34% new ARR growth, 4.1% freight cost reduction from AI procurement agent, IDC MarketScape recognition; Q4 enterprise RFP campaign competing vs Transplace/Oracle/Blue Yonder",
+        "C.H. Robinson Robinson Fresh cross-border cold-chain directly hit by Canada counter-tariffs; $604M verdict appeal ongoing; two-front crisis heading into peak season",
+        "RXO Q3 2026 EBITDA guided $40M (vs $6M Q1); CHR enterprise displacement campaign; lighter cross-border exposure positions as enterprise-safe broker"
       ]
     }
   ]
