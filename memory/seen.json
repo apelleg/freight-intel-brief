@@ -1353,7 +1353,16 @@
     "https://iamovers.org/news/panama-canal-to-cut-daily-transits-again-as-el-nino-drought-deepens/",
     "https://www.businesswire.com/news/home/20260902997149/en/Aurora-to-Host-Analyst-Investor-Day-on-September-23-2026",
     "https://www.investing.com/news/commodities-news/us-mexico-set-fourth-round-of-usmca-talks-amid-differences-over-key-issues-4810353",
-    "https://www.federalregister.gov/documents/2026/08/31/2026-17741"
+    "https://www.federalregister.gov/documents/2026/08/31/2026-17741",
+    "https://www.dat.com/freight-market-statistics-and-trends",
+    "https://www.freightwaves.com/news/sonar",
+    "https://www.freightwaves.com/news",
+    "https://www.goldmansachs.com/insights/conferences/communacopia",
+    "https://www.idc.com",
+    "https://www.supplychaindive.com",
+    "https://ir.aurora.tech",
+    "https://www.ttnews.com",
+    "https://www.joc.com"
   ],
   "seen_story_hashes": [
     "section 301 tariffs t-7 days july 24 2026 no extension q3 booking freeze record august imports front-loading compliance freeze jocustr/joc",
@@ -1960,7 +1969,14 @@
     "trimble tms/tmw q4 rfp window opens goldman sachs sale no buyer transplace displacement windowccj",
     "ustr signaling interim arrangements rather than full usmca deal structural rework 2027investing.com",
     "panama canal drops 32 daily transits september 15 el nino watershed 44% below averageiam movers",
-    "hormuz day 191 12 ships/day september 6 slight improvement from 6/day nadir september 1straits.live"
+    "hormuz day 191 12 ships/day september 6 slight improvement from 6/day nadir september 1straits.live",
+    "807f5e91cb41ba5777351f1dd8568e01",
+    "b7607d381a959f23b3d3e524674dd56a",
+    "73494a515bd2b26b259ca05e3604e955",
+    "5eed4a45f5cbeb25e47465237771d472",
+    "8ccd8a491da9077e5fa64cb41f0ca4c3",
+    "8d76f7fa4bc285c8f2f6ad17515a3721",
+    "da12609f0bf6759f49a5f3b4fc2659a0"
   ],
   "threads": [
     {
@@ -1979,9 +1995,9 @@
     },
     {
       "id": "aurora_commercial_deployment",
-      "label": "Aurora Gen-2 Commercial Ramp",
-      "status": "GS Communacopia Sept 10 (tomorrow), 5:25 PM ET \u2014 first institutional pricing scrutiny of $2+/mi TaaS and $0.85+/mi DaaS model; Analyst & Investor Day Sept 23 Dallas; 440K+ driverless miles; 200 trucks year-end target across 11 Sun Belt routes; Uber Freight named commercial partner.",
-      "last_covered_date": "2026-09-08",
+      "label": "Aurora commercial AV deployment",
+      "status": "440K+ driverless miles on 11 Sun Belt commercial routes. CEO Urmson speaks Goldman Sachs Communacopia Sept 10 (5:25 PM ET) \u2014 first institutional pricing scrutiny of TaaS $2+/mi vs. current spot $2.21/mi. Aurora Investor Day Sept 23 Dallas. Two-week window sets institutional pricing benchmarks for Q4.",
+      "last_covered_date": "2026-09-09",
       "first_covered_date": "2026-08-05"
     },
     {
@@ -1993,9 +2009,9 @@
     },
     {
       "id": "canada_section_338_aug19",
-      "label": "Canada Section 338 Tariffs Aug 19",
-      "status": "Two-wall tariff fully live: Canada counter-tariffs (15\u201350% on C$27.6B US goods, 700+ product lines) live Sept 8; US Section 338 (50% on $20B Canadian goods) live since Aug 22; USTR Greer confirmed no further US-Canada trade talks planned \u2014 bifurcation is settled, not negotiating posture.",
-      "last_covered_date": "2026-09-08",
+      "label": "Canada/US bilateral tariff wall",
+      "status": "Both walls complete as of Sept 8: Canada counter-tariffs (15\u201350% on C$27.6B US goods) live Sept 8; US Section 338 (50%) live since Aug 22. USTR Greer confirmed no dialogue with Ottawa as of Sept 9. Cross-border freight structurally disrupted with no talks underway.",
+      "last_covered_date": "2026-09-09",
       "first_covered_date": "2026-08-06"
     },
     {
@@ -2109,6 +2125,13 @@
       "status": "DOT released 'America Leads: National Strategy for Automated Vehicles, FY2026-2030' on September 3. 15 NHTSA/FMCSA AV rulemakings on 2026 agenda; first-ever federal ADS behavioral competency standards framework. Reaffirms NHTSA as federal vehicle safety regulator (not states). NHTSA ADS framework + FMVSS exemption IFR comment periods extended to September 30. Provides regulatory scaffold for Aurora Gen-2 commercial operations and UF TaaS partnership.",
       "first_covered_date": "2026-09-07",
       "last_covered_date": "2026-09-07"
+    },
+    {
+      "id": "labor_day_q4_tightening_2026",
+      "label": "Post-Labor Day Q4 freight tightening",
+      "status": "Tender rejections peaked 14.5% Labor Day (highest since 2021 cycle), settling ~14% as of Sept 8. Dry van L/T 9.98 vs. 5.81 YoY; equipment posts lowest Week 36 on record (-31% YoY). Converging with Canada two-wall tariff (both walls live Sept 8) and Panama Canal capacity cuts heading into Q4.",
+      "first_covered_date": "2026-09-09",
+      "last_covered_date": "2026-09-09"
     }
   ],
   "last_30_days": [
@@ -2305,6 +2328,20 @@
         "NHTSA ADS framework comment window 22 days remaining (closes Sept 30); Aurora/UF partnership under docket 2026-17741",
         "Trimble TMS/TMW: Goldman Sachs sale process no buyer as of Sept 4; Q4 RFP window opens \u2014 clearest Transplace displacement window of 2026"
       ]
+    },
+    {
+      "date": "2026-09-09",
+      "topics_covered": [
+        "spot_rates",
+        "carrier_capacity",
+        "competitor_intel",
+        "freight_tech",
+        "tms_4pl",
+        "ma_funding",
+        "uber_freight",
+        "shipper_sentiment"
+      ],
+      "story_count": 7
     }
   ]
 }
