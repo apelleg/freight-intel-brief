@@ -1362,7 +1362,13 @@
     "https://www.supplychaindive.com",
     "https://ir.aurora.tech",
     "https://www.ttnews.com",
-    "https://www.joc.com"
+    "https://www.joc.com",
+    "https://www.thetrucker.com/trucking-news/business/dat-reefer-spot-rates-climb-9-cents-to-3-54-a-mile-ahead-of-labor-day",
+    "https://www.freightwaves.com/news/truckload-volumes-drop-15-but-spot-rates-stay-hot",
+    "https://www.cnbc.com/2026/09/08/canada-retaliatory-tariffs.html",
+    "https://techcrunch.com/2026/09/02/uber-is-laying-off-10-of-staff-or-3300-people/",
+    "https://www.cnbc.com/2026/09/02/uber-to-cut-10percent-of-workforce-in-bid-to-move-simpler-and-faster.html",
+    "https://disa.com/news/2026-dot-compliance-updates-for-motor-carriers/"
   ],
   "seen_story_hashes": [
     "section 301 tariffs t-7 days july 24 2026 no extension q3 booking freeze record august imports front-loading compliance freeze jocustr/joc",
@@ -1427,7 +1433,7 @@
     "ustr section 301 forced labor tariffs 10% 12.5% 60 economies mexico canada eu july 7 hearing q3 2026 implementationustr/cnbc",
     "drewry wci june 4 2026 shanghai-la $4565/feu +31% wow shanghai-nyc $5505/feu +20% wow hapag maersk pss $600-1000/40ft june 8-10 amazon prime day june 23 peak season 3-4 weeks earlydrewry",
     "nti.usa hits new cycle high $2.89/mile dry van post-roadcheck week otri 13.4% midwest above 18% highestfreightwaves",
-    "parallel systems raises $100 million autonomous freight trains anthos capital 300 unit backlog genesee wyoming georgia f\u0440\u0430roboticsandautomationnews",
+    "parallel systems raises $100 million autonomous freight trains anthos capital 300 unit backlog genesee wyoming georgia fраroboticsandautomationnews",
     "fmcsa proposes new requirements for driverless trucks first federal ads inspection maintenancefreightwaves",
     "xpo q2 2026 revenue $2.36b +13.5% yoy adj eps $1.70 +62% yoy adj ebitda $434m north american ltl adjusted or 79.9% record 300bps best-ever mario harik profitable market share gainglobenewswire",
     "fedex freight fdxf first week independent nyse trading $149-$168 s&p 500 passive $2-4b ceo ai flexible pricing smb reps june 1-6 2026cnbc/stockstotrade",
@@ -1776,7 +1782,7 @@
     "44a69688029c88401301e3eac35ad782",
     "99d25981828ff9c7b55dde62b2dbc02d",
     "c.h. robinson ceo bozeman expects prevail appeal 604m nuclear verdict 2027 insurance preliminary discussionstrucknews",
-    "uber technologies acquires delivery hero $14.8b \u20ac14b debt 99 markets 50 markets july 16 2026 food delivery global mobilityuber ir/bloomberg",
+    "uber technologies acquires delivery hero $14.8b €14b debt 99 markets 50 markets july 16 2026 food delivery global mobilityuber ir/bloomberg",
     "xpo q2 2026 earnings july 30 ltl yield comfortably ahead mid-single-digit q1 yoy increase 250-300bps sequential margin improvement may tonnage on trackmarkets daily",
     "c.h. robinson responds to supreme court decision, supports federal safety oversight federal preemptionch robinson",
     "dat spot rates august 18 2026 dry van $2.93/mile all-in flatbed $3.54/mile reefer $3.38/mile load-tdat freight & analytics",
@@ -1804,7 +1810,7 @@
     "5a5c0a5b4e63c1149c0fec6f791c5a8a",
     "trimble unveiled cloud-native tms for shippers north america july 7 planning execution visibility dock yard freight audit routing pcmiler appian integrations same day goldman sale reporttrimble",
     "ch robinson q2 2026 earnings july 29 consensus $1.49 eps +15.5% yoy fy2026 $6.08 +19.5% 30 ai agents 100% rate quotes ai monetizationyahoo finance",
-    "dat week july 21-27 2026 dry van linehaul $2.38/mile -6\u00a2 wow +40% yoy flatbed $2.87/mile -8\u00a2 +42% reefer $2.72/mile ltr 10.61 capacity returningdat/bluegrace",
+    "dat week july 21-27 2026 dry van linehaul $2.38/mile -6¢ wow +40% yoy flatbed $2.87/mile -8¢ +42% reefer $2.72/mile ltr 10.61 capacity returningdat/bluegrace",
     "iran oman hormuz framework agreement august 5-6 2026 shipping routes brent $75-82 deal not yet implemented us israeli vessel access restrictedbloomberg",
     "dat august monthly report record june july contract rate gains dry van +13 cents mile $2.39/mile spot at contract paritydat/globenewswire",
     "fedex freight holding company set to join dow jones transportation average replaces american airlines june 1 2026spglobal",
@@ -1976,7 +1982,18 @@
     "5eed4a45f5cbeb25e47465237771d472",
     "8ccd8a491da9077e5fa64cb41f0ca4c3",
     "8d76f7fa4bc285c8f2f6ad17515a3721",
-    "da12609f0bf6759f49a5f3b4fc2659a0"
+    "da12609f0bf6759f49a5f3b4fc2659a0",
+    "dat reefer spot rates $3.54/mi van $2.95/mi flatbed $3.54/mi week sept 5 national truckload index $3.44/mi sept 9 +47% yoythetrucker/freightwaves sonar",
+    "canada retaliatory tariffs 15-50% on $27.6b us goods effective september 8 steel dairy agricultural equipment electronics plasticscnbc/canada finance",
+    "ism manufacturing pmi 54.6% august 2026 8th consecutive expansion new orders 53.7% production 58.3%ism/prnewswire",
+    "uber cuts 3300 jobs 10% global workforce sept 2 20% management layers uber freight reportedly unaffected per sources familiartechchrunch/freightwaves",
+    "fedex freight terminates cco michael lyons following internal conduct investigation enterprise growth strategy external search underwayfréightwaves/truckingdive",
+    "brokerage sector spot rates above contract rates first time since 2021 reefer rejections 20% van rejections 12.35% 4-year highsdat/freightwaves",
+    "dot av-5 america leads national strategy fy2026-2030 sept 3 driverless commercial freight interstate highway corridorsdot/holland knight",
+    "gatik $200m series d qia kdt middle-mile driverless truck 85k+ driverless orders 600m+ contracted revenue dc-to-store walmart krogerforbes/fleetowner",
+    "trucksmarter shuts down owner-operator freight app ceasing operations mobile-first carrier acquisition unit economics incumbentfreightwaves",
+    "project44 named idc marketscape major player visibility tms sept 2 34% new arr growth ai agent intelligent tms transplace competitorglobenewswire/project44",
+    "fmcsa eld compliance deadline sept 8 final deadline non-certified eld replacement passed enforcement action small fleet exitsdisa/fmcsa"
   ],
   "threads": [
     {
@@ -1989,28 +2006,28 @@
     {
       "id": "usmca_round_negotiations",
       "label": "USMCA Bilateral Negotiations",
-      "status": "Round 4 concluded; USTR now signaling 'interim arrangements' rather than a full USMCA deal for 2026, with structural rework likely slipping to 2027 \u2014 US-Mexico cross-border uncertainty persists through next contract year.",
+      "status": "Round 4 concluded; USTR now signaling 'interim arrangements' rather than a full USMCA deal for 2026, with structural rework likely slipping to 2027 — US-Mexico cross-border uncertainty persists through next contract year.",
       "last_covered_date": "2026-09-08",
       "first_covered_date": "2026-08-04"
     },
     {
       "id": "aurora_commercial_deployment",
       "label": "Aurora commercial AV deployment",
-      "status": "440K+ driverless miles on 11 Sun Belt commercial routes. CEO Urmson speaks Goldman Sachs Communacopia Sept 10 (5:25 PM ET) \u2014 first institutional pricing scrutiny of TaaS $2+/mi vs. current spot $2.21/mi. Aurora Investor Day Sept 23 Dallas. Two-week window sets institutional pricing benchmarks for Q4.",
+      "status": "440K+ driverless miles on 11 Sun Belt commercial routes. CEO Urmson speaks Goldman Sachs Communacopia Sept 10 (5:25 PM ET) — first institutional pricing scrutiny of TaaS $2+/mi vs. current spot $2.21/mi. Aurora Investor Day Sept 23 Dallas. Two-week window sets institutional pricing benchmarks for Q4.",
       "last_covered_date": "2026-09-09",
       "first_covered_date": "2026-08-05"
     },
     {
       "id": "fmcsa_ads_nprm",
       "label": "FMCSA ADS NPRM (RIN 2126-AC17)",
-      "status": "NPRM projected for August 2026 \u2014 first comprehensive federal proposed rule for ADS-equipped commercial motor vehicles. Would address driver qualification equivalencies, drug/alcohol testing, CDL requirements, pre-trip inspection, and roadside inspection standards for driverless trucks. Not yet formally published as of August 6, 2026.",
+      "status": "NPRM projected for August 2026 — first comprehensive federal proposed rule for ADS-equipped commercial motor vehicles. Would address driver qualification equivalencies, drug/alcohol testing, CDL requirements, pre-trip inspection, and roadside inspection standards for driverless trucks. Not yet formally published as of August 6, 2026.",
       "last_covered_date": "2026-08-06",
       "first_covered_date": "2026-08-06"
     },
     {
       "id": "canada_section_338_aug19",
       "label": "Canada/US bilateral tariff wall",
-      "status": "Both walls complete as of Sept 8: Canada counter-tariffs (15\u201350% on C$27.6B US goods) live Sept 8; US Section 338 (50%) live since Aug 22. USTR Greer confirmed no dialogue with Ottawa as of Sept 9. Cross-border freight structurally disrupted with no talks underway.",
+      "status": "Both walls complete as of Sept 8: Canada counter-tariffs (15–50% on C$27.6B US goods) live Sept 8; US Section 338 (50%) live since Aug 22. USTR Greer confirmed no dialogue with Ottawa as of Sept 9. Cross-border freight structurally disrupted with no talks underway.",
       "last_covered_date": "2026-09-09",
       "first_covered_date": "2026-08-06"
     },
@@ -2038,7 +2055,7 @@
     {
       "id": "trimble_tms_sale",
       "label": "Trimble TMS/TMW Sale Process",
-      "status": "Goldman Sachs sale process ongoing; no buyer announced as of September 4, 2026. Mid-market TMW/TM4 customers face strategic uncertainty entering Q4 RFP cycles \u2014 binary choice: wait for M&A resolution or move. Highest-leverage Transplace displacement window of the year.",
+      "status": "Goldman Sachs sale process ongoing; no buyer announced as of September 4, 2026. Mid-market TMW/TM4 customers face strategic uncertainty entering Q4 RFP cycles — binary choice: wait for M&A resolution or move. Highest-leverage Transplace displacement window of the year.",
       "last_covered_date": "2026-09-04",
       "first_covered_date": "2026-08-12"
     },
@@ -2065,8 +2082,8 @@
     },
     {
       "id": "panama_canal_el_nino_2026",
-      "label": "Panama Canal El Ni\u00f1o draft cuts",
-      "status": "34-vessel/day transit cap LIVE as of September 4; drops to 32/day September 15. El Ni\u00f1o watershed 44% below historical average; slot auction prices tripled from earlier in 2026; SK Gas paid record $5.3M for one priority slot. East Coast and Gulf port pressure building Q4. Port of LA projecting ~5% cargo diversion for affected vessel classes.",
+      "label": "Panama Canal El Niño draft cuts",
+      "status": "34-vessel/day transit cap LIVE as of September 4; drops to 32/day September 15. El Niño watershed 44% below historical average; slot auction prices tripled from earlier in 2026; SK Gas paid record $5.3M for one priority slot. East Coast and Gulf port pressure building Q4. Port of LA projecting ~5% cargo diversion for affected vessel classes.",
       "last_covered_date": "2026-09-04",
       "first_covered_date": "2026-08-25"
     },
@@ -2080,9 +2097,9 @@
     {
       "id": "gatik_series_d",
       "label": "Gatik $200M Series D Autonomous Middle-Mile",
-      "status": "$200M Series D led by Qatar Investment Authority and KDT (Kia CVC) closed August 25\u201326, 2026; total raised ~$500M. $600M+ contracted revenue, 85K+ cumulative driverless orders. DC-to-store middle-mile for Walmart, Kroger, PepsiCo in DFW, Phoenix, NW Arkansas, Toronto. Targeting 100+ driverless trucks by year-end 2026. Not affiliated with Uber Freight's commercial AV network.",
+      "status": "$200M Series D (QIA + KDT) closed Aug 25-26; $600M+ contracted revenue; 85K+ cumulative driverless orders. DC-to-store middle-mile for Walmart, Kroger, PepsiCo. 100+ driverless trucks targeting year-end 2026. Competes directly with hub-to-hub AV use cases Waabi and Aurora are targeting.",
       "first_covered_date": "2026-08-31",
-      "last_covered_date": "2026-08-31"
+      "last_covered_date": "2026-09-10"
     },
     {
       "id": "up_ns_merger",
@@ -2094,9 +2111,9 @@
     {
       "id": "project44_intelligent_tms",
       "label": "project44 Intelligent TMS G2 Rise",
-      "status": "34% new ARR growth fueled by AI agent momentum; IDC MarketScape Major Player (Sept 2); 4.1% freight cost reduction, 75% sourcing cycle reduction via AI procurement agent. Q4 enterprise RFP campaign active competing directly with Transplace, Oracle, Blue Yonder. Direct competitive threat to UF managed transport platform in Q4 renewal window.",
+      "status": "34% new ARR growth; IDC MarketScape Major Player (Sept 2, first-ever TMS category IDC recognition); AI procurement agent delivers 4.1% freight cost reduction, 75% sourcing cycle reduction. Explicitly repositioning from visibility layer to TMS-adjacent AI orchestration platform competing with Transplace in Q4 enterprise RFPs.",
       "first_covered_date": "2026-09-01",
-      "last_covered_date": "2026-09-07"
+      "last_covered_date": "2026-09-10"
     },
     {
       "id": "kodiak_factory_av",
@@ -2108,9 +2125,9 @@
     {
       "id": "fedex_freight_lyons",
       "label": "FedEx Freight CCO Termination",
-      "status": "EVP/Chief Commercial Officer Michael Lyons terminated September 2 (Code of Conduct violation); 95 days into independent trading as FDXF. External CCO search underway; responsibilities transitioning internally. Commercial momentum at risk during leadership vacuum \u2014 enterprise LTL shippers evaluating alternatives.",
+      "status": "EVP/Chief Commercial Officer Michael Lyons terminated September 2 (Code of Conduct violation); 95 days into independent FDXF trading. External CCO search underway. Commercial leadership vacuum creates narrow window for enterprise LTL shippers to evaluate alternatives before replacement is in seat.",
       "first_covered_date": "2026-09-04",
-      "last_covered_date": "2026-09-04"
+      "last_covered_date": "2026-09-10"
     },
     {
       "id": "fmcsa_elp_nprm",
@@ -2122,16 +2139,30 @@
     {
       "id": "dot_av_national_strategy",
       "label": "DOT AV National Strategy 2026-2030",
-      "status": "DOT released 'America Leads: National Strategy for Automated Vehicles, FY2026-2030' on September 3. 15 NHTSA/FMCSA AV rulemakings on 2026 agenda; first-ever federal ADS behavioral competency standards framework. Reaffirms NHTSA as federal vehicle safety regulator (not states). NHTSA ADS framework + FMVSS exemption IFR comment periods extended to September 30. Provides regulatory scaffold for Aurora Gen-2 commercial operations and UF TaaS partnership.",
+      "status": "DOT 'America Leads: AV National Strategy FY2026-2030' released Sept 3. 15 NHTSA/FMCSA AV rulemakings on agenda; first-ever federal ADS behavioral competency standards; NHTSA as sole federal regulator. Validates driverless commercial freight on interstate corridors. NHTSA ADS framework + FMVSS IFR comment periods extended to Sept 30. Directly accelerates Uber Freight's Waabi deployment pipeline.",
       "first_covered_date": "2026-09-07",
-      "last_covered_date": "2026-09-07"
+      "last_covered_date": "2026-09-10"
     },
     {
       "id": "labor_day_q4_tightening_2026",
       "label": "Post-Labor Day Q4 freight tightening",
-      "status": "Tender rejections peaked 14.5% Labor Day (highest since 2021 cycle), settling ~14% as of Sept 8. Dry van L/T 9.98 vs. 5.81 YoY; equipment posts lowest Week 36 on record (-31% YoY). Converging with Canada two-wall tariff (both walls live Sept 8) and Panama Canal capacity cuts heading into Q4.",
+      "status": "All-in van $2.95/mi (+6¢ wk/wk), reefer $3.54/mi (+9¢), flatbed $3.54/mi (+4¢) week ending Sept 5. National Truckload Index $3.44/mi Sept 9 (held even as volumes fell 15% post-Labor Day), up 47% YoY. Load-to-truck: van 11.5, reefer 21.5, flatbed 36.4 — dramatically above year-ago. Spot rates now above contract rates for first time since 2021; reefer tender rejections above 20%, van rejections 12.35% — 4-year highs.",
       "first_covered_date": "2026-09-09",
-      "last_covered_date": "2026-09-09"
+      "last_covered_date": "2026-09-10"
+    },
+    {
+      "id": "uber_parent_layoffs_sept2",
+      "label": "Uber parent 3,300 job cuts",
+      "status": "Uber cut 3,300 jobs (10% of global workforce) September 2, with 20% reduction in management layers and sharpened focus on rideshare, delivery, robotaxi. Uber Freight reportedly unaffected per sources familiar with the situation. Corporate overhead compression expected to intensify ROI scrutiny on freight product investments.",
+      "first_covered_date": "2026-09-10",
+      "last_covered_date": "2026-09-10"
+    },
+    {
+      "id": "fmcsa_eld_non_certified_deadline",
+      "label": "FMCSA ELD non-certified device deadline",
+      "status": "Final FMCSA deadline for carriers to replace non-certified ELDs passed September 8. Non-compliant carriers face enforcement action; likely to accelerate exits among small fleets unable to fund upgrades, further tightening truckload capacity at the margin.",
+      "first_covered_date": "2026-09-10",
+      "last_covered_date": "2026-09-10"
     }
   ],
   "last_30_days": [
@@ -2148,17 +2179,17 @@
     {
       "date": "2026-08-12",
       "stories_count": 7,
-      "top_signal": "DAT record June-July contract rate gains (van +13\u00a2 to $2.39/mi, spot at contract parity since Feb 2022); Daimler Truck largest-ever US greenfield plant approved, production 2029; Landstar post-Montgomery winner narrative; Trimble TMS sale Goldman Sachs process, no buyer; CVSA Brake Safety Week Aug 23-29 + Canada Section 338 T-7 sequential capacity compressions"
+      "top_signal": "DAT record June-July contract rate gains (van +13¢ to $2.39/mi, spot at contract parity since Feb 2022); Daimler Truck largest-ever US greenfield plant approved, production 2029; Landstar post-Montgomery winner narrative; Trimble TMS sale Goldman Sachs process, no buyer; CVSA Brake Safety Week Aug 23-29 + Canada Section 338 T-7 sequential capacity compressions"
     },
     {
       "date": "2026-08-13",
       "stories_count": 6,
-      "top_signal": "Uber Freight Helix cybersecurity breach (1M files claimed \u2014 dispatch docs, AR/AP, mailbox); Hormuz transits 78/week (\u2193 from 95, deal stalled); Canada Section 338 T-6 days + CVSA Brake Safety Week sequential; Trimble TMW Q4 displacement window; CHR AI 4PL positioning; Blue Yonder Gartner TMS leader 19th year / autonomous orchestration"
+      "top_signal": "Uber Freight Helix cybersecurity breach (1M files claimed — dispatch docs, AR/AP, mailbox); Hormuz transits 78/week (↓ from 95, deal stalled); Canada Section 338 T-6 days + CVSA Brake Safety Week sequential; Trimble TMW Q4 displacement window; CHR AI 4PL positioning; Blue Yonder Gartner TMS leader 19th year / autonomous orchestration"
     },
     {
       "date": "2026-08-14",
       "stories_count": 9,
-      "top_signal": "July jobs -23K nonfarm (first negative in 2+ years) + spot rates -17% from July 4 peak signals tariff-driven recovery not demand; Panama Canal El Ni\u00f1o draft tightens Aug 15; Canada 338 T-5; Trimble TMS CEO formally confirmed sale at Q2 earnings; CHR CEO expects to prevail on $604M verdict appeal; UP/NS merger 7 state AGs oppose; Aurora Town Hall Aug 20; FMCSA ADS NPRM imminent"
+      "top_signal": "July jobs -23K nonfarm (first negative in 2+ years) + spot rates -17% from July 4 peak signals tariff-driven recovery not demand; Panama Canal El Niño draft tightens Aug 15; Canada 338 T-5; Trimble TMS CEO formally confirmed sale at Q2 earnings; CHR CEO expects to prevail on $604M verdict appeal; UP/NS merger 7 state AGs oppose; Aurora Town Hall Aug 20; FMCSA ADS NPRM imminent"
     },
     {
       "date": "2026-08-17",
@@ -2168,17 +2199,17 @@
     {
       "date": "2026-08-18",
       "stories_count": 9,
-      "top_signal": "US-Iran 60-day MoU expired midnight Aug 17; Iran FM ruled out extension; Hormuz crossings zero Sunday vs. 31 prior weekend; Brent ~$91, WTI ~$85, diesel $5.38/gal rising \u2014 collides with Canada Section 338 live Aug 19 (50% duties, no USMCA); Schneider Q2 beat + guidance raised 18%; GXO UK asset sale; Aurora Town Hall Aug 20"
+      "top_signal": "US-Iran 60-day MoU expired midnight Aug 17; Iran FM ruled out extension; Hormuz crossings zero Sunday vs. 31 prior weekend; Brent ~$91, WTI ~$85, diesel $5.38/gal rising — collides with Canada Section 338 live Aug 19 (50% duties, no USMCA); Schneider Q2 beat + guidance raised 18%; GXO UK asset sale; Aurora Town Hall Aug 20"
     },
     {
       "date": "2026-08-19",
       "stories_count": 9,
-      "top_signal": "Canada Section 338 tariffs LIVE 12:01am ET \u2014 50% duties on $20B Canadian goods, CBP entry-date trigger, USMCA voided, no sunset; Hormuz zero crossings Aug 17 Iran FM rules out extension diesel $5.38/gal; Aurora Town Hall Aug 20; Pony.ai US robotruck retreat; CHR two-front crisis (338 + $604M verdict); RXO enterprise-safe pivot; Trimble TMW Q4 displacement window; FMCSA ADS NPRM comment Aug 31"
+      "top_signal": "Canada Section 338 tariffs LIVE 12:01am ET — 50% duties on $20B Canadian goods, CBP entry-date trigger, USMCA voided, no sunset; Hormuz zero crossings Aug 17 Iran FM rules out extension diesel $5.38/gal; Aurora Town Hall Aug 20; Pony.ai US robotruck retreat; CHR two-front crisis (338 + $604M verdict); RXO enterprise-safe pivot; Trimble TMW Q4 displacement window; FMCSA ADS NPRM comment Aug 31"
     },
     {
       "date": "2026-08-20",
       "stories_count": 7,
-      "top_signal": "Canada Section 338 tariffs paused through Aug 21 EOD as US-Canada deal nears (went live midnight Aug 19, paused hours later); Iran Hormuz 13 vessel crossings Aug 19-20 vs. zero prior weekend \u2014 US Navy gaining control; freight distress 7,000+ jobs cut Aug wave; DAT dry van $2.25/mi cooling from summer peak; Aurora investor town hall Aug 20; USMCA Mexico round 4 September in Washington."
+      "top_signal": "Canada Section 338 tariffs paused through Aug 21 EOD as US-Canada deal nears (went live midnight Aug 19, paused hours later); Iran Hormuz 13 vessel crossings Aug 19-20 vs. zero prior weekend — US Navy gaining control; freight distress 7,000+ jobs cut Aug wave; DAT dry van $2.25/mi cooling from summer peak; Aurora investor town hall Aug 20; USMCA Mexico round 4 September in Washington."
     },
     {
       "date": "2026-08-21",
@@ -2188,7 +2219,7 @@
     {
       "date": "2026-08-25",
       "stories_count": 11,
-      "top_signal": "Bessent 'Operation Economic Outcast' secondary sanctions on 60+ entities (Aug 24) + Canada Section 338 tariffs LIVE (Aug 22, no deal) + ATA CEO Spear departure \u2014 dual trade shock and advocacy vacuum; diesel $5.45+/gal; CVSA Brake Safety Week Day 3; Panama Canal Neopanamax draft cuts Aug 26"
+      "top_signal": "Bessent 'Operation Economic Outcast' secondary sanctions on 60+ entities (Aug 24) + Canada Section 338 tariffs LIVE (Aug 22, no deal) + ATA CEO Spear departure — dual trade shock and advocacy vacuum; diesel $5.45+/gal; CVSA Brake Safety Week Day 3; Panama Canal Neopanamax draft cuts Aug 26"
     },
     {
       "date": "2026-08-26",
@@ -2207,26 +2238,26 @@
     {
       "date": "2026-08-27",
       "stories_covered": [
-        "Iran-Oman maritime water-sharing agreement; oil at $80-81 (4-day decline) \u2014 Hormuz de-escalation signal",
+        "Iran-Oman maritime water-sharing agreement; oil at $80-81 (4-day decline) — Hormuz de-escalation signal",
         "Dry van spot rates down 7 consecutive weeks to $2.25-2.28/mi, still +38% YoY; L/T van 9.61",
         "Panama Canal Neopanamax 48ft draft live Aug 26; Neopanamax slots cut to 9 starting Sept 3",
         "RXO Q2 EBITDA $40M (Q1: $6M), Q3 guide $40M; 50% spot mix, enterprise account recruitment vs CHR",
         "CHR Aug market update; CEO reiterated $604M verdict appeal confidence",
         "project44 split into project44 + LSP44 (AI-native LSP infrastructure); LSP44 positive cash flow, 48% ARR growth",
         "project44 AI Freight Procurement Agent: 4.1% cost reduction, 75% sourcing cycle reduction",
-        "NHTSA ADS 31-day comment window closes Aug 31 (4 days) \u2014 governs Aurora/UF commercial partnership"
+        "NHTSA ADS 31-day comment window closes Aug 31 (4 days) — governs Aurora/UF commercial partnership"
       ]
     },
     {
       "date": "2026-08-28",
       "stories_covered": [
-        "Canada counter-tariffs 15-50% on $27.6B US exports (700+ products), effective September 8 \u2014 first concrete Section 338 retaliation",
+        "Canada counter-tariffs 15-50% on $27.6B US exports (700+ products), effective September 8 — first concrete Section 338 retaliation",
         "DAT dry van linehaul $2.21/mi (8 consecutive weekly declines), L/T ratio ~9.6; flatbed $2.72; reefer $2.63",
         "RXO Q3 EBITDA guidance $40M, TL spot rate index +43% YoY; active enterprise CHR displacement campaign",
         "FreightWaves SONAR: intermodal up 10% YoY, Intermodal Contract Savings Index 31.52% (record vs. truckload)",
         "STB removes UP-NS merger from abeyance Aug 18; workpapers due today; final decision Q2 2027",
         "NHTSA ADS comment window closes Aug 31 (3 days); docket NHTSA-2026-1552",
-        "Aurora Goldman Sachs Communacopia conference September 10 \u2014 first investor appearance post per-mile pricing",
+        "Aurora Goldman Sachs Communacopia conference September 10 — first investor appearance post per-mile pricing",
         "Panama Canal: Neopanamax 9/day slots Sept 3; Panamax cut to 23/day Sept 15",
         "CVSA Brake Safety Week ends today (Aug 23-29); results to be compiled post-event"
       ]
@@ -2234,12 +2265,12 @@
     {
       "date": "2026-08-31",
       "stories_covered": [
-        "NHTSA extends ADS Framework + FMVSS Exemption IFR comment periods to Sept 30 (Fed Register 2026-17741/17742) \u2014 governs Aurora/UF commercial partnership; FMCSA NPRM sequenced behind",
-        "Aurora Innovation: Value Truck (Dallas\u2013Laredo) + Charger Logistics (FW\u2013Phoenix) new carrier partners Aug 25; Goldman Sachs Sept 10 investor appearance",
-        "Gatik $200M Series D (QIA + KDT) closed Aug 25\u201326; $600M+ contracted revenue; 85K driverless orders; DC-to-store middle-mile Walmart/Kroger/PepsiCo; 100+ trucks year-end",
+        "NHTSA extends ADS Framework + FMVSS Exemption IFR comment periods to Sept 30 (Fed Register 2026-17741/17742) — governs Aurora/UF commercial partnership; FMCSA NPRM sequenced behind",
+        "Aurora Innovation: Value Truck (Dallas–Laredo) + Charger Logistics (FW–Phoenix) new carrier partners Aug 25; Goldman Sachs Sept 10 investor appearance",
+        "Gatik $200M Series D (QIA + KDT) closed Aug 25–26; $600M+ contracted revenue; 85K driverless orders; DC-to-store middle-mile Walmart/Kroger/PepsiCo; 100+ trucks year-end",
         "RXO Curve forecast: Q3 EBITDA guided $40M (vs $6M Q1); active CHR enterprise displacement campaign",
         "DAT dry van $2.21/mi (8 weekly declines from July 4 peak, +38% YoY); van L/T ~9.6; post-CVSA capacity returning",
-        "Panama Canal: 34/day cap Sept 4, 32/day Sept 15; El Ni\u00f1o watershed 44% below avg; East Coast port pressure Q4",
+        "Panama Canal: 34/day cap Sept 4, 32/day Sept 15; El Niño watershed 44% below avg; East Coast port pressure Q4",
         "Canada counter-tariffs Sept 8 T-8 days; CHR cross-border advisory Aug 28; steel/dairy/appliances/electronics",
         "STB UP-NS merger review: Nov 18 public comment deadline"
       ]
@@ -2247,14 +2278,14 @@
     {
       "date": "2026-09-01",
       "stories_covered": [
-        "Canada counter-tariffs T-7 (Sept 8): 15\u201350% duties on $27.6B US goods (700+ product lines); USTR Greer confirmed no further US-Canada trade talks planned \u2014 two-wall tariff problem for cross-border lanes",
-        "DAT Aug 23-29 spot data: dry van $2.19\u20132.21/mi, 9 consecutive weekly declines from July 4 peak, still +38% YoY; van L/T ~9.6; truck posts -32% YoY during CVSA Brake Safety Week",
+        "Canada counter-tariffs T-7 (Sept 8): 15–50% duties on $27.6B US goods (700+ product lines); USTR Greer confirmed no further US-Canada trade talks planned — two-wall tariff problem for cross-border lanes",
+        "DAT Aug 23-29 spot data: dry van $2.19–2.21/mi, 9 consecutive weekly declines from July 4 peak, still +38% YoY; van L/T ~9.6; truck posts -32% YoY during CVSA Brake Safety Week",
         "ATA August for-hire truck tonnage index +0.9% MoM",
-        "Panama Canal: 34/day transit cap begins Sept 4, 32/day Sept 15; El Ni\u00f1o watershed 44% below average",
+        "Panama Canal: 34/day transit cap begins Sept 4, 32/day Sept 15; El Niño watershed 44% below average",
         "C.H. Robinson cross-border advisory Aug 28 on Canada counter-tariffs; simultaneously appealing $604M nuclear verdict",
         "RXO Q3 EBITDA guided $40M (vs $6M Q1); active enterprise CHR displacement campaign",
         "NHTSA extends ADS framework comment period to Sept 30 (Federal Register 2026-17741); FMCSA NPRM sequenced behind",
-        "Aurora: Goldman Sachs Communacopia Sept 10; new carriers Charger Logistics (FW\u2013Phoenix) + Value Truck (Dallas\u2013Laredo) Aug 25; $2+/mi TaaS, $0.85+/mi DaaS pricing",
+        "Aurora: Goldman Sachs Communacopia Sept 10; new carriers Charger Logistics (FW–Phoenix) + Value Truck (Dallas–Laredo) Aug 25; $2+/mi TaaS, $0.85+/mi DaaS pricing",
         "Kodiak Robotics: Roush Industries factory-built AV trucks; first delivery to Atlas Energy in Permian; hundreds by year-end 2026",
         "project44 Intelligent TMS: G2 Fall 2026 Enterprise Leader (first-ever TMS Grid ranking); shipper revenue +57% YoY",
         "Trimble TMS: no buyer announced as of Sept 1; Q4 RFP displacement window open for Transplace"
@@ -2263,9 +2294,9 @@
     {
       "date": "2026-09-02",
       "stories_covered": [
-        "DAT August monthly: van TVI softest August since 2021, avg $2.03/mile; month-end L/T spike 9.62\u219212.01 in one week \u2014 capacity attrition signal",
+        "DAT August monthly: van TVI softest August since 2021, avg $2.03/mile; month-end L/T spike 9.62→12.01 in one week — capacity attrition signal",
         "Panama Canal 34/day cap begins Sept 4, 32/day Sept 15; SK Gas record $5.3M priority slot",
-        "Canada counter-tariffs T-6 (Sept 8): 15\u201350% on 700+ US products, goods-in-transit exempt with documentation; USTR Greer confirmed no further US-Canada talks",
+        "Canada counter-tariffs T-6 (Sept 8): 15–50% on 700+ US products, goods-in-transit exempt with documentation; USTR Greer confirmed no further US-Canada talks",
         "USMCA Round 4 opened Sept 2, Washington D.C.: autos, Section 232, Rapid Response Labor Mechanism; 85% Mexican exporters relying on USMCA; resolution likely 2027",
         "Aurora: three September investor conferences confirmed (Goldman Sachs Sept 10, Morgan Stanley Sept 15, Evercore Sept 29); first pricing scrutiny since $2+/mi TaaS disclosed",
         "DHL Global Forwarding acquires Aero Cargas (Uruguay, Sept 1): first direct Latin American ground network",
@@ -2276,14 +2307,14 @@
     {
       "date": "2026-09-03",
       "stories_covered": [
-        "Hormuz Day 188: 6 ships/day (vs 85 normal), 465 vessels anchored \u2014 aftermath of US Sept 1 ~100 IRGC target strikes (first Iranian tankers) + Iran ballistic missile retaliation; triple shock convergence with Canada T-5 and Panama Canal starting tomorrow",
+        "Hormuz Day 188: 6 ships/day (vs 85 normal), 465 vessels anchored — aftermath of US Sept 1 ~100 IRGC target strikes (first Iranian tankers) + Iran ballistic missile retaliation; triple shock convergence with Canada T-5 and Panama Canal starting tomorrow",
         "ISM Manufacturing PMI 54.6% August (8th consecutive expansion, released Sept 1); new orders 53.7%, production 58.3%",
         "Canada counter-tariffs T-5 (Sept 8): carriers actively avoiding northbound cross-border loads; goods-in-transit exempt with documentation",
-        "Panama Canal drops to 34 transits/day starting Sept 4 (32/day Sept 15); El Ni\u00f1o watershed 44% below avg; East/Gulf Coast port queues building Q4",
+        "Panama Canal drops to 34 transits/day starting Sept 4 (32/day Sept 15); El Niño watershed 44% below avg; East/Gulf Coast port queues building Q4",
         "C.H. Robinson launches US-Mexico freight consolidation service: up to 40% cost savings, 48-hour earlier visibility, customs brokerage + AI routing bundled",
         "FMCSA ELP NPRM (Federal Register 2026-16288): proposes codifying English proficiency as OOS criterion; 26K+ drivers already sidelined; comment period Oct 9",
-        "Aurora expands to Fort Worth\u2013El Paso route (11th Sun Belt lane); Goldman Sachs Communacopia Sept 10 first institutional pricing scrutiny of $2+/mi TaaS",
-        "Parcel carriers (UPS, USPS, OnTrac) all lock in Q4 peak surcharges \u2014 first synchronized multi-carrier peak stack in years; USPS pursuing 6% temporary rate increase",
+        "Aurora expands to Fort Worth–El Paso route (11th Sun Belt lane); Goldman Sachs Communacopia Sept 10 first institutional pricing scrutiny of $2+/mi TaaS",
+        "Parcel carriers (UPS, USPS, OnTrac) all lock in Q4 peak surcharges — first synchronized multi-carrier peak stack in years; USPS pursuing 6% temporary rate increase",
         "Diesel $5.599/gal as of Aug 31 (+$1.865 YoY); TL rates at 15-week seasonal low at Labor Day; seasonal reversal expected this week"
       ]
     },
@@ -2291,13 +2322,13 @@
       "date": "2026-09-04",
       "stories_covered": [
         "Four-shock convergence: Panama Canal 34/day transit cap LIVE today (Sept 4); Dutch ports (Rotterdam, Amsterdam, Zeeland) 8-hour coordinated strike today + German port disruptions (first synchronized European multi-gateway disruption of 2026); Canada counter-tariffs T-4 (Sept 8) with CTA 'nuclear winter' warning + USTR no further US-Canada talks; freight at 15-week seasonal low entering Labor Day",
-        "DAT dry van linehaul $2.28/mi week ending Sept 1 (\u22124\u00a2 WoW, +38% YoY); van L/T 10.4; reefer $2.64/mi, flatbed $2.67/mi; diesel $5.599/gal; Labor Day seasonal reversal widely expected",
+        "DAT dry van linehaul $2.28/mi week ending Sept 1 (−4¢ WoW, +38% YoY); van L/T 10.4; reefer $2.64/mi, flatbed $2.67/mi; diesel $5.599/gal; Labor Day seasonal reversal widely expected",
         "FedEx Freight: EVP/Chief Commercial Officer Michael Lyons terminated Sept 2 (Code of Conduct violation); 95 days into independent trading (FDXF); external CCO search underway",
         "C.H. Robinson: CEO Bozeman confirmed $604M Texas nuclear verdict appeal at Q2 earnings call ('potentially years away'); simultaneously running new US-Mexico AI consolidation service",
         "RXO: Q3 EBITDA guided $40M (vs $6M Q1); active enterprise account displacement campaign targeting CHR shippers on technology and product velocity",
         "TruckSmarter shuts down permanently Sept 4: AI-native load board + chat-based dispatch app for owner-operators; 500K+ carriers; $16M raised Sept 2025; undisclosed acquirer; Dispatch AI agent also sunsets",
-        "Aurora Analyst & Investor Day confirmed Sept 23 at Pittsburgh HQ \u2014 first major institutional showcase since $2+/mi TaaS / $0.85+/mi DaaS pricing disclosed at Aug 20 town hall; Goldman Sachs Communacopia Sept 10 first public pricing scrutiny",
-        "Trimble TMS: no buyer as of Sept 4, Goldman Sachs process ongoing since July; Q4 RFP season open \u2014 clearest Transplace displacement opportunity in years for enterprise TMW/TM4 accounts",
+        "Aurora Analyst & Investor Day confirmed Sept 23 at Pittsburgh HQ — first major institutional showcase since $2+/mi TaaS / $0.85+/mi DaaS pricing disclosed at Aug 20 town hall; Goldman Sachs Communacopia Sept 10 first public pricing scrutiny",
+        "Trimble TMS: no buyer as of Sept 4, Goldman Sachs process ongoing since July; Q4 RFP season open — clearest Transplace displacement opportunity in years for enterprise TMW/TM4 accounts",
         "project44 Intelligent TMS: IDC MarketScape Major Player (Sept 2, first-ever TMS category recognition by IDC); G2 Fall 2026 Leader; 57% YoY shipper revenue growth; now competing in Q4 enterprise RFPs vs. Oracle, Blue Yonder, Transplace",
         "FMCSA ELP NPRM (Federal Register 2026-16288): English proficiency proposed as OOS criterion for commercial drivers; 26K+ already sidelined; comment period Oct 9; most acute impact on US-Mexico cross-border capacity"
       ]
@@ -2309,7 +2340,7 @@
         "DAT dry van $2.21/mi (week ending Sept 1, -$0.04 WoW, +35% YoY); van L/T 9.88 firming; truck posts -28.4% YoY; Labor Day seasonal reversal expected this week; diesel $5.599/gal",
         "Triple capacity constraint: Canada counter-tariffs tonight + Panama Canal 34/day (drops 32/day Sept 15) + Hormuz averaging ~13 vessels/day vs 85 normal (4 AIS-off vessels Sept 6)",
         "DOT 'America Leads' AV National Strategy 2026-2030 (Sept 3): 15 NHTSA/FMCSA rulemakings, first-ever federal ADS behavioral competency standards; NHTSA as sole federal regulator; comment period Sept 30",
-        "Aurora CEO Urmson Goldman Sachs Communacopia Sept 10 5:25pm ET \u2014 first institutional pricing scrutiny since $2+/mi TaaS disclosed Aug 20; Analyst & Investor Day Sept 23 Dallas",
+        "Aurora CEO Urmson Goldman Sachs Communacopia Sept 10 5:25pm ET — first institutional pricing scrutiny since $2+/mi TaaS disclosed Aug 20; Analyst & Investor Day Sept 23 Dallas",
         "project44 Intelligent TMS: 34% new ARR growth, 4.1% freight cost reduction from AI procurement agent, IDC MarketScape recognition; Q4 enterprise RFP campaign competing vs Transplace/Oracle/Blue Yonder",
         "C.H. Robinson Robinson Fresh cross-border cold-chain directly hit by Canada counter-tariffs; $604M verdict appeal ongoing; two-front crisis heading into peak season",
         "RXO Q3 2026 EBITDA guided $40M (vs $6M Q1); CHR enterprise displacement campaign; lighter cross-border exposure positions as enterprise-safe broker"
@@ -2318,15 +2349,15 @@
     {
       "date": "2026-09-08",
       "stories_covered": [
-        "Canada counter-tariffs 15-50% on C$27.6B US goods (700+ product lines) live today Sept 8 \u2014 two-wall tariff complete with US Section 338; USTR Greer confirmed no further US-Canada trade talks",
-        "DAT dry van linehaul $2.19/mi week ending Sept 1 (-$0.02 WoW, +38% YoY); load-to-truck 12.01 (from 9.62 prior week); reefer spot sharpest weekly gain of post-Labor Day period \u2014 seasonal reversal underway",
-        "Triple-shock environment: Canada counter-tariffs live + Panama Canal drops to 32 daily transits Sept 15 (El Ni\u00f1o watershed 44% below avg) + Hormuz Day 191 ~12 ships/day (slight improvement from ~6/day nadir Sept 1); diesel $5.599/gal",
+        "Canada counter-tariffs 15-50% on C$27.6B US goods (700+ product lines) live today Sept 8 — two-wall tariff complete with US Section 338; USTR Greer confirmed no further US-Canada trade talks",
+        "DAT dry van linehaul $2.19/mi week ending Sept 1 (-$0.02 WoW, +38% YoY); load-to-truck 12.01 (from 9.62 prior week); reefer spot sharpest weekly gain of post-Labor Day period — seasonal reversal underway",
+        "Triple-shock environment: Canada counter-tariffs live + Panama Canal drops to 32 daily transits Sept 15 (El Niño watershed 44% below avg) + Hormuz Day 191 ~12 ships/day (slight improvement from ~6/day nadir Sept 1); diesel $5.599/gal",
         "USTR signaling 'interim arrangements' rather than full USMCA deal for 2026; structural rework likely 2027",
-        "C.H. Robinson: Robinson Fresh cross-border cold-chain in acute triage; $604M Texas nuclear verdict appeal ongoing \u2014 dual crisis entering peak season",
+        "C.H. Robinson: Robinson Fresh cross-border cold-chain in acute triage; $604M Texas nuclear verdict appeal ongoing — dual crisis entering peak season",
         "RXO Q3 EBITDA guided $40M (vs $6M Q1); lighter Canada exposure; active CHR enterprise displacement campaign",
-        "Aurora CEO Urmson GS Communacopia Sept 10 (tomorrow) 5:25 PM ET \u2014 first institutional pricing scrutiny of $2+/mi TaaS / $0.85+/mi DaaS; Analyst & Investor Day Sept 23 Dallas",
+        "Aurora CEO Urmson GS Communacopia Sept 10 (tomorrow) 5:25 PM ET — first institutional pricing scrutiny of $2+/mi TaaS / $0.85+/mi DaaS; Analyst & Investor Day Sept 23 Dallas",
         "NHTSA ADS framework comment window 22 days remaining (closes Sept 30); Aurora/UF partnership under docket 2026-17741",
-        "Trimble TMS/TMW: Goldman Sachs sale process no buyer as of Sept 4; Q4 RFP window opens \u2014 clearest Transplace displacement window of 2026"
+        "Trimble TMS/TMW: Goldman Sachs sale process no buyer as of Sept 4; Q4 RFP window opens — clearest Transplace displacement window of 2026"
       ]
     },
     {
@@ -2342,6 +2373,21 @@
         "shipper_sentiment"
       ],
       "story_count": 7
+    },
+    {
+      "date": "2026-09-10",
+      "stories_covered": [
+        "Canada retaliatory tariffs 15-50% on $27.6B US goods live Sept 8 — two-wall tariff complete; northbound cross-border lanes disrupted",
+        "DAT Sept 5 data: van $2.95/mi all-in (+6¢ wk/wk), reefer $3.54/mi (+9¢), flatbed $3.54/mi (+4¢); SONAR NTI $3.44/mi Sept 9 even as volumes -15% post-Labor Day, +47% YoY",
+        "Load-to-truck: van 11.5, reefer 21.5, flatbed 36.4 — above year-ago; spot rates above contract for first time since 2021; reefer tender rejections 20%+, van 12.35%",
+        "Uber parent cuts 3,300 jobs (10% global workforce) Sept 2 — Uber Freight reportedly unaffected per sources familiar",
+        "FedEx Freight CCO Michael Lyons terminated Sept 2 (Code of Conduct); external search underway; commercial leadership vacuum in LTL",
+        "DOT AV-5 National Strategy (Sept 3): validates driverless commercial freight on interstate corridors; 15 NHTSA/FMCSA rulemakings on 2026 agenda",
+        "Gatik $200M Series D (QIA + KDT): 85K+ driverless orders, $600M+ contracted revenue; DC-to-store middle-mile Walmart/Kroger/PepsiCo",
+        "TruckSmarter shuts down: AI-native load board for owner-operators ceasing operations despite record owner-op pricing power",
+        "project44 IDC MarketScape Major Player (Sept 2): 34% new ARR growth; repositioning from visibility to TMS-adjacent AI orchestration vs. Transplace",
+        "FMCSA ELD non-certified device compliance deadline passed Sept 8; non-compliant carriers face enforcement; small fleet exits accelerate"
+      ]
     }
   ]
 }
