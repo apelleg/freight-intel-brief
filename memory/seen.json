@@ -1383,7 +1383,26 @@
     "https://www.chrobinson.com/en-us/resources/insights-and-advisories/north-america-freight-insights/sep-2026-freight-market-update/cross-border/",
     "https://www.chrobinson.com/en-us/resources/insights-and-advisories/north-america-freight-insights/sep-2026-freight-market-update/automotive/",
     "https://www.logisticsmgmt.com/article/u.s_canada_trade_tensions_deepen_as_tariffs_put_cross_border_supply_chains_in_focus",
-    "https://www.logisticsmgmt.com/article/rxo_curve_forecast_signals_spot_rate_rebound_projects_further_gains_in_2026"
+    "https://www.logisticsmgmt.com/article/rxo_curve_forecast_signals_spot_rate_rebound_projects_further_gains_in_2026",
+    "https://www.upi.com/Top_News/World-News/2026/09/13/iran-hormuz-strait-attack/9681789307409",
+    "https://www.forbes.com/sites/rrapier/2026/09/09/why-diesel-is-on-track-to-set-a-2026-price-record/",
+    "https://www.bloomberg.com/news/articles/2026-09-10/hormuz-fuel-exports-slow-recovery-keeps-prices-near-record",
+    "https://www.trucking.org/news-insights/ata-truck-tonnage-index-rose-02-august",
+    "https://www.sec.gov/Archives/edgar/data/2082247/000110465926104793/tm2624680d1_8k.htm",
+    "https://finance.yahoo.com/small-business/articles/604m-ch-robinson-verdict-still-192955477.html",
+    "https://www.globenewswire.com/news-release/2026/09/11/3360471/15800/en/heartland-express-inc-announces-participation-in-upcoming-conference.html",
+    "https://www.globenewswire.com/news-release/2026/09/10/3359578/0/en/redwoodconnect-and-augment-partner-to-bring-faster-ai-integrations-to-more-tms-and-erp-providers.html",
+    "https://www.freightwaves.com/news/uber-freight-warns-tight-capacity-could-fuel-q4-freight-rate-surge",
+    "https://www.aljazeera.com/news/2026/9/9/why-us-iran-war-over-hormuz-is-threatening-the-gulfs-waters",
+    "https://www.automotiveworld.com/news/aurora-launches-second-generation-driverless-trucks-in-us/",
+    "https://www.supplychainbrain.com/articles/44827-uber-freight-high-fuel-costs-squeeze-small-truckload-carriers",
+    "https://www.redwoodlogistics.com/insights/redwoodconnect-and-augment-partner-to-bring-faster-ai-integrations-to-more-tms-and-erp-providers",
+    "https://www.truckinginfo.com/news/truckload-rates-hit-two-year-highs-as-diesel-costs-surge-dat-says",
+    "https://www.ksat.com/news/world/2026/09/13/an-iranian-commercial-ship-is-struck-near-strait-of-hormuz-with-1-dead-iranian-media-say/",
+    "https://princemanufacturing.com/usmca-september-2026-update-manufacturing-mexico-canada/",
+    "https://www.heartlandexpress.com/news-events/press-releases/",
+    "https://www.stocktitan.net/news/JBHT/j-b-hunt-transport-services-inc-announces-participation-in-upcoming-ad6ktd4iwg6g.html",
+    "https://www.stocktitan.net/news/WERN/werner-to-participate-in-morgan-stanley-s-14th-annual-laguna-udva5s0lvf0d.html"
   ],
   "seen_story_hashes": [
     "section 301 tariffs t-7 days july 24 2026 no extension q3 booking freeze record august imports front-loading compliance freeze jocustr/joc",
@@ -2024,7 +2043,19 @@
     "fc8c1e729cfffb725d87099d87a27a5d",
     "79ac1f8ed4993f9e399b1802c67a5657",
     "b2fdbd6ca8032d37725b2f8c14dc81bd",
-    "682d2803420fbd711e9457fcdb615696"
+    "682d2803420fbd711e9457fcdb615696",
+    "iranian commercial vessel struck near strait of hormuz sept 13 1 dead upi",
+    "diesel hits record 597 per gallon eia week sept 7 2026 forbes",
+    "fedex freight cco michael lyons terminated sept 2 code of conduct sec 8k",
+    "aurora innovation analyst investor day september 23 2026 dallas businesswire",
+    "redwoodconnect augment partner ai integrations tms erp providers sept 10 globenewswire",
+    "aurora second generation driverless trucks commercial service 10 sun belt routes act news",
+    "ata truck tonnage index rose 02 august 2026 american trucking associations",
+    "heartland express morgan stanley 14th annual laguna conference sept 15 2026",
+    "ch robinson nuclear verdict 604m appeal potentially years away ceo bozeman",
+    "trimble tms tmw sale goldman sachs process ongoing no buyer sept 2026 axios",
+    "uber freight q3 market update repairing networks heading into q4 2026",
+    "uber freight warns tight capacity could fuel q4 freight rate surge freightwaves"
   ],
   "threads": [
     {
@@ -2044,8 +2075,8 @@
     {
       "id": "aurora_commercial_deployment",
       "label": "Aurora driverless commercial deployment",
-      "status": "CEO Urmson at Goldman Sachs Communacopia Sept 10: 'driverless trucking shifts to scale.' TaaS $2/mi (only $0.21 below dry van spot $2.21/mi). 200 trucks targeted year-end 2026 (~$80M ARR); Volvo VNL driverless Q1 2027. Analyst & Investor Day Sept 23 Dallas. Stock +45% 6 months; market cap $13B.",
-      "last_covered_date": "2026-09-11",
+      "status": "Morgan Stanley Laguna Conference Sept 15; Analyst & Investor Day Sept 23 Dallas (first major capital markets event since Gen-2 truck launch). Gen-2 driverless trucks (1M-mile life, ~50% lower hardware cost) on 10 Sun Belt routes; one customer committed 500 trucks. 200-truck year-end 2026 target; TaaS ~/mi vs. .21/mi spot. Roush production run-rate targeting 1,000/yr by end 2026.",
+      "last_covered_date": "2026-09-14",
       "first_covered_date": "2026-08-05"
     },
     {
@@ -2065,8 +2096,8 @@
     {
       "id": "iran_hormuz_shipping_deal",
       "label": "Iran Hormuz shipping attacks",
-      "status": "Largest-ever attack wave Sept 9, 2026; Brent $97-99/barrel (Goldman Sachs warns $120/barrel plausible in 2027 if 4M bpd offline); diesel all-time high ~$6/gal; colliding with tightest truckload market since 2021 (NTI $3.44/mi +47% YoY).",
-      "last_covered_date": "2026-09-11",
+      "status": "Iranian commercial container vessel struck near Hengam Island, Hormuz Sept 13 (1 dead; crew evacuated); Gulf Arab diplomatic talks to ease tanker war postponed. Diesel .97/gal nationally (EIA week of Sept 7, 2026 \u2014 new weekly nominal record). Brent ~7-99/bbl; Hormuz throughput still ~90% below pre-conflict levels; Goldman Sachs warns 20/bbl plausible in 2027.",
+      "last_covered_date": "2026-09-14",
       "first_covered_date": "2026-08-07"
     },
     {
@@ -2156,9 +2187,9 @@
     {
       "id": "fedex_freight_lyons",
       "label": "FedEx Freight CCO Termination",
-      "status": "EVP/Chief Commercial Officer Michael Lyons terminated September 2 (Code of Conduct violation); 95 days into independent FDXF trading. External CCO search underway. Commercial leadership vacuum creates narrow window for enterprise LTL shippers to evaluate alternatives before replacement is in seat.",
+      "status": "EVP/CCO Michael Lyons terminated Sept 2 (Code of Conduct violation); 12 days post-termination, no replacement named; duties redistributed to existing executives. External CCO search underway. Commercial leadership vacuum persists at second-largest U.S. LTL carrier through peak season Q4 account renewal window.",
       "first_covered_date": "2026-09-04",
-      "last_covered_date": "2026-09-10"
+      "last_covered_date": "2026-09-14"
     },
     {
       "id": "fmcsa_elp_nprm",
@@ -2177,9 +2208,9 @@
     {
       "id": "labor_day_q4_tightening_2026",
       "label": "Labor Day / Q4 2026 truckload tightening",
-      "status": "DAT Sept 8 week: dry van linehaul $2.21/mi (+2\u00a2 WoW, +38% YoY), reefer $2.69/mi (+6\u00a2), NTI $3.44/mi (+47% YoY); spot above contract first time since early 2022. L/T van 11.5, reefer 21.5, flatbed 36.4; OTRI van 13.45%, reefer 20%+. ATA August tonnage declined MoM (capacity attrition, not demand growth).",
-      "first_covered_date": "2026-09-09",
-      "last_covered_date": "2026-09-11"
+      "status": "DAT Sept 8 week: dry van linehaul .21/mi (+38% YoY), reefer .69/mi, NTI .44/mi (+47% YoY); spot above contract first time since early 2022; tender rejection >15%. L/T van 11.5, reefer 21.5, flatbed 36.4. ATA August tonnage +0.2% MoM (released Sept 2026) \u2014 demand-led growth confirmed. Diesel .97/gal (EIA Sept 7) \u2014 new weekly record. Uber Freight Q3 update warns Q4 rate surge risk; recommends routing guide repair and baseline capacity lock-in before Oct 15.",
+      "last_covered_date": "2026-09-14",
+      "first_covered_date": "2026-09-09"
     },
     {
       "id": "uber_parent_layoffs_sept2",
@@ -2201,24 +2232,16 @@
       "status": "Overroute (J.B. Hunt AI freight execution spinout) raised $5.5M seed led by UP.Partners (Sept 9-10 2026) to expand carrier-side AI agents platform (shipment monitoring, exception handling, delivery scheduling, driver/customer comms) beyond J.B. Hunt to other enterprise carriers and private fleets.",
       "first_covered_date": "2026-09-11",
       "last_covered_date": "2026-09-11"
+    },
+    {
+      "id": "redwoodconnect_augment_tms_ai",
+      "label": "RedwoodConnect/Augment TMS AI agents",
+      "status": "Sept 10, 2026: Redwood Logistics RedwoodConnect iPaaS integrated Augment AI agent Augie across Oracle TM, Blue Yonder, MercuryGate/Infios, Manhattan Associates \u2014 no custom build required. Democratizes AI freight automation in mid-market TMS tier competing with Transplace. Launched at start of Q4 RFP season.",
+      "last_covered_date": "2026-09-14",
+      "first_covered_date": "2026-09-14"
     }
   ],
   "last_30_days": [
-    {
-      "date": "2026-08-12",
-      "stories_count": 7,
-      "top_signal": "DAT record June-July contract rate gains (van +13\u00a2 to $2.39/mi, spot at contract parity since Feb 2022); Daimler Truck largest-ever US greenfield plant approved, production 2029; Landstar post-Montgomery winner narrative; Trimble TMS sale Goldman Sachs process, no buyer; CVSA Brake Safety Week Aug 23-29 + Canada Section 338 T-7 sequential capacity compressions"
-    },
-    {
-      "date": "2026-08-13",
-      "stories_count": 6,
-      "top_signal": "Uber Freight Helix cybersecurity breach (1M files claimed \u2014 dispatch docs, AR/AP, mailbox); Hormuz transits 78/week (\u2193 from 95, deal stalled); Canada Section 338 T-6 days + CVSA Brake Safety Week sequential; Trimble TMW Q4 displacement window; CHR AI 4PL positioning; Blue Yonder Gartner TMS leader 19th year / autonomous orchestration"
-    },
-    {
-      "date": "2026-08-14",
-      "stories_count": 9,
-      "top_signal": "July jobs -23K nonfarm (first negative in 2+ years) + spot rates -17% from July 4 peak signals tariff-driven recovery not demand; Panama Canal El Ni\u00f1o draft tightens Aug 15; Canada 338 T-5; Trimble TMS CEO formally confirmed sale at Q2 earnings; CHR CEO expects to prevail on $604M verdict appeal; UP/NS merger 7 state AGs oppose; Aurora Town Hall Aug 20; FMCSA ADS NPRM imminent"
-    },
     {
       "date": "2026-08-17",
       "stories_count": 6,
@@ -2421,6 +2444,21 @@
       "date": "2026-09-11",
       "top_signal": "Iran's largest-ever Hormuz attack wave Sept 9 pushed Brent to $97-99/barrel, diesel to all-time high ~$6/gal, colliding with tightest truckload market since 2021 (NTI $3.44/mi +47% YoY).",
       "stories_count": 14
+    },
+    {
+      "date": "2026-09-14",
+      "stories": [
+        "Iranian commercial vessel struck at Hormuz Sept 13, 1 dead; Gulf Arab diplomatic talks postponed; Hormuz throughput still ~90% below pre-conflict levels.",
+        "National diesel reached .97/gal (EIA week of Sept 7, 2026) \u2014 new weekly nominal record; colliding with NTI .44/mi (+47% YoY), tightest truckload market since early 2022.",
+        "ATA August tonnage +0.2% MoM \u2014 first consecutive months of demand-led growth in 2026.",
+        "FedEx Freight CCO Michael Lyons terminated Sept 2; no replacement named 12 days later; commercial vacuum at second-largest LTL carrier entering peak season.",
+        "C.H. Robinson CEO Bozeman defended AI strategy citing 8 consecutive outperforming quarters; nuclear verdict appeal remains years away.",
+        "Aurora Innovation at Morgan Stanley Laguna Conference Sept 15; Investor Day Sept 23 Dallas \u2014 200-truck year-end target and Gen-2 TaaS pricing to be updated.",
+        "RedwoodConnect (Redwood Logistics) partnered with Augment to bring AI agent Augie to Oracle TM, Blue Yonder, MercuryGate/Infios, Manhattan without custom builds (Sept 10).",
+        "Trimble TMS/TMW Goldman Sachs sale ongoing with no buyer; Q4 RFP season begins \u2014 peak displacement window for Transplace.",
+        "Uber Freight Q3 market update warns tight capacity could fuel Q4 rate surge; recommends shippers lock in baseline capacity and repair routing guides now.",
+        "Werner, JB Hunt, Heartland Express, Schneider National all presenting at Morgan Stanley Laguna Conference Sept 15."
+      ]
     }
   ]
 }
