@@ -2086,7 +2086,29 @@
     "50be40c542dd",
     "f7223edbeca2",
     "78e7145ea656",
-    "0ec12ea200f3"
+    "0ec12ea200f3",
+    "https://www.globenewswire.com/news-release/2026/09/15/3362237/0/en/dat-spot-van-rate-falls-20-cents-in-steepest-august-pullback-on-record.html",
+    "https://www.globenewswire.com/news-release/2026/09/15/3362524/0/en/oxea-transforms-global-logistics-operations-selects-uber-freight-as-strategic-partner.html",
+    "https://www.bloomberg.com/news/articles/2026-09-13/uae-iran-leaders-meet-as-push-to-resolve-hormuz-standoff-grows",
+    "https://news.sbs.co.kr/english/article.do?news_id=N1008751008",
+    "https://www.ttnews.com/articles/werner-peak-season-2026",
+    "https://nrf.com/media-center/press-releases/import-cargo-s-peak-season-not-over-yet",
+    "https://angrybearblog.com/2026/09/fuel-pricing-september-2026",
+    "https://www.vantagemarkets.com/market-news/iran-hormuz-shipping-pact-gulf-nations-september-14-2026/",
+    "https://finance.yahoo.com/economy/articles/oxea-taps-uber-freight-manage-160000087.html",
+    "https://www.freightwaves.com/news/oxea-taps-uber-freight-to-manage-north-american-european-logistics",
+    "https://www.businesswire.com/news/home/20260910236596/en/J.B.-Hunt-Transport-Services-Inc.-Announces-Participation-in-Upcoming-Investor-Conference",
+    "https://www.dat.com/blog/dry-van-report-rates-tick-up-as-truck-capacity-starts-trickling-back",
+    "https://www.ccjdigital.com/business/mergers-acquisitions/article/15829584/trimble-may-sell-transportation-logistics-unit-reports-say",
+    "https://wwd.com/sourcing-journal/logistics/september-peak-shipping-season-import-volumes-nrf-global-port-tracker-1239207519/",
+    "https://www.fleetowner.com/news/rates/news/55404245/truckload-spot-rates-rise-across-dry-van-reefer-and-flatbed-markets",
+    "iran hormuz corridor agreement unveiled 7 gulf nations muscat sept 16 60-day no transit fees bahrain declinedsbs news/vantage markets",
+    "dat august monthly van spot steepest july-to-august drop 16-year history van -0.20 to 2.19/mi reefer -0.14 to 2.61/mi all modes +30% yoydat freight analytics",
+    "oxea selects uber freight strategic global logistics partner us canada mexico europe tl rail ocean managed transportationglobenewswire/freightwaves",
+    "werner ceo derek leathers best peak trucking since covid 25000 driver elp enforcement morgan stanley laguna sept 15 2026transport topics",
+    "nrf reverses peak slowdown call september imports 2.31m teus +9.6% yoy busiest import month 2026 retailer restockingnrf hackett global port tracker",
+    "jb hunt cfo brad delco darren field intermodal record volumes structural upcycle 2027 morgan stanley laguna sept 15 2026jb hunt ir",
+    "diesel $6.29/gal eia week ending sept 14 2026 new weekly nominal record +$2.53 yoyeia"
   ],
   "threads": [
     {
@@ -2127,8 +2149,8 @@
     {
       "id": "iran_hormuz_shipping_deal",
       "label": "Iran Hormuz shipping attacks",
-      "status": "Iran and Oman officials formally signing a designated shipping route agreement through Hormuz in Muscat on Sept 15; Iran maintains it does not consider the strait \"open\" and route is a temporary Oman-brokered corridor. Saudi East-West pipeline (4-5M bpd) shut Sept 10-11 after drone strikes compounding supply shock; Brent at $110.42/bbl (Sept 14); U.S. diesel all-time high $6.23/gal.",
-      "last_covered_date": "2026-09-15",
+      "status": "Iran formally unveiled Oman-brokered Hormuz corridor agreement to 7 Gulf nations at multilateral meeting in Muscat Sept 16 (Saudi Arabia, UAE, Kuwait, Qatar, Oman, Iraq; Bahrain declined); 60-day initial corridor with no transit fees; fee structures and operational scope still under negotiation. Diesel hit new record $6.29/gal (EIA week ending Sept 14) same week Q4 truckload contracts are locking.",
+      "last_covered_date": "2026-09-16",
       "first_covered_date": "2026-08-07"
     },
     {
@@ -2239,8 +2261,8 @@
     {
       "id": "labor_day_q4_tightening_2026",
       "label": "Labor Day / Q4 2026 truckload tightening",
-      "status": "DAT Sept 8 week: dry van linehaul .21/mi (+38% YoY), reefer .69/mi, NTI .44/mi (+47% YoY); spot above contract first time since early 2022; tender rejection >15%. L/T van 11.5, reefer 21.5, flatbed 36.4. ATA August tonnage +0.2% MoM (released Sept 2026) \u2014 demand-led growth confirmed. Diesel .97/gal (EIA Sept 7) \u2014 new weekly record. Uber Freight Q3 update warns Q4 rate surge risk; recommends routing guide repair and baseline capacity lock-in before Oct 15.",
-      "last_covered_date": "2026-09-14",
+      "status": "DAT August monthly: van spot -$0.20/mi to $2.19/mi (steepest July-to-August linehaul decline in DAT 16-year history); reefer -$0.14/mi to $2.61/mi; all modes still +30%+ YoY; spot slipped below contract in August after exceeding in June\u2013July; weekly van $2.21/mi, L/T van 11.47, van tender rejections ~14%. Diesel $6.29/gal (EIA week ending Sept 14) \u2014 new weekly nominal record. September imports 2.31M TEUs (+9.6% YoY) \u2014 busiest month of 2026 per NRF. Werner CEO estimates 25K drivers at ELP enforcement risk.",
+      "last_covered_date": "2026-09-16",
       "first_covered_date": "2026-09-09"
     },
     {
@@ -2511,6 +2533,18 @@
         "Aurora Innovation presenting at Morgan Stanley Laguna Conference today (11:30 AM ET); Investor Day Sept 23 Dallas \u2014 200-truck year-end target.",
         "Pony.ai unveiled Gen-4 Level 4 robotruck at IAA 2026 Hannover (Sept 14); ADK cost 70% below prior gen; volume production starting 2026.",
         "Trimble TMS Goldman Sachs formal strategic review ongoing, no buyer announced as Q4 2026 RFP season opens \u2014 Transplace displacement window."
+      ]
+    },
+    {
+      "date": "2026-09-16",
+      "stories": [
+        "Iran formally unveiled 60-day Hormuz corridor to 7 Gulf nations in Muscat (Saudi Arabia, UAE, Kuwait, Qatar, Oman, Iraq; Bahrain declined); no transit fees; fee structures and operational scope still under negotiation.",
+        "DAT August monthly: van spot -$0.20/mi to $2.19/mi \u2014 steepest July-to-August linehaul decline in DAT 16-year history; reefer -$0.14/mi to $2.61/mi; flatbed -$0.20/mi to $2.70/mi; all modes still +30%+ YoY.",
+        "Diesel $6.29/gal national average (EIA week ending Sept 14) \u2014 new weekly nominal record, +$2.53 YoY.",
+        "OXEA selects Uber Freight as strategic global logistics partner across US, Canada, Mexico, and Europe \u2014 first UF managed transportation mandate spanning four geographies from inception.",
+        "Werner CEO Leathers at Morgan Stanley Laguna: declares 2026 peak 'best for trucking since COVID'; estimates ~25,000 drivers removed by FMCSA ELP enforcement in first year.",
+        "NRF reverses prior peak-slowdown call; September imports forecast 2.31M TEUs (+9.6% YoY) \u2014 busiest import month of 2026.",
+        "JB Hunt CFO and Intermodal President at Morgan Stanley Laguna: intermodal volumes at record levels, structural upcycle narrative intact through 2027."
       ]
     }
   ]
