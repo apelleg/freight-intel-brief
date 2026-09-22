@@ -1508,7 +1508,17 @@
     "https://www.ccjdigital.com/economic-trends/article/15834946/tight-capacity-and-diesel-surge-set-rate-floor-for-trucking",
     "https://www.cnbc.com/2026/09/17/diesel-gas-prices-oil-us-economy.html",
     "https://logisticsstrategies.substack.com/p/the-brief-record-diesel-peak-parcel",
-    "https://discoveryalert.com/analysis/us-diesel-price-supply-chain-shock-september-2026/"
+    "https://discoveryalert.com/analysis/us-diesel-price-supply-chain-shock-september-2026/",
+    "https://www.globenewswire.com/news-release/2026/09/22/3365961/0/en/uber-freight-expands-european-business-with-new-leadership-and-investment.html",
+    "https://www.thetrucker.com/trucking-news/business/dat-reefer-spot-rate-climbs-9-cents-to-3-59-as-diesel-jumps-37-cents",
+    "https://www.freightwaves.com/news/routing-guides-are-crumbling-it-is-different-this-time",
+    "https://www.fleetowner.com/news/news/55373169/knight-swift-pushes-10-truckload-rate-hikes-as-capacity-tightens",
+    "https://ir.aurora.tech/news-events/press-releases/detail/151/aurora-to-host-analyst-investor-day-on-september-23-2026",
+    "https://www.nasdaq.com/press-release/aurora-host-analyst-investor-day-september-23-2026-2026-09-02",
+    "https://www.investing.com/news/analyst-ratings/evercore-isi-adds-aurora-innovation-stock-ahead-of-investor-day-93CH-4901389",
+    "https://www.flexport.com/technology/product-release/winter-2026/",
+    "https://www.forvismazars.us/forsights/2026/09/form-5106-accuracy-review-and-enforcement-for-importers-and-brokers",
+    "https://wwd.com/sourcing-journal/logistics/september-peak-shipping-season-import-volumes-nrf-global-port-tracker-1239207519/"
   ],
   "seen_story_hashes": [
     "trimble tms potential sale goldman sachs advising tmw tms maps no buyer confirmed q4 contract cycle timing mid-market shipper renewals uncertaintyccj",
@@ -2227,7 +2237,13 @@
     "f77c64b208061de5a812c9787c937dbf",
     "554aa22194b9110cfeff17e01f9ed1fe",
     "a99b27f3e90de6999788b441aed02462",
-    "25ae0fd502a90ec2d73abfcbcf54019f"
+    "25ae0fd502a90ec2d73abfcbcf54019f",
+    "uber freight expands european business with new leadership and investmentglobenewswire",
+    "dat reefer spot rate climbs 9 cents to $3.59 as diesel jumps 37 centsthe trucker",
+    "routing guides are crumbling: 'it is different this time'freightwaves",
+    "knight-swift pushes 10% truckload rate hikes as capacity tightensfleetowner",
+    "aurora to host analyst & investor day on september 23, 2026nasdaq",
+    "form 5106 accuracy review and enforcement—for importers and brokersforvis mazars"
   ],
   "threads": [
     {
@@ -2247,8 +2263,8 @@
     {
       "id": "aurora_commercial_deployment",
       "label": "Aurora driverless commercial deployment",
-      "status": "Formal Analyst & Investor Day invitation issued Sept 23 Dallas (8:45 AM CT webcast ir.aurora.tech) — first major capital markets event since commercial launch; CEO Urmson at Goldman Sachs Sept 10 and Morgan Stanley Laguna Sept 15; Gen-2 trucks on 10 Sun Belt driverless routes; 200-truck year-end target; Roush factory production line active.",
-      "last_covered_date": "2026-09-17",
+      "status": "Investor Day tomorrow Sept 23 Dallas (8:45 AM CT, ir.aurora.tech webcast); Evercore ISI expects 10-15% stock move and full reset of 2024 targets ($1.3B revenue, 70% gross margin, positive FCF); current year-end target 200 driverless trucks vs. 20-25 trucks end of Q3; commercial pricing $2+/mi TaaS, $0.85+/mi DaaS. As UF/Waabi commercial partner, new targets define fleet ramp and pricing structure UF can offer shippers in 2027.",
+      "last_covered_date": "2026-09-22",
       "first_covered_date": "2026-08-05"
     },
     {
@@ -2418,6 +2434,13 @@
       "status": "Iraqi drone strikes on Sept 10-11 shut Saudi Arabia's East-West crude oil pipeline (4-5M bpd, 5% of global supply); oil broke $100/bbl for first time in months, hitting $110.42/bbl by Sept 14. Combined with Hormuz closure, pushed U.S. diesel to all-time record $6.23/gallon nationally and $8.14/gallon in California. Pipeline closure timeline and restart not announced.",
       "last_covered_date": "2026-09-15",
       "first_covered_date": "2026-09-15"
+    },
+    {
+      "id": "uber_freight_europe_4pl",
+      "label": "Uber Freight European 4PL Expansion",
+      "status": "Sept 22, 2026: Mike Doucleff appointed Head of Europe (reports directly to CEO Tinucci); Krakow, Poland Control Tower and ops hub launching 2027 — second European location alongside existing Netherlands base; dedicated product and engineering resources earmarked for European TMS experience improvements. Built on 200M EUR freight under management, doubling of new 4PL deals in 2025, and OXEA four-geography managed transportation win (Sept 15).",
+      "last_covered_date": "2026-09-22",
+      "first_covered_date": "2026-09-22"
     }
   ],
   "last_30_days": [
@@ -2681,6 +2704,18 @@
         "project44 Intelligent TMS competing in Q4 RFP cycles vs. Transplace/Oracle/Blue Yonder with IDC MarketScape Major Player recognition and 34% ARR growth",
         "CBP IOR enforcement day 3: voiding Importer of Record numbers for inaccurate Form 5106 data; immediate import shutdown risk for affected 4PL clients",
         "NHTSA ADS comment period closes Sept 30 (9 days); FMCSA ELP NPRM deadline Oct 9 (18 days)"
+      ]
+    },
+    {
+      "date": "2026-09-22",
+      "stories": [
+        "Uber Freight announces European 4PL expansion: Mike Doucleff as Head of Europe, Krakow Control Tower and ops hub launching 2027, dedicated product/engineering for European TMS — built on 200M EUR FUM and OXEA mandate (Sept 15)",
+        "DAT week Sept 13-19: van all-in $2.96/mi (+4¢ WoW), reefer $3.59/mi (+9¢, diesel-driven), flatbed $3.55/mi (+6¢); L/T van 11.2, reefer 19.1, flatbed 41.84 (~2x year-ago); load posts 2.9M (+16% WoW)",
+        "Diesel EIA print $6.285/gal (Sept 14); Bloomberg/AAA spot $6.505/gal Sept 21 — third consecutive all-time record week; FedEx Freight surcharge at 58.6% of transportation charges",
+        "JB Hunt confirms routing guides crumbling at accelerated pace; Knight-Swift pushing 10%+ rate hikes on 70% remaining 2026 contract book; shippers running emergency mini-bids",
+        "Aurora Innovation Investor Day tomorrow Sept 23 Dallas (8:45 AM CT, ir.aurora.tech): full reset of $1.3B 2028 targets expected; Evercore ISI expects 10-15% stock move; 200-truck year-end target vs. 20-25 trucks end of Q3",
+        "Flexport Atlas ocean freight map publicly available at no cost (atlas.flexport.com) with MCP API; Fall Tech Release Sept 29 adds AI customs agent (0.2% error), cost optimization (10% savings), AI trade translation",
+        "CBP IOR enforcement Day 5: actively voiding Importer of Record numbers under EO 14411 for inaccurate Form 5106 data; immediate import shutdown risk for 4PL clients using third-party customs brokers as IOR"
       ]
     }
   ]
