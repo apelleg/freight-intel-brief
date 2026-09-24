@@ -1529,7 +1529,27 @@
     "https://stockstotrade.com/news/aurora-innovation-inc-aur-news-2026_09_21-2/",
     "https://straits.live/briefs/2026-09-23",
     "https://portxlogistics.com/2026/09/17/freight-market-update-imports-rail-diesel-suez/",
-    "https://sourcealliance.net/routing-guides-are-crumbling-it-is-different-this-time/"
+    "https://sourcealliance.net/routing-guides-are-crumbling-it-is-different-this-time/",
+    "https://www.businesswire.com/news/home/20260923278327/en/Aurora-Outlines-2030-Vision-to-Scale-to-30000-Driverless-Trucks-at-Analyst-and-Investor-Day",
+    "https://ir.aurora.tech/news-events/press-releases/detail/152/aurora-outlines-2030-vision-to-scale-to-30000-driverless-trucks-at-analyst-and-investor-day",
+    "https://www.marketbeat.com/instant-alerts/event-aurora-innovation-targets-30000-driverless-trucks-5b-revenue-by-2030-2026-09-24/",
+    "https://www.gurufocus.com/news/9093624/aurora-innovation-aur-showcases-driverless-trucking-growth-amid-high-pricetosales-valuation",
+    "https://www.freightwaves.com/news/benchmark-diesel-sets-new-record-futures-signaling-relief",
+    "https://www.fleetowner.com/emissions-efficiency/news/55406906/us-diesel-prices-hit-653-as-strait-of-hormuz-disruption-drives-trucking-costs",
+    "https://www.stripes.com/theaters/us/2026-09-23/iran-discussions-united-nations-trump-threats-22941123.html",
+    "https://www.thenationalnews.com/news/mena/2026/09/23/iran-us-meeting-new-york/",
+    "https://www.axios.com/2026/09/22/unga-iran-us-trump-war",
+    "https://www.freightwaves.com/news/short-haul-freight-is-winning-as-long-haul-slips",
+    "https://www.cnbc.com/2026/09/23/trump-xi-meeting-why-chinas-self-sufficiency-changes-the-calculus.html",
+    "https://www.trucknews.com/technology/aurora-targets-30000-driverless-trucks-by-2030/1003222185/",
+    "https://www.tipranks.com/news/company-announcements/aurora-showcases-commercial-driverless-trucking-at-investor-day",
+    "https://stockanalysis.com/stocks/aur/",
+    "https://www.fleetequipmentmag.com/uber-freight-q3-2026-market-report/",
+    "https://www.aftermarketnews.com/tight-capacity-keeps-pressure-on-q4-freight-market/",
+    "https://en.wikipedia.org/wiki/2026_Iran_war_ceasefire",
+    "https://www.globalsecurity.org/wmd/library/news/iran/2026/09/iran-260916-rferl01.htm",
+    "https://securities.io/aurora-targets-30-000-plus-driverless-trucks-by-2030-at-investor-day/",
+    "https://seekingalpha.com/article/4949137-aurora-innovation-inc-aur-analyst-investor-day-slideshow"
   ],
   "seen_story_hashes": [
     "trimble tms potential sale goldman sachs advising tmw tms maps no buyer confirmed q4 contract cycle timing mid-market shipper renewals uncertaintyccj",
@@ -2261,7 +2281,17 @@
     "05eb4402a6c2b01f062fbb9ccf32bd05",
     "87d32ea60046aafb7cd9e9b580d54143",
     "49633339eb1185bb32ef63101748f9f8",
-    "22b76878ce8298326989d70fd291144c"
+    "22b76878ce8298326989d70fd291144c",
+    "aurora outlines 2030 vision to scale to 30000 driverless trucks at analyst and investor dayaur",
+    "aurora innovation aur showcases driverless trucking growth amid high price-to-sales valuationgur",
+    "benchmark diesel sets new record futures signaling relieffreightwaves",
+    "us iran hold mediated unga talks on ending war opening strait of hormuzal jazeera",
+    "iran presents us with road map for regionwide ceasefire and hormuz reopeningthe national",
+    "uber freight q3 report capacity stays tight into q4uber freight",
+    "short-haul freight is winning as long-haul slipsfreightwaves sonar",
+    "trump-xi meeting why chinas self-sufficiency changes the calculuscnbc",
+    "aurora targets 30000 driverless trucks by 2030 from about 20 todayev",
+    "us diesel prices hit 653 as strait of hormuz disruption drives trucking costsfleetowner"
   ],
   "threads": [
     {
@@ -2414,8 +2444,8 @@
     {
       "id": "labor_day_q4_tightening_2026",
       "label": "Labor Day / Q4 2026 truckload tightening",
-      "status": "DAT week Sept 13-19: van all-in $2.96/mi (+4c WoW, +33% YoY), reefer $3.59/mi (+9c), flatbed $3.55/mi (+6c). Load posts 2.9M, +16% WoW. L/T: van 11.2, reefer 19.1, flatbed 41.84 (~2x year-ago). Routing guide collapse now confirmed at scale -- mini-bid activity at 5-year high. CHR September market update forecasts +10% dry van and +11% reefer CPM into 2027. Diesel $6.505/gal all-time record.",
-      "last_covered_date": "2026-09-23",
+      "status": "SONAR tender rejection 14.21% (Sept 23); DAT week Sept 13-19: van $2.96/mi (+33% YoY), reefer $3.59/mi (+38%), flatbed $3.55/mi (+29%); L/T: van 11.2, reefer 19.1, flatbed 41.84. UF Q3 report: 48,000+ drivers out of market, Class 8 oversubscribed by 35,000 units, 9-month backlog. Short-haul (CSTVI) +35% YTD, long-haul -15%, intermodal +6%. EIA diesel record $6.529/gal. Routing guides failing at 5-year-high rates; mini-bid activity at peak.",
+      "last_covered_date": "2026-09-24",
       "first_covered_date": "2026-09-09"
     },
     {
@@ -2449,8 +2479,8 @@
     {
       "id": "saudi_east_west_pipeline_attack",
       "label": "Saudi East-West Pipeline Attack",
-      "status": "Iraqi drone strikes on Sept 10-11 shut Saudi Arabia's East-West crude oil pipeline (4-5M bpd, 5% of global supply); oil broke $100/bbl for first time in months, hitting $110.42/bbl by Sept 14. Combined with Hormuz closure, pushed U.S. diesel to all-time record $6.23/gallon nationally and $8.14/gallon in California. Pipeline closure timeline and restart not announced.",
-      "last_covered_date": "2026-09-15",
+      "status": "UNGA indirect talks Sept 23 (Qatar-mediated): Iran proposed 60-day regionwide ceasefire + Hormuz reopening within 7 days if US lifts naval blockade. Trump rejected preconditions, threatened escalation. No breakthrough; mediators continuing. Hormuz ~1 vessel/day vs. 85 baseline. EIA diesel official record $6.529/gal (Sept 22), West Coast $7.46/gal, Midwest $6.68/gal. November truce on Hormuz corridor remains suspended.",
+      "last_covered_date": "2026-09-24",
       "first_covered_date": "2026-09-15"
     },
     {
@@ -2459,6 +2489,20 @@
       "status": "Sept 22, 2026: Mike Doucleff appointed Head of Europe (reports directly to CEO Tinucci); Krakow, Poland Control Tower and ops hub launching 2027 \u2014 second European location alongside existing Netherlands base; dedicated product and engineering resources earmarked for European TMS experience improvements. Built on 200M EUR freight under management, doubling of new 4PL deals in 2025, and OXEA four-geography managed transportation win (Sept 15).",
       "last_covered_date": "2026-09-22",
       "first_covered_date": "2026-09-22"
+    },
+    {
+      "id": "aurora_investor_day_2026",
+      "label": "Aurora Investor Day / 2030 Vision",
+      "status": "Formal press release (Sept 23) confirmed 2030 vision: 30,000+ driverless trucks, ~$5B annual revenue, ~60% gross margin. Near-term: 200 trucks by year-end 2026, $80M TaaS run-rate, $1.2B revenue by 2029, FCF positive 2028. Hirschbach committed 500 DaaS trucks ($0.85/mi) starting 2027. 7 named customers including Uber Freight. Gen-2 hardware (1M-mile lifespan, <50% cost). AUR stock +8% on investor day. PACCAR/Volvo/International integrations.",
+      "first_covered_date": "2026-09-23",
+      "last_covered_date": "2026-09-24"
+    },
+    {
+      "id": "trump_xi_trade_truce_2026",
+      "label": "US-China Trade Truce / Nov 10 Deadline",
+      "status": "White House state visit Sept 24; November 10 truce expiry deadline on 30% reciprocal tariffs + Section 301. Potential pull-forward surge if truce collapses, repeating 2025 pattern. Tougher negotiations on trade surplus and technology intensifying as deadline approaches.",
+      "first_covered_date": "2026-09-24",
+      "last_covered_date": "2026-09-24"
     }
   ],
   "last_30_days": [
@@ -2747,6 +2791,17 @@
         "Trimble TMS/TMW Goldman Sachs sale: no buyer as of Sept 23; Q4 2026 RFP season live -- Transplace displacement window open",
         "NHTSA ADS framework comment deadline Sept 30 (7 days) and FMCSA ELP NPRM deadline Oct 9 (16 days) approaching",
         "Diesel at all-time nominal record $6.505/gal (Bloomberg/AAA Sept 21)"
+      ]
+    },
+    {
+      "date": "2026-09-24",
+      "stories": [
+        "Aurora Innovation formal press release adds 2030 vision: 30,000+ driverless trucks, ~$5B revenue, ~60% gross margin by 2030 \u2014 the capital markets re-rating layer beyond yesterdays Investor Day near-term guidance.",
+        "UNGA Hormuz talks (Sept 23) concluded without breakthrough: Iran proposed 60-day ceasefire + Hormuz reopening within 7 days; Trump rejected preconditions and threatened escalation; Qatar mediators continuing.",
+        "EIA official diesel record $6.529/gal (Sept 22), +9 cents above Bloomberg/AAA $6.505 \u2014 direct impact on fuel surcharge calculations; Midwest $6.68/gal, West Coast $7.46/gal.",
+        "SONAR tender rejection rate 14.21% (Sept 23); short-haul freight CSTVI +35% YTD, long-haul -15% over 2 years, intermodal +6% \u2014 structural modal shift accelerated by diesel shock.",
+        "Uber Freight Q3 Market Report: 48,000+ noncompliant drivers out of market in past year; Class 8 9-month backlog oversubscribed by 35,000 units; contract linehaul peaked $2.39/mi (+18% YoY) in July.",
+        "Trump-Xi White House state visit Sept 24; November 10 US-China tariff truce deadline approaching \u2014 potential pull-forward surge risk for import freight volumes."
       ]
     }
   ]
