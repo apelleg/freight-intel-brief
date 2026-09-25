@@ -1549,7 +1549,30 @@
     "https://en.wikipedia.org/wiki/2026_Iran_war_ceasefire",
     "https://www.globalsecurity.org/wmd/library/news/iran/2026/09/iran-260916-rferl01.htm",
     "https://securities.io/aurora-targets-30-000-plus-driverless-trucks-by-2030-at-investor-day/",
-    "https://seekingalpha.com/article/4949137-aurora-innovation-inc-aur-analyst-investor-day-slideshow"
+    "https://seekingalpha.com/article/4949137-aurora-innovation-inc-aur-analyst-investor-day-slideshow",
+    "https://ielfreight.com/truckload-market-update-september-2026/",
+    "https://www.ajot.com/news/dat-truckload-market-report-sept-1319-2026-spot-rates-climb-on-higher-diesel-prices",
+    "https://transportationinsight.com/resources/transportation-industry-trends-september-21-25-2026/",
+    "https://www.freightos.com/freight-resources/typhoon-disruptions-driving-congestion-and-putting-pressure-on-rates-september-25-2026-update/",
+    "https://www.sekologistics.com/en/resource-hub/news/super-typhoon-ragasa-impact-hong-kong-south-china-air-and-ocean-freight-updated-september-25/",
+    "https://www.globenewswire.com/news-release/2026/09/24/3368370/0/en/kodiak-ai-and-dtl-transport-complete-first-autonomous-trucking-deliveries-under-new-california-dmv-permit.html",
+    "https://www.truckinginfo.com/news/kodiak-hauls-produce-in-california-autonomous-truck-pilot",
+    "https://www.thetrucker.com/trucking-news/business/kodiak-ai-dtl-transport-complete-first-autonomous-trucking-deliveries-under-new-california-dmv-permit",
+    "https://www.cnbc.com/2026/09/22/aurora-autonomous-semi-ride.html",
+    "https://www.ccjdigital.com/regulations/safety-compliance/article/15830826/ch-robinson-to-appeal-604-million-freight-broker-liability-verdict",
+    "https://www.freightwaves.com/news/16-trucking-companies-hit-bankruptcy-court-in-less-than-a-month",
+    "https://www.project44.com/blog/project44-positioned-as-a-major-player-in-2026-idc-marketscape-for-tms/",
+    "https://www.ccjdigital.com/business/mergers-acquisitions/article/15829584/trimble-may-sell-transportation-logistics-unit-reports-say/",
+    "https://finance.yahoo.com/news/us-september-container-imports-dip-153027622.html",
+    "https://www.truckinginfo.com/articles/ai-is-reshaping-trucking-in-2026-from-the-back-office-to-the-shop",
+    "https://ielfreight.com/freight-market-update-capacity-rates-september-2026/",
+    "https://www.chrobinson.com/en-us/resources/insights-and-advisories/north-america-freight-insights/",
+    "https://gcaptain.com/u-s-container-imports-plunge-6-6-in-september-as-tariff-fallout-takes-hold/",
+    "https://www.truckinginfo.com/news/container-imports-drop-following-summer-pre-tariff-surge",
+    "https://www.chase.com/personal/investments/learning-and-insights/article/diesel-prices-hit-new-record-september-2026-what-it-means-for-inflation-and-investors",
+    "https://www.kcur.org/environment-agriculture/2026-09-25/record-high-diesel-costs-squeezing-farmers-harvest-season",
+    "https://www.stlpr.org/2026-09-25/record-high-diesel-costs-squeezing-farmers-harvest-season",
+    "https://finance.yahoo.com/markets/stocks/articles/j-b-hunt-sees-freight-210219385.html"
   ],
   "seen_story_hashes": [
     "trimble tms potential sale goldman sachs advising tmw tms maps no buyer confirmed q4 contract cycle timing mid-market shipper renewals uncertaintyccj",
@@ -2291,7 +2314,15 @@
     "short-haul freight is winning as long-haul slipsfreightwaves sonar",
     "trump-xi meeting why chinas self-sufficiency changes the calculuscnbc",
     "aurora targets 30000 driverless trucks by 2030 from about 20 todayev",
-    "us diesel prices hit 653 as strait of hormuz disruption drives trucking costsfleetowner"
+    "us diesel prices hit 653 as strait of hormuz disruption drives trucking costsfleetowner",
+    "852bffaabf73e672efc23c2445145deb",
+    "4c9edfb11bc0ad66813dcda4280cf2a9",
+    "87fb5a191db3ed77e0584a1fb7e09c8f",
+    "d65d9fdf6de15b99073f1a4113f17951",
+    "19f85bb8e3d85213b5b8e88fc879ad39",
+    "b5115b39b40730ea6f9150abf7cbdb9a",
+    "80f48e582c884ef55da3797921efae23",
+    "21c82d7727ec94dcf68db01309f05b46"
   ],
   "threads": [
     {
@@ -2346,7 +2377,7 @@
     {
       "id": "chr_nuclear_verdict_appeal",
       "label": "CHR Nuclear Verdict Appeal",
-      "status": "C.H. Robinson appealing $604M Texas nuclear verdict; CEO Bozeman confirmed at Q2 earnings call that resolution is 'potentially years away.' Covered through 2026; 2027 insurance renewal discussions started. Stock down ~20% since verdict. RXO running active enterprise displacement campaign targeting same accounts. CHR simultaneously launching US-Mexico AI consolidation service.",
+      "status": "C.H. Robinson appealing 04M Texas nuclear verdict; Dallas County judge has NOT yet affirmed the July 23 ruling, delaying the formal appeal clock. CEO Bozeman warns process could take years. CHR simultaneously raising shipper contract rates ~10% YoY for 2027 as capacity tightens.",
       "last_covered_date": "2026-09-04",
       "first_covered_date": "2026-08-11"
     },
@@ -2409,14 +2440,14 @@
     {
       "id": "project44_intelligent_tms",
       "label": "project44 Intelligent TMS G2 Rise",
-      "status": "34% new ARR growth; IDC MarketScape Major Player (Sept 2, first-ever TMS category IDC recognition); AI procurement agent delivers 4.1% freight cost reduction, 75% sourcing cycle reduction. Explicitly repositioning from visibility layer to TMS-adjacent AI orchestration platform competing with Transplace in Q4 enterprise RFPs.",
+      "status": "57% YoY shipper revenue growth (most recent quarter); IDC MarketScape Major Player recognition (Sept 2, 2026). Actively competing in Q4 2026 RFP cycles against Oracle TM, Blue Yonder, and Transplace. Customer metrics: 4% freight cost reduction, 60% fewer check calls, 17% better on-time delivery.",
       "first_covered_date": "2026-09-01",
       "last_covered_date": "2026-09-10"
     },
     {
       "id": "kodiak_factory_av",
       "label": "Kodiak Factory-Built AV Trucks",
-      "status": "Roush Industries producing Kodiak Driver-equipped trucks on a dedicated factory production line; first units delivered to Atlas Energy Solutions in Permian Basin; targeting hundreds of trucks by year-end 2026. Competes with Aurora TaaS model for fleet-level AV adoption.",
+      "status": "First California autonomous produce deliveries completed Sept 24 under new CA DMV heavy-duty AV Testing permit; Kodiak AI + DTL Transport running Fresno\u2192LA on SR-99/I-5 with safety driver. Plans driverless Texas launch by year-end 2026. Roush targeting 1,000-unit/year production run rate. Now the second AV player with permitted freight routes in both Texas and California.",
       "first_covered_date": "2026-09-01",
       "last_covered_date": "2026-09-01"
     },
@@ -2444,7 +2475,7 @@
     {
       "id": "labor_day_q4_tightening_2026",
       "label": "Labor Day / Q4 2026 truckload tightening",
-      "status": "SONAR tender rejection 14.21% (Sept 23); DAT week Sept 13-19: van $2.96/mi (+33% YoY), reefer $3.59/mi (+38%), flatbed $3.55/mi (+29%); L/T: van 11.2, reefer 19.1, flatbed 41.84. UF Q3 report: 48,000+ drivers out of market, Class 8 oversubscribed by 35,000 units, 9-month backlog. Short-haul (CSTVI) +35% YTD, long-haul -15%, intermodal +6%. EIA diesel record $6.529/gal. Routing guides failing at 5-year-high rates; mini-bid activity at peak.",
+      "status": "JB Hunt announced intermodal capacity at ceiling (week of Sept 21-25) \u2014 overflow freight shifting to spot truck. Tender rejection back above 14% bucking typical September seasonal pattern. SONAR NTI dry van ~.43/mi all-in (+47% YoY); DAT van L/T 11.2, reefer 19.1, flatbed ~41. US September container imports down 8.4% amid tariff uncertainty. Super Typhoon Ragasa (Sept 24) disrupting Shanghai/Ningbo, intensifying West Coast dray demand.",
       "last_covered_date": "2026-09-24",
       "first_covered_date": "2026-09-09"
     },
@@ -2503,14 +2534,16 @@
       "status": "White House state visit Sept 24; November 10 truce expiry deadline on 30% reciprocal tariffs + Section 301. Potential pull-forward surge if truce collapses, repeating 2025 pattern. Tougher negotiations on trade surplus and technology intensifying as deadline approaches.",
       "first_covered_date": "2026-09-24",
       "last_covered_date": "2026-09-24"
+    },
+    {
+      "id": "typhoon_ragasa_2026",
+      "label": "Typhoon Ragasa Ocean Disruption",
+      "status": "Super Typhoon Ragasa made landfall South China coast Sept 24, disrupting Shanghai/Ningbo port operations; 661 vessels impacted or at risk. Shanghai-LA transpacific rates climbed to ,185/FEU. LA/LB container dwell averaging 6.5 days. West Coast port congestion expected to intensify through late September.",
+      "last_covered_date": "2026-09-25",
+      "first_covered_date": "2026-09-25"
     }
   ],
   "last_30_days": [
-    {
-      "date": "2026-08-25",
-      "stories_count": 11,
-      "top_signal": "Bessent 'Operation Economic Outcast' secondary sanctions on 60+ entities (Aug 24) + Canada Section 338 tariffs LIVE (Aug 22, no deal) + ATA CEO Spear departure \u2014 dual trade shock and advocacy vacuum; diesel $5.45+/gal; CVSA Brake Safety Week Day 3; Panama Canal Neopanamax draft cuts Aug 26"
-    },
     {
       "date": "2026-08-26",
       "stories_covered": [
@@ -2802,6 +2835,17 @@
         "SONAR tender rejection rate 14.21% (Sept 23); short-haul freight CSTVI +35% YTD, long-haul -15% over 2 years, intermodal +6% \u2014 structural modal shift accelerated by diesel shock.",
         "Uber Freight Q3 Market Report: 48,000+ noncompliant drivers out of market in past year; Class 8 9-month backlog oversubscribed by 35,000 units; contract linehaul peaked $2.39/mi (+18% YoY) in July.",
         "Trump-Xi White House state visit Sept 24; November 10 US-China tariff truce deadline approaching \u2014 potential pull-forward surge risk for import freight volumes."
+      ]
+    },
+    {
+      "date": "2026-09-25",
+      "stories": [
+        "Super Typhoon Ragasa (Sept 24) disrupts Shanghai/Ningbo with 661 vessels impacted; Shanghai-LA rates hit $7,185/FEU \u2014 compounding JB Hunt intermodal capacity ceiling, forcing overflow to spot truck with tender rejections above 14%.",
+        "Kodiak AI + DTL Transport completed first CA autonomous produce deliveries under new DMV permit (Fresno\u2192LA, I-5/SR-99, Sept 24) \u2014 second AV player now permitted in both Texas and California freight corridors.",
+        "16 small carrier Chapter 11/7 bankruptcies filed in <1 month through Sept 21 (including Xoco Transport), accelerating capacity exit from the market.",
+        "C.H. Robinson repricing contracts with ~10% rate increases forecast for 2027; nuclear verdict appeal (04M) in pre-affirmation limbo.",
+        "project44 Intelligent TMS grew 57% YoY, competing in Q4 RFPs against Transplace; Trimble TMS sale process ongoing with no buyer \u2014 Q4 RFP season creates displacement window for Transplace.",
+        "US September container imports down 8.4% amid tariff uncertainty; SONAR NTI dry van ~$3.43/mi all-in (+47% YoY); DAT van L/T 11.2."
       ]
     }
   ]
