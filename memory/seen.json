@@ -1633,7 +1633,29 @@
     "https://gawdamedia.com/october-1-2026-safety-compliance/",
     "https://www.overdriveonline.com/regulations/article/15835167/fmcsa-waives-hos-regs-for-gas-diesel-haulers",
     "https://www.freightwaves.com/news/trucks-hauling-fuel-get-hos-waiver-for-3-months",
-    "https://newsroomamerica.com/a/Zv9n4JQFvzwN9CjOSDH6asnDWUb/flexport_ceo_ryan_petersen_will_host_a_live_broadcast_on_september_29_2026_announcing_new_ai_and_technology_products_aimed_at_helping_businesses_move_faster_with_fewer_resources.html"
+    "https://newsroomamerica.com/a/Zv9n4JQFvzwN9CjOSDH6asnDWUb/flexport_ceo_ryan_petersen_will_host_a_live_broadcast_on_september_29_2026_announcing_new_ai_and_technology_products_aimed_at_helping_businesses_move_faster_with_fewer_resources.html",
+    "https://www.freightwaves.com/news/ikea-picks-kodiak-for-driverless-freight-rollout",
+    "https://globenewswire.com/news-release/2026/10/01/3372974/0/en/kodiak-ai-chooses-aws-for-ai-powered-autonomous-trucking-technology-development-ahead-of-driverless-highway-launch",
+    "https://www.bloomberg.com/news/articles/2026-10-01/europe-holds-emergency-diesel-talks-as-us-pressure-mounts",
+    "https://www.bloomberg.com/news/articles/2026-10-01/eu-seeks-joint-stance-on-diesel-stock-after-us-demands-release",
+    "https://sundayguardianlive.com/world/us-israel-iran-war-live-news-eu-fully-rejects-us-diesel-export-threat-if-europe-does-not-release-more-of-its-fuel-stocks-297259/",
+    "https://www.overdriveonline.com/business/article/15836324/tql-ch-robinson-accused-of-federal-racketeering",
+    "https://finance.yahoo.com/small-business/articles/lawsuit-approach-accusing-c-h-051113634.html",
+    "https://www.gurufocus.com/news/9105408/wells-fargo-adds-ch-robinson-worldwide-chrw-to-tactical-ideas-list-on-positive-outlook",
+    "https://seekingalpha.com/news/4648956-c-h-robinson-worldwide-is-added-to-wells-fargos-tactical-ideas-list",
+    "https://www.freightwaves.com/news/old-dominion-pulls-forward-4-9-gri-as-ltl-carriers-accelerate-rate-hikes",
+    "https://www.ccjdigital.com/business/article/15835450/old-dominion-announces-rate-increase",
+    "https://www.icontainers.com/blog/china-golden-week-shipping-2026/",
+    "https://panvaya.com/blog/golden-week-blank-sailings-double-holiday-2026",
+    "https://transportationinsight.com/resources/transportation-industry-trends-september-28-october-2-2026/",
+    "https://www.rigzone.com/news/europe_holds_emergency_diesel_talks-01-oct-2026-184749-article",
+    "https://knews.media/2026/10/01/france-and-germany-control-one-third-of-eus-diesel-reserves-amid-us-pressure/",
+    "https://www.nbcnews.com/business/energy/trump-diesel-reserves-europe-ban-rcna600967",
+    "https://freightwaves.com/news/new-lawsuit-approach-accusing-c-h-robinson-tql-of-rico-violations",
+    "https://www.theconveyor.co/p/ch-robinson-tql-sued-chameleon-carriers",
+    "https://kodiak.ai/news/ikea-driverless-launch-partner",
+    "https://www.truckingdive.com/news/kodiak-targets-year-end-driverless-launch-on-dallas-houston-lane-with-ikea/831495/",
+    "https://press.aboutamazon.com/aws/2026/10/kodiak-ai-chooses-aws-for-ai-powered-autonomous-trucking-technology-development-ahead-of-driverless-highway-launch"
   ],
   "seen_story_hashes": [
     "trimble tms potential sale goldman sachs advising tmw tms maps no buyer confirmed q4 contract cycle timing mid-market shipper renewals uncertaintyccj",
@@ -2422,7 +2444,15 @@
     "6317f7655440",
     "72c7528d288e",
     "efa37936c544",
-    "2b5c4f91dc6f"
+    "2b5c4f91dc6f",
+    "7595c3342e31bfe31489df25db439da1",
+    "10c907d75e94708a75cfe2f9bff9e34a",
+    "63de173c536d806d4bab48e261098c64",
+    "26dadd47a42461394d846e10dcaf6e8f",
+    "a16cf9205807af1b1ec1cae7b2c4f5dc",
+    "85c92e27f0bdd205c22f14428e64035f",
+    "7955ba366f864d4a17eca547efe956ed",
+    "e25c69c389e76495535a346a7d11acc0"
   ],
   "threads": [
     {
@@ -2463,8 +2493,8 @@
     {
       "id": "iran_hormuz_shipping_deal",
       "label": "Iran Hormuz shipping attacks",
-      "status": "Sept 29: Hormuz oil volumes recovered to 13.1M bbl/day (77% of pre-war baseline) via dark tanker shuttle (AIS off, STS transfers in Gulf of Oman). Saudi crude rerouted. Iran losing leverage. EIA diesel $6.382/gal (Sept 29) -- first confirmed pullback from $6.549 all-time record. Iran still controls formal transit approvals but unable to stop shuttle system.",
-      "last_covered_date": "2026-09-28",
+      "status": "EU officially rejected US demand to release 120M barrels of emergency diesel reserves (Oct 1-2); Germany declining its pledged 15M barrel drawdown. US threatening diesel export ban against European allies. Refined products through Hormuz still at 677K bpd (19% of 3.6M pre-war). Diesel ~$6.38/gal nationally (first pullback from $6.549 record). No structural relief expected through Q1 2027.",
+      "last_covered_date": "2026-10-02",
       "first_covered_date": "2026-08-07"
     },
     {
@@ -2547,9 +2577,9 @@
     {
       "id": "kodiak_factory_av",
       "label": "Kodiak Factory-Built AV Trucks",
-      "status": "At Evercore 9th Annual ADAS & AI Forum (Sept 29): 93% completion on Autonomy Readiness Measure; monthly progress updates through December targeting driverless commercial launch by year-end. $150M+ cash, runway into H2 2027. Operating Texas/Permian Basin (Atlas Energy) and California (Fresno-LA with DTL Transport).",
-      "first_covered_date": "2026-09-01",
-      "last_covered_date": "2026-09-01"
+      "status": "Oct 1: Named IKEA Supply as first driverless commercial launch partner (219-mile I-45 route, Baytown DC to Frisco TX store); simultaneously announced AWS as primary cloud infrastructure for BreakPoint safety validation. Currently 35 supervised driverless trucks for Atlas Energy. Targeting driverless launch later in 2026. 93%+ safety case completion.",
+      "last_covered_date": "2026-10-02",
+      "first_covered_date": "2026-09-01"
     },
     {
       "id": "fedex_freight_lyons",
@@ -2641,25 +2671,23 @@
       "status": "Super Typhoon Ragasa made landfall South China coast Sept 24, disrupting Shanghai/Ningbo port operations; 661 vessels impacted or at risk. Shanghai-LA transpacific rates climbed to ,185/FEU. LA/LB container dwell averaging 6.5 days. West Coast port congestion expected to intensify through late September.",
       "last_covered_date": "2026-09-25",
       "first_covered_date": "2026-09-25"
+    },
+    {
+      "id": "chr_tql_rico_lawsuit",
+      "label": "CHR/TQL RICO Chameleon Carrier Lawsuit",
+      "status": "Six mid-size carriers filed federal RICO suit (2:26-cv-00869, E.D. Texas, Sept 23) against C.H. Robinson and TQL alleging systematic routing to chameleon carriers (unsafe operators that dissolve and reopen under new DOT numbers) and billing shippers for compliant service. C.H. Robinson denies. Industry's largest broker liability test since 2026 Supreme Court negligent-hiring ruling.",
+      "first_covered_date": "2026-10-02",
+      "last_covered_date": "2026-10-02"
+    },
+    {
+      "id": "eu_diesel_reserve_standoff",
+      "label": "EU-US Diesel Reserve Standoff",
+      "status": "US demanded EU release 120M barrels emergency diesel reserves over 6 months; EU rejected and called US diesel export ban threat 'fully rejected' (Oct 1-2). Germany (18% of EU stockpiles) declining drawdown. France/Germany control ~35% of EU reserves. Energy Commissioner Jørgensen coordinating EU joint position. Standoff eliminates diplomatic relief for diesel prices through near-term.",
+      "first_covered_date": "2026-10-02",
+      "last_covered_date": "2026-10-02"
     }
   ],
   "last_30_days": [
-    {
-      "date": "2026-09-01",
-      "stories_covered": [
-        "Canada counter-tariffs T-7 (Sept 8): 15–50% duties on $27.6B US goods (700+ product lines); USTR Greer confirmed no further US-Canada trade talks planned — two-wall tariff problem for cross-border lanes",
-        "DAT Aug 23-29 spot data: dry van $2.19–2.21/mi, 9 consecutive weekly declines from July 4 peak, still +38% YoY; van L/T ~9.6; truck posts -32% YoY during CVSA Brake Safety Week",
-        "ATA August for-hire truck tonnage index +0.9% MoM",
-        "Panama Canal: 34/day transit cap begins Sept 4, 32/day Sept 15; El Niño watershed 44% below average",
-        "C.H. Robinson cross-border advisory Aug 28 on Canada counter-tariffs; simultaneously appealing $604M nuclear verdict",
-        "RXO Q3 EBITDA guided $40M (vs $6M Q1); active enterprise CHR displacement campaign",
-        "NHTSA extends ADS framework comment period to Sept 30 (Federal Register 2026-17741); FMCSA NPRM sequenced behind",
-        "Aurora: Goldman Sachs Communacopia Sept 10; new carriers Charger Logistics (FW–Phoenix) + Value Truck (Dallas–Laredo) Aug 25; $2+/mi TaaS, $0.85+/mi DaaS pricing",
-        "Kodiak Robotics: Roush Industries factory-built AV trucks; first delivery to Atlas Energy in Permian; hundreds by year-end 2026",
-        "project44 Intelligent TMS: G2 Fall 2026 Enterprise Leader (first-ever TMS Grid ranking); shipper revenue +57% YoY",
-        "Trimble TMS: no buyer announced as of Sept 1; Q4 RFP displacement window open for Transplace"
-      ]
-    },
     {
       "date": "2026-09-02",
       "stories_covered": [
@@ -2932,6 +2960,19 @@
         "US-China tariff truce confirmed extended to Jan 10, 2027; Section 301 Chinese vessel port fees still scheduled Nov 10 with no formal pause extension.",
         "NHTSA ADS Framework comment period (docket 2026-17741, governs Aurora/UF partnership) closed Sept 30; NHTSA reviewing comments ahead of final guidance.",
         "FMCSA ELP NPRM comment deadline Oct 9 (8 days remaining)."
+      ]
+    },
+    {
+      "date": "2026-10-02",
+      "stories": [
+        "EU officially rejected US demand to release 120M barrels emergency diesel reserves; Germany confirms no drawdown; US threatens diesel export ban against European allies.",
+        "Kodiak AI named IKEA Supply as its first driverless commercial freight launch partner on I-45 Texas corridor (219 miles, Baytown DC to Frisco store); target: driverless later in 2026.",
+        "Kodiak AI chose AWS as primary cloud platform for safety validation and AI development ahead of driverless public-highway launch.",
+        "Six carriers filed RICO suit (2:26-cv-00869, E.D. Texas) against C.H. Robinson and TQL alleging chameleon carrier routing and racketeering; C.H. Robinson denies.",
+        "Wells Fargo added CHRW to Tactical Ideas List (Oct 1); price target raised to $215 Overweight; stock +4.5% premarket on improving brokerage margins thesis.",
+        "Old Dominion 4.9% GRI takes effect October 5 — second consecutive year ODFL pulled GRI date forward by ~1 month; LTL pricing power remains intact entering Q4.",
+        "China Golden Week (Oct 1-7) driving 18-25% blank sailings on Transpacific lanes; November port arrival clustering building late-fall import surge risk.",
+        "FMCSA ELP NPRM (Docket FMCSA-2026-0826) comment deadline October 9 — 7 days remaining; could OOS additional ~9,000 drivers on top of 26,000+ already sidelined."
       ]
     }
   ]
