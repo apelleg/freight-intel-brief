@@ -1655,7 +1655,20 @@
     "https://www.theconveyor.co/p/ch-robinson-tql-sued-chameleon-carriers",
     "https://kodiak.ai/news/ikea-driverless-launch-partner",
     "https://www.truckingdive.com/news/kodiak-targets-year-end-driverless-launch-on-dallas-houston-lane-with-ikea/831495/",
-    "https://press.aboutamazon.com/aws/2026/10/kodiak-ai-chooses-aws-for-ai-powered-autonomous-trucking-technology-development-ahead-of-driverless-highway-launch"
+    "https://press.aboutamazon.com/aws/2026/10/kodiak-ai-chooses-aws-for-ai-powered-autonomous-trucking-technology-development-ahead-of-driverless-highway-launch",
+    "https://www.freightwaves.com/news/breaking-c-h-robinson-acquiring-rxo",
+    "https://www.bloomberg.com/news/articles/2026-10-05/ch-robinson-to-buy-freight-broker-firm-rxo-in-5-8-billion-deal",
+    "https://www.bnnbloomberg.ca/business/company-news/2026/10/05/ch-robinson-to-buy-rxo-for-us58b/",
+    "https://www.ttnews.com/articles/ch-robinson-rxo-deal-2026",
+    "https://ca.finance.yahoo.com/news/c-h-robinson-acquire-rxo-110000870.html",
+    "https://gokhshtein.com/news/2026-10-05-ch-robinson-buys-rxo-for-58b-targets-300m-in-synergies",
+    "https://foreignpolicy.com/2026/10/01/oil-strait-hormuz-iran-trump-war-gulf-gas-diesel-prices/",
+    "https://newstarget.com/2026-10-01-trucking-companies-file-bankruptcy-record-diesel-cost.html",
+    "https://www.globenewswire.com/news-release/2026/09/29/3370881/0/en/lsp44-named-to-freightwaves-2027-freighttech100.html",
+    "https://transportmanagement.org/trimble-weighs-transporeon-sale-shipper-impact",
+    "https://highways.today/2026/10/03/uber-freight-krakow-expansion/",
+    "https://summar.com/freight-market-update-october-2026/",
+    "https://financialcontent.com/article/bizwire-2026-10-5-ch-robinson-to-acquire-rxo-redefining-the-future-of-third-party-logistics-while-unlocking-significant-shareholder-value"
   ],
   "seen_story_hashes": [
     "trimble tms potential sale goldman sachs advising tmw tms maps no buyer confirmed q4 contract cycle timing mid-market shipper renewals uncertaintyccj",
@@ -2452,7 +2465,14 @@
     "a16cf9205807af1b1ec1cae7b2c4f5dc",
     "85c92e27f0bdd205c22f14428e64035f",
     "7955ba366f864d4a17eca547efe956ed",
-    "e25c69c389e76495535a346a7d11acc0"
+    "e25c69c389e76495535a346a7d11acc0",
+    "c.h. robinson to acquire rxo $5.8b 29% premium $30.25/share combined ev $25b $300m synergies lean ai model close h1 2027bloomberg",
+    "chr lean ai operating model cited as mechanism to extract $300m from rxo deal first major broker to structure ai productivity as m&a justifchr press",
+    "flexport atlas mcp server enabling ai agents claude chatgpt copilot to book and track global freight ocean air rail barge real timeflexport",
+    "lsp44 project44 named freightwaves 2027 freighttech100 sept 29 57% yoy shipper revenue growth 48% q4 arr growth enterprise rfp competi",
+    "apax partners bain capital stepped away trimble t&l review third buyer advanced talks considering transporeon tmw/tm4 portfolio splittransportmanagement",
+    "uber freight krakow poland control tower european 4pl ops hub actively staffing mike doucleff head of europe sept 28 start oxea four-geohighways today",
+    "chr rxo managed transportation merge h1 2027 close rxo managed transportation folding into chr 4pl business competing against transplace"
   ],
   "threads": [
     {
@@ -2514,8 +2534,8 @@
     {
       "id": "trimble_tms_sale",
       "label": "Trimble TMS/TMW Sale Process",
-      "status": "Trimble Insight Conference (San Diego, Sept 28-29): CEO Rob Painter said no update on Goldman Sachs-led sale process; comfortable owning the business. Unveiled NEXT Showcase with ~20 AI tools, 4 carrier TMS platforms (Innovative, TruckMate, TMW.Suite, Fuel Dispatch) now browser-based and agent-ready, no migration required. Sale process and potential Transporeon/TMW breakup still ongoing.",
-      "last_covered_date": "2026-09-28",
+      "status": "Apax Partners and Bain Capital stepped away from Trimble's Goldman Sachs-led T&L review; a third buyer in advanced talks reportedly considering a portfolio split — Transporeon (European shipper TMS) sold separately from TMW/TM4 (North American carrier/broker TMS). Q4 2026 RFP season is active, creating peak Transplace displacement window. Deal outcome and timeline TBD.",
+      "last_covered_date": "2026-10-05",
       "first_covered_date": "2026-08-12"
     },
     {
@@ -2647,8 +2667,8 @@
     {
       "id": "uber_freight_europe_4pl",
       "label": "Uber Freight European 4PL Expansion",
-      "status": "Sept 22, 2026: Mike Doucleff appointed Head of Europe (reports directly to CEO Tinucci); Krakow, Poland Control Tower and ops hub launching 2027 — second European location alongside existing Netherlands base; dedicated product and engineering resources earmarked for European TMS experience improvements. Built on 200M EUR freight under management, doubling of new 4PL deals in 2025, and OXEA four-geography managed transportation win (Sept 15).",
-      "last_covered_date": "2026-09-22",
+      "status": "Krakow, Poland Control Tower and European 4PL ops hub actively staffing as of Oct 3, 2026 following Mike Doucleff's Sept 28 start as Head of Europe. Supporting OXEA four-geography managed transportation mandate and doubling of European 4PL new wins in 2025. Second European location alongside Netherlands base.",
+      "last_covered_date": "2026-10-05",
       "first_covered_date": "2026-09-22"
     },
     {
@@ -2680,6 +2700,13 @@
       "last_covered_date": "2026-10-02"
     },
     {
+      "id": "chr_rxo_acquisition",
+      "label": "CHR $5.8B Acquisition of RXO",
+      "status": "CHR announced definitive $5.8B acquisition of RXO on Oct 5, 2026 ($17.25/share cash + 0.0856 CHRW shares = $30.25/share, 29% premium). Combined EV >$25B. $300M net run-rate synergies via Lean AI model targeted within 2 years of H1 2027 close. Financed via Morgan Stanley bridge; CHR targets 1.75-2.25x leverage by end-2028. Creates combined managed transportation + brokerage + last-mile platform. Subject to regulatory review.",
+      "last_covered_date": "2026-10-05",
+      "first_covered_date": "2026-10-05"
+    },
+    {
       "id": "eu_diesel_reserve_standoff",
       "label": "EU-US Diesel Reserve Standoff",
       "status": "US demanded EU release 120M barrels emergency diesel reserves over 6 months; EU rejected and called US diesel export ban threat 'fully rejected' (Oct 1-2). Germany (18% of EU stockpiles) declining drawdown. France/Germany control ~35% of EU reserves. Energy Commissioner Jørgensen coordinating EU joint position. Standoff eliminates diplomatic relief for diesel prices through near-term.",
@@ -2688,48 +2715,6 @@
     }
   ],
   "last_30_days": [
-    {
-      "date": "2026-09-02",
-      "stories_covered": [
-        "DAT August monthly: van TVI softest August since 2021, avg $2.03/mile; month-end L/T spike 9.62→12.01 in one week — capacity attrition signal",
-        "Panama Canal 34/day cap begins Sept 4, 32/day Sept 15; SK Gas record $5.3M priority slot",
-        "Canada counter-tariffs T-6 (Sept 8): 15–50% on 700+ US products, goods-in-transit exempt with documentation; USTR Greer confirmed no further US-Canada talks",
-        "USMCA Round 4 opened Sept 2, Washington D.C.: autos, Section 232, Rapid Response Labor Mechanism; 85% Mexican exporters relying on USMCA; resolution likely 2027",
-        "Aurora: three September investor conferences confirmed (Goldman Sachs Sept 10, Morgan Stanley Sept 15, Evercore Sept 29); first pricing scrutiny since $2+/mi TaaS disclosed",
-        "DHL Global Forwarding acquires Aero Cargas (Uruguay, Sept 1): first direct Latin American ground network",
-        "RXO Curve Q3 EBITDA guided $40M vs $6M Q1; active CHR enterprise displacement campaign",
-        "C.H. Robinson $604M nuclear verdict appeal pending; no new ruling; insurance secured through 2026"
-      ]
-    },
-    {
-      "date": "2026-09-03",
-      "stories_covered": [
-        "Hormuz Day 188: 6 ships/day (vs 85 normal), 465 vessels anchored — aftermath of US Sept 1 ~100 IRGC target strikes (first Iranian tankers) + Iran ballistic missile retaliation; triple shock convergence with Canada T-5 and Panama Canal starting tomorrow",
-        "ISM Manufacturing PMI 54.6% August (8th consecutive expansion, released Sept 1); new orders 53.7%, production 58.3%",
-        "Canada counter-tariffs T-5 (Sept 8): carriers actively avoiding northbound cross-border loads; goods-in-transit exempt with documentation",
-        "Panama Canal drops to 34 transits/day starting Sept 4 (32/day Sept 15); El Niño watershed 44% below avg; East/Gulf Coast port queues building Q4",
-        "C.H. Robinson launches US-Mexico freight consolidation service: up to 40% cost savings, 48-hour earlier visibility, customs brokerage + AI routing bundled",
-        "FMCSA ELP NPRM (Federal Register 2026-16288): proposes codifying English proficiency as OOS criterion; 26K+ drivers already sidelined; comment period Oct 9",
-        "Aurora expands to Fort Worth–El Paso route (11th Sun Belt lane); Goldman Sachs Communacopia Sept 10 first institutional pricing scrutiny of $2+/mi TaaS",
-        "Parcel carriers (UPS, USPS, OnTrac) all lock in Q4 peak surcharges — first synchronized multi-carrier peak stack in years; USPS pursuing 6% temporary rate increase",
-        "Diesel $5.599/gal as of Aug 31 (+$1.865 YoY); TL rates at 15-week seasonal low at Labor Day; seasonal reversal expected this week"
-      ]
-    },
-    {
-      "date": "2026-09-04",
-      "stories_covered": [
-        "Four-shock convergence: Panama Canal 34/day transit cap LIVE today (Sept 4); Dutch ports (Rotterdam, Amsterdam, Zeeland) 8-hour coordinated strike today + German port disruptions (first synchronized European multi-gateway disruption of 2026); Canada counter-tariffs T-4 (Sept 8) with CTA 'nuclear winter' warning + USTR no further US-Canada talks; freight at 15-week seasonal low entering Labor Day",
-        "DAT dry van linehaul $2.28/mi week ending Sept 1 (−4¢ WoW, +38% YoY); van L/T 10.4; reefer $2.64/mi, flatbed $2.67/mi; diesel $5.599/gal; Labor Day seasonal reversal widely expected",
-        "FedEx Freight: EVP/Chief Commercial Officer Michael Lyons terminated Sept 2 (Code of Conduct violation); 95 days into independent trading (FDXF); external CCO search underway",
-        "C.H. Robinson: CEO Bozeman confirmed $604M Texas nuclear verdict appeal at Q2 earnings call ('potentially years away'); simultaneously running new US-Mexico AI consolidation service",
-        "RXO: Q3 EBITDA guided $40M (vs $6M Q1); active enterprise account displacement campaign targeting CHR shippers on technology and product velocity",
-        "TruckSmarter shuts down permanently Sept 4: AI-native load board + chat-based dispatch app for owner-operators; 500K+ carriers; $16M raised Sept 2025; undisclosed acquirer; Dispatch AI agent also sunsets",
-        "Aurora Analyst & Investor Day confirmed Sept 23 at Pittsburgh HQ — first major institutional showcase since $2+/mi TaaS / $0.85+/mi DaaS pricing disclosed at Aug 20 town hall; Goldman Sachs Communacopia Sept 10 first public pricing scrutiny",
-        "Trimble TMS: no buyer as of Sept 4, Goldman Sachs process ongoing since July; Q4 RFP season open — clearest Transplace displacement opportunity in years for enterprise TMW/TM4 accounts",
-        "project44 Intelligent TMS: IDC MarketScape Major Player (Sept 2, first-ever TMS category recognition by IDC); G2 Fall 2026 Leader; 57% YoY shipper revenue growth; now competing in Q4 enterprise RFPs vs. Oracle, Blue Yonder, Transplace",
-        "FMCSA ELP NPRM (Federal Register 2026-16288): English proficiency proposed as OOS criterion for commercial drivers; 26K+ already sidelined; comment period Oct 9; most acute impact on US-Mexico cross-border capacity"
-      ]
-    },
     {
       "date": "2026-09-07",
       "stories_covered": [
@@ -2973,6 +2958,18 @@
         "Old Dominion 4.9% GRI takes effect October 5 — second consecutive year ODFL pulled GRI date forward by ~1 month; LTL pricing power remains intact entering Q4.",
         "China Golden Week (Oct 1-7) driving 18-25% blank sailings on Transpacific lanes; November port arrival clustering building late-fall import surge risk.",
         "FMCSA ELP NPRM (Docket FMCSA-2026-0826) comment deadline October 9 — 7 days remaining; could OOS additional ~9,000 drivers on top of 26,000+ already sidelined."
+      ]
+    },
+    {
+      "date": "2026-10-05",
+      "stories": [
+        "C.H. Robinson announced $5.8B acquisition of RXO — $17.25/share cash + 0.0856 CHRW shares = $30.25/share implied (29% premium), combined EV >$25B; $300M synergies via Lean AI model; close H1 2027; financed via Morgan Stanley bridge.",
+        "CHR/RXO deal context: CHR managing RICO suit (2:26-cv-00869, E.D. Texas, Oct 2) alleging chameleon carrier routing + unresolved $604M nuclear verdict appeal.",
+        "Flexport Atlas MCP server enables AI agents (Claude, ChatGPT, Copilot) to book and track ocean/air/rail/barge freight in real time; North America webinar Oct 8.",
+        "CHR Lean AI as M&A engine: ~92% load execution via AI agents; $300M synergy justification is first major broker to frame AI productivity as primary M&A thesis.",
+        "project44/LSP44 named FreightWaves 2027 FreightTech100 (Sept 29); 57% YoY shipper revenue growth, 48% Q4 ARR growth; competing in Q4 enterprise RFPs vs Oracle/Blue Yonder/Transplace.",
+        "Trimble TMS breakup advancing: Apax/Bain out; third buyer considering Transporeon/TMW-TM4 portfolio split. Q4 RFP season peak displacement window for Transplace.",
+        "Uber Freight Krakow hub building out as of Oct 3; Doucleff started Sept 28; supporting OXEA four-geography MT mandate."
       ]
     }
   ]
