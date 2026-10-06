@@ -1668,7 +1668,30 @@
     "https://transportmanagement.org/trimble-weighs-transporeon-sale-shipper-impact",
     "https://highways.today/2026/10/03/uber-freight-krakow-expansion/",
     "https://summar.com/freight-market-update-october-2026/",
-    "https://financialcontent.com/article/bizwire-2026-10-5-ch-robinson-to-acquire-rxo-redefining-the-future-of-third-party-logistics-while-unlocking-significant-shareholder-value"
+    "https://financialcontent.com/article/bizwire-2026-10-5-ch-robinson-to-acquire-rxo-redefining-the-future-of-third-party-logistics-while-unlocking-significant-shareholder-value",
+    "https://www.flexport.com/technology/flexport-mcp/",
+    "https://theloadstar.com/flexport-lets-ai-agents-book-freight-who-signed-the-contract",
+    "https://finance.yahoo.com/technology/ai/articles/flexport-launches-technology-let-ai-160000388.html",
+    "https://freightwaves.com/news/waabi-volvo-warp-autonomous-ltl-customer-operations",
+    "https://www.prnewswire.com/news-releases/volvo-and-waabi-kick-off-customer-operations-in-texas-starting-with-warp-302898508.html",
+    "https://insights.uberfreight.com/hubfs/UberFreight_Market_Update_Report.pdf",
+    "https://www.supplychainbrain.com/articles/44925-panama-canal-to-roll-back-transit-and-draft-restrictions",
+    "https://www.npr.org/2026/10/02/nx-s1-5989397/the-g7-will-release-100-million-reserve-barrels-of-diesel-fuel-over-the-next-4-months",
+    "https://www.china-briefing.com/news/us-china-relations-in-the-trump-2-0-implications/",
+    "https://manilatimes.net/2026/10/01/tmt-newswire/globenewswire/xpo-opens-two-new-service-centers-in-fast-growing-freight-markets/2437017",
+    "https://www.freightwaves.com/news/national-trucking-capacity-is-about-to-tighten-significantly",
+    "https://www.freightwaves.com/news/white-paper-state-of-the-industry-october-2026",
+    "https://forum.freightwaves.com/t/flexport-launches-mcp-server-for-ai-agents-to-book-freight/11997",
+    "https://splash247.com/flexport-lets-ai-agents-book-freight-without-logging-in/",
+    "https://www.ajot.com/news/flexport-launches-technology-to-let-ai-agents-book-track-and-optimize-global-freight",
+    "https://www.freightwaves.com/news/is-the-freight-market-finally-turning",
+    "https://www.freightwaves.com/news/class-8-truck-orders-rise-18-in-september-as-fleets-turn-to-2027-models",
+    "https://www.chrobinson.com/en-us/resources/insights-and-advisories/north-america-freight-insights/oct-2026-freight-market-update/",
+    "https://www.thenationalnews.com/business/energy/2026/10/02/g7-members-agree-to-release-100-million-barrels-of-diesel-and-other-reserves/",
+    "https://www.roboticsandautomationnews.com/2026/10/05/volvo-and-waabi-launch-autonomous-freight-operations-in-texas/105526/",
+    "https://runtimewire.com/article/volvo-waabi-warp-texas-autonomous-ltl-freight",
+    "https://www.trucknews.com/technology/volvo-waabi-launch-autonomous-freight-operations-with-warp-in-texas/1003222758/",
+    "https://www.automotiveworld.com/news/aurora-expands-autonomous-trucking-across-sun-belt/"
   ],
   "seen_story_hashes": [
     "trimble tms potential sale goldman sachs advising tmw tms maps no buyer confirmed q4 contract cycle timing mid-market shipper renewals uncertaintyccj",
@@ -2472,7 +2495,15 @@
     "lsp44 project44 named freightwaves 2027 freighttech100 sept 29 57% yoy shipper revenue growth 48% q4 arr growth enterprise rfp competi",
     "apax partners bain capital stepped away trimble t&l review third buyer advanced talks considering transporeon tmw/tm4 portfolio splittransportmanagement",
     "uber freight krakow poland control tower european 4pl ops hub actively staffing mike doucleff head of europe sept 28 start oxea four-geohighways today",
-    "chr rxo managed transportation merge h1 2027 close rxo managed transportation folding into chr 4pl business competing against transplace"
+    "chr rxo managed transportation merge h1 2027 close rxo managed transportation folding into chr 4pl business competing against transplace",
+    "7df7118acf2d4ba59e39ccdf48253fe6",
+    "b37e1762440e4caaeb409c91a752c8e8",
+    "39d015ebf62e920224388596a03746ed",
+    "23526bc6f3da2e1adf3e3364bc2a6eb4",
+    "fc40d2a2293851d2fc251451654729e8",
+    "8abbe69a713a516b44edbd3792b2161a",
+    "bf557a7086773a1a25806c007e9252c9",
+    "5aa243907f6a2d97762d63482d065580"
   ],
   "threads": [
     {
@@ -2492,8 +2523,8 @@
     {
       "id": "aurora_commercial_deployment",
       "label": "Aurora driverless commercial deployment",
-      "status": "At Evercore 9th Annual ADAS & AI Forum (Sept 29): reiterated only fully-driverless AV on public roads. 200 trucks by year-end 2026, 1,000+ by 2027. Aurora Driver 2 in production; next-gen hardware (AUMOVIO) full PPAP by end-2027. Partners: FedEx Freight, Werner, Continental. Uber Freight stake reduced.",
-      "last_covered_date": "2026-09-28",
+      "status": "Roush targeting 20 trucks/week Gen-2 hardware upfitting in October; PACCAR integrating Aurora Driver into future production-line trucks. On track for 200+ driverless trucks by year-end 2026 and $80M TaaS run-rate. Waabi (separate UF partner) also launched first LTL customer ops with Volvo for Warp on Dallas-Houston (Oct 5).",
+      "last_covered_date": "2026-10-06",
       "first_covered_date": "2026-08-05"
     },
     {
@@ -2562,8 +2593,8 @@
     {
       "id": "panama_canal_el_nino_2026",
       "label": "Panama Canal El Nino draft cuts",
-      "status": "Draft limit drops to 14.48m effective October 1 (from 14.63m). 32-vessel/day transit cap maintained (9 Neopanamax, 23 Panamax). El Nino watershed 35.8% below historical average. Further slot reductions possible in Q1 2027 depending on Oct-Nov rainfall.",
-      "last_covered_date": "2026-09-15",
+      "status": "Starting October 15: Neopanamax transit slots increase 9→10 per day and draft limits ease 48.5→49 ft as Gatun Lake water levels recover from El Niño lows. First structural capacity relief since restrictions began. Panama's met office still projects below-average rainfall Oct-Nov but 'effective water-saving measures in locks' cited.",
+      "last_covered_date": "2026-10-06",
       "first_covered_date": "2026-08-25"
     },
     {
@@ -2681,9 +2712,9 @@
     {
       "id": "trump_xi_trade_truce_2026",
       "label": "US-China Trade Truce / Nov 10 Deadline",
-      "status": "White House state visit Sept 24; November 10 truce expiry deadline on 30% reciprocal tariffs + Section 301. Potential pull-forward surge if truce collapses, repeating 2025 pattern. Tougher negotiations on trade surplus and technology intensifying as deadline approaches.",
+      "status": "US-China trade truce extended from November 10, 2026 deadline to January 10, 2027 per US Treasury Secretary Bessent; removes Q4 pull-forward import surge risk. Core structural disputes (trade surplus, technology) remain unresolved; new deadline gives both sides through Q4 and into 2027.",
       "first_covered_date": "2026-09-24",
-      "last_covered_date": "2026-09-24"
+      "last_covered_date": "2026-10-06"
     },
     {
       "id": "typhoon_ragasa_2026",
@@ -2709,9 +2740,23 @@
     {
       "id": "eu_diesel_reserve_standoff",
       "label": "EU-US Diesel Reserve Standoff",
-      "status": "US demanded EU release 120M barrels emergency diesel reserves over 6 months; EU rejected and called US diesel export ban threat 'fully rejected' (Oct 1-2). Germany (18% of EU stockpiles) declining drawdown. France/Germany control ~35% of EU reserves. Energy Commissioner Jørgensen coordinating EU joint position. Standoff eliminates diplomatic relief for diesel prices through near-term.",
+      "status": "G7 agreed Oct 2 to release 100M barrels of diesel/oil reserves over 4 months with front-loaded substantial release in first 20 days. National diesel average fell to $6.38/gal (from $6.549 record Sept 28). Goldman Sachs estimates release offsets ~half the price surge. Structural Hormuz supply disruption persists; no full price recovery expected near-term.",
       "first_covered_date": "2026-10-02",
-      "last_covered_date": "2026-10-02"
+      "last_covered_date": "2026-10-06"
+    },
+    {
+      "id": "waabi_volvo_warp_ops",
+      "label": "Waabi-Volvo Warp LTL Customer Ops",
+      "status": "Volvo VNL Autonomous trucks running Waabi Driver began first customer freight operations for Warp on Dallas-Houston corridor Oct 5, 2026. Supervised (observer in cab). First LTL-class deployment for Waabi — multi-customer freight, third-party facility drops. Direct implication for UF-Waabi partnership roadmap extending beyond dedicated TL use cases.",
+      "last_covered_date": "2026-10-06",
+      "first_covered_date": "2026-10-06"
+    },
+    {
+      "id": "flexport_mcp_launch",
+      "label": "Flexport MCP AI-Native Freight Booking",
+      "status": "Flexport launched MCP Server Oct 6, 2026 enabling AI agents (Claude, ChatGPT, Copilot, enterprise) to book freight at negotiated rates, track shipments, pull quotes — no human login required. Processing 21M tasks/year. First major freight intermediary with AI-native booking production infrastructure. Sets competitive benchmark for UF brokerage and 4PL/Transplace integration strategy.",
+      "last_covered_date": "2026-10-06",
+      "first_covered_date": "2026-10-06"
     }
   ],
   "last_30_days": [
@@ -2970,6 +3015,19 @@
         "project44/LSP44 named FreightWaves 2027 FreightTech100 (Sept 29); 57% YoY shipper revenue growth, 48% Q4 ARR growth; competing in Q4 enterprise RFPs vs Oracle/Blue Yonder/Transplace.",
         "Trimble TMS breakup advancing: Apax/Bain out; third buyer considering Transporeon/TMW-TM4 portfolio split. Q4 RFP season peak displacement window for Transplace.",
         "Uber Freight Krakow hub building out as of Oct 3; Doucleff started Sept 28; supporting OXEA four-geography MT mandate."
+      ]
+    },
+    {
+      "date": "2026-10-06",
+      "stories": [
+        "Waabi and Volvo began first commercial customer freight operations for Warp on Dallas-Houston LTL corridor (Oct 5).",
+        "Flexport launched MCP Server enabling AI agents to book freight at negotiated rates without human login (Oct 6).",
+        "XPO opened two new LTL service centers in Mesa AZ and Cameron MO expanding Sunbelt/Midwest density.",
+        "Panama Canal easing Neopanamax draft and slot restrictions starting October 15 as Gatun Lake water levels recover.",
+        "US-China trade truce extended from November 10 to January 10 2027 removing Q4 pull-forward import risk.",
+        "G7 agreed to release 100 million barrels of diesel reserves; national diesel average fell to $6.38/gal from $6.549 record.",
+        "Uber Freight Q3 Market Report warned of Q4 capacity tightening with tender rejections above 14% and contract rates up 18% YoY.",
+        "Aurora Gen-2 production ramp: Roush targeting 20 trucks/week upfitting in October; on track for 200+ driverless trucks by year-end."
       ]
     }
   ]
