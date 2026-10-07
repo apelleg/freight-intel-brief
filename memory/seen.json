@@ -1691,7 +1691,23 @@
     "https://www.roboticsandautomationnews.com/2026/10/05/volvo-and-waabi-launch-autonomous-freight-operations-in-texas/105526/",
     "https://runtimewire.com/article/volvo-waabi-warp-texas-autonomous-ltl-freight",
     "https://www.trucknews.com/technology/volvo-waabi-launch-autonomous-freight-operations-with-warp-in-texas/1003222758/",
-    "https://www.automotiveworld.com/news/aurora-expands-autonomous-trucking-across-sun-belt/"
+    "https://www.automotiveworld.com/news/aurora-expands-autonomous-trucking-across-sun-belt/",
+    "https://www.whitehouse.gov/releases/2026/10/president-trump-takes-decisive-action-to-lower-diesel-costs-for-american-truckers-farmers/",
+    "https://www.cnbc.com/2026/10/06/us-diesel-fuel-prices-iran-ukraine-energy-crisis-.html",
+    "https://www.cnbc.com/2026/10/07/trump-hormuz-oil-diesel-iran-anthropic-ai.html",
+    "https://www.freightwaves.com/news/benchmark-diesel-slides-what-will-be-impact-of-red-dye-change",
+    "https://www.freightwaves.com/news/optimus-acquires-smarthop-freight-platform",
+    "https://bigenergynews.com/2026/10/record-diesel-prices-make-the-case-for-moving-more-freight-by-rail/",
+    "https://www.bloomberg.com/news/articles/2026-10-06/uber-to-buy-catering-platform-ezcater-for-2-3-billion-in-cash",
+    "https://qz.com/trump-executive-order-red-dyed-diesel-tax-free-highway-100626",
+    "https://www.nbcnews.com/business/energy/aiming-fuel-costs-trump-opens-tax-exempt-red-dye-diesel-rcna601748",
+    "http://cdllife.com/2026/trump-signs-executive-order-allowing-on-highway-use-of-red-dyed-diesel/",
+    "https://politicalwire.com/2026/10/06/oil-is-flowing-from-hormuz-again-just-not-diesel/",
+    "https://foreignpolicy.com/2026/10/01/oil-strait-hormuz-iran-trump-war-gulf-gas-diesel-prices/",
+    "https://www.gurufocus.com/news/9111790/uber-technologies-uber-acquires-ezcater-for-23-billion-to-expand-corporate-dining-reach",
+    "https://summar.com/freight-market-update-october-2026/",
+    "https://www.freightwaves.com/news/freight-distress-spreads-as-bankruptcies-layoffs-top-600-jobs",
+    "https://www.chrobinson.com/en-us/resources/insights-and-advisories/north-america-freight-insights/oct-2026-freight-market-update/na-truckload/"
   ],
   "seen_story_hashes": [
     "trimble tms potential sale goldman sachs advising tmw tms maps no buyer confirmed q4 contract cycle timing mid-market shipper renewals uncertaintyccj",
@@ -2503,7 +2519,15 @@
     "fc40d2a2293851d2fc251451654729e8",
     "8abbe69a713a516b44edbd3792b2161a",
     "bf557a7086773a1a25806c007e9252c9",
-    "5aa243907f6a2d97762d63482d065580"
+    "5aa243907f6a2d97762d63482d065580",
+    "trump signs executive order allowing highway use of tax-free red-dyed diesel through december 31 24.4 cents/gallon federal excise tax deferredwhitehouse.gov",
+    "benchmark diesel slides second week what will be impact of red dye change on fuel surchargefreightwaves",
+    "estes express back-to-back record ltl weeks 15% yoy tonnage increase october 2026freightwaves",
+    "c.h. robinson october 2026 edge report tl costs +30% yoy 2026 +10% yoy 2027 route guide failures risingchr edge",
+    "uber technologies acquires ezcater $2.3b all-cash deal corporate catering platform 2.5b gbv 140k restaurants delivery expansion bloomberg oct 6 2026",
+    "optimus technology acquires smarthop load fleet management platform plans free access small midsize carriersfreightwaves oct 7 2026",
+    "record diesel prices economic case for moving more freight by rail intermodal shift 500-mile breakevenbig energy news oct 7 2026",
+    "iran linked attacks struck four additional tankers near hormuz october 2-4 fragile crude rebound threatened 19% refined productscnbc oct 7 2026"
   ],
   "threads": [
     {
@@ -2544,8 +2568,8 @@
     {
       "id": "iran_hormuz_shipping_deal",
       "label": "Iran Hormuz shipping attacks",
-      "status": "EU officially rejected US demand to release 120M barrels of emergency diesel reserves (Oct 1-2); Germany declining its pledged 15M barrel drawdown. US threatening diesel export ban against European allies. Refined products through Hormuz still at 677K bpd (19% of 3.6M pre-war). Diesel ~$6.38/gal nationally (first pullback from $6.549 record). No structural relief expected through Q1 2027.",
-      "last_covered_date": "2026-10-02",
+      "status": "Iran-linked attacks struck four additional tankers near Hormuz (Oct 2-4); CNBC Oct 7 reports the fragile crude rebound remains threatened. Refined products still at only 19% of pre-war baseline (677K bpd). Diesel national average ~$6.38/gal, down from $6.549 record (Sept 28) after G7 reserve release and Trump red-dyed diesel EO (Oct 7). No structural diesel relief expected through Q1 2027 absent a permanent Hormuz reopening.",
+      "last_covered_date": "2026-10-07",
       "first_covered_date": "2026-08-07"
     },
     {
@@ -2733,16 +2757,16 @@
     {
       "id": "chr_rxo_acquisition",
       "label": "CHR $5.8B Acquisition of RXO",
-      "status": "CHR announced definitive $5.8B acquisition of RXO on Oct 5, 2026 ($17.25/share cash + 0.0856 CHRW shares = $30.25/share, 29% premium). Combined EV >$25B. $300M net run-rate synergies via Lean AI model targeted within 2 years of H1 2027 close. Financed via Morgan Stanley bridge; CHR targets 1.75-2.25x leverage by end-2028. Creates combined managed transportation + brokerage + last-mile platform. Subject to regulatory review.",
-      "last_covered_date": "2026-10-05",
+      "status": "CHR announced $5.8B acquisition of RXO Oct 5, 2026 ($30.25/share, 29% premium, combined EV >$25B, $300M synergies via Lean AI, H1 2027 close). No FTC opposition raised; companies confident in regulatory clearance. CHR October 2026 Edge Report (published Oct 7) forecasts TL costs +30% YoY in 2026, +10% in 2027 — first multi-mode rate anchor since announcement. Combined platform will compete in enterprise managed transportation Q4 RFPs alongside Transplace.",
+      "last_covered_date": "2026-10-07",
       "first_covered_date": "2026-10-05"
     },
     {
       "id": "eu_diesel_reserve_standoff",
       "label": "EU-US Diesel Reserve Standoff",
-      "status": "G7 agreed Oct 2 to release 100M barrels of diesel/oil reserves over 4 months with front-loaded substantial release in first 20 days. National diesel average fell to $6.38/gal (from $6.549 record Sept 28). Goldman Sachs estimates release offsets ~half the price surge. Structural Hormuz supply disruption persists; no full price recovery expected near-term.",
+      "status": "Trump signed EO Oct 7 permitting tax-free red-dyed (off-road) diesel on US highways through Dec 31, deferring 24.4¢/gal federal excise tax — saves carriers $61-100+/fill. G7 100M barrel reserve release ongoing; national diesel average ~$6.38/gal (down from $6.549 record Sept 28). Structural Hormuz refined-product shortage persists; no full price recovery expected near-term.",
       "first_covered_date": "2026-10-02",
-      "last_covered_date": "2026-10-06"
+      "last_covered_date": "2026-10-07"
     },
     {
       "id": "waabi_volvo_warp_ops",
@@ -2757,6 +2781,20 @@
       "status": "Flexport launched MCP Server Oct 6, 2026 enabling AI agents (Claude, ChatGPT, Copilot, enterprise) to book freight at negotiated rates, track shipments, pull quotes — no human login required. Processing 21M tasks/year. First major freight intermediary with AI-native booking production infrastructure. Sets competitive benchmark for UF brokerage and 4PL/Transplace integration strategy.",
       "last_covered_date": "2026-10-06",
       "first_covered_date": "2026-10-06"
+    },
+    {
+      "id": "uber_parent_capital_allocation",
+      "label": "Uber Parent Capital Allocation Signals",
+      "status": "Uber Technologies announced $2.3B cash acquisition of ezCater (corporate catering, $2.5B GBV) on Oct 6, 2026 — expanding Uber Eats/Delivery segment. Second large M&A in rapid succession (after Delivery Hero, July 2026). Parent capital flowing toward food/delivery verticals; Uber Freight will face heightened internal ROI scrutiny in next prioritization cycle.",
+      "last_covered_date": "2026-10-07",
+      "first_covered_date": "2026-10-07"
+    },
+    {
+      "id": "trump_red_dyed_diesel_eo",
+      "label": "Trump Red-Dyed Diesel EO for Truckers",
+      "status": "Trump signed EO Oct 7, 2026 permitting highway use of tax-free red-dyed (off-road) diesel through December 31 — deferring 24.4¢/gal federal excise tax with no interest or penalties. Saves carriers $61/250-gal fill federally (up to $100+ with state matches). Chemically identical to standard highway diesel; FSC agreements tied to DOE benchmark may diverge from actual carrier pump prices. Agricultural fuel supply strain concerns raised.",
+      "last_covered_date": "2026-10-07",
+      "first_covered_date": "2026-10-07"
     }
   ],
   "last_30_days": [
@@ -3028,6 +3066,19 @@
         "G7 agreed to release 100 million barrels of diesel reserves; national diesel average fell to $6.38/gal from $6.549 record.",
         "Uber Freight Q3 Market Report warned of Q4 capacity tightening with tender rejections above 14% and contract rates up 18% YoY.",
         "Aurora Gen-2 production ramp: Roush targeting 20 trucks/week upfitting in October; on track for 200+ driverless trucks by year-end."
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "stories": [
+        "Trump signed executive order permitting tax-free red-dyed (off-road) diesel on US highways through Dec 31 — 24.4¢/gal federal excise tax deferred, saving carriers $61-100+/fill; FSC methodology vs. DOE benchmark divergence watch.",
+        "Benchmark diesel fell for second consecutive week (FreightWaves Oct 7); national average ~$6.38/gal, down from $6.549 record Sept 28.",
+        "Iran-linked attacks struck four additional tankers near Hormuz (Oct 2-4), threatening the fragile crude rebound; refined products still at 19% of pre-war baseline.",
+        "Estes Express posted back-to-back record LTL weeks — 15% YoY tonnage increase as of October 7.",
+        "CHR October 2026 Edge Report forecasts TL costs +30% YoY for full-year 2026, tapering to +10% YoY in 2027; first post-RXO-announcement rate forecast.",
+        "Uber parent acquired ezCater for $2.3B (Oct 6) — second large Uber M&A in rapid succession (after Delivery Hero); capital flowing toward food/delivery verticals away from freight.",
+        "Optimus Technology acquired SmartHop's load/fleet management platform; plans to offer it free to small and midsize carriers.",
+        "Record diesel prices driving intermodal modal shift on lanes >500 miles; JB Hunt intermodal at operating capacity ceiling."
       ]
     }
   ]
