@@ -1777,7 +1777,21 @@
     "https://www.ccjdigital.com/alternative-power/battery-electric/article/15825462/einride-level-4-autonomous-trucks-launch-ohio-pilot",
     "https://sdcexec.com/transportation/trucking/news/22975771/dimerco-peak-season-extended-asia-freight-demand-exceeds-forecasts",
     "https://sdcexec.com/transportation/3pl-4pl",
-    "https://www.ccjdigital.com/technology/artificial-intelligence/article/15836111/trimble-modernizes-freight-management-with-aiready-tms-updates"
+    "https://www.ccjdigital.com/technology/artificial-intelligence/article/15836111/trimble-modernizes-freight-management-with-aiready-tms-updates",
+    "https://www.aljazeera.com/economy/2026/10/12/iran-sets-crosshairs-on-us-uae-oil-shuttle-out-of-strait-of-hormuz",
+    "https://www.cnn.com/2026/10/11/middleeast/iran-hormuz-oil-analysis-intl",
+    "https://en.irna.ir/news/86288817/IRGC-Offending-supertanker-is-burning-in-Strait-of-Hormuz",
+    "https://en.apa.az/asia/irgc-supertanker-exploded-in-hormuz-after-hitting-mine-529336",
+    "https://en.abna24.com/news/1876868/IRGC-Navy-says-2nd-supertanker-explodes-after-striking-sea-mine",
+    "https://www.ajot.com/news/panama-canal-announces-increase-in-draft-and-daily-transit",
+    "https://www.intelligentaudit.com/blog/ia-insights-october-12-2026",
+    "https://www.fleetowner.com/emissions-efficiency/news/55405283/record-high-us-diesel-prices-hit-6-as-strait-of-hormuz-tensions-raise-trucking-costs",
+    "https://www.ccjdigital.com/business/article/15836592/ch-robinson-acquiring-rxo-in-58-billion-stock-and-cash-transaction",
+    "https://www.atsinc.com/blog/q4-2026-freight-market-update",
+    "https://container-news.com/panama-canal-postpones-neopanamax-draft-reduction/",
+    "https://www.seatrade-maritime.com/regulations/panama-canal-postpones-october-neopanamax-draught-cuts",
+    "https://shipandbunker.com/news/am/235871-panama-canal-eases-restrictions-on-ship-transits",
+    "https://www.freightwaves.com/news/uber-freight-elevates-ai-ambitions-with-hiring-of-logistics-technology-veteran"
   ],
   "seen_story_hashes": [
     "trimble tms potential sale goldman sachs advising tmw tms maps no buyer confirmed q4 contract cycle timing mid-market shipper renewals uncertaintyccj",
@@ -2624,7 +2638,15 @@
     "dd2cfc98d4bb8465c3f91a23ef1fd87c",
     "b2fa3e4080588e2cbbb08cc5932c1382",
     "0d97357d57d03ff42e67c75b6f54afcb",
-    "3e71547e1aba6e500d9e197052372769"
+    "3e71547e1aba6e500d9e197052372769",
+    "iran irgc escalated hormuz attacks supertanker mine explosion oct 11 12 15 vessels al jaze",
+    "van load-to-truck ratio 13.72 quarter-end surge oct 5-9 2026 spot rates 3.08/mi dat freight",
+    "panama canal 10th neopanamax slot october 15 2026 first structural capacity increase panama",
+    "chr october 2026 edge report tl costs 30 yoy tapering 10 2027 rxo acquisition rico lawsuit c",
+    "estes express back-to-back record ltl tonnage weeks october 15 yoy fedex repricing q4 freigh",
+    "port of los angeles new monthly container record october 2026 import surge intelligent audit",
+    "freightwaves f3 future of freight festival oct 27-28 chattanooga freighttech 25 awards freig",
+    "2027 3pl study shippers 66 vs 3pls 43 ai adoption gap widest ever armstrong associates freig"
   ],
   "threads": [
     {
@@ -2714,8 +2736,8 @@
     {
       "id": "panama_canal_el_nino_2026",
       "label": "Panama Canal El Nino draft cuts",
-      "status": "Starting October 15: Neopanamax transit slots increase 9\u219210 per day and draft limits ease 48.5\u219249 ft as Gatun Lake water levels recover from El Ni\u00f1o lows. First structural capacity relief since restrictions began. Panama's met office still projects below-average rainfall Oct-Nov but 'effective water-saving measures in locks' cited.",
-      "last_covered_date": "2026-10-06",
+      "status": "10th Neopanamax daily slot added Oct 15 as scheduled (up from 9/day, 33 total daily slots) \u2014 first structural ocean capacity increase since El Ni\u00f1o restrictions; October draft cut postponed, draft maintained at 14.94m/49ft.",
+      "last_covered_date": "2026-10-13",
       "first_covered_date": "2026-08-25"
     },
     {
@@ -2854,8 +2876,8 @@
     {
       "id": "chr_rxo_acquisition",
       "label": "CHR $5.8B Acquisition of RXO",
-      "status": "CHR announced $5.8B acquisition of RXO Oct 5, 2026 ($30.25/share, 29% premium, combined EV >$25B, $300M synergies via Lean AI, H1 2027 close). No FTC opposition raised; companies confident in regulatory clearance. CHR October 2026 Edge Report (published Oct 7) forecasts TL costs +30% YoY in 2026, +10% in 2027 \u2014 first multi-mode rate anchor since announcement. Combined platform will compete in enterprise managed transportation Q4 RFPs alongside Transplace.",
-      "last_covered_date": "2026-10-07",
+      "status": "CHR October 2026 Edge Report sets Q4 RFP rate anchor: TL costs +30% YoY 2026, tapering to +10% in 2027; $5.8B RXO acquisition expected close H1 2027; RICO chameleon-carrier lawsuit 2:26-cv-00869 E.D. Texas active \u2014 creating shipper defection opportunity for competitors.",
+      "last_covered_date": "2026-10-13",
       "first_covered_date": "2026-10-05"
     },
     {
@@ -2920,6 +2942,20 @@
       "status": "Freight Right Global Logistics launched MCP API for ocean freight booking via Claude, ChatGPT, and Microsoft Copilot (Oct 2026), following Flexport MCP launch Oct 6. AI agents can now quote, track, and book ocean cargo at negotiated rates without human login. Two major freight intermediaries with MCP infrastructure in production within 5 days of each other.",
       "first_covered_date": "2026-10-09",
       "last_covered_date": "2026-10-09"
+    },
+    {
+      "id": "iran_hormuz_shipping_attacks",
+      "label": "Iran IRGC Hormuz attacks",
+      "status": "IRGC detonated mine under 2nd supertanker Oct 11-12 while leaving via unauthorized route; 15+ vessels targeted Oct 2026; IRGC explicitly warned ops not limited to Hormuz; diesel eased to $6.199/gal (Oct 5) after Trump Oct 9 no-strike signal but new attacks threaten reversal; tender rejections projected 20% by December.",
+      "first_covered_date": "2026-10-13",
+      "last_covered_date": "2026-10-13"
+    },
+    {
+      "id": "labor_day_q4_tightening",
+      "label": "Q4 2026 freight market tightening",
+      "status": "DAT week Oct 5-9: van L/T ratio 13.72 (up from 11.40 quarter-end surge), van all-in ~$3.08/mi (+43% YoY); reefer ~$3.62/mi; flatbed ~$3.71/mi; tender rejections ~14%, projected 20% by December.",
+      "first_covered_date": "2026-10-13",
+      "last_covered_date": "2026-10-13"
     }
   ],
   "last_30_days": [
@@ -3185,6 +3221,18 @@
         "FMCSA ELP NPRM comment period closed Oct 9 \u2014 1,800+ comments; final rule could OOS ~9,000 more cross-border drivers beyond 26,000+ already sidelined.",
         "Forbes Oct 11: Hormuz crude recovered to pre-war baseline but refined products remain at 677K bpd (19% of 3.6M pre-war); diesel AAA $6.28/gal (slight uptick from $6.199 EIA Oct 5).",
         "DAT van all-in ~$3.08/mi nationally (Oct 2026); SONAR contract TL $2.72/mi+fuel at 52-week high (+18% YoY); van L/T 13.7 (quarter-end surge)."
+      ]
+    },
+    {
+      "date": "2026-10-13",
+      "stories": [
+        "IRGC detonated mine under 2nd supertanker Oct 11-12; 15+ vessels targeted in Oct 2026; IRGC warns ops not limited to Hormuz; diesel eased to $6.199/gal after Trump Oct 9 no-strike signal but new attacks threaten reversal.",
+        "DAT week Oct 5-9: van L/T 13.72 (up from 11.40 quarter-end surge), van all-in ~$3.08/mi (+43% YoY), reefer ~$3.62/mi, flatbed ~$3.71/mi; tender rejections ~14%, projected 20% by December.",
+        "Panama Canal adds 10th Neopanamax slot Oct 15 (up from 9/day) \u2014 first structural ocean capacity increase since El Ni\u00f1o restrictions; October draft cut postponed.",
+        "CHR October 2026 Edge Report: TL costs +30% YoY 2026, tapering to +10% in 2027; $5.8B RXO acquisition close H1 2027 pending; RICO chameleon-carrier lawsuit 2:26-cv-00869 E.D. Texas active.",
+        "Estes Express confirmed back-to-back record LTL tonnage weeks into October (+15% YoY); FedEx Freight repricing Q4 under new engineer-led commercial structure post-CCO termination.",
+        "Port of LA set new monthly container record October 2026, signaling import surge arriving Midwest/SE dray networks in 4-6 weeks.",
+        "FreightWaves F3 Future of Freight Festival Oct 27-28 Chattanooga; 2027 3PL Study shows 23-point AI adoption gap (shippers 66% vs 3PLs 43%)."
       ]
     }
   ]
