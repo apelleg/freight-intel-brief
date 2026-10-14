@@ -21,10 +21,8 @@ jobs:
           git config user.name "Claude Sonnet 4.6"
           git add memory/seen.json
           if ! git diff --staged --quiet; then
-            git commit -m "chore: update seen stories [2026-10-14]
-
-Co-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>
-Claude-Session: https://claude.ai/code/session_01Wuw4cMVhJhb4ZN1R3Sinn7"
+            printf 'chore: update seen stories [2026-10-14]\n\nCo-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>\nClaude-Session: https://claude.ai/code/session_01Wuw4cMVhJhb4ZN1R3Sinn7\n' > /tmp/commit_msg.txt
+            git commit -F /tmp/commit_msg.txt
             git push
           else
             echo "No changes to commit - seen.json already up to date"
