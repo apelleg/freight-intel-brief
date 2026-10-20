@@ -1856,7 +1856,20 @@
     "https://mybluegrace.com/indexes/bluegrace-logistics-freight-market-update-october-2026/",
     "https://abc30.com/post/trump-says-us-get-diesel-russia-relaxing-pressure-moscow-ease-prices-before-midterms/19925563/",
     "https://scmp.com/news/world/united-states-canada/article/3370409/trump-says-us-get-diesel-russia-stunning-bid-ease-prices",
-    "https://www.dcvelocity.com/transportation/trucking/autonomous-trucks/aurora-says-its-technology-will-guide-200-driverless-trucks-by-end-of-2026"
+    "https://www.dcvelocity.com/transportation/trucking/autonomous-trucks/aurora-says-its-technology-will-guide-200-driverless-trucks-by-end-of-2026",
+    "https://www.ajot.com/news/dat-spot-truckload-pricing-and-load-to-truck-ratios-for-oct-1016-2026-week-42",
+    "https://www.freightwaves.com/news/werner-enterprises-issues-q3-profit-warning",
+    "https://www.sec.gov/Archives/edgar/data/0000793074/000079307426000162/wern-20261019.htm",
+    "https://www.sec.gov/Archives/edgar/data/0000793074/000079307426000162/wern-8xk101926exhibit.htm",
+    "https://english.alarabiya.net/News/middle-east/2026/10/20/iran-s-irgc-says-mines-halted-two-tankers-crossing-strait-of-hormuz",
+    "https://www.theamericanconservative.com/iran-war-day-232-attacks-on-hormuz-shipping-surge-as-iran-says-strait-closed/",
+    "https://www.freightwaves.com/news/freight-market-alert-why-octobers-tender-rejections-hit-14-unexpectedly",
+    "https://www.trucknews.com/business-management/act-research-trucking-capacity-tightening-ahead-of-holiday-shipping-season/1003223517/",
+    "https://www.freightwaves.com/news/the-2026-elections-will-reshape-trucking-labor-policy-no-matter-which-party-wins",
+    "https://live.freightwaves.com/f3-future-of-freight-festival-2026",
+    "https://www.trucknews.com/business-management/truckload-rates-to-hit-highest-levels-since-2022-as-capacity-tightens-afs/1003223140/",
+    "https://www.atsinc.com/blog/q4-2026-freight-market-update",
+    "https://investor.werner.com/news-and-events/press-releases/news-details/2026/Werner-to-Release-Third-Quarter-Earnings-and-Host-Earnings-Call-on-October-27-2026/default.aspx"
   ],
   "seen_story_hashes": [
     "87241028b69603cd8b7c85793c31bf6f",
@@ -2749,7 +2762,14 @@
     "j.b. hunt q3 2026 revenue 3.68b intermodal +20% loads +8% oi +31% dedicated +35%freightwaves",
     "uber freight q3 2026 market report tight capacity tl mexico high exposure october 2026freightwaves",
     "canacar b-1 visa revocations 25000+ drivers sidelined calexico east mexicali blockade oct 18 2026freightwaves",
-    "dat spot truckload freight market oct 4-10 2026 van 2.26/mi ltr 10.5 diesel 6.382 eia oct 13 2026dat freight & analytics"
+    "dat spot truckload freight market oct 4-10 2026 van 2.26/mi ltr 10.5 diesel 6.382 eia oct 13 2026dat freight & analytics",
+    "irgc mined two more tankers oct 20 shot down us mq-9 drone formally re-declared strait of hormuz closed al arabiya",
+    "werner enterprises q3 adjusted eps 0.15-0.16 gaap 0.10-0.11 vs 0.36 consensus diesel driver insurance headwinds oct 19freightwaves",
+    "dat week 42 oct 10-16 van linehaul 2.26/mi flat wow +35% yoy flatbed only mode with rising l/t ratio oct 20 2026ajot/dat",
+    "sonar tender rejection index 14.17% october 2026 supply-driven no demand surge oct 20 2026freightwaves sonar",
+    "act research active truck utilization projected 96% by year-end supply-driven tightness into 2027 oct 16 2026truck news",
+    "f3 future of freight festival oct 27-28 2026 chattanooga freighttech100 shipper of choice announced livefreightwaves live",
+    "2026 elections will reshape trucking labor policy modern worker empowerment act post-election legislative targetfreightwaves"
   ],
   "threads": [
     {
@@ -3049,22 +3069,22 @@
     {
       "id": "iran_hormuz_shipping_attacks",
       "label": "Iran IRGC Hormuz attacks",
-      "status": "IRGC detonated mine under 2nd supertanker Oct 11-12 while leaving via unauthorized route; 15+ vessels targeted Oct 2026; IRGC explicitly warned ops not limited to Hormuz; diesel eased to $6.199/gal (Oct 5) after Trump Oct 9 no-strike signal but new attacks threaten reversal; tender rejections projected 20% by December.",
+      "status": "IRGC mined 2 more tankers Oct 20, shot down US MQ-9 drone, and formally re-declared Hormuz closed to all shipping. Crude flows 8.5M bpd (40% below pre-war baseline, Kpler week Oct 12) — October worst month for Hormuz shipping since war began. Diesel daily survey $6.32/gal Oct 19, slight uptick reversing post-Oct-9 de-escalation trend. Carrier financial attrition accelerating.",
       "first_covered_date": "2026-10-13",
-      "last_covered_date": "2026-10-13"
+      "last_covered_date": "2026-10-20"
     },
     {
       "id": "labor_day_q4_tightening",
       "label": "Q4 truckload capacity tightening",
-      "status": "JB Hunt Q3 2026 (Oct 15): revenue $3.68B +20%, intermodal revenue +20% to $1.83B on +8% loads, +31% OI; dedicated +35% to $894M; cost headwinds >$50M diesel/drivers. Stephens analysts: >30% TL-intermodal spread accelerating modal conversion. DAT week Oct 4-10: van L/T 10.5 (down from 13.7), linehaul $2.26/mi (+35% YoY), EIA diesel $6.382/gal. Tender rejections ~13.9% heading into holidays per IndexBox.",
+      "status": "Werner Enterprises pre-announced Q3 adjusted EPS $0.15–$0.16 (vs. $0.36 consensus) Oct 19 — $0.18/share cumulative headwinds from diesel, driver pay, and insurance reserve; revenue $946–951M; full results Oct 27. DAT Week 42 (Oct 10-16): van linehaul $2.26/mi flat WoW +35% YoY, L/T van 9.7 (down from 10.3 quarter-end surge). ACT Research: 96% active truck utilization projected by year-end; TD Cowen Q4 TL rates highest since 2022 +14.7% YoY. SONAR TRI 14.17%.",
       "first_covered_date": "2026-10-13",
-      "last_covered_date": "2026-10-19"
+      "last_covered_date": "2026-10-20"
     },
     {
       "id": "hormuz_iran_war",
       "label": "Hormuz / Iran tanker war",
-      "status": "IEA Oct 14 confirmed diesel shortages likely persist into 2027 \u2014 Gulf refinery damage (Saudi, Kuwait, UAE, Iraq) keeps refined products at ~11% of pre-war Hormuz flows even as crude recovered to ~76%. Diesel refining margins record ~5/bbl in September. Global refinery throughputs down 2.5M bpd in 2026, recovering +3.5M bpd in 2027. Structural diesel shortage independent of IRGC attack tempo.",
-      "last_covered_date": "2026-10-16",
+      "status": "IRGC mined 2 more tankers Oct 20, shot down US MQ-9, formally re-declared Hormuz closed; crude flows 8.5M bpd (40% below pre-war, Kpler Oct 12) \u2014 October worst month since war began. IEA (Oct 14) confirmed structural diesel shortage into 2027: Gulf refinery damage keeps refined products at ~11% of pre-war flows even as crude at ~76%. Diesel $6.32/gal (Oct 19 daily survey), slight uptick from $6.18/gal (EIA Oct 12).",
+      "last_covered_date": "2026-10-20",
       "first_covered_date": "2026-03-01"
     },
     {
@@ -3407,6 +3427,26 @@
         "Mexico Economy Minister Ebrard: bilateral tariff negotiations with US ~90% complete ahead of Oct 29 deadline \u2014 positive signal for cross-border managed transportation clients."
       ]
     },
-    "2026-10-19"
+    {
+      "date": "2026-10-19",
+      "stories": [
+        "Uber Freight CEO Tinucci Q3 2026 Market Report (Oct 18, FreightWaves): TL and Mexico rated high Q4 exposure; TL contract rates +18% YoY; Sept-Oct optimal window for capacity lock-in.",
+        "CANACAR estimates 25,000+ Mexican commercial drivers sidelined by CBP B-1 visa revocations; Calexico East-Mexicali crossing blockaded; cross-border TL capacity tightening ahead of Oct 29 USMCA bilateral deadline.",
+        "DAT Week 42 (Oct 10-16): van linehaul $2.26/mi flat WoW +35% YoY; van L/T 9.7 (down from 10.3 quarter-end surge); reefer L/T 15.8; flatbed L/T 36.5 (rising).",
+        "JB Hunt Q3 2026: revenue $3.68B +20% YoY, intermodal +20% to $1.83B on +8% loads +31% OI, dedicated +35% to $894M; >$50M diesel/driver cost headwinds."
+      ]
+    },
+    {
+      "date": "2026-10-20",
+      "stories": [
+        "IRGC mined 2 more tankers Oct 20, shot down US MQ-9 drone, formally re-declared Hormuz closed to all shipping; crude flows 8.5M bpd (40% below pre-war, Kpler week Oct 12) — October worst month for Hormuz shipping since war began.",
+        "Werner Enterprises Q3 profit warning (8-K Oct 19): adjusted EPS $0.15–$0.16 vs. $0.36 consensus; $0.18/share cumulative headwinds from diesel, driver pay, insurance reserve; revenue $946–951M; full results Oct 27.",
+        "DAT Week 42 (Oct 10-16): van linehaul $2.26/mi flat WoW +35% YoY, van L/T 9.7, reefer L/T 15.8, flatbed L/T 36.5 (rising); SONAR Tender Rejection Index 14.17%.",
+        "ACT Research (Oct 16): active truck utilization projected 96% by year-end — supply-driven (driver exits, carrier retirements), not demand recovery; TD Cowen/AFS projects Q4 TL rates highest since 2022 +14.7% YoY.",
+        "FreightWaves Oct 20: 2026 elections reshape trucking labor policy — Modern Worker Empowerment Act live post-election target; no floor vote scheduled.",
+        "F3 Future of Freight Festival Oct 27–28 Chattanooga; CHR Q3 earnings call Oct 28 — same week; C.H. Robinson first post-$5.8B RXO acquisition investor call.",
+        "Trimble TMS sale unresolved: Apax/Bain out, third buyer evaluating Transporeon/TMW-TM4 split; Q4 RFP season live — widest Transplace displacement window since Goldman Sachs process began."
+      ]
+    }
   ]
 }
