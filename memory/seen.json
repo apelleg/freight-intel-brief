@@ -1869,7 +1869,29 @@
     "https://live.freightwaves.com/f3-future-of-freight-festival-2026",
     "https://www.trucknews.com/business-management/truckload-rates-to-hit-highest-levels-since-2022-as-capacity-tightens-afs/1003223140/",
     "https://www.atsinc.com/blog/q4-2026-freight-market-update",
-    "https://investor.werner.com/news-and-events/press-releases/news-details/2026/Werner-to-Release-Third-Quarter-Earnings-and-Host-Earnings-Call-on-October-27-2026/default.aspx"
+    "https://investor.werner.com/news-and-events/press-releases/news-details/2026/Werner-to-Release-Third-Quarter-Earnings-and-Host-Earnings-Call-on-October-27-2026/default.aspx",
+    "https://www.freightwaves.com/news/reefer-truckload-rejections-soar-1-in-5-loads-rejected-nationally",
+    "https://www.fleetowner.com/emissions-efficiency/news/55413156/us-diesel-prices-climb-to-628-as-fleets-face-rising-fuel-costs-and-market-uncertainty",
+    "https://www.cnbc.com/2026/10/21/oil-price-today-wti-brent-rise-on-middle-east-worries.html",
+    "https://thenationalnews.com/news/gulf/2026/10/21/araghchi-says-strait-of-hormuz-will-stay-closed-until-us-agrees-to-irans-terms",
+    "https://oilprice.com/Latest-Energy-News/World-News/Oil-Jumps-2-as-Iran-Steps-Up-Attacks-on-Hormuz-Tankers.html",
+    "https://www.financialcontent.com/article/bizwire-2026-10-19-werner-reports-preliminary-third-quarter-2026-financial-results",
+    "https://www.truckingdive.com/news/diesel-price-volatility-is-truckings-top-issue-in-2026-atri/833310/",
+    "https://www.ttnews.com/articles/atri-top-issues-2026",
+    "https://www.freightwaves.com/news/fmcsa-aurora-beacon-waiver-reissue-challenge",
+    "https://joc.com/article/agentic-ai-to-bring-outsized-capabilities-to-smaller-freight-brokers-6309177",
+    "https://www.ccjdigital.com/business/mergers-acquisitions/article/15837502/experts-offer-tips-for-fleets-considering-a-tms-switch",
+    "https://www.latintimes.com/north-americas-trade-future-hangs-balance-sheinbaum-fights-usmca-deal-600132",
+    "https://www.csis.org/analysis/what-would-interim-us-mexico-trade-deal-actually-involve",
+    "https://www.trucknews.com/business-management/spot-freight-rates-hold-steady-despite-softer-load-volumes-dat-truckstop/1003223662/",
+    "https://www.ibtimes.com.au/oil-prices-rise-tanker-attacks-hormuz-supply-fears-1877115",
+    "https://www.business-standard.com/amp/markets/commodities/oil-prices-rise-on-red-sea-shipping-risks-threats-to-saudi-oil-sites-126102100052_1.html",
+    "https://finance.yahoo.com/markets/stocks/articles/xpo-schedules-third-quarter-2026-200500813.html",
+    "https://www.marketbeat.com/earnings/reports/2026-10-29-xpo-logistics-inc-stock/",
+    "https://www.overdriveonline.com/business/article/15837980/fuel-tops-truckings-biggest-issues-parking-no-2-for-drivers",
+    "https://cdllife.com/2026/drivers-motor-carriers-share-top-industry-issue-in-2026-atri-list-fuel-prices/",
+    "https://tanktransport.com/2026/10/trucking-fuel-costs/",
+    "https://news.alphastreet.com/werner-enterprises-releases-q3-2026-financial-results/"
   ],
   "seen_story_hashes": [
     "87241028b69603cd8b7c85793c31bf6f",
@@ -2769,7 +2791,20 @@
     "sonar tender rejection index 14.17% october 2026 supply-driven no demand surge oct 20 2026freightwaves sonar",
     "act research active truck utilization projected 96% by year-end supply-driven tightness into 2027 oct 16 2026truck news",
     "f3 future of freight festival oct 27-28 2026 chattanooga freighttech100 shipper of choice announced livefreightwaves live",
-    "2026 elections will reshape trucking labor policy modern worker empowerment act post-election legislative targetfreightwaves"
+    "2026 elections will reshape trucking labor policy modern worker empowerment act post-election legislative targetfreightwaves",
+    "iran fm araghchi says strait of hormuz will stay closed until us agrees to irans termsthenationalnews",
+    "oil price today wti brent rise on middle east worriescnbc",
+    "us diesel prices climb to 628 as fleets face rising fuel costs and market uncertaintyfleetowner",
+    "reefer truckload rejections soar 1 in 5 loads rejected nationallyfreightwaves",
+    "werner reports preliminary third quarter 2026 financial resultsfinancialcontent",
+    "diesel price volatility is truckings top issue in 2026 atritruckingdive",
+    "autonomous truck beacon waiver moves closer to october renewal amid legal challengefreightwaves",
+    "experts offer tips for fleets considering a tms switchccjdigital",
+    "north americas trade future hangs in the balance as sheinbaum fights for a usmca deallatintimes",
+    "oil jumps 2 as iran steps up attacks on hormuz tankersoilprice",
+    "agentic ai to bring outsized capabilities to smaller freight brokersjoc",
+    "atri top issues 2026 fuel prices top trucking concerns lawsuit reformttews",
+    "ltl earnings xpo old dominion saia q3 2026 oct 28-29 2026marketbeat"
   ],
   "threads": [
     {
@@ -2782,16 +2817,16 @@
     {
       "id": "usmca_round_negotiations",
       "label": "USMCA Bilateral Negotiations",
-      "status": "Mexico Economy Minister Ebrard stated Oct 14 that bilateral tariff negotiations with US are ~90% complete ahead of Oct 29 deadline. US declined to renew USMCA at July 1 joint review, triggering annual reviews; structural renegotiation slipping to 2027. Bilateral tariff track near conclusion.",
-      "last_covered_date": "2026-10-16",
+      "status": "Oct 29 bilateral US-Mexico deadline in 8 days (before Nov 3 midterms). Mexico Economy Minister Ebrard reported ~90% complete (Oct 14). Fourth bilateral round was delayed to October; no final deal confirmed. Canada talks stalled. USTR seeking interim deals with Mexico and Canada before year-end; harder issues (China, rules-of-origin) to 2027. 25K+ Mexican commercial drivers still sidelined by B-1 visa revocations.",
+      "last_covered_date": "2026-10-21",
       "first_covered_date": "2026-08-04"
     },
     {
       "id": "aurora_commercial_deployment",
       "label": "Aurora driverless commercial deployment",
-      "status": "DOT granted Aurora a 5-year beacon exemption Oct 7-8, 2026 \u2014 cab-mounted warning beacons replace reflective triangles for stopped autonomous trucks, clearing the last near-term legal barrier to commercial AV fleet scaling. Roush targeting 20 Gen-2 trucks/week upfitting in October; 200-truck year-end target remains intact. Gen-2 hardware at 1M-mile lifespan, 50%+ lower cost than Gen-1. Waabi-Volvo Warp customer ops on Dallas-Houston corridor began Oct 5.",
+      "status": "FMCSA 5-year beacon exemption (Oct 7) now faces legal challenge \u2014 FreightWaves Oct 21 report. Aurora's 200-truck year-end target and UF-Aurora commercial partnership intact pending resolution. Roush 20 Gen-2/week upfitting; Gen-2 hardware 1M-mile lifespan. Waabi-Volvo Warp Dallas-Houston corridor supervised ops ongoing.",
       "first_covered_date": "2026-08-05",
-      "last_covered_date": "2026-10-09"
+      "last_covered_date": "2026-10-21"
     },
     {
       "id": "fmcsa_ads_nprm",
@@ -2831,8 +2866,8 @@
     {
       "id": "trimble_tms_sale",
       "label": "Trimble TMS / T&L unit sale",
-      "status": "Apax and Bain out; third buyer evaluating Transporeon/TMW-TM4 portfolio split; no ownership resolution; Q4 2026 RFP season live \u2014 Transplace displacement window active.",
-      "last_covered_date": "2026-10-15",
+      "status": "Apax and Bain out; third buyer evaluating Transporeon/TMW-TM4 portfolio split; no ownership resolution. CCJ Digital published fleet TMS-switch guidance (Oct 15) signaling market anxiety. Q4 2026 RFP season live \u2014 widest Transplace displacement window since Goldman Sachs process began.",
+      "last_covered_date": "2026-10-21",
       "first_covered_date": "2026-08-12"
     },
     {
@@ -3069,22 +3104,22 @@
     {
       "id": "iran_hormuz_shipping_attacks",
       "label": "Iran IRGC Hormuz attacks",
-      "status": "IRGC mined 2 more tankers Oct 20, shot down US MQ-9 drone, and formally re-declared Hormuz closed to all shipping. Crude flows 8.5M bpd (40% below pre-war baseline, Kpler week Oct 12) — October worst month for Hormuz shipping since war began. Diesel daily survey $6.32/gal Oct 19, slight uptick reversing post-Oct-9 de-escalation trend. Carrier financial attrition accelerating.",
+      "status": "See hormuz_iran_war thread \u2014 merged. Iran FM Araghchi stated Oct 21 Hormuz stays closed until US agrees to terms. Brent $110. Goldman Sachs war-risk premium $7/bbl of $20/bbl total crude freight rate.",
       "first_covered_date": "2026-10-13",
-      "last_covered_date": "2026-10-20"
+      "last_covered_date": "2026-10-21"
     },
     {
       "id": "labor_day_q4_tightening",
       "label": "Q4 truckload capacity tightening",
-      "status": "Werner Enterprises pre-announced Q3 adjusted EPS $0.15–$0.16 (vs. $0.36 consensus) Oct 19 — $0.18/share cumulative headwinds from diesel, driver pay, and insurance reserve; revenue $946–951M; full results Oct 27. DAT Week 42 (Oct 10-16): van linehaul $2.26/mi flat WoW +35% YoY, L/T van 9.7 (down from 10.3 quarter-end surge). ACT Research: 96% active truck utilization projected by year-end; TD Cowen Q4 TL rates highest since 2022 +14.7% YoY. SONAR TRI 14.17%.",
-      "first_covered_date": "2026-10-13",
-      "last_covered_date": "2026-10-20"
+      "status": "Reefer tender rejections 21.44% (1-in-5 loads) as of Oct 20 (FreightWaves SONAR). EIA diesel $6.276/gal Oct 20 (up 10c WoW). DAT Week 42: van $2.26/mi flat WoW +35% YoY; van L/T 9.7; flatbed L/T 36.5 (rising). ACT Research: 96% active truck utilization projected year-end \u2014 supply-driven exits. ATRI: fuel at #1 for first time in 22-year history. Werner Q3 miss: $0.18/share diesel/driver/insurance headwinds. Full Werner results Oct 27; CHR, XPO, ODFL, Saia earnings Oct 28-29.",
+      "first_covered_date": "2026-09-09",
+      "last_covered_date": "2026-10-21"
     },
     {
       "id": "hormuz_iran_war",
       "label": "Hormuz / Iran tanker war",
-      "status": "IRGC mined 2 more tankers Oct 20, shot down US MQ-9, formally re-declared Hormuz closed; crude flows 8.5M bpd (40% below pre-war, Kpler Oct 12) \u2014 October worst month since war began. IEA (Oct 14) confirmed structural diesel shortage into 2027: Gulf refinery damage keeps refined products at ~11% of pre-war flows even as crude at ~76%. Diesel $6.32/gal (Oct 19 daily survey), slight uptick from $6.18/gal (EIA Oct 12).",
-      "last_covered_date": "2026-10-20",
+      "status": "Iran FM Araghchi stated Oct 21 Hormuz will stay closed until US agrees to Iran's full terms \u2014 no near-term diplomatic resolution. Brent crude $109.73-110.46/bbl (Oct 21). Goldman Sachs: total crude freight rates >$20/bbl (vs $3/yr ago), war-risk premiums ~$7/bbl. EIA diesel $6.276/gal Oct 20 (up 10c WoW, $2.66 above year-ago). Qatar/Pakistan mediation proposal briefly pushed prices to $106 then faded. 18+ Kpler-tracked attacks past 2 weeks. Crude at ~76% pre-war baseline; refined products ~11%. Structural diesel shortage confirmed into 2027 (IEA).",
+      "last_covered_date": "2026-10-21",
       "first_covered_date": "2026-03-01"
     },
     {
@@ -3111,8 +3146,8 @@
     {
       "id": "tms_ai_agent_race",
       "label": "TMS AI agent race (SAP/Descartes)",
-      "status": "project44 Intelligent TMS named Accelerator in Nucleus Research 2026 TMS Value Matrix (Oct 15) \u2014 57% YoY shipper revenue growth. Leaders confirmed: Blue Yonder, E2open, Infios, Infor, Manhattan, Oracle. AI agents confirmed as primary TMS differentiator. SAP Joule dispatch agent expected Q4 2026; Descartes Agent Control Plane live Oct 6. Q4 2026 first RFP cycle where shippers explicitly score agentic dispatch.",
-      "last_covered_date": "2026-10-16",
+      "status": "JOC Oct 2026: agentic AI enabling smaller brokers to offer managed transportation at enterprise quality \u2014 4PL capability gap compressing. Flexport MCP (Oct 6), Freight Right MCP (Oct 9), RedwoodConnect/Augment (Sept 10) all lowering cost of automated freight execution. F3 Festival Oct 26-28 Chattanooga will preview next-gen TMS/AI products.",
+      "last_covered_date": "2026-10-21",
       "first_covered_date": "2026-10-15"
     },
     {
@@ -3138,46 +3173,6 @@
     }
   ],
   "last_30_days": [
-    {
-      "date": "2026-09-16",
-      "stories": [
-        "Iran formally unveiled 60-day Hormuz corridor to 7 Gulf nations in Muscat (Saudi Arabia, UAE, Kuwait, Qatar, Oman, Iraq; Bahrain declined); no transit fees; fee structures and operational scope still under negotiation.",
-        "DAT August monthly: van spot -$0.20/mi to $2.19/mi \u2014 steepest July-to-August linehaul decline in DAT 16-year history; reefer -$0.14/mi to $2.61/mi; flatbed -$0.20/mi to $2.70/mi; all modes still +30%+ YoY.",
-        "Diesel $6.29/gal national average (EIA week ending Sept 14) \u2014 new weekly nominal record, +$2.53 YoY.",
-        "OXEA selects Uber Freight as strategic global logistics partner across US, Canada, Mexico, and Europe \u2014 first UF managed transportation mandate spanning four geographies from inception.",
-        "Werner CEO Leathers at Morgan Stanley Laguna: declares 2026 peak 'best for trucking since COVID'; estimates ~25,000 drivers removed by FMCSA ELP enforcement in first year.",
-        "NRF reverses prior peak-slowdown call; September imports forecast 2.31M TEUs (+9.6% YoY) \u2014 busiest import month of 2026.",
-        "JB Hunt CFO and Intermodal President at Morgan Stanley Laguna: intermodal volumes at record levels, structural upcycle narrative intact through 2027."
-      ]
-    },
-    {
-      "date": "2026-09-17",
-      "stories": [
-        "All three truckload modes (van, reefer, flatbed) posted simultaneous gains for first time since May; NTI $3.42/mi (+47% YoY); van L/T 11.5, reefer 21.5, flatbed 36.4.",
-        "Iran announced 60-day Hormuz corridor to 7 Gulf nations in Muscat (Sept 16) but simultaneously attacked bulk carrier Minoan Dignity and seized tanker Amara; 12 vessels/day vs. 85 baseline.",
-        "Diesel $6.269/gal (FreightWaves Sept 16 index) \u2014 new nominal weekly record.",
-        "C.H. Robinson launched BidBoardX, a carrier-facing committed freight search-bid-secure platform for local, dedicated, and drop-trailer freight.",
-        "Flexport announced Fall Technology Release Sept 29 (Flexport Atlas, AI customs compliance 0.2% error rate, 10% container cost savings).",
-        "Aurora Innovation Investor Day confirmed Sept 23 Dallas (formal IR invite issued); first major capital markets event since commercial launch.",
-        "Pony.ai Gen-4 Level 4 robotruck unveiled at IAA 2026 Hannover with ADK cost 70% below prior gen; volume production starting 2026.",
-        "Trimble TMS/TMW Goldman Sachs sale ongoing, no buyer; Q4 RFP window open \u2014 Transplace displacement opportunity active.",
-        "RedwoodConnect/Augment: AI agent Augie pre-built into Oracle TM, Blue Yonder, MercuryGate/Infios, Manhattan \u2014 no custom build required.",
-        "FMCSA ELP NPRM comment deadline Oct 9 (22 days); Werner CEO estimated 25K drivers removed from cross-border lanes.",
-        "NHTSA ADS Framework comment period closes Sept 30 (13 days); docket 2026-17741 governs Aurora/UF commercial partnership."
-      ]
-    },
-    {
-      "date": "2026-09-18",
-      "stories": [
-        "Iran violated its own 60-day Hormuz corridor within 48 hours: tankers AL REKAYYAT (Qatari LNG) and Saudi ULCC struck on NCAGS-approved outbound route \u2014 third IRGC attack on Qatari LNG in 2026.",
-        "Diesel hit $6.285/gal (DOE effective Sept. 14) \u2014 new all-time series record; ULSD futures $5.262/gal highest since 1978; ExxonMobil Joliet refinery outage compounds Hormuz/Saudi pipeline pressure.",
-        "DAT dry van spot $2.20/mi (week of Sept. 15, -$0.01 WoW, +34.2% YoY); van L/T 10.95 (down from 11.47, still 2\u00d7 year-ago 5.33); reefer 21.5; flatbed 36.4.",
-        "CBP begins voiding Importer of Record numbers today for inaccurate Form 5106 data under EO 14411 \u2014 immediate import shutdown for affected shippers.",
-        "At least one major brokerage cut approved carrier list from 60,000 to 14,000; shippers running emergency minibids to lock in 2027 baseline capacity.",
-        "C.H. Robinson September Edge report raises reefer rate forecast as supply contracts faster than demand; 2027 insurance renewal underway with $604M nuclear verdict unresolved.",
-        "Aurora Gen-2: Roush targets 1,000-truck annual production rate by year-end 2026; Investor Day Sept. 23 Dallas."
-      ]
-    },
     {
       "date": "2026-09-21",
       "stories": [
@@ -3439,13 +3434,28 @@
     {
       "date": "2026-10-20",
       "stories": [
-        "IRGC mined 2 more tankers Oct 20, shot down US MQ-9 drone, formally re-declared Hormuz closed to all shipping; crude flows 8.5M bpd (40% below pre-war, Kpler week Oct 12) — October worst month for Hormuz shipping since war began.",
-        "Werner Enterprises Q3 profit warning (8-K Oct 19): adjusted EPS $0.15–$0.16 vs. $0.36 consensus; $0.18/share cumulative headwinds from diesel, driver pay, insurance reserve; revenue $946–951M; full results Oct 27.",
+        "IRGC mined 2 more tankers Oct 20, shot down US MQ-9 drone, formally re-declared Hormuz closed to all shipping; crude flows 8.5M bpd (40% below pre-war, Kpler week Oct 12) \u2014 October worst month for Hormuz shipping since war began.",
+        "Werner Enterprises Q3 profit warning (8-K Oct 19): adjusted EPS $0.15\u2013$0.16 vs. $0.36 consensus; $0.18/share cumulative headwinds from diesel, driver pay, insurance reserve; revenue $946\u2013951M; full results Oct 27.",
         "DAT Week 42 (Oct 10-16): van linehaul $2.26/mi flat WoW +35% YoY, van L/T 9.7, reefer L/T 15.8, flatbed L/T 36.5 (rising); SONAR Tender Rejection Index 14.17%.",
-        "ACT Research (Oct 16): active truck utilization projected 96% by year-end — supply-driven (driver exits, carrier retirements), not demand recovery; TD Cowen/AFS projects Q4 TL rates highest since 2022 +14.7% YoY.",
-        "FreightWaves Oct 20: 2026 elections reshape trucking labor policy — Modern Worker Empowerment Act live post-election target; no floor vote scheduled.",
-        "F3 Future of Freight Festival Oct 27–28 Chattanooga; CHR Q3 earnings call Oct 28 — same week; C.H. Robinson first post-$5.8B RXO acquisition investor call.",
-        "Trimble TMS sale unresolved: Apax/Bain out, third buyer evaluating Transporeon/TMW-TM4 split; Q4 RFP season live — widest Transplace displacement window since Goldman Sachs process began."
+        "ACT Research (Oct 16): active truck utilization projected 96% by year-end \u2014 supply-driven (driver exits, carrier retirements), not demand recovery; TD Cowen/AFS projects Q4 TL rates highest since 2022 +14.7% YoY.",
+        "FreightWaves Oct 20: 2026 elections reshape trucking labor policy \u2014 Modern Worker Empowerment Act live post-election target; no floor vote scheduled.",
+        "F3 Future of Freight Festival Oct 27\u201328 Chattanooga; CHR Q3 earnings call Oct 28 \u2014 same week; C.H. Robinson first post-$5.8B RXO acquisition investor call.",
+        "Trimble TMS sale unresolved: Apax/Bain out, third buyer evaluating Transporeon/TMW-TM4 split; Q4 RFP season live \u2014 widest Transplace displacement window since Goldman Sachs process began."
+      ]
+    },
+    {
+      "date": "2026-10-21",
+      "stories": [
+        "Iran FM Araghchi explicitly stated Oct 21 Hormuz stays closed until US agrees to terms; Brent $110/bbl; Goldman Sachs war-risk premium $7/bbl of $20/bbl total crude freight rate.",
+        "EIA diesel $6.276/gal (Oct 20, up 10c WoW, $2.66 above year-ago); ACT Research projects 96% active truck utilization by year-end \u2014 supply-driven exits.",
+        "DAT Week 42 (Oct 10-16): van all-in $3.09/mi +35% YoY; van L/T 9.7; reefer L/T 15.8; flatbed L/T 36.5 (rising); reefer rejections 21.44% (1-in-5 loads).",
+        "Werner Q3 2026 preliminary miss: EPS $0.15-0.16 vs $0.36 consensus; $0.18/share diesel/driver/insurance headwinds; full results Oct 27.",
+        "ATRI 22nd annual Top Industry Issues report (Oct 19): fuel prices jump 17 spots to #1 for first time in 22-year history; lawsuit abuse reform #2; AI in trucking #7.",
+        "CHR Q3 2026 earnings call Oct 28 \u2014 first post-$5.8B RXO acquisition investor call; XPO, ODFL, Saia all report Oct 28-29.",
+        "Aurora FMCSA beacon waiver (Oct 7, 5-year) now facing legal challenge; 200-truck year-end target and UF-Aurora partnership intact pending resolution.",
+        "JOC: agentic AI enabling smaller brokers to offer managed transportation at enterprise quality \u2014 4PL capability gap compressing.",
+        "Trimble TMS: CCJ Digital published fleet tips for TMS switch as Apax/Bain out, third buyer evaluating split; Q4 RFP displacement window live.",
+        "USMCA bilateral deadline Oct 29 (8 days); Mexico 90% complete; 25K+ Mexican drivers still sidelined by B-1 visa revocations."
       ]
     }
   ]
