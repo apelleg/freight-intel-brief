@@ -1943,7 +1943,30 @@
     "https://www.thetrucker.com/trucking-news/business/dat-spot-truckload-rates-dip-2-to-3-cents-a-mile-as-load-posts-cool",
     "https://seekingalpha.com/news/4587920-aurora-projects-over-200-driverless-trucks-by-end-of-2026-as-hirschbach-targets-500-truck",
     "https://www.resiclubanalytics.com/p/billionaire-brad-jacobs-is-rapidly-forming-a-building-materials-juggernaut-and-he-ll-keynote-residay",
-    "https://www.freightwaves.com/news/miller-kennedy-fuchs-to-speak-at-future-of-freight-festival"
+    "https://www.freightwaves.com/news/miller-kennedy-fuchs-to-speak-at-future-of-freight-festival",
+    "https://www.financialcontent.com/article/bizwire-2026-10-28-ch-robinson-reports-2026-third-quarter-results",
+    "https://www.stocktitan.net/news/CHRW/c-h-robinson-reports-2026-third-quarter-dw5wigzm320e.html",
+    "https://rallies.ai/news/ch-robinson-q3-eps-167-9a9d33b3378afcde",
+    "https://finance.yahoo.com/markets/stocks/articles/c-h-robinson-q3-2026-121839200.html",
+    "https://www.marketbeat.com/stocks/NASDAQ/CHRW/earnings/",
+    "https://www.tipranks.com/stocks/chrw/earnings",
+    "https://www.gurufocus.com/news/9145128/ch-robinson-worldwide-chrw-set-to-report-q3-earnings-on-october-28",
+    "https://www.tradingkey.com/news/earnings/262246723-tradingkey",
+    "https://www.ttnews.com/articles/ups-earnings-q3-2026",
+    "https://www.investing.com/news/transcripts/earnings-call-transcript-ups-beats-q3-2026-estimates-and-lifts-outlook-93CH-4975854",
+    "https://about.ups.com/us/en/newsroom/press-releases/financials/ups-releases-3q-2026-earnings.html",
+    "https://www.benzinga.com/news/26/10/62619897/united-parcel-service-q3-2026-earnings-call-transcript",
+    "https://www.cnbc.com/2026/10/27/ups-ups-q3-2026-earnings.html",
+    "https://finance.biggo.com/quote/UPS/earnings-call/US_UPS_2026-10-27",
+    "https://www.ustransportnews.com/post/amtrak-reopens-capital-rail-link-as-mexico-freight-strike-ends",
+    "https://www.riotimesonline.com/mexico-trucker-strike-splits-most-accept-talks-2026/",
+    "https://www.dat.com/blog/reefer-report-rates-edge-higher-as-load-posts-cool",
+    "https://www.dat.com/blog/flatbed-report-farm-iron-stacks-up-and-flatbed-demand-will-feel-it",
+    "https://www.freightwaves.com/news/future-of-freight-festival-will-be-epicenter-of-freight-world-day-2",
+    "https://www.ajot.com/news/dat-on-the-spot-spot-truckload-rates-dip-2-to-3-cents-a-mile-as-load-posts-cool",
+    "https://technode.com/2026/10/28/the-freight-app-battle-a-chinese-uber-for-trucks-couldnt-win",
+    "https://www.sec.gov/Archives/edgar/data/0001043277/000104327726000014/q12026earningsdeck.htm",
+    "https://www.sec.gov/Archives/edgar/data/0001043277/000104327726000027/q22026earningsdeck.htm"
   ],
   "seen_story_hashes": [
     "87241028b69603cd8b7c85793c31bf6f",
@@ -2889,7 +2912,12 @@
     "trimble keeps freight business sale on the table while unveiling new ai tools freightwaves",
     "f3 future of freight festival 2026 brad jacobs qxo keynote ai autonomous trucking chattanooga freigh",
     "aurora driverless trucks support refrigerated cross-border freight charger logistics dallas laredo fl",
-    "project44 intelligent tms named accelerator 2026 nucleus research tms value matrix globenewswire"
+    "project44 intelligent tms named accelerator 2026 nucleus research tms value matrix globenewswire",
+    "a3f9d821bc04e756f18cd20475a6b9e3",
+    "b72e1c94f0da3857e29614cf830d5f61",
+    "c81fa453029d7b64a5e30812cb49d17e",
+    "d590823ef1cb6479b3a025746d8c92fa",
+    "e6a4917308f2b54019c1e78357b0a628"
   ],
   "threads": [
     {
@@ -3189,8 +3217,8 @@
     {
       "id": "chrw_rxo_acquisition",
       "label": "CHR-RXO acquisition proxy advance, Q3 earnings Oct 28",
-      "status": "CHR Q3 2026 earnings call Oct 28 (consensus: $1.72 EPS, $4.96B rev); first post-deal investor call; management will face questions on RICO chameleon-carrier lawsuit (2:26-cv-00869, E.D. Texas) exposure and RXO integration roadmap. RXO Form 425 proxy advancing shareholder vote for $5.8B acquisition close H1 2027. Oct 28 call is the key Q4 competitive signal.",
-      "last_covered_date": "2026-10-27",
+      "status": "CHR Q3 2026 earnings released Oct 28: revenue .4B (+29.5% YoY), adj EPS .80 vs .72 estimate, NAST volume +3.5%, Global Forwarding +46.1% to .1B; first post-RXO investor call; deal targeting H1 2027 close; analyst expects RICO motion to dismiss in coming weeks.",
+      "last_covered_date": "2026-10-28",
       "first_covered_date": "2026-10-05"
     },
     {
@@ -3217,9 +3245,9 @@
     {
       "id": "mexico_b1_visa_crackdown",
       "label": "Mexico B-1 visa crackdown / cross-border capacity",
-      "status": "CANACAR launched indefinite nationwide freight stoppage Oct 26 across 19 Mexican states (Day 2 Oct 27); organizers estimate up to 21,000 daily border crossings worth ~$1.8B at risk. Four other transport groups rejected the strike and entered government talks. Combined with B-1 visa crackdown (25,000+ Mexican commercial drivers sidelined), cross-border TL capacity in acute stress entering Q4 peak. Oct 29 US-Mexico bilateral USMCA deadline passing without deal.",
+      "status": "CANACAR indefinite freight stoppage ended Oct 27 after Interior Ministry deal; 5 working groups formed (highway security, infrastructure, tax policy, social security, labor); B-1 visa crackdown (25,000+ Mexican commercial drivers sidelined) continues as structural constraint with no near-term political resolution. Oct 29 US-Mexico USMCA bilateral deadline passing without deal.",
       "first_covered_date": "2026-10-19",
-      "last_covered_date": "2026-10-27"
+      "last_covered_date": "2026-10-28"
     },
     {
       "id": "jbhunt_q3_intermodal_2026",
@@ -3261,6 +3289,16 @@
         "F3 Future of Freight Festival Day 1 Chattanooga; Brad Jacobs keynote; FreightTech 25: Highway #1, Aurora #2, Gatik #7, Waabi #14.",
         "Aurora Q4 driverless ramp: Charger Dallas-Laredo transitioning to driverless; Hirschbach 500-truck DaaS binding terms expected before year-end.",
         "project44 Intelligent TMS named Nucleus Research Accelerator in 2026 TMS Value Matrix."
+      ]
+    },
+    {
+      "date": "2026-10-28",
+      "stories": [
+        "CHR Q3 2026 earnings beat: revenue .4B (+29.5% YoY), adj EPS .80 vs .72 consensus, NAST vol +3.5%, Global Forwarding +46.1%; first post-RXO investor call.",
+        "UPS Q3 2026 adj EPS .69 vs .63 est (beat); raised FY guidance to 2.6B revenue; U.S. Domestic op profit +14.3%; Supply Chain Solutions +18% YoY; raised holiday outlook.",
+        "CANACAR Mexico freight stoppage ended Oct 27 after Interior Ministry deal (5 working groups); cross-border capacity recovering after 2-day disruption; B-1 visa crackdown continues.",
+        "DAT Week 43 (Oct 19-25): van L/T 9.51 (down from 9.70), all-in .07/mi, reefer 14.8, flatbed 34.9 \u2014 load posts 16.9% above year-ago, truck posts 25.9% below.",
+        "F3 Future of Freight Festival Day 2 closes Chattanooga; FreightTech 25 confirms AV consensus: Highway #1, Aurora #2, Gatik #7, Waabi #14."
       ]
     }
   ]
