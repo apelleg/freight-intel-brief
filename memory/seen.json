@@ -1966,7 +1966,32 @@
     "https://www.ajot.com/news/dat-on-the-spot-spot-truckload-rates-dip-2-to-3-cents-a-mile-as-load-posts-cool",
     "https://technode.com/2026/10/28/the-freight-app-battle-a-chinese-uber-for-trucks-couldnt-win",
     "https://www.sec.gov/Archives/edgar/data/0001043277/000104327726000014/q12026earningsdeck.htm",
-    "https://www.sec.gov/Archives/edgar/data/0001043277/000104327726000027/q22026earningsdeck.htm"
+    "https://www.sec.gov/Archives/edgar/data/0001043277/000104327726000027/q22026earningsdeck.htm",
+    "https://techcrunch.com/2026/10/28/kodiak-lands-first-commercial-deal-to-supply-driverless-trucks-for-public-highways/",
+    "https://www.freightwaves.com/news/2027-freighttech-25-winners-announced-at-f3",
+    "https://www.freightwaves.com/news/fraud-prevention-focused-highway-leads-freighttech-25",
+    "https://landline.media/flurry-of-rules-from-fmcsa-headed-your-way/",
+    "https://houseofsaud.com/irgc-tanker-mines-hormuz-oct29/",
+    "https://en.sedaily.com/international/2026/10/27/iran-warns-of-legal-action-against-koreas-sinokor-7-tankers",
+    "https://www.sec.gov/Archives/edgar/data/0001929561/000119312526436465/d156417d425.htm",
+    "https://cargado.com/news/mexico-driver-strike-october-2026",
+    "https://www.latintimes.com/mexico-truckers-end-national-strike-government-talks-600627",
+    "https://riotimesonline.com/mexico-truckers-strike-roads-26-october-2026",
+    "https://www.ustransportnews.com/post/mexican-truckers-strike-as-ups-raises-outlook-into-holiday-peak",
+    "https://conventiongrid.com/shows/freightwaves-live/2026/chattanooga/",
+    "https://spotinc.com/news/logistics-market-update-october-2026/",
+    "https://freightplus.io/market-report-october-2026/",
+    "https://www.ryantrans.com/news/october-2026-industry-update",
+    "https://www.govinfo.gov/content/pkg/FR-2026-10-26/pdf/2026-21733.pdf",
+    "https://thetrucker.com/trucking-news/truckload-authority/government-affairs/catching-chameleons-safe-revoke-acts-take-different-approaches-to-detecting-repeat-offenders-and-strengthening-fmcsa-enforcement",
+    "https://www.stattimes.com/air-cargo/dsv-q3-air-freight-yields-up-8-despite-3-volume-dip-1360995",
+    "https://quartr.com/events/dsv-a-s-dsv-q3-2026_3sPZ3JJh",
+    "https://247wallst.com/cards/xpost-01m5yq8s7cvpdrdh9ewem2v7br",
+    "https://www.kurdistan24.net/en/story/948915/iran-says-oil-tanker-hit-naval-mines-in-strait-of-hormuz",
+    "https://mexicobusiness.news/logistics/news/echo-launches-echoxborder-us-mexico-customs-brokerage",
+    "https://www.freightwaves.com/news/trimble-carrier-tms-modernization-ai-agents",
+    "https://news.trimble.com/2026-09-28-Trimble-Accelerates-Transportation-Modernization-with-Autonomous-AI-and-Agent-Ready-Platforms-at-2026-Insight-Conference",
+    "https://www.freightwaves.com/news/f3-freightwaves-announces-shipper-of-choice-winners"
   ],
   "seen_story_hashes": [
     "87241028b69603cd8b7c85793c31bf6f",
@@ -2917,7 +2942,13 @@
     "b72e1c94f0da3857e29614cf830d5f61",
     "c81fa453029d7b64a5e30812cb49d17e",
     "d590823ef1cb6479b3a025746d8c92fa",
-    "e6a4917308f2b54019c1e78357b0a628"
+    "e6a4917308f2b54019c1e78357b0a628",
+    "8bf1b8173eef",
+    "e2c50d030d49",
+    "b2d316bc8572",
+    "c9a02858210a",
+    "0122bb678a26",
+    "5fb3811fb917"
   ],
   "threads": [
     {
@@ -3014,8 +3045,8 @@
     {
       "id": "kodiak_factory_av",
       "label": "Kodiak Factory-Built AV Trucks",
-      "status": "Oct 1: Named IKEA Supply as first driverless commercial launch partner (219-mile I-45 route, Baytown DC to Frisco TX store); simultaneously announced AWS as primary cloud infrastructure for BreakPoint safety validation. Currently 35 supervised driverless trucks for Atlas Energy. Targeting driverless launch later in 2026. 93%+ safety case completion.",
-      "last_covered_date": "2026-10-02",
+      "status": "Oct 28: Signed first commercial technology-supply deal \u2014 Kodiak supplies driverless trucks to DTL Transport (carrier) for Dallas-El Paso and Dallas-Atlanta public highway routes. Marks Kodiak shift from carrier/operator model to asset-light AV hardware supplier. IKEA I-45 route still active. Share price down ~87% from opening day.",
+      "last_covered_date": "2026-10-29",
       "first_covered_date": "2026-09-01"
     },
     {
@@ -3028,9 +3059,9 @@
     {
       "id": "fmcsa_elp_nprm",
       "label": "FMCSA English Language Proficiency NPRM",
-      "status": "Comment period closed October 9, 2026. 1,800+ comments received. FMCSA reviewing before deciding whether to finalize the rule codifying English Language Proficiency as an out-of-service criterion for CMV drivers. ~26,000+ drivers already sidelined under current enforcement; final rule could OOS ~9,000 more cross-border drivers. Timeline for final rule TBD.",
+      "status": "Comment period closed Oct 9 with 1,800+ submissions. FMCSA acting administrator stated Oct 28 the agency expects ~9 rules before year-end \u2014 ELP enforcement formally making out-of-service criteria is among the most advanced in the pipeline.",
       "first_covered_date": "2026-09-04",
-      "last_covered_date": "2026-10-09"
+      "last_covered_date": "2026-10-29"
     },
     {
       "id": "dot_av_national_strategy",
@@ -3203,8 +3234,8 @@
     {
       "id": "hormuz_iran_war",
       "label": "Iran Hormuz mine warfare escalation",
-      "status": "Iran IRGC claimed naval mines sank a container ship and struck two tankers Oct 19-21 \u2014 most aggressive escalation since crisis began March 2026; U.S. CENTCOM denied; FM Araghchi confirmed Oct 21 Hormuz stays closed until US meets full terms; no diplomatic off-ramp. Brent $108.82, diesel $6.276/gal (+$2.66 YoY).",
-      "last_covered_date": "2026-10-22",
+      "status": "Oct 29: IRGC struck 3 more tankers with mines on southern Hormuz route (4th wave since Oct 19-21 triple attack); UKMTO confirms vessel burning near Khasab; Iran warned Sinokor of legal action after 7 VLCCs hit; Brent 15.27; OPEC+ meets Oct 31-Nov 1. Strait effectively closed to commercial shipping (2 ships/day vs ~85/day normal).",
+      "last_covered_date": "2026-10-29",
       "first_covered_date": "2026-03-01"
     },
     {
@@ -3217,8 +3248,8 @@
     {
       "id": "chrw_rxo_acquisition",
       "label": "CHR-RXO acquisition proxy advance, Q3 earnings Oct 28",
-      "status": "CHR Q3 2026 earnings released Oct 28: revenue .4B (+29.5% YoY), adj EPS .80 vs .72 estimate, NAST volume +3.5%, Global Forwarding +46.1% to .1B; first post-RXO investor call; deal targeting H1 2027 close; analyst expects RICO motion to dismiss in coming weeks.",
-      "last_covered_date": "2026-10-28",
+      "status": "Q3 2026 earnings confirmed on Oct 28 investor call: revenue .4B (+29.5% YoY), adj EPS .80 vs .72 est; deal financing confirmed on track; RXO shareholder vote targeted Q4 2026; combined close expected H1 2027 at 5B+ enterprise value. CHR has financial capacity to absorb integration costs.",
+      "last_covered_date": "2026-10-29",
       "first_covered_date": "2026-10-05"
     },
     {
@@ -3231,8 +3262,8 @@
     {
       "id": "tms_ai_agent_race",
       "label": "TMS AI agent race (SAP/Descartes)",
-      "status": "F3 Future of Freight Festival Oct 27-28 Chattanooga underway; Day 1 Brad Jacobs keynote, AI/AV/TMS agenda. FreightTech 25 (revealed Oct 26): Highway #1, Aurora #2, Gatik #7, Waabi #14. project44 Intelligent TMS named Nucleus Research Accelerator (Oct 13). Trimble T&L sale still no deal; three buyers evaluating. AI agent TMS gap-closing with enterprise platforms accelerating into 2027 RFP cycle.",
-      "last_covered_date": "2026-10-27",
+      "status": "F3 Future of Freight Festival concluded Oct 28 Chattanooga. 2027 FreightTech 25 final: Highway #1 (3rd year), GenLogs #2, HappyRobot #3 \u2014 two AI orchestration platforms displaced AV-heavy prior top-3; 5 AI automation firms new to list. FMCSA signaled ~9 rules before year-end (Oct 28 Land Line), including likely AV framework and ELP enforcement.",
+      "last_covered_date": "2026-10-29",
       "first_covered_date": "2026-10-15"
     },
     {
@@ -3299,6 +3330,16 @@
         "CANACAR Mexico freight stoppage ended Oct 27 after Interior Ministry deal (5 working groups); cross-border capacity recovering after 2-day disruption; B-1 visa crackdown continues.",
         "DAT Week 43 (Oct 19-25): van L/T 9.51 (down from 9.70), all-in .07/mi, reefer 14.8, flatbed 34.9 \u2014 load posts 16.9% above year-ago, truck posts 25.9% below.",
         "F3 Future of Freight Festival Day 2 closes Chattanooga; FreightTech 25 confirms AV consensus: Highway #1, Aurora #2, Gatik #7, Waabi #14."
+      ]
+    },
+    {
+      "date": "2026-10-29",
+      "stories": [
+        "Iran IRGC launched 4th wave of Hormuz mine warfare Oct 29 \u2014 3 tankers struck, vessel burning near Khasab, Brent 15.27, OPEC+ meets in 3 days.",
+        "Kodiak Robotics announced first commercial AV tech-supply deal with DTL Transport for Dallas-El Paso and Dallas-Atlanta driverless routes (Oct 28).",
+        "2027 FreightTech 25 concluded at F3 Chattanooga: Highway #1 for 3rd year, GenLogs #2, HappyRobot #3; 5 AI automation first-timers signal pivot from AV to AI-agent focus.",
+        "FMCSA acting administrator signals ~9 rules before year-end, ending months of regulatory quiet \u2014 AV framework, ELP enforcement, HOS likely included (Oct 28 Land Line).",
+        "DAT Week 43 (Oct 19-25): van L/T 9.51 (down 9.70), all-in van .07/mi (-2c), linehaul +33% YoY; diesel >.20/gal; truck posts 25.9% below year-ago."
       ]
     }
   ]
