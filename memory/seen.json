@@ -2023,7 +2023,11 @@
     "https://www.sec.gov/Archives/edgar/data/0001828108/000182810826000094/aur-20260930.htm",
     "https://www.sustainabletruckvan.com/aurora-charger-logistics-plan-to-deploy-up-to-500-autonomous-trucks-in-the-us/",
     "https://www.supplychainbrain.com/articles/45118-auroras-driverless-trucks-on-pace-for-2027-expansion-target",
-    "https://www.fmcsa.dot.gov/newsroom/trumps-transportation-secretary-sean-p-duffy-puts-safety-first-finalizes-rule-stop"
+    "https://www.fmcsa.dot.gov/newsroom/trumps-transportation-secretary-sean-p-duffy-puts-safety-first-finalizes-rule-stop",
+    "https://www.freightwaves.com/news/aurora-q3-2026-earnings",
+    "https://logisticsviewpoints.com/2026/10/28/the-future-of-tms-from-transportation-planning-to-intelligent-execution",
+    "https://www.thescxchange.com/move/shipper-costs-hit-five-year-high-as-freight-demand-stalls",
+    "https://ir.aurora.tech/news-events/press-releases/detail/154/charger-logistics-and-aurora-to-begin-scaling-autonomous-fleet-to-500-trucks"
   ],
   "seen_story_hashes": [
     "87241028b69603cd8b7c85793c31bf6f",
@@ -3406,6 +3410,16 @@
         "Fr8Tech Zayren agentic AI launched on US-Mexico corridors (Oct 27): Autopilot Negotiator enables real-time carrier negotiation competing with UF Laredo/El Paso brokerage.",
         "FMCSA removed 10,000+ driver training providers from registry since Dec 2025; PAM Transport filed CDL pre-issuance exemption request Oct 30.",
         "USMCA US-Mexico bilateral deadline passed Oct 29 without agreement; B-1 visa crackdown still sidelining ~25,000 Mexican commercial drivers."
+      ]
+    },
+    {
+      "date": "2026-11-02",
+      "stories": [
+        "Market: Van spot ~$3.36/mi, reefer ~$3.90/mi (DAT Trendlines Nov 2); freight spending +32.1% YoY in Q3 per U.S. Bank/DAT — largest annual gain since 2021; diesel above $6.50/gal Q3 average; routing guide failures rising per CHR Oct update.",
+        "Aurora Q3 additional detail: Charger Logistics formal 500-truck MOU announced with Oct 28 Q3 report; FMCSA 5-yr beacon exemption (Oct 9) covers Aurora/Kodiak/Waabi/Stack through Oct 2031 — supplements Oct 30 coverage of production miss.",
+        "C.H. Robinson/RXO $5.8B acquisition: antitrust scrutiny flagged by analysts; DOJ second-request possible given $25B+ combined EV; H1 2027 close unchanged; both operating independently.",
+        "Logistics Viewpoints (Oct 28): TMS evolving toward AI-driven continuous execution with defined decision rights — AI orchestration layers on top of incumbent TMS platforms as near-term path.",
+        "Trimble T&L sale: no buyer named; third buyer still evaluating; Q4 RFP displacement window remains open per CCJ Digital."
       ]
     }
   ]
